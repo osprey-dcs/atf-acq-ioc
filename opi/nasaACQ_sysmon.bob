@@ -193,7 +193,7 @@
     <name>Action Button</name>
     <actions>
       <action type="open_display">
-        <file>mpexACQ_FPGAreboot.bob</file>
+        <file>nasaACQ_FPGAreboot.bob</file>
         <target>window</target>
         <description>Reboot FPGA</description>
       </action>
