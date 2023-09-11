@@ -1,0 +1,16 @@
+record(longin, "$(P)$(R)$(NAME)") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT) 0x2$(LO)$(IDX) 0)")
+    field(SCAN, "I/O Intr")
+    field(TSE,  "-2")
+    field(EGU,  "$(EGU)")
+    field(LOLO, "$(LOLO)")
+    field(LOW,  "$(LOW)")
+    field(HIGH, "$(HIGH)")
+    field(HIHI, "$(HIHI)")
+    field(LLSV, "MAJOR")
+    field(LSV,  "MINOR")
+    field(HSV,  "MINOR")
+    field(HHSV, "MAJOR")
+}

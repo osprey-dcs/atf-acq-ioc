@@ -1,0 +1,6 @@
+record(longin, "$(P)$(R)CMD:retry$(NRETRY)") {
+    field(DESC, "Commands succeeding on retry $(NRETRY)")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT) 0x0F00$(NRETRY) 0)")
+    field(SCAN, "10 second")
+}

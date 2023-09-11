@@ -1,0 +1,21 @@
+#
+# Send all pending output packets
+#
+record(bo, "$(P)$(R)send_") {
+  field(DTYP, "PSC Ctrl Send All")
+  field(OUT , "@$(PORT)")
+  field(ZNAM, "Send")
+  field(ONAM, "Send")
+}
+
+#
+# Trigger a system monitor readback
+#
+record(bo, "$(P)$(R)sysmonTrig_") {
+    field(DESC, "Trigger system monitor readback")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16952 0")
+    field(PINI, "YES")
+    field(SCAN, "5 second")
+    field(FLNK, "$(P)$(R)send_")
+}

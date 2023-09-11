@@ -1,0 +1,29 @@
+file "perFPGA.template" {
+  pattern { P R,PORT,   NRETRY }
+  { \$(P),\$(R),\$(PORT), 6 }
+}
+
+#file "perBuildDate.template"
+#{ pattern
+#{       P,       R,       PORT,            NAME,        A }
+#  { "\$(P)", "\$(R)", "\$(PORT)",  "firmwareBuildDate", 0 }
+#  { "\$(P)", "\$(R)", "\$(PORT)",  "softwareBuildDate", 1 }
+#}
+#
+file "perSysmonAI.template" {
+  pattern { P R,PORT,                     NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
+  { \$(P),\$(R),\$(PORT),   "FPGA:Temperature",   0,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
+  { \$(P),\$(R),\$(PORT),        "FPGA:VccINT",   4,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
+  { \$(P),\$(R),\$(PORT),        "FPGA:VccAUX",   8,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
+  { \$(P),\$(R),\$(PORT),         "FPGA:VBRAM",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12I",  16,       "A",     121.951e-6,       0,    2,  0.10,  0.15,   0.9,   1.0, "INA219 U17 current" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12V",  20,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
+  { \$(P),\$(R),\$(PORT),        "MARBLE:P12I",  32,       "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
+  { \$(P),\$(R),\$(PORT),        "MARBLE:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+}
+#
+#file "perSysmonLI.template" {
+#  pattern { P R,PORT,                 NAME, LO, IDX,       EGU,        LOLO,         LOW,       HIGH,       HIHI, DESC }
+#}
