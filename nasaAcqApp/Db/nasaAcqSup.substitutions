@@ -23,7 +23,8 @@ file "perSysmonAI.template" {
   { \$(P),\$(R),\$(PORT),        "MARBLE:P12I",  32,       "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
   { \$(P),\$(R),\$(PORT),        "MARBLE:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
 }
-#
-#file "perSysmonLI.template" {
-#  pattern { P R,PORT,                 NAME, LO, IDX,       EGU,        LOLO,         LOW,       HIGH,       HIHI, DESC }
-#}
+
+file "perSysmonLI.template" {
+  pattern { P R,PORT,                 NAME, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
+  { \$(P),\$(R),\$(PORT),     "ACQ:errors",  40,        "", -2147483648, -2147483648,           1,           1, "Acquisition Error Status" }
+}
