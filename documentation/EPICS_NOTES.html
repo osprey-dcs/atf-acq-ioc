@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>NASA_ACQ_EPICS_NOTES</title>
+  </head>
+  <body>
+    <h2>Introduction</h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">This
+        support module uses a PSCDRV driver to communicate with NASA ACQ
+        nodes and provides an example IOC, and some Engineering CSS
+        screens.&nbsp; All the records mentioned in the following
+        sections have names beginning with </span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;">$(P)$(R)
+          macros.&nbsp; Typically the P macro is set to 'NASA_ACQ:' and
+          the R macro to the acquisition node number followed by a
+          colon.<br>
+        </span></span></p>
+    <span style="font-family: Times New Roman, Times, serif;"><span
+        style="font-family: Times New Roman, Times, serif;"></span></span><span
+      style="font-family: Times New Roman, Times, serif;"></span><br>
+    <h2><span style="font-family: Times New Roman, Times, serif;">System
+        Monitoring <br>
+      </span></h2>
+    <span style="font-family: Times New Roman, Times, serif;">Processing
+      the sysmonTrig_ record causes the IOC to read back a set of system
+      monitor values and push them into the records described in the
+      following table.&nbsp; The </span><br>
+    <span style="font-family: Times New Roman, Times, serif;"><span
+        style="font-family: Times New Roman, Times, serif;">sysmonTrig_
+        record has a value of 1 when the FPGA has performed a power-up
+        or reboot.&nbsp; The IOC uses this value to automatically push
+        output settings to the FPGA.<br>
+        <br>
+      </span></span><br>
+    <table style=" text-align: left; width: 80%;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Name</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Type</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family: Times
+                New Roman, Times, serif;">Description</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:Temperature</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FPGA internal temperature in
+              degrees C.</span><span style="font-family: Times New
+              Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:VccINT</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FPGA internal Vcc.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:VccAUX</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FPGA auxiliary Vcc.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:VBRAM</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FPGA block RAM Vcc.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">QSFP:Temperature</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">QSFP module internal temperature
+              in degrees C.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:FMC1:P12I</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Current being drawn through
+              Marble FMC 1 connector 12 volt supply.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:FMC1:P12V</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Voltage at Marble FMC 1
+              connector 12 volt supply.</span><br>
+            <span style="font-family: Times New Roman, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:FMC2:P12I</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Current being drawn through
+              Marble FMC 2 connector 12 volt supply.</span><br>
+            <span style="font-family: Times New Roman, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:FMC2:P12V</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Voltage at Marble FMC 2
+              connector 12 volt supply.</span><br>
+            <span style="font-family: Times New Roman, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:P12I</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Current drawn from Marble 12V
+              supply.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MARBLE:P12V</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="vertical-align: top;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble 12V supply actual
+              voltage.</span><br>
+            <span style="font-family: Times New Roman, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:status</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: top;"><span style="font-family:
+              Times New Roman, Times, serif;">Fast acquisition system
+              status:<span style="text-decoration: underline;"><br>
+              </span></span>
+            <table style=" text-align: left; width: 90%;"
+              cellspacing="2" cellpadding="2" border="1">
+              <tbody>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-weight: bold;"><span
+                        style="font-family: Times New Roman, Times,
+                        serif;">Bit</span></span><span
+                      style="font-family: Times New Roman, Times,
+                      serif;"><br>
+                    </span></td>
+                  <td style="vertical-align: middle; text-align:
+                    center;"><span style="font-weight: bold;"><span
+                        style="font-family: Times New Roman, Times,
+                        serif;">Description</span></span><span
+                      style="font-family: Times New Roman, Times,
+                      serif;"><br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">0</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when acquisition clock is unlocked
+                      from timing pulse-per-second marker.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">14</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when packet builder has overrun
+                      network driver.</span><span style="font-family:
+                      Times New Roman, Times, serif;"><br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">15</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when ADC sampling has overrun packet
+                      builder</span><span style="font-family: Times New
+                      Roman, Times, serif;"><br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">30</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when acquisition is active.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">31</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when acquisition is enabled.</span><br>
+                    <span style="font-family: Times New Roman, Times,
+                      serif;"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <span style="font-family: Times New Roman, Times, serif;"><span
+                style="text-decoration: underline;"></span> </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <span style="font-family: Times New Roman, Times, serif;"><span
+        style="font-family: Times New Roman, Times, serif;"></span></span><span
+      style="font-family: Times New Roman, Times, serif;"></span>
+    <h2>FPGA Reboot<br>
+    </h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">Writing
+        1, then 100, then 10000 to the FPGA:reboot record will cause the
+        FPGA to reboot.</span><span style="font-family: Times New Roman,
+        Times, serif;"><span style="caret-color: rgb(0, 0, 0); color:
+          rgb(0, 0, 0); font-size: medium; font-style: normal;
+          font-variant-caps: normal; font-weight: 400; letter-spacing:
+          normal; text-align: center; text-indent: 0px; text-transform:
+          none; white-space: normal; word-spacing: 0px;
+          -webkit-text-stroke-width: 0px; text-decoration: none;
+          display: inline !important; float: none;">&nbsp; The
+          requirement of three write operations with different values is
+          to guard against accidental reboots.<br>
+        </span></span></p>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Communication
+
+
+        Statistics</span></h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">A group
+        of longin records with names </span><span style="font-family:
+        Times New Roman, Times, serif;"><span style="caret-color: rgb(0,
+          0, 0); color: rgb(0, 0, 0); font-size: medium; font-style:
+          normal; font-variant-caps: normal; font-weight: 400;
+          letter-spacing: normal; text-align: center; text-indent: 0px;
+          text-transform: none; white-space: normal; word-spacing: 0px;
+          -webkit-text-stroke-width: 0px; text-decoration: none;
+          display: inline !important; float: none;">Cmd</span></span><span
+        style="font-style: italic;"><span style="font-family: Times New
+          Roman, Times, serif;"><span style="caret-color: rgb(0, 0, 0);
+            color: rgb(0, 0, 0); font-variant-caps: normal; font-weight:
+            400; letter-spacing: normal; text-align: center;
+            text-indent: 0px; text-transform: none; white-space: normal;
+            word-spacing: 0px; -webkit-text-stroke-width: 0px;
+            text-decoration: none;">x</span></span></span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+          font-size: medium; font-style: normal; font-variant-caps:
+          normal; font-weight: 400; letter-spacing: normal; text-align:
+          center; text-indent: 0px; text-transform: none; white-space:
+          normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+          text-decoration: none; display: inline !important; float:
+          none;">RetryCount, where <span style="font-style: italic;">x</span>
+          is from 0 through 5 count the number of IOC to FPGA commands
+          that succeeded with <span style="font-style: italic;">x</span>
+          retries.&nbsp; A longin record named CmdFailedCount counts the
+          number of commands that failed to be acknowledged.<br>
+        </span></span></p>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Inte</span><span
+        style="font-family: Times New Roman, Times, serif;">rnal Records</span></h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">Records
+        with names ending in an underscore are intended for internal use
+        by the IOC and should not be written by any other clients.</span><br>
+    </p>
+  </body>
+</html>

@@ -26,5 +26,5 @@ file "perSysmonAI.template" {
 
 file "perSysmonLI.template" {
   pattern { P R,PORT,                 NAME, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
-  { \$(P),\$(R),\$(PORT),     "ACQ:errors",  40,        "", -2147483648, -2147483648,           1,           1, "Acquisition Error Status" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:status",  40,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
 }
