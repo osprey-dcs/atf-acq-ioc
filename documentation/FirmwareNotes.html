@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Firmware Notes</title>
+  </head>
+  <body>
+    <meta charset="UTF-8">
+    <h2 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; letter-spacing:
+      normal; text-align: start; text-indent: 0px; text-transform: none;
+      white-space: normal; word-spacing: 0px; -webkit-text-stroke-width:
+      0px; text-decoration: none;"><span style="font-family: Times New
+        Roman, Times, serif;">Console Commands</span></h2>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;">The
+        processor in the FPGA provides a simple command
+        interpreter.&nbsp; The console interpreter can be accessed
+        through the USB/Serial adapter (serial settings 115200-8N1) or
+        through a UDP port and the console.py script.&nbsp; Typing a
+        character to the USB/Serial port disables the UDP connection.</span><span
+        style="font-family: Times New Roman, Times, serif;"><br>
+      </span></p>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;">Only enough
+        of a command name to make it unique needs to be entered.&nbsp;
+        Since the first character of all commands is different this
+        means that only a single character need be entered.&nbsp; The
+        only editing available is the backspace or delete key which
+        erases the character to the left of the cursor.&nbsp; Typing a
+        carriage return or newline character executes the command.</span><span
+        style="font-family: Times New Roman, Times, serif;"><br>
+      </span></p>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;">The commands
+        and their arguments are:</span><span style="font-family: Times
+        New Roman, Times, serif;"><br>
+      </span></p>
+    <dl style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);">
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><a name="cmdBOOT"></a>boot [-a]</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><span
+              class="Apple-converted-space"></span></span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;">The
+          FPGA prompts for confirmation and then restarts as if powered
+          up.&nbsp; The optional argument specifies that the alternate
+          bootable image is to be tried first.</span><span
+          style="font-family: Times New Roman, Times, serif;"><br>
+        </span></dd>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><br>
+        </span></dt>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><span style="font-weight: bold;"></span>debug
+
+
+            [-s] [<span style="font-style: italic;">n</span>]</span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;">The
+          debugging flags are set to the specified value, if one is
+          given.&nbsp; If no value is given the current value of the
+          debugging flags will be printed.&nbsp; The bits are</span></dd>
+    </dl>
+    <ul style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0); margin-left: 40px;">
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          0 &nbsp;&nbsp; — Enable messages related to the EPICS UDP
+          port.</span><span style="font-family: Times New Roman, Times,
+          serif;"><br>
+        </span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          1 &nbsp;&nbsp; — Enable messages related to the TFTP UDP port.</span></li>
+      <li><span style=" font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;">Bit 4
+            &nbsp;&nbsp; — Enable messages related to the system clock
+            frequency adjustment state machine.</span></span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          9 &nbsp;&nbsp; — Show some status information about the
+          bootstrap flash memory.</span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          10&nbsp; — Scan the Marble I<sup>2</sup>C</span><span
+          style="font-family: Times New Roman, Times, serif;"> buses and
+          show the devices attached to each.<br>
+        </span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          12&nbsp; — Enable messages related to the Marble ethernet
+          interface.<br>
+        </span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          16&nbsp; — Dump the register contents of the AD7768 ADC chips.<br>
+        </span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Bit
+          17&nbsp; — Enable a scan of the system clock VCXO on startup.</span></li>
+    </ul>
+    <dl style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);">
+      <dd><span style="font-family: Times New Roman, Times, serif;">If
+          the optional</span><span style="font-family: Times New Roman,
+          Times, serif;"><span class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;">-s</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;">argument
+          is present the value of the debugging flags used at FPGA
+          startup will be set or shown.</span><span style="font-family:
+          Times New Roman, Times, serif;"><br>
+        </span></dd>
+    </dl>
+    <dl style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);">
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><span style="font-weight: bold;">fmon<br>
+            </span></span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;">Show
+          the value of the frequency counters monitoring various FPGA
+          clocks.&nbsp; Values shown with only 3 fractional digits
+          indicate that the FPGA is not receiving a 'pulse per second'
+          marker directly or indirectly from the facility timing system
+          and that the accuracy of the measurement is somewhat suspect.</span><span
+          style="font-family: Times New Roman, Times, serif;"><br>
+        </span></dd>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><br>
+        </span></dt>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><span style="font-weight: bold;">help
+
+
+              or ?&nbsp;<span class="Apple-converted-space">&nbsp;</span><br>
+            </span></span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;">Show
+          a table of commands.</span></dd>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><br>
+        </span></dt>
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"><span style="font-weight: bold;">log<br>
+            </span></span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;">Replay
+
+
+          the console startup messages.</span><span style="font-family:
+          Times New Roman, Times, serif;"><br>
+        </span></dd>
+    </dl>
+    <dl style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);">
+      <dt><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;">reg [r] [n]</span></span></dt>
+      <dd><span style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;"></span></span><span
+          style="font-family: Times New Roman, Times, serif;">Show the
+          contents of</span><span style="font-family: Times New Roman,
+          Times, serif;"><span class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;">n</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;">(default
+          1) general-purpose I/O registers starting at register</span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-weight: bold;">r</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            class="Apple-converted-space">&nbsp;</span></span><span
+          style="font-family: Times New Roman, Times, serif;">(default
+          0).</span></dd>
+    </dl>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;"><br>
+      </span></p>
+    <h2 style="font-style: normal; font-variant-caps: normal;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;
+      caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);"><span
+        style="font-family: Times New Roman, Times, serif;">TFTP Server</span></h2>
+    <p style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);"><span style="font-family: Times New Roman, Times, serif;">Files
+
+
+        can be uploaded to, or downloaded from, the Marble bootstrap
+        flash memory using the TFTP server in the FPGA application.</span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          class="Apple-converted-space"></span></span><span
+        style="font-family: Times New Roman, Times, serif;"><br>
+      </span></p>
+    <p style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);"><span style="font-family: Times New Roman, Times, serif;">File
+
+
+        transfers must be performed in 'octet' (binary) mode.&nbsp; The
+        TFTP server is limited to a single active transfer at a
+        time.&nbsp; Don't attempt simultaneous transfers from multiple
+        clients.</span><span style="font-family: Times New Roman, Times,
+        serif;"><br>
+      </span></p>
+    <p style="font-style: normal; font-variant-caps: normal;
+      font-weight: normal; letter-spacing: normal; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
+      0);"><span style="font-family: Times New Roman, Times, serif;">The
+        FPGA firmware and executable image are contained in a single
+        file.&nbsp; By default the FPGA will attempt to load everything
+        from the default image named BOOT.bin in the flash
+        memory.&nbsp;&nbsp; See the</span><span style="font-family:
+        Times New Roman, Times, serif;"><span
+          class="Apple-converted-space">&nbsp;</span></span><span
+        style="font-family: Times New Roman, Times, serif;"><a
+          moz-do-not-send="true" href="#cmdBOOT">boot</a></span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          class="Apple-converted-space">&nbsp;</span></span><span
+        style="font-family: Times New Roman, Times, serif;">command
+        documentation for instructions on how to boot the alternate
+        image.&nbsp; To ensure that an update does not result in an
+        unresponsive ('bricked') system the following procedure should
+        be followed:</span><span style="font-family: Times New Roman,
+        Times, serif;"><br>
+      </span></p>
+    <ul style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;">
+      <li><span style="font-family: Times New Roman, Times, serif;">Transfer
+
+
+          the new image from the host machine to the alternate file
+          (BOOT_A.bin).</span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Issue
+
+
+          the console command to boot the alternate image:</span><span
+          style="font-family: Times New Roman, Times, serif;"><br>
+        </span><span style="font-family: Times New Roman, Times, serif;"><font
+            size="+1">&nbsp;&nbsp;&nbsp; boot -a</font></span><span
+          style="font-family: Times New Roman, Times, serif;"><br>
+        </span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">If
+          the boot fails, power cycle the FPGA to revert to the default
+          image (BOOT.BIN).</span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">If
+          the boot succeeds, transfer the new image again, but this time
+          to the standard location (BOOT.BIN).</span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">Issue
+
+
+          the console command to boot the default image:</span><span
+          style="font-family: Times New Roman, Times, serif;"><br>
+        </span><span style="font-family: Times New Roman, Times, serif;"><font
+            size="+1">&nbsp;&nbsp;&nbsp; boot</font></span></li>
+    </ul>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+          font-size: medium; font-style: normal; font-variant-caps:
+          normal; font-weight: 400; letter-spacing: normal; text-align:
+          start; text-indent: 0px; text-transform: none; white-space:
+          normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+          text-decoration: none; float: none; display: inline
+          !important;">If things go wrong and you end up with a bricked
+          system the only recourse is to use the Vivado Hardware Manager
+          to download the image through the USB/JTAG adapter.<br>
+        </span></span></p>
+  </body>
+</html>
