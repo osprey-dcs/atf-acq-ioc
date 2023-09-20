@@ -25,7 +25,7 @@ file "perSysmonAI.template" {
   { \$(P),\$(R),\$(PORT),   "QSFP:Temperature",  40,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP temperature" }
   { \$(P),\$(R),\$(PORT),           "QSFP:Vcc",  44,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP Vcc" }
   { \$(P),\$(R),\$(PORT),      "QSFP:RxPower1",  48,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 1 receiver power" }
-  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower2",  52,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 2 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower2",  52,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 2 receiver power" }
   { \$(P),\$(R),\$(PORT),      "QSFP:RxPower3",  56,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 receiver power" }
   { \$(P),\$(R),\$(PORT),      "QSFP:RxPower4",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 receiver power" }
 }
