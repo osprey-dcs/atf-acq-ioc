@@ -21,6 +21,70 @@ record(bo, "$(P)$(R)sysmonTrig_") {
 }
 
 #
+# Sampling rate
+#
+record(mbbo, "$(P)$(R)ACQ:rate") {
+    field(DESC, "Set acquisition speed")
+    field(ZRVL, "1")
+    field(ZRST, "250 kHz")
+    field(ONVL, "5")
+    field(ONST, "50 kHz")
+    field(TWVL, "25")
+    field(TWST, "10 kHz")
+    field(THVL, "250")
+    field(THST, "1 kHz")
+    field(VAL,  "0")
+    field(PINI, "YES")
+    field(FLNK, "$(P)$(R)ACQ:downsample_")
+}
+
+#
+# Downsampling factor
+#
+record(longout, "$(P)$(R)ACQ:downsample_") {
+    field(DESC, "Set downsampling factor")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 10")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(R)ACQ:rate.RVAL")
+    field(LOPR, "1")
+    field(HOPR, "1023")
+    field(DRVL, "1")
+    field(DRVH, "1023")
+    field(FLNK, "$(P)$(R)ACQ:alphaCMP_")
+}
+
+#
+# Compute downsampling filter alpha (first order IIR lowpass)
+# Place cutoff frequency at 0.4 of downsample rate
+#
+record(calc, "$(P)$(R)ACQ:alphaCMP_") {
+    field(DESC, "Compute downsampling filter alpha")
+    field(INPA, "$(P)$(R)ACQ:downsample_")
+    field(INPB, "-2.513274122871834") # -2 * PI * 0.4
+    field(CALC, "(A<=1)?1:(1-EXP(B/A))")
+    field(FLNK, "$(P)$(R)ACQ:alpha_")
+}
+
+#
+# Send downsampling filter alpha (first order IIR lowpass)
+#
+record(ao, "$(P)$(R)ACQ:alpha_") {
+    field(DESC, "Downsampling filter alpha")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 11")
+    field(OMSL, "closed_loop")
+    field(DOL,  "$(P)$(R)ACQ:alphaCMP_")
+    field(LINR, "SLOPE")
+    field(ESLO, "7.62939453125e-06")  # 1 / (2^17)
+    field(LOPR, "0.0001")
+    field(HOPR, "1")
+    field(DRVL, "0.0001")
+    field(DRVH, "1")
+    field(FLNK, "$(P)$(R)send_")
+}
+
+#
 # Reboot FPGA
 #
 record(longout, "$(P)$(R)FPGA:reboot") {

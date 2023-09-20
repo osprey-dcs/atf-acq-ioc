@@ -22,9 +22,17 @@ file "perSysmonAI.template" {
   { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
   { \$(P),\$(R),\$(PORT),        "MARBLE:P12I",  32,       "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
   { \$(P),\$(R),\$(PORT),        "MARBLE:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+  { \$(P),\$(R),\$(PORT),   "QSFP:Temperature",  40,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP temperature" }
+  { \$(P),\$(R),\$(PORT),           "QSFP:Vcc",  44,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP Vcc" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower1",  48,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 1 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower2",  52,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 2 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower3",  56,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower4",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 receiver power" }
 }
 
 file "perSysmonLI.template" {
   pattern { P R,PORT,                 NAME, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
-  { \$(P),\$(R),\$(PORT),     "ACQ:status",  40,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:status",  64,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:active",  68,        "", -2147483648, -2147483648,  2147483647,  2147483647, "Active ADC channels" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:clkPLL",  72,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
 }

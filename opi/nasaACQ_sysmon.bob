@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-09-11 14:50:50 by eric-->
+<!--Saved on 2023-09-18 13:00:35 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -351,161 +351,289 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group</name>
-    <x>60</x>
-    <y>660</y>
-    <width>205</width>
-    <height>170</height>
+    <x>9</x>
+    <y>570</y>
+    <width>301</width>
+    <height>95</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label</name>
+      <text>Active Channels</text>
+      <x>1</x>
+      <width>300</width>
+      <height>25</height>
+      <font>
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor</name>
+      <pv_name>$(P)$(R)ACQ:active</pv_name>
+      <x>155</x>
+      <y>65</y>
+      <width>145</width>
+      <height>30</height>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>0</text>
+        <text>1</text>
+        <text>2</text>
+        <text>3</text>
+        <text>4</text>
+        <text>5</text>
+        <text>6</text>
+        <text>7</text>
+      </labels>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_1</name>
+      <pv_name>$(P)$(R)ACQ:active</pv_name>
+      <y>66</y>
+      <width>145</width>
+      <height>29</height>
+      <startBit>8</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>8</text>
+        <text>9</text>
+        <text>10</text>
+        <text>11</text>
+        <text>12</text>
+        <text>13</text>
+        <text>14</text>
+        <text>15</text>
+      </labels>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_2</name>
+      <pv_name>$(P)$(R)ACQ:active</pv_name>
+      <x>155</x>
+      <y>28</y>
+      <width>145</width>
+      <height>30</height>
+      <startBit>16</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>16</text>
+        <text>17</text>
+        <text>18</text>
+        <text>19</text>
+        <text>20</text>
+        <text>21</text>
+        <text>22</text>
+        <text>23</text>
+      </labels>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_3</name>
+      <pv_name>$(P)$(R)ACQ:active</pv_name>
+      <y>29</y>
+      <width>145</width>
+      <height>29</height>
+      <startBit>24</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>24</text>
+        <text>25</text>
+        <text>26</text>
+        <text>27</text>
+        <text>28</text>
+        <text>29</text>
+        <text>30</text>
+        <text>31</text>
+      </labels>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>89</x>
+    <y>685</y>
+    <width>126</width>
+    <height>57</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)$(R)ACQ:rate</pv_name>
+      <y>27</y>
+      <width>126</width>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Sampling Rate</text>
+      <width>126</width>
+      <height>21</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>MarbleP12mon_1</name>
+    <x>9</x>
+    <y>390</y>
+    <width>255</width>
+    <height>145</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <width>205</width>
-      <height>20</height>
+      <name>INA219val_3</name>
+      <y>50</y>
+      <width>255</width>
+      <height>15</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_32</name>
+        <pv_name>$(P)$(R)QSFP:RxPower1</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_4</name>
+        <text>QSFP Rx1 Power</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_13</name>
+      <y>75</y>
+      <width>255</width>
+      <height>15</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update_37</name>
-        <pv_name>$(P)$(R)Cmd0RetryCount</pv_name>
-        <x>105</x>
+        <pv_name>$(P)$(R)QSFP:RxPower2</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_14</name>
-        <text>0 Retries</text>
+        <text>QSFP Rx2 Power</text>
+        <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <y>25</y>
-      <width>205</width>
+      <name>INA219val_15</name>
+      <y>100</y>
+      <width>255</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update_39</name>
-        <pv_name>$(P)$(R)Cmd1RetryCount</pv_name>
-        <x>105</x>
+        <name>Text Update_38</name>
+        <pv_name>$(P)$(R)QSFP:RxPower3</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_16</name>
-        <text>1 Retry</text>
+        <text>QSFP Rx3 Power</text>
+        <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_3</name>
-      <y>50</y>
-      <width>205</width>
+      <name>INA219val_17</name>
+      <y>125</y>
+      <width>255</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update_40</name>
-        <pv_name>$(P)$(R)Cmd2RetryCount</pv_name>
-        <x>105</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_17</name>
-        <text>2 Retries</text>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_5</name>
-      <y>75</y>
-      <width>205</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_41</name>
-        <pv_name>$(P)$(R)Cmd3RetryCount</pv_name>
-        <x>105</x>
+        <name>Text Update_39</name>
+        <pv_name>$(P)$(R)QSFP:RxPower4</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_18</name>
-        <text>3 Retries</text>
+        <text>QSFP Rx4 Power</text>
+        <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_6</name>
-      <y>100</y>
-      <width>205</width>
+      <name>INA219val_19</name>
+      <width>255</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update_42</name>
-        <pv_name>$(P)$(R)Cmd4RetryCount</pv_name>
-        <x>105</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_19</name>
-        <text>4 Retries</text>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_7</name>
-      <y>125</y>
-      <width>205</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_43</name>
-        <pv_name>$(P)$(R)Cmd5RetryCount</pv_name>
-        <x>105</x>
+        <name>Text Update_40</name>
+        <pv_name>$(P)$(R)QSFP:Temperature</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_20</name>
-        <text>5 Retries</text>
+        <text>QSFP Temp</text>
+        <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
     <widget type="group" version="2.0.0">
-      <name>Group_8</name>
-      <y>150</y>
-      <width>205</width>
+      <name>INA219val_21</name>
+      <y>25</y>
+      <width>255</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
-        <name>Text Update_44</name>
-        <pv_name>$(P)$(R)CmdFailedCount</pv_name>
-        <x>105</x>
+        <name>Text Update_41</name>
+        <pv_name>$(P)$(R)QSFP:Vcc</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
       </widget>
       <widget type="label" version="2.0.0">
-        <name>INA219val_21</name>
-        <text>Failed</text>
+        <name>INA219val_22</name>
+        <text>QSFP Vcc</text>
+        <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
