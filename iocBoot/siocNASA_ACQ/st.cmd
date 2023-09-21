@@ -15,13 +15,19 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 
 ###############################################################################
 # Set up connections
-createPSCUDP("NASA_ACQ", "$(NASA_ACQ_FPGA_IP)", 54398, 1)
+createPSCUDP("NASA_CTRL", "$(NASA_ACQ_FPGA_IP)", 54398, 1)
+createPSCUDPFast("NASA_ACQ", "$(NASA_ACQ_FPGA_IP)", 54399, 0)
+var PSCDebug 2
+var PSCUDPDSyncSizeMB 20
 
 ###############################################################################
 # Load record instances
-dbLoadRecords("db/nasaAcqSup.db", "P=$(P),R=$(R),PORT=NASA_ACQ")
+dbLoadRecords("db/nasaAcqSup.db", "P=$(P),R=$(R),PORT=NASA_CTRL")
+dbLoadRecords("db/pscudpfast.db", "P=$(P)$(R),NAME=NASA_ACQ")
 
 ###############################################################################
 # Start IOC
 cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
+dbpf "$(P)$(R)FileDir-SP" "."
+dbpf "$(P)$(R)FileBase-SP" "FOO"

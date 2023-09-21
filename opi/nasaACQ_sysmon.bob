@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-09-18 13:00:35 by eric-->
+<!--Saved on 2023-09-20 16:44:13 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -465,8 +465,8 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group</name>
-    <x>89</x>
-    <y>685</y>
+    <x>16</x>
+    <y>680</y>
     <width>126</width>
     <height>57</height>
     <style>3</style>
@@ -637,6 +637,78 @@
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>152</x>
+    <y>680</y>
+    <width>198</width>
+    <height>53</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Acquisition</text>
+      <width>198</width>
+      <height>21</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_16</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(R)ACQ:enable</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Disable</text>
+      <y>28</y>
+      <width>80</width>
+      <height>25</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_17</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)$(R)ACQ:enable</pv_name>
+          <value>1</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Enable</text>
+      <x>87</x>
+      <y>28</y>
+      <width>80</width>
+      <height>25</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P)$(R)ACQ:status</pv_name>
+      <bit>31</bit>
+      <x>173</x>
+      <y>28</y>
+      <width>25</width>
+      <height>25</height>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
     </widget>
   </widget>
 </display>
