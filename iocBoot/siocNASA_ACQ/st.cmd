@@ -33,3 +33,4 @@ cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 dbpf "$(P)FileDir-SP" "."
 dbpf "$(P)FileBase-SP" "FOO"
+dbpf "$(P)Record-Sel" 1
