@@ -180,23 +180,23 @@
       0);">
       <dt><span style="font-family: Times New Roman, Times, serif;"><span
             style="font-weight: bold;"><span style="font-weight: bold;">ntp
-              [uuu.vvv.www.xxx.yyy[/nn]] [aaa.bbb.ccc.ddd]<br>
+              [vvv.www.xxx.yyy[/nn]] [aaa.bbb.ccc.ddd]<br>
               ntp 0<span class="Apple-converted-space"></span><br>
             </span></span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">The
-          FPGA firmwire include an MRF-compatible event generator
-          capable of setting its initial time from an NTP server and
-          then maintaining it using a hardware pulse-per-second
-          signal.&nbsp; To enable this, use this command with the IPv4
-          address of the NTP server (uuu.vvv.www.xxx.yyy) as an
-          argument.&nbsp; If the server is not on the same network as
-          the FPGA you must also specify the IPv4 address of the gateway
-          machine (aaa.bbb.ccc.ddd) and, otptionally, the number of bits
-          in the network address (default 24 - a class C network).&nbsp;
-          To disable the event generator, set the address of the NTP
-          server to 0.&nbsp; Issuing the <span style="font-weight:
-            bold;">ntp</span> command with no arguments will print the
-          current settings.<br>
+          FPGA firmware includes an MRF-compatible event generator which
+          obtains its initial time from an NTP server and then maintains
+          it using a hardware pulse-per-second signal.&nbsp; To enable
+          the event generator use this command with the IPv4 address of
+          the NTP server (vvv.www.xxx.yyy) as an argument.&nbsp; If the
+          server is not on the same network as the FPGA you must also
+          specify the IPv4 address of the gateway machine
+          (aaa.bbb.ccc.ddd) and, optionally, the number of bits in the
+          network address (default 24 – a class C network).&nbsp; To
+          disable the event generator, set the address of the NTP server
+          to 0.<br>
+          Issuing the <span style="font-weight: bold;">ntp</span>
+          command with no arguments displays the current settings.<br>
         </span></dd>
     </dl>
     <dl style="font-style: normal; font-variant-caps: normal;
