@@ -17,7 +17,7 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 # Set up connections
 createPSCUDP("NASA_CTRL", "$(NASA_ACQ_FPGA_IP)", 54398, 1)
 createPSCUDPFast("NASA_ACQ", "$(NASA_ACQ_FPGA_IP)", 54399, 0)
-var PSCDebug 2
+var PSCDebug 0
 var PSCUDPDSyncSizeMB 20
 
 ###############################################################################

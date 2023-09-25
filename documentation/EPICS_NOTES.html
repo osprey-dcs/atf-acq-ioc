@@ -17,9 +17,6 @@
           the R macro to the acquisition node number followed by a
           colon.<br>
         </span></span></p>
-    <span style="font-family: Times New Roman, Times, serif;"><span
-        style="font-family: Times New Roman, Times, serif;"></span></span><span
-      style="font-family: Times New Roman, Times, serif;"></span><br>
     <h2><span style="font-family: Times New Roman, Times, serif;">System
         Monitoring <br>
       </span></h2>
@@ -27,12 +24,13 @@
       the sysmonTrig_ record causes the IOC to read back a set of system
       monitor values and push them into the records described in the
       following table.</span><br>
-    <div style="margin-left: 40px;"><span style="font-family: Times New
+    <div style="margin-left: 80px;"><span style="font-family: Times New
         Roman, Times, serif;"><span style="font-family: Times New Roman,
           Times, serif;"> </span></span><br>
     </div>
-    <table style=" text-align: left; width: 80%;" cellspacing="2"
-      cellpadding="2" border="1">
+    <div style="margin-left: 40px;"> </div>
+    <table style="text-align: left; width: 80%; margin-left: 40px;"
+      cellspacing="2" cellpadding="2" border="1">
       <tbody>
         <tr>
           <td style="text-align: center;"><span style="font-weight:
@@ -293,12 +291,125 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
         </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:DCcoupled</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Bitmap of channel
+              coupling.&nbsp; A 1 in a given bit position indicates that
+              the channel is DC-coupled&nbsp; A 0 indicates
+              AC-coupling.&nbsp; Least significant bit corresponds to
+              ADC channel 0.</span><span style="font-family: Times New
+              Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:clkPLL</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">indicatesSystem clock alignment
+              status register.&nbsp; See Verilog code for details.<br>
+            </span></td>
+        </tr>
       </tbody>
     </table>
-    <div style="margin-left: 40px;"> <span style="font-family: Times
+    <div style="margin-left: 40px;"> </div>
+    <div style="margin-left: 80px;"> <span style="font-family: Times
         New Roman, Times, serif;"><span style="font-family: Times New
           Roman, Times, serif;"></span></span><span style="font-family:
         Times New Roman, Times, serif;"></span> </div>
+    <div style="margin-left: 40px;"> </div>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Controls</span></h2>
+    <div style="margin-left: 40px;"> </div>
+    <table style="text-align: left; width: 80%; margin-left: 40px;"
+      cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Name</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Type</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family: Times
+                New Roman, Times, serif;">Description</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:enable</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">bo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Enable/disable (1/0) data
+              acquisition.</span><span style="font-family: Times New
+              Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:rate</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">mbbo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Set the sampling rate.&nbsp; The
+              sampling rate is 250 kHz divided by the menu item RVAL.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:coupling:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">bo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Set the input coupling for
+              channel <span style="font-style: italic;">nn</span> to DC
+              or AC (1/0).<br>
+            </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-left: 40px;"> </div>
+    <div style="margin-left: 80px;"> <span style="font-family: Times
+        New Roman, Times, serif;"><span style="font-family: Times New
+          Roman, Times, serif;"></span></span><span style="font-family:
+        Times New Roman, Times, serif;"></span> </div>
+    <div style="margin-left: 40px;"> </div>
+    <h2 style="margin-left: 40px;"><span style="font-family: Times New
+        Roman, Times, serif;"></span></h2>
+    <div style="margin-left: 40px;">
+    </div>
     <h2>FPGA Reboot<br>
     </h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Writing

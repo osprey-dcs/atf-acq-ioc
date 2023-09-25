@@ -1,0 +1,8 @@
+record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
+    field(DESC, "Set input coupling for channel $(N)")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16951 1$(N)")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+    field(FLNK, "$(P)$(R)send_")
+}

@@ -33,6 +33,43 @@ file "perSysmonAI.template" {
 file "perSysmonLI.template" {
   pattern { P R,PORT,                 NAME, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
   { \$(P),\$(R),\$(PORT),     "ACQ:status",  64,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
-  { \$(P),\$(R),\$(PORT),     "ACQ:active",  68,        "", -2147483648, -2147483648,  2147483647,  2147483647, "Active ADC channels" }
-  { \$(P),\$(R),\$(PORT),     "ACQ:clkPLL",  72,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:active",  68,        "",           0,           0,           0,           0, "Active ADC channels" }
+  { \$(P),\$(R),\$(PORT),  "ACQ:DCcoupled",  72,        "",           0,           0,           0,           0, "Active ADC channels" }
+  { \$(P),\$(R),\$(PORT),     "ACQ:clkPLL",  76,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
+}
+
+file "perChannel.template" {
+  pattern { P R,PORT,       N  }
+  { \$(P),\$(R),\$(PORT),  00 }
+  { \$(P),\$(R),\$(PORT),  01 }
+  { \$(P),\$(R),\$(PORT),  02 }
+  { \$(P),\$(R),\$(PORT),  03 }
+  { \$(P),\$(R),\$(PORT),  04 }
+  { \$(P),\$(R),\$(PORT),  05 }
+  { \$(P),\$(R),\$(PORT),  06 }
+  { \$(P),\$(R),\$(PORT),  07 }
+  { \$(P),\$(R),\$(PORT),  08 }
+  { \$(P),\$(R),\$(PORT),  09 }
+  { \$(P),\$(R),\$(PORT),  10 }
+  { \$(P),\$(R),\$(PORT),  11 }
+  { \$(P),\$(R),\$(PORT),  12 }
+  { \$(P),\$(R),\$(PORT),  13 }
+  { \$(P),\$(R),\$(PORT),  14 }
+  { \$(P),\$(R),\$(PORT),  15 }
+  { \$(P),\$(R),\$(PORT),  16 }
+  { \$(P),\$(R),\$(PORT),  17 }
+  { \$(P),\$(R),\$(PORT),  18 }
+  { \$(P),\$(R),\$(PORT),  19 }
+  { \$(P),\$(R),\$(PORT),  20 }
+  { \$(P),\$(R),\$(PORT),  21 }
+  { \$(P),\$(R),\$(PORT),  22 }
+  { \$(P),\$(R),\$(PORT),  23 }
+  { \$(P),\$(R),\$(PORT),  24 }
+  { \$(P),\$(R),\$(PORT),  25 }
+  { \$(P),\$(R),\$(PORT),  26 }
+  { \$(P),\$(R),\$(PORT),  27 }
+  { \$(P),\$(R),\$(PORT),  28 }
+  { \$(P),\$(R),\$(PORT),  29 }
+  { \$(P),\$(R),\$(PORT),  30 }
+  { \$(P),\$(R),\$(PORT),  31 }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-09-20 16:44:13 by eric-->
+<!--Saved on 2023-09-25 13:08:00 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -92,8 +92,8 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>FPGAmon</name>
-    <x>9</x>
-    <y>100</y>
+    <x>363</x>
+    <y>110</y>
     <width>255</width>
     <height>95</height>
     <style>3</style>
@@ -205,8 +205,8 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon</name>
-    <x>9</x>
-    <y>220</y>
+    <x>363</x>
+    <y>230</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -351,8 +351,8 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group</name>
-    <x>9</x>
-    <y>570</y>
+    <x>35</x>
+    <y>273</y>
     <width>301</width>
     <height>95</height>
     <style>3</style>
@@ -391,6 +391,7 @@
         <text>6</text>
         <text>7</text>
       </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_1</name>
@@ -414,6 +415,7 @@
         <text>14</text>
         <text>15</text>
       </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_2</name>
@@ -438,6 +440,7 @@
         <text>22</text>
         <text>23</text>
       </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
     <widget type="byte_monitor" version="2.0.0">
       <name>Byte Monitor_3</name>
@@ -461,42 +464,13 @@
         <text>30</text>
         <text>31</text>
       </labels>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <x>16</x>
-    <y>680</y>
-    <width>126</width>
-    <height>57</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="combo" version="2.0.0">
-      <name>Combo Box</name>
-      <pv_name>$(P)$(R)ACQ:rate</pv_name>
-      <y>27</y>
-      <width>126</width>
-      <font>
-        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-        </font>
-      </font>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>Label_1</name>
-      <text>Sampling Rate</text>
-      <width>126</width>
-      <height>21</height>
-      <font>
-        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
-        </font>
-      </font>
-      <horizontal_alignment>1</horizontal_alignment>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon_1</name>
-    <x>9</x>
-    <y>390</y>
+    <x>363</x>
+    <y>400</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -641,8 +615,8 @@
   </widget>
   <widget type="group" version="2.0.0">
     <name>Group</name>
-    <x>152</x>
-    <y>680</y>
+    <x>97</x>
+    <y>110</y>
     <width>198</width>
     <height>53</height>
     <style>3</style>
@@ -709,6 +683,154 @@
         <color name="Button_Background" red="210" green="210" blue="210">
         </color>
       </off_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>131</x>
+    <y>183</y>
+    <width>126</width>
+    <height>57</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)$(R)ACQ:rate</pv_name>
+      <y>27</y>
+      <width>126</width>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Sampling Rate</text>
+      <width>126</width>
+      <height>21</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_1</name>
+    <x>35</x>
+    <y>400</y>
+    <width>301</width>
+    <height>95</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_3</name>
+      <text>DC-Coupled Channels</text>
+      <x>1</x>
+      <width>300</width>
+      <height>25</height>
+      <font>
+        <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_4</name>
+      <pv_name>$(P)$(R)ACQ:DCcoupled</pv_name>
+      <x>155</x>
+      <y>65</y>
+      <width>145</width>
+      <height>30</height>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>0</text>
+        <text>1</text>
+        <text>2</text>
+        <text>3</text>
+        <text>4</text>
+        <text>5</text>
+        <text>6</text>
+        <text>7</text>
+      </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_5</name>
+      <pv_name>$(P)$(R)ACQ:DCcoupled</pv_name>
+      <y>66</y>
+      <width>145</width>
+      <height>29</height>
+      <startBit>8</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>8</text>
+        <text>9</text>
+        <text>10</text>
+        <text>11</text>
+        <text>12</text>
+        <text>13</text>
+        <text>14</text>
+        <text>15</text>
+      </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_6</name>
+      <pv_name>$(P)$(R)ACQ:DCcoupled</pv_name>
+      <x>155</x>
+      <y>28</y>
+      <width>145</width>
+      <height>30</height>
+      <startBit>16</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>16</text>
+        <text>17</text>
+        <text>18</text>
+        <text>19</text>
+        <text>20</text>
+        <text>21</text>
+        <text>22</text>
+        <text>23</text>
+      </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+    <widget type="byte_monitor" version="2.0.0">
+      <name>Byte Monitor_7</name>
+      <pv_name>$(P)$(R)ACQ:DCcoupled</pv_name>
+      <y>29</y>
+      <width>145</width>
+      <height>29</height>
+      <startBit>24</startBit>
+      <square>true</square>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+      <labels>
+        <text>24</text>
+        <text>25</text>
+        <text>26</text>
+        <text>27</text>
+        <text>28</text>
+        <text>29</text>
+        <text>30</text>
+        <text>31</text>
+      </labels>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
   </widget>
 </display>
