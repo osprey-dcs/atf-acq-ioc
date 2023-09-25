@@ -1,6 +1,11 @@
+file "perSystem.template" {
+  pattern { P } { \$(P) }
+}
+
 file "perFPGA.template" {
-  pattern { P R,PORT,   NRETRY }
-  { \$(P),\$(R),\$(PORT), 6 }
+  pattern { P R,PORT }
+  { \$(P),"00:",\$(PORT)00, }
+# And repeat 32 times, one for each node
 }
 
 #file "perBuildDate.template"
@@ -12,64 +17,67 @@ file "perFPGA.template" {
 #
 file "perSysmonAI.template" {
   pattern { P R,PORT,                     NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
-  { \$(P),\$(R),\$(PORT),   "FPGA:Temperature",   0,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
-  { \$(P),\$(R),\$(PORT),        "FPGA:VccINT",   4,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
-  { \$(P),\$(R),\$(PORT),        "FPGA:VccAUX",   8,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
-  { \$(P),\$(R),\$(PORT),         "FPGA:VBRAM",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
-  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12I",  16,       "A",     121.951e-6,       0,    2,  0.10,  0.15,   0.9,   1.0, "INA219 U17 current" }
-  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12V",  20,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
-  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
-  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
-  { \$(P),\$(R),\$(PORT),        "MARBLE:P12I",  32,       "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
-  { \$(P),\$(R),\$(PORT),        "MARBLE:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
-  { \$(P),\$(R),\$(PORT),   "QSFP:Temperature",  40,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP temperature" }
-  { \$(P),\$(R),\$(PORT),           "QSFP:Vcc",  44,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP Vcc" }
-  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower1",  48,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 1 receiver power" }
-  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower2",  52,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 2 receiver power" }
-  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower3",  56,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 receiver power" }
-  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower4",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 receiver power" }
+  { \$(P),"00:",\$(PORT)00, "FPGA:Temperature",   0,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
+  { \$(P),"00:",\$(PORT)00,      "FPGA:VccINT",   4,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
+  { \$(P),"00:",\$(PORT)00,      "FPGA:VccAUX",   8,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
+  { \$(P),"00:",\$(PORT)00,       "FPGA:VBRAM",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
+  { \$(P),"00:",\$(PORT)00, "MARBLE:FMC1:P12I",  16,       "A",     121.951e-6,       0,    2,  0.10,  0.15,   0.9,   1.0, "INA219 U17 current" }
+  { \$(P),"00:",\$(PORT)00, "MARBLE:FMC1:P12V",  20,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
+  { \$(P),"00:",\$(PORT)00, "MARBLE:FMC2:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
+  { \$(P),"00:",\$(PORT)00, "MARBLE:FMC2:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
+  { \$(P),"00:",\$(PORT)00,      "MARBLE:P12I",  32,       "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
+  { \$(P),"00:",\$(PORT)00,      "MARBLE:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+  { \$(P),"00:",\$(PORT)00, "QSFP:Temperature",  40,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP temperature" }
+  { \$(P),"00:",\$(PORT)00,         "QSFP:Vcc",  44,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP Vcc" }
+  { \$(P),"00:",\$(PORT)00,    "QSFP:RxPower1",  48,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 1 receiver power" }
+  { \$(P),"00:",\$(PORT)00,    "QSFP:RxPower2",  52,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 2 receiver power" }
+  { \$(P),"00:",\$(PORT)00,    "QSFP:RxPower3",  56,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 receiver power" }
+  { \$(P),"00:",\$(PORT)00,    "QSFP:RxPower4",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 receiver power" }
+# And repeat 32 times, one for each node
 }
 
 file "perSysmonLI.template" {
   pattern { P R,PORT,                 NAME, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
-  { \$(P),\$(R),\$(PORT),     "ACQ:status",  64,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
-  { \$(P),\$(R),\$(PORT),     "ACQ:active",  68,        "",           0,           0,           0,           0, "Active ADC channels" }
-  { \$(P),\$(R),\$(PORT),  "ACQ:DCcoupled",  72,        "",           0,           0,           0,           0, "Active ADC channels" }
-  { \$(P),\$(R),\$(PORT),     "ACQ:clkPLL",  76,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
+  { \$(P),"00:",\$(PORT)00,   "ACQ:status",  64,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
+  { \$(P),"00:",\$(PORT)00,   "ACQ:active",  68,        "",           0,           0,           0,           0, "Active ADC channels" }
+  { \$(P),"00:",\$(PORT)00,"ACQ:DCcoupled",  72,        "",           0,           0,           0,           0, "Active ADC channels" }
+  { \$(P),"00:",\$(PORT)00,   "ACQ:clkPLL",  76,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
+# And repeat 32 times, one for each node
 }
 
 file "perChannel.template" {
-  pattern { P R,PORT,       N  }
-  { \$(P),\$(R),\$(PORT),  00 }
-  { \$(P),\$(R),\$(PORT),  01 }
-  { \$(P),\$(R),\$(PORT),  02 }
-  { \$(P),\$(R),\$(PORT),  03 }
-  { \$(P),\$(R),\$(PORT),  04 }
-  { \$(P),\$(R),\$(PORT),  05 }
-  { \$(P),\$(R),\$(PORT),  06 }
-  { \$(P),\$(R),\$(PORT),  07 }
-  { \$(P),\$(R),\$(PORT),  08 }
-  { \$(P),\$(R),\$(PORT),  09 }
-  { \$(P),\$(R),\$(PORT),  10 }
-  { \$(P),\$(R),\$(PORT),  11 }
-  { \$(P),\$(R),\$(PORT),  12 }
-  { \$(P),\$(R),\$(PORT),  13 }
-  { \$(P),\$(R),\$(PORT),  14 }
-  { \$(P),\$(R),\$(PORT),  15 }
-  { \$(P),\$(R),\$(PORT),  16 }
-  { \$(P),\$(R),\$(PORT),  17 }
-  { \$(P),\$(R),\$(PORT),  18 }
-  { \$(P),\$(R),\$(PORT),  19 }
-  { \$(P),\$(R),\$(PORT),  20 }
-  { \$(P),\$(R),\$(PORT),  21 }
-  { \$(P),\$(R),\$(PORT),  22 }
-  { \$(P),\$(R),\$(PORT),  23 }
-  { \$(P),\$(R),\$(PORT),  24 }
-  { \$(P),\$(R),\$(PORT),  25 }
-  { \$(P),\$(R),\$(PORT),  26 }
-  { \$(P),\$(R),\$(PORT),  27 }
-  { \$(P),\$(R),\$(PORT),  28 }
-  { \$(P),\$(R),\$(PORT),  29 }
-  { \$(P),\$(R),\$(PORT),  30 }
-  { \$(P),\$(R),\$(PORT),  31 }
+  pattern { P R,PORT,        N  }
+  { \$(P),"00:",\$(PORT)00, 00 }
+  { \$(P),"00:",\$(PORT)00, 01 }
+  { \$(P),"00:",\$(PORT)00, 02 }
+  { \$(P),"00:",\$(PORT)00, 03 }
+  { \$(P),"00:",\$(PORT)00, 04 }
+  { \$(P),"00:",\$(PORT)00, 05 }
+  { \$(P),"00:",\$(PORT)00, 06 }
+  { \$(P),"00:",\$(PORT)00, 07 }
+  { \$(P),"00:",\$(PORT)00, 08 }
+  { \$(P),"00:",\$(PORT)00, 09 }
+  { \$(P),"00:",\$(PORT)00, 10 }
+  { \$(P),"00:",\$(PORT)00, 11 }
+  { \$(P),"00:",\$(PORT)00, 12 }
+  { \$(P),"00:",\$(PORT)00, 13 }
+  { \$(P),"00:",\$(PORT)00, 14 }
+  { \$(P),"00:",\$(PORT)00, 15 }
+  { \$(P),"00:",\$(PORT)00, 16 }
+  { \$(P),"00:",\$(PORT)00, 17 }
+  { \$(P),"00:",\$(PORT)00, 18 }
+  { \$(P),"00:",\$(PORT)00, 19 }
+  { \$(P),"00:",\$(PORT)00, 20 }
+  { \$(P),"00:",\$(PORT)00, 21 }
+  { \$(P),"00:",\$(PORT)00, 22 }
+  { \$(P),"00:",\$(PORT)00, 23 }
+  { \$(P),"00:",\$(PORT)00, 24 }
+  { \$(P),"00:",\$(PORT)00, 25 }
+  { \$(P),"00:",\$(PORT)00, 26 }
+  { \$(P),"00:",\$(PORT)00, 27 }
+  { \$(P),"00:",\$(PORT)00, 28 }
+  { \$(P),"00:",\$(PORT)00, 29 }
+  { \$(P),"00:",\$(PORT)00, 30 }
+  { \$(P),"00:",\$(PORT)00, 31 }
+# And repeat 32 times, one for each node
 }

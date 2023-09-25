@@ -1,0 +1,23 @@
+#
+# Global acquisition control
+#
+record(bo, "$(P)ACQ:enable") {
+    field(DESC, "Enable/disable data acquisition")
+    field(PINI, "YES")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(mbbo, "$(P)ACQ:rate") {
+    field(DESC, "Set acquisition speed")
+    field(ZRVL, "1")
+    field(ZRST, "250 kHz")
+    field(ONVL, "5")
+    field(ONST, "50 kHz")
+    field(TWVL, "25")
+    field(TWST, "10 kHz")
+    field(THVL, "250")
+    field(THST, "1 kHz")
+    field(VAL,  "0")
+    field(PINI, "YES")
+}

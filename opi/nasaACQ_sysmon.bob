@@ -636,7 +636,7 @@
       <name>Action Button_16</name>
       <actions>
         <action type="write_pv">
-          <pv_name>$(P)$(R)ACQ:enable</pv_name>
+          <pv_name>$(P)ACQ:enable</pv_name>
           <value>0</value>
           <description>WritePV</description>
         </action>
@@ -655,7 +655,7 @@
       <name>Action Button_17</name>
       <actions>
         <action type="write_pv">
-          <pv_name>$(P)$(R)ACQ:enable</pv_name>
+          <pv_name>$(P)ACQ:enable</pv_name>
           <value>1</value>
           <description>WritePV</description>
         </action>
@@ -695,7 +695,7 @@
     <transparent>true</transparent>
     <widget type="combo" version="2.0.0">
       <name>Combo Box</name>
-      <pv_name>$(P)$(R)ACQ:rate</pv_name>
+      <pv_name>$(P)ACQ:rate</pv_name>
       <y>27</y>
       <width>126</width>
       <font>

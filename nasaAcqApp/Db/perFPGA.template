@@ -32,24 +32,9 @@ record(bo, "$(P)$(R)ACQ:enable") {
     field(PINI, "YES")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
+    field(OMSL, "closed_loop")
+    field(DOL,  "$(P)ACQ:enable CPP")
     field(FLNK, "$(P)$(R)send_")
-}
-#
-# Sampling rate
-#
-record(mbbo, "$(P)$(R)ACQ:rate") {
-    field(DESC, "Set acquisition speed")
-    field(ZRVL, "1")
-    field(ZRST, "250 kHz")
-    field(ONVL, "5")
-    field(ONST, "50 kHz")
-    field(TWVL, "25")
-    field(TWST, "10 kHz")
-    field(THVL, "250")
-    field(THST, "1 kHz")
-    field(VAL,  "0")
-    field(PINI, "YES")
-    field(FLNK, "$(P)$(R)ACQ:downsample_")
 }
 
 #
@@ -71,7 +56,7 @@ record(longout, "$(P)$(R)ACQ:downsample_") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 20")
     field(OMSL, "closed_loop")
-    field(DOL , "$(P)$(R)ACQ:rate.RVAL")
+    field(DOL , "$(P)ACQ:rate.RVAL CPP")
     field(LOPR, "1")
     field(HOPR, "1023")
     field(DRVL, "1")
