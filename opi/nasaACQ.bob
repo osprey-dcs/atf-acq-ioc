@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2023-09-25 17:11:01 by eric-->
+<display version="2.0.0">
+  <name>NASA Data Acquisition</name>
+  <x>9</x>
+  <y>88</y>
+  <width>615</width>
+  <height>840</height>
+  <background_color>
+    <color name="GLOBAL canvas" red="200" green="200" blue="200">
+    </color>
+  </background_color>
+  <grid_visible>false</grid_visible>
+  <widget type="label" version="2.0.0">
+    <name>EDM activeXTextClass</name>
+    <text>$(P)</text>
+    <y>2</y>
+    <width>300</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="black-14" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="green-19" red="0" green="128" blue="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>00:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 00</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>01:</R>
+        </macros>
+        <target>replace</target>
+        <description>FPGA 01</description>
+      </action>
+    </actions>
+    <text>More...</text>
+    <x>278</x>
+    <y>120</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>80</x>
+    <y>40</y>
+    <width>198</width>
+    <height>53</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>Label_2</name>
+      <text>Acquisition</text>
+      <width>198</width>
+      <height>21</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_16</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)ACQ:enable</pv_name>
+          <value>0</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Disable</text>
+      <y>28</y>
+      <width>80</width>
+      <height>25</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_17</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)ACQ:enable</pv_name>
+          <value>1</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Enable</text>
+      <x>87</x>
+      <y>28</y>
+      <width>80</width>
+      <height>25</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P)$(R)ACQ:status</pv_name>
+      <bit>31</bit>
+      <x>173</x>
+      <y>28</y>
+      <width>25</width>
+      <height>25</height>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>110</x>
+    <y>110</y>
+    <width>126</width>
+    <height>57</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="combo" version="2.0.0">
+      <name>Combo Box</name>
+      <pv_name>$(P)ACQ:rate</pv_name>
+      <y>27</y>
+      <width>126</width>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Sampling Rate</text>
+      <width>126</width>
+      <height>21</height>
+      <font>
+        <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+    </widget>
+  </widget>
+</display>
