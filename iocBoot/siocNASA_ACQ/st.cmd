@@ -31,6 +31,6 @@ dbLoadRecords("db/pscudpfast.db", "P=$(P),NAME=NASA_ACQ00")
 # Start IOC
 cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
-dbpf "$(P)FileDir-SP" "."
-dbpf "$(P)FileBase-SP" "FOO"
+dbpf "$(P)FileDir-SP" "/tmp"
+dbpf "$(P)FileBase-SP" "FOO-"
 dbpf "$(P)Record-Sel" 1
