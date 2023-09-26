@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-09-25 17:08:18 by eric-->
+<!--Saved on 2023-09-25 17:21:33 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -15,7 +15,7 @@
     <name>EDM activeXTextClass</name>
     <text>$(P)$(R)</text>
     <y>2</y>
-    <width>500</width>
+    <width>300</width>
     <height>21</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="18.0">
@@ -297,7 +297,7 @@
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <x>13</x>
-    <y>38</y>
+    <y>57</y>
     <width>301</width>
     <height>95</height>
     <style>3</style>
@@ -674,6 +674,35 @@
         <text>31</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>130</x>
+    <y>29</y>
+    <width>90</width>
+    <height>25</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P)$(R)ACQ:status</pv_name>
+      <bit>31</bit>
+      <x>65</x>
+      <width>25</width>
+      <height>25</height>
+      <off_color>
+        <color name="Button_Background" red="210" green="210" blue="210">
+        </color>
+      </off_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_1</name>
+      <text>Acquiring</text>
+      <y>3</y>
+      <width>59</width>
+      <height>16</height>
+      <auto_size>true</auto_size>
     </widget>
   </widget>
 </display>

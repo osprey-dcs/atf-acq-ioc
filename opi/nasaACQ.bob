@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-09-25 17:11:01 by eric-->
+<!--Saved on 2023-09-25 17:21:52 by eric-->
 <display version="2.0.0">
   <name>NASA Data Acquisition</name>
   <x>9</x>
@@ -117,8 +117,8 @@
     </widget>
     <widget type="led" version="2.0.0">
       <name>LED</name>
-      <pv_name>$(P)$(R)ACQ:status</pv_name>
-      <bit>31</bit>
+      <pv_name>$(P)ACQ:enable</pv_name>
+      <bit>0</bit>
       <x>173</x>
       <y>28</y>
       <width>25</width>
