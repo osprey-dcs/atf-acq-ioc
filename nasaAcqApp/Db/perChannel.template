@@ -8,13 +8,13 @@ record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
 }
 record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
     field(DESC, "Channel $(N) calibration offset")
-    field(DTYP, "PSC Single U32")
+    field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 2$(N)")
     field(FLNK, "$(P)$(R)send_")
 }
 record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(DESC, "Channel $(N) calibration gain")
-    field(DTYP, "PSC Single U32")
+    field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 3$(N)")
     field(FLNK, "$(P)$(R)send_")
 }
