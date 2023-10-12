@@ -15,7 +15,6 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 ###############################################################################
 # Set up connections
 var PSCDebug 0
-var PSCUDPDSyncSizeMB 20
 var PSCUDPMaxPacketSize 1500
 createPSCUDP("NASA_CTRL00", "$(NASA_ACQ_FPGA_IP)00", 54398, 1)
 # And repeat 32 times, one for each node
