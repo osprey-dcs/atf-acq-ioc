@@ -333,8 +333,8 @@
     <div style="margin-left: 40px;"> </div>
     <h2><span style="font-family: Times New Roman, Times, serif;">Controls</span></h2>
     <div style="margin-left: 40px;"> </div>
-    <table style="text-align: left; width: 80%; margin-left: 40px;"
-      cellspacing="2" cellpadding="2" border="1">
+    <table style=" text-align: left; width: 80%;" cellspacing="2"
+      cellpadding="2" border="1">
       <tbody>
         <tr>
           <td style="text-align: center;"><span style="font-weight:
@@ -398,6 +398,42 @@
               or AC (1/0).<br>
             </span></td>
         </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:ofst:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Set the AD7768 offset register
+              of channel 0 to VAL.&nbsp; If the channel gain setting is
+              at its nominal value of 0x555555 (</span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">ACQ:gain:<span
+                  style="font-style: italic;">nn</span>=0)</span>, an
+              LSB of offset register adjustment changes the digital
+              output by −4/3 LSBs.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:gain:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Set the AD7768 offset register
+              of channel 0 to VAL+0x555555.<br>
+            </span></td>
+        </tr>
       </tbody>
     </table>
     <div style="margin-left: 40px;"> </div>
@@ -408,8 +444,7 @@
     <div style="margin-left: 40px;"> </div>
     <h2 style="margin-left: 40px;"><span style="font-family: Times New
         Roman, Times, serif;"></span></h2>
-    <div style="margin-left: 40px;">
-    </div>
+    <div style="margin-left: 40px;"> </div>
     <h2>FPGA Reboot<br>
     </h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Writing
