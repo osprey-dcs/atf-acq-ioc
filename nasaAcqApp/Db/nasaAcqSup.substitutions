@@ -39,6 +39,13 @@ file "perSysmonAI.template" {
   { \$(P),"00:",\$(PORT)00,    "QSFP2:RxPower2",  76,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
   { \$(P),"00:",\$(PORT)00,    "QSFP2:RxPower3",  80,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
   { \$(P),"00:",\$(PORT)00,    "QSFP2:RxPower4",  84,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
+  { \$(P),\$(R),\$(PORT)00,       "Quartz:2P2V", 104,       "V", 1.220703125e-3,       0,    3, 2.046, 2.090, 2.310, 2.354, "Quartz 2.2V supply voltage (reg 1)" }
+  { \$(P),\$(R),\$(PORT)00,       "Quartz:3P7V", 108,       "V", 1.220703125e-3,       0,    3, 3.441, 3.515, 3.885, 3.959, "Quartz 3.7V supply voltage (reg 2)" }
+  { \$(P),\$(R),\$(PORT)00,       "Quartz:P12V", 112,       "V",  3.43724301e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage (reg 3)" }
+  { \$(P),\$(R),\$(PORT)00,       "Quartz:P12I", 116,       "A", 6.10351563e-04,       0,    3,  0.01,  0.015  1.00,  1.10, "Quartz 12.0V supply current (reg 6)" }
+  { \$(P),\$(R),\$(PORT)00,       "Quartz:3P3V", 120,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage (reg 7)" }
+  { \$(P),\$(R),\$(PORT)00,   "Quartz:MON:Temp", 124,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature (reg 8)" }
+
 # And repeat 32 times, one for each node
 }
 
