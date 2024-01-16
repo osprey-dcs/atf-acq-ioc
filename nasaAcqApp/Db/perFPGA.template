@@ -103,3 +103,13 @@ record(longout, "$(P)$(R)FPGA:reboot") {
     field(OUT,  "@$(PORT) 16951 0")
     field(FLNK, "$(P)$(R)send_")
 }
+
+#
+# Align ADC with EVR PPS marker
+#
+record(longout, "$(P)$(R)FPGA:ADC:align") {
+    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 5")
+    field(FLNK, "$(P)$(R)send_")
+}
