@@ -74,6 +74,8 @@
 
 
 
+
+
             [-s] [<span style="font-style: italic;">n</span>]</span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">The
           debugging flags are set to the specified value, if one is
@@ -109,6 +111,8 @@
               style=" font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">&nbsp;&nbsp;&nbsp;
 
+
+
                 — Enable messages related to the event generator.<br>
               </span></span></span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
@@ -121,6 +125,8 @@
             style=" font-family: Times New Roman, Times, serif;"><span
               style=" font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">&nbsp;
+
+
 
                 &nbsp; — Enable messages related to the clock phase lock
                 loop operation.<br>
@@ -187,6 +193,8 @@
 
 
 
+
+
               or ?&nbsp;<span class="Apple-converted-space">&nbsp;</span><br>
             </span></span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">Show
@@ -197,6 +205,8 @@
             style="font-weight: bold;"><span style="font-weight: bold;">log<br>
             </span></span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">Replay
+
+
 
 
 
@@ -212,6 +222,8 @@
       0);">
       <dt><span style="font-family: Times New Roman, Times, serif;"><span
             style="font-weight: bold;"><span style="font-weight: bold;">ntp
+
+
 
               [vvv.www.xxx.yyy[/nn]] [aaa.bbb.ccc.ddd]<br>
               ntp 0<span class="Apple-converted-space"></span><br>
@@ -290,6 +302,8 @@
 
 
 
+
+
         can be uploaded to, or downloaded from, the Marble bootstrap
         flash memory using the TFTP server in the FPGA application.</span><span
         style="font-family: Times New Roman, Times, serif;"><span
@@ -302,6 +316,8 @@
       word-spacing: 0px; -webkit-text-stroke-width: 0px;
       text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
       0);"><span style="font-family: Times New Roman, Times, serif;">File
+
+
 
 
 
@@ -345,9 +361,13 @@
 
 
 
+
+
           the new image from the host machine to the alternate file
           (BOOT_A.bin).</span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">Issue
+
+
 
 
 
@@ -365,6 +385,8 @@
           the boot succeeds, transfer the new image again, but this time
           to the standard location (BOOT.BIN).</span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">Issue
+
+
 
 
 
@@ -394,8 +416,99 @@
       font-style: normal; font-variant-caps: normal; font-weight: 400;
       letter-spacing: normal; text-align: start; text-indent: 0px;
       text-transform: none; white-space: normal; word-spacing: 0px;
-      -webkit-text-stroke-width: 0px; text-decoration: none;"><br>
-    </p>
+      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+          font-size: medium; font-style: normal; font-variant-caps:
+          normal; font-weight: 400; letter-spacing: normal; text-align:
+          start; text-indent: 0px; text-transform: none; white-space:
+          normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+          text-decoration: none; float: none; display: inline
+          !important;">In addition to the primary and secondary
+          bootstrap images the TFTP server provides access to other
+          'files'.&nbsp; The complete list of these is:<br>
+        </span></span></p>
+    <div style="margin-left: 40px;"> </div>
+    <table style="text-align: left; width: 70%; margin-left: 40px;"
+      cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Name</span></span><br>
+          </td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;">Description</span><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">BOOT.bin<br>
+          </td>
+          <td style=" text-align: left;">Primary bootstrap image.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">BOOT_A.bin<br>
+          </td>
+          <td style="text-align: left;">Secondary (alternate) bootstrap
+            image.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">SYSPARAM.dat<br>
+          </td>
+          <td style="text-align: left;">System parameter values (Startup
+            debug flags, NTP server settings).<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">FullFlash.bin<br>
+          </td>
+          <td style="text-align: left;">Complete flash memory contents
+            (16 MiB).<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">QSFP1_EEPROM.bin<br>
+          </td>
+          <td style="text-align: left;">EEPROM and dynamic values of
+            first QSFP module (read only).<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">QSFP1_EEPROM.bin</td>
+          <td style="text-align: left;">EEPROM and dynamic values of
+            second QSFP module (read only).</td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">FMC1_EEPROM.bin</td>
+          <td style="text-align: left;">IPMI EEPROM of first FMC
+            mezzanine card.<br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left;">FMC2_EEPROM.bin</td>
+          <td style="text-align: left;">IPMI EEPROM of second FMC
+            mezzanine card.</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-left: 40px;"> </div>
+    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-style: normal; font-variant-caps: normal; font-weight: 400;
+      letter-spacing: normal; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none;
+      margin-left: 80px;"><span style="font-family: Times New Roman,
+        Times, serif;"><span style="caret-color: rgb(0, 0, 0); color:
+          rgb(0, 0, 0); font-size: medium; font-style: normal;
+          font-variant-caps: normal; font-weight: 400; letter-spacing:
+          normal; text-align: start; text-indent: 0px; text-transform:
+          none; white-space: normal; word-spacing: 0px;
+          -webkit-text-stroke-width: 0px; text-decoration: none; float:
+          none; display: inline !important;"><br>
+        </span></span></p>
+    <div style="margin-left: 40px;"> </div>
     <h2 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-style: normal; font-variant-caps: normal; letter-spacing:
       normal; text-align: start; text-indent: 0px; text-transform: none;
