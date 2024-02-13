@@ -58,7 +58,7 @@ def readFromFPGA():
     while True:
         haveTimeout = False
         try:
-            msg = sock.recv(2048).decode('utf-8')
+            msg = sock.recv(2048).decode('ascii')
             sys.stdout.write(msg)
             if (haveTimeout == False):
                 sock.settimeout(0.5)
@@ -79,7 +79,7 @@ try:
         c = sys.stdin.read(1)
         if c == '\003':
             break;
-        sock.sendto(c, (address, UDP_PORT))
+        sock.sendto(bytes(c,'ascii'), (address, UDP_PORT))
 finally:
     if (saveTTY):
         termios.tcsetattr(sys.stdin.fileno(), termios.TCSADRAIN, saveTTY)
