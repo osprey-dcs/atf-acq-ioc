@@ -16,16 +16,16 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 # Set up connections
 var PSCDebug 0
 var PSCUDPMaxPacketSize 1500
-createPSCUDP("NASA_CTRL00", "$(NASA_ACQ_FPGA_IP)00", 54398, 1)
+createPSCUDP("NASA_CTRL01", "$(NASA_ACQ_FPGA_IP)01", 54398, 1)
 # And repeat 32 times, one for each node
-createPSCUDPFast("NASA_ACQ00", "$(NASA_ACQ_FPGA_IP)00", 54399, 0)
+createPSCUDPFast("NASA_ACQ01", "$(NASA_ACQ_FPGA_IP)01", 54399, 0)
 # And repeat 32 times, one for each node
 
 ###############################################################################
 # Load record instances
 dbLoadRecords("db/nasaAcqSup.db", "P=$(P),PORT=NASA_CTRL")
 # FIXME: This has to be redone to handle multiple acquisition nodes -- force use of the first node for now.
-dbLoadRecords("db/pscudpfast.db", "P=$(P),NAME=NASA_ACQ00")
+dbLoadRecords("db/pscudpfast.db", "P=$(P),NAME=NASA_ACQ01")
 
 ###############################################################################
 # Start IOC

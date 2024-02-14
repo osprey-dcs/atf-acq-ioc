@@ -38,18 +38,18 @@
       <action type="open_display">
         <file>nasaACQ_sysmon.bob</file>
         <macros>
-          <R>00:</R>
+          <R>01:</R>
         </macros>
         <target>window</target>
-        <description>FPGA 00</description>
+        <description>FPGA 01</description>
       </action>
       <action type="open_display">
         <file>nasaACQ_sysmon.bob</file>
         <macros>
-          <R>01:</R>
+          <R>02:</R>
         </macros>
         <target>replace</target>
-        <description>FPGA 01</description>
+        <description>FPGA 02</description>
       </action>
     </actions>
     <text>More...</text>
