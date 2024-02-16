@@ -10,6 +10,8 @@ DB += nasaEVG.db
 DB += nasaAcqSup.db
 DB_INSTALLS += $(PSCDRV)/db/pscudpfast.db
 
+DB += quartzAcq.db
+
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
 # <anyname>_template = <templatename>

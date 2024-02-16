@@ -1,0 +1,80 @@
+
+# /-- from quartzAcq (Chan0) or previous channel
+# |
+# V
+
+record(aai, "$(P)SA:Ch$(N)") {
+    field(DTYP, "PSCUDPFast Get Short I24 packed")
+    field(INP , "@$(NAME) 20033 $(OFF=24) 96")
+    field(FTVL, "LONG")
+    field(NELM, "$(NELM)")
+    field(TSEL, "$(TSEL=0)")
+    field(FLNK, "$(P)SA:Ch$(N):Stats-Calc_")
+}
+
+record(aSub, "$(P)SA:Ch$(N):Stats-Calc_") {
+  field(SCAN, "$(SCAN=)")
+  field(SNAM, "wf_stats")
+  field(FTA , "DOUBLE")
+  field(FTB , "DOUBLE")
+  field(FTC , "DOUBLE")
+  field(FTD , "DOUBLE")
+  field(FTVA ,"DOUBLE")
+  field(FTVB ,"DOUBLE")
+  field(FTVC ,"DOUBLE")
+  field(FTVD ,"DOUBLE")
+  field(FTVE ,"ULONG")
+  field(NOA , "$(NELM)")
+  field(NOB , "$(NELM)")
+  field(INPA, "$(P)SA:Ch$(N) NPP MS")
+  field(INPB, "$(P)SA:T")
+  field(INPC, "$(P)SA:WinSt") # window start
+  field(INPD, "$(P)SA:WinSz") # window width
+  field(OUTA, "$(P)SA:Ch$(N):Mean-I PP MS")
+  field(OUTB, "$(P)SA:Ch$(N):Std-I PP MS")
+  field(OUTC, "$(P)SA:Ch$(N):Min-I PP MS")
+  field(OUTD, "$(P)SA:Ch$(N):Max-I PP MS")
+  field(OUTE, "$(P)SA:Ch$(N):Cnt-I PP MS")
+  field(TSEL, "$(P)SA:Ch$(N).TIME")
+  field(FLNK, "$(P)SA:Ch$(N):FEn_")
+}
+
+record(fanout, "$(P)SA:Ch$(N):FEn_") {
+  field(LNK0, "$(FLNK=)") # --> next channel or stats for Chan0
+  field(LNK1, "$(P)SA:Ch$(N):FFT:In-SP") # maybe start FFT calc
+}
+
+record(ai, "$(P)SA:Ch$(N):Mean-I") {
+  field(PREC, "$(PREC=2)")
+  field(TSEL, "$(P)SA:Ch$(N):Stats-Calc_.TIME")
+}
+record(ai, "$(P)SA:Ch$(N):Std-I") {
+  field(PREC, "$(PREC=2)")
+  field(TSEL, "$(P)SA:Ch$(N):Stats-Calc_.TIME")
+}
+record(ai, "$(P)SA:Ch$(N):Min-I") {
+  field(PREC, "$(PREC=2)")
+  field(TSEL, "$(P)SA:Ch$(N):Stats-Calc_.TIME")
+}
+record(ai, "$(P)SA:Ch$(N):Max-I") {
+  field(PREC, "$(PREC=2)")
+  field(TSEL, "$(P)SA:Ch$(N):Stats-Calc_.TIME")
+}
+record(longin, "$(P)SA:Ch$(N):Cnt-I") {
+  field(TSEL, "$(P)SA:Ch$(N):Stats-Calc_.TIME")
+}
+
+# override psc-psd.db
+
+record("*", "$(P)SA:Ch$(N):FFT:F:Samp-SP") {
+  field(DOL, "$(P)SA:Fq CP")
+  field(OMSL, "closed_loop")
+}
+
+record("*", "$(P)SA:Ch$(N):FFT:Wind-Sel") {
+  field(RVAL , "1")
+}
+
+record("*", "$(P)SA:Ch$(N):FFT:Run-Sel") {
+  field(VAL , "1")
+}
