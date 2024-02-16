@@ -16,7 +16,7 @@ file "perFPGA.template" {
 #}
 #
 file "perSysmonAI.template" {
-  pattern { P R,PORT,                     NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
+  pattern { P R,PORT,                     NAME, IDX,       EGU,            ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
   { \$(P),"01:",\$(PORT)01,  "FPGA:Temperature",   0,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
   { \$(P),"01:",\$(PORT)01,       "FPGA:VccINT",   4,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
   { \$(P),"01:",\$(PORT)01,       "FPGA:VccAUX",   8,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
@@ -39,12 +39,14 @@ file "perSysmonAI.template" {
   { \$(P),"01:",\$(PORT)01,    "QSFP2:RxPower2",  76,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
   { \$(P),"01:",\$(PORT)01,    "QSFP2:RxPower3",  80,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
   { \$(P),"01:",\$(PORT)01,    "QSFP2:RxPower4",  84,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
-  { \$(P),"01:",\$(PORT)01,       "Quartz:2P2V", 104,       "V", 1.220703125e-3,       0,    3, 2.046, 2.090, 2.310, 2.354, "Quartz 2.2V supply voltage (reg 1)" }
-  { \$(P),"01:",\$(PORT)01,       "Quartz:3P7V", 108,       "V", 1.220703125e-3,       0,    3, 3.441, 3.515, 3.885, 3.959, "Quartz 3.7V supply voltage (reg 2)" }
-  { \$(P),"01:",\$(PORT)01,       "Quartz:P12V", 112,       "V",  3.43724301e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage (reg 3)" }
-  { \$(P),"01:",\$(PORT)01,       "Quartz:P12I", 116,       "A", 6.10351563e-04,       0,    3,  0.01,  0.015  1.00,  1.10, "Quartz 12.0V supply current (reg 6)" }
-  { \$(P),"01:",\$(PORT)01,       "Quartz:3P3V", 120,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage (reg 7)" }
-  { \$(P),"01:",\$(PORT)01,   "Quartz:MON:Temp", 124,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature (reg 8)" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:P15V", 104,       "V", 5.531712581e-3,       0,    3, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:P5V",  108,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.10,  5.25, "Quartz 5V supply voltage" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:P12V", 112,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:3P3V", 116,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:2P5V1",120,       "V", 1.774676832e-3,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:2P5V2",124,       "V", 1.774676832e-3,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
+  { \$(P),"01:",\$(PORT)01,       "Quartz:P12I", 128,       "A", 6.10351563e-04,       0,    3,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
+  { \$(P),"01:",\$(PORT)01,   "Quartz:MON:Temp", 132,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
 
 # And repeat 32 times, one for each node
 }
