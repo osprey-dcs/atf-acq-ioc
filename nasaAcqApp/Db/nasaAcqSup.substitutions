@@ -1,94 +1,94 @@
 file "perFPGA.template" {
   pattern { P,   R,      PORT }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), }
+  { \$(P),"",\$(PORT), }
 }
 
 file "perBuildDate.template"
 { pattern
 {       P,          R,        PORT,                           NAME, IDX }
-  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "firmwareBuildDate",   0 }
-  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "softwareBuildDate",   8 }
+  { "\$(P)", "", "\$(PORT)",  "firmwareBuildDate",   0 }
+  { "\$(P)", "", "\$(PORT)",  "softwareBuildDate",   8 }
 }
 
 file "perSysmonAI.template" {
   pattern { P,   R,      PORT,                         NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "FPGA:Temperature",   8,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "FPGA:VccINT",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "FPGA:VccAUX",  16,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),        "FPGA:VBRAM",  20,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC1:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   0.9,   1.0, "INA219 U17 current" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC1:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC2:P12I",  32,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC2:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "MARBLE:P12I",  40,       "A",    -365.854e-6,       0,    2,  0.45,   0.5,   2.8,   3.0, "INA219 U57 current" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "MARBLE:P12V",  44,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), "QSFP1:Temperature",  48,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 1 temperature" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),         "QSFP1:Vcc",  52,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 1 Vcc" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP1:RxPower1",  56,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP 1 channel 1 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP1:RxPower2",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 2 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP1:RxPower3",  64,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 3 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP1:RxPower4",  68,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 4 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), "QSFP2:Temperature",  72,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 2 temperature" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),         "QSFP2:Vcc",  76,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 2 Vcc" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP2:RxPower1",  80,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 1 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP2:RxPower2",  84,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP2:RxPower3",  88,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),    "QSFP2:RxPower4",  92,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:N15V",  96,       "V",-5.765477231e-3,       0,    3,-15.75,-15.30,-14.70,-14.25, "Quartz -15V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P15V", 100,       "V", 5.531712581e-3,       0,    3, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.10,  5.25, "Quartz 5V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V2",120,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P12I", 124,       "A", 3.565738076e-3,       0,    3,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "Quartz:Temp",     128,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
+  { \$(P),"",\$(PORT),  "FPGA:Temperature",   8,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
+  { \$(P),"",\$(PORT),       "FPGA:VccINT",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
+  { \$(P),"",\$(PORT),       "FPGA:VccAUX",  16,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
+  { \$(P),"",\$(PORT),        "FPGA:VBRAM",  20,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   0.9,   1.0, "INA219 U17 current" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12I",  32,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
+  { \$(P),"",\$(PORT),       "MARBLE:P12I",  40,       "A",    -365.854e-6,       0,    2,  0.45,   0.5,   2.8,   3.0, "INA219 U57 current" }
+  { \$(P),"",\$(PORT),       "MARBLE:P12V",  44,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+  { \$(P),"",\$(PORT), "QSFP1:Temperature",  48,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 1 temperature" }
+  { \$(P),"",\$(PORT),         "QSFP1:Vcc",  52,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 1 Vcc" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower1",  56,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP 1 channel 1 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower2",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 2 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower3",  64,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 3 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower4",  68,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 4 receiver power" }
+  { \$(P),"",\$(PORT), "QSFP2:Temperature",  72,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 2 temperature" }
+  { \$(P),"",\$(PORT),         "QSFP2:Vcc",  76,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 2 Vcc" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower1",  80,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 1 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower2",  84,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower3",  88,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower4",  92,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
+  { \$(P),"",\$(PORT),       "Quartz:N15V",  96,       "V",-5.765477231e-3,       0,    3,-15.75,-15.30,-14.70,-14.25, "Quartz -15V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P15V", 100,       "V", 5.531712581e-3,       0,    3, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.10,  5.25, "Quartz 5V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
+  { \$(P),"",\$(PORT),       "Quartz:2P5V2",120,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
+  { \$(P),"",\$(PORT),       "Quartz:P12I", 124,       "A", 3.565738076e-3,       0,    3,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
+  { \$(P),"",\$(PORT),   "Quartz:Temp",     128,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
 }
 
 file "perSysmonLI.template" {
   pattern { P,   R,      PORT,                    NAME, IDX,  EGU, LOLO, LOW, HIGH, HIHI,     LLSV,      LSV,      HSV,     HHSV, DESC }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),"FPGA:powerUp_",   0,   "",    0,   0,    2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "FPGA:uptime",   4,  "s",    0,   0,    0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:status", 132,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:active", 136,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),"ACQ:DCcoupled", 140,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:clkPLL", 144,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM,    MAJOR, "Acquisition clock PLL status register" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "DRDY:status", 148,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "HI:PPS->DRDY  LO:DRDYs skew" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "PPS:status", 152,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
+  { \$(P),"",\$(PORT),"FPGA:powerUp_",   0,   "",    0,   0,    2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
+  { \$(P),"",\$(PORT),  "FPGA:uptime",   4,  "s",    0,   0,    0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
+  { \$(P),"",\$(PORT),   "ACQ:status", 132,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
+  { \$(P),"",\$(PORT),   "ACQ:active", 136,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
+  { \$(P),"",\$(PORT),"ACQ:DCcoupled", 140,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
+  { \$(P),"",\$(PORT),   "ACQ:clkPLL", 144,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM,    MAJOR, "Acquisition clock PLL status register" }
+  { \$(P),"",\$(PORT),  "DRDY:status", 148,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "HI:PPS->DRDY  LO:DRDYs skew" }
+  { \$(P),"",\$(PORT),   "PPS:status", 152,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
 }
 
 file "perChannel.template" {
   pattern { P,   R,      PORT,           N,  IDX }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 01,   00 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 02,   01 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 03,   02 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 04,   03 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 05,   04 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 06,   05 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 07,   06 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 08,   07 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 09,   08 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 10,   09 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 11,   10 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 12,   11 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 13,   12 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 14,   13 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 15,   14 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 16,   15 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 17,   16 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 18,   17 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 19,   18 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 20,   19 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 21,   20 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 22,   21 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 23,   22 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 24,   23 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 25,   24 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 26,   25 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 27,   26 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 28,   27 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 29,   28 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 30,   29 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 31,   30 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 32,   31 }
+  { \$(P),"",\$(PORT), 01,   00 }
+  { \$(P),"",\$(PORT), 02,   01 }
+  { \$(P),"",\$(PORT), 03,   02 }
+  { \$(P),"",\$(PORT), 04,   03 }
+  { \$(P),"",\$(PORT), 05,   04 }
+  { \$(P),"",\$(PORT), 06,   05 }
+  { \$(P),"",\$(PORT), 07,   06 }
+  { \$(P),"",\$(PORT), 08,   07 }
+  { \$(P),"",\$(PORT), 09,   08 }
+  { \$(P),"",\$(PORT), 10,   09 }
+  { \$(P),"",\$(PORT), 11,   10 }
+  { \$(P),"",\$(PORT), 12,   11 }
+  { \$(P),"",\$(PORT), 13,   12 }
+  { \$(P),"",\$(PORT), 14,   13 }
+  { \$(P),"",\$(PORT), 15,   14 }
+  { \$(P),"",\$(PORT), 16,   15 }
+  { \$(P),"",\$(PORT), 17,   16 }
+  { \$(P),"",\$(PORT), 18,   17 }
+  { \$(P),"",\$(PORT), 19,   18 }
+  { \$(P),"",\$(PORT), 20,   19 }
+  { \$(P),"",\$(PORT), 21,   20 }
+  { \$(P),"",\$(PORT), 22,   21 }
+  { \$(P),"",\$(PORT), 23,   22 }
+  { \$(P),"",\$(PORT), 24,   23 }
+  { \$(P),"",\$(PORT), 25,   24 }
+  { \$(P),"",\$(PORT), 26,   25 }
+  { \$(P),"",\$(PORT), 27,   26 }
+  { \$(P),"",\$(PORT), 28,   27 }
+  { \$(P),"",\$(PORT), 29,   28 }
+  { \$(P),"",\$(PORT), 30,   29 }
+  { \$(P),"",\$(PORT), 31,   30 }
+  { \$(P),"",\$(PORT), 32,   31 }
 }

@@ -2,7 +2,7 @@
 # Update values to FPGA on reconnection.
 # Monitor a readback record to detect
 # reconnection or FPGA power up.
-record(longin, "$(P)$(NODE):FPGA:powerUp_") {
+record(longin, "$(P):FPGA:powerUp_") {
     field(FLNK, "$(P)$(R)reconnChk_")
 }
 record(calcout, "$(P)$(R)reconnChk_") {
@@ -75,7 +75,7 @@ record(longout, "$(P)$(R)ACQ:downsample_") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 20")
     field(OMSL, "closed_loop")
-    field(DOL , "$(P)ACQ:rate.RVAL CPP")
+    field(DOL , "$(EVG)ACQ:rate.RVAL CPP")
     field(LOPR, "1")
     field(HOPR, "1023")
     field(DRVL, "1")
