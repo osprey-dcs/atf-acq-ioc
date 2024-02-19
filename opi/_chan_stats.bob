@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-16 10:30:24 by dev-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>545</width>
+  <height>40</height>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)SA:Ch$(N):Min-I</pv_name>
+    <x>180</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)SA:Ch$(N):Mean-I</pv_name>
+    <x>255</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)SA:Ch$(N):Std-I</pv_name>
+    <x>325</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+    <format>3</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)SA:Ch$(N):Max-I</pv_name>
+    <x>395</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)SA:Ch$(N):Cnt-I</pv_name>
+    <x>465</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Text Update_5</name>
+    <text>Ch $(N)</text>
+    <x>5</x>
+    <y>5</y>
+    <width>60</width>
+    <height>25</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>$(P)ACQ:coupling:00_1</name>
+    <pv_name>$(P)ACQ:coupling:$(N)</pv_name>
+    <x>80</x>
+    <y>5</y>
+    <width>85</width>
+    <height>25</height>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <horizontal_alignment>0</horizontal_alignment>
+    <vertical_alignment>0</vertical_alignment>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+</display>

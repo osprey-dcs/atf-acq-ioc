@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-02-18 16:06:50 by dev-->
+<display version="2.0.0">
+  <name>UDP Fast Demo</name>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)Record-I</pv_name>
+    <x>60</x>
+    <y>120</y>
+    <width>110</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)FileBase-SP.VAL$</pv_name>
+    <x>20</x>
+    <y>60</y>
+    <width>470</width>
+    <format>6</format>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button</name>
+    <pv_name>$(P)Record-Sel</pv_name>
+    <x>30</x>
+    <y>100</y>
+    <width>170</width>
+    <height>20</height>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Record-I</pv_name>
+    <x>30</x>
+    <y>120</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)LastFile-I.VAL$</pv_name>
+    <x>20</x>
+    <y>80</y>
+    <width>470</width>
+    <format>6</format>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <pv_name>$(P)PFree-I</pv_name>
+    <x>20</x>
+    <y>170</y>
+    <width>60</width>
+    <height>150</height>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_1</name>
+    <pv_name>$(P)PRXe-I</pv_name>
+    <x>80</x>
+    <y>170</y>
+    <width>60</width>
+    <height>150</height>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank_2</name>
+    <pv_name>$(P)PWrt-I</pv_name>
+    <x>140</x>
+    <y>170</y>
+    <width>60</width>
+    <height>150</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)RXBRate-I</pv_name>
+    <x>130</x>
+    <y>350</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)RXRate-I</pv_name>
+    <x>130</x>
+    <y>380</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)WrtRate-I</pv_name>
+    <x>130</x>
+    <y>410</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P)LstSz-I</pv_name>
+    <x>130</x>
+    <y>440</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>% Free</text>
+    <x>20</x>
+    <y>320</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>% Ready</text>
+    <x>80</x>
+    <y>320</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>% Write</text>
+    <x>140</x>
+    <y>320</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>RX Rate</text>
+    <x>20</x>
+    <y>350</y>
+    <height>50</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>File Rate</text>
+    <x>20</x>
+    <y>410</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>packet drop</text>
+    <x>20</x>
+    <y>470</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>File Size</text>
+    <x>20</x>
+    <y>440</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)FileDir-SP.VAL$</pv_name>
+    <x>20</x>
+    <y>20</y>
+    <width>470</width>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Write Directory</text>
+    <x>20</x>
+    <width>240</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>File name Base</text>
+    <x>20</x>
+    <y>40</y>
+    <width>240</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_7</name>
+    <pv_name>$(P)LastErr-I.VAL$</pv_name>
+    <x>20</x>
+    <y>140</y>
+    <width>470</width>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>packet ignore</text>
+    <x>20</x>
+    <y>500</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)TmoRate-I</pv_name>
+    <x>130</x>
+    <y>530</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>timeouts</text>
+    <x>20</x>
+    <y>530</y>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)NDrp-I</pv_name>
+    <x>240</x>
+    <y>470</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P)NIgn-I</pv_name>
+    <x>240</x>
+    <y>500</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)NTmo-I</pv_name>
+    <x>240</x>
+    <y>530</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)DrpRate-I</pv_name>
+    <x>130</x>
+    <y>470</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)IgnRate-I</pv_name>
+    <x>130</x>
+    <y>500</y>
+  </widget>
+</display>
