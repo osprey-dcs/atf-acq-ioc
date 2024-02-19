@@ -485,10 +485,10 @@
         </span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">If
           the boot fails, power cycle the FPGA to revert to the default
-          image (BOOT.BIN).</span></li>
+          image (BOOT.bin).</span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">If
           the boot succeeds, transfer the new image again, but this time
-          to the standard location (BOOT.BIN).</span></li>
+          to the standard location (BOOT.bin).</span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">Issue
 
 
@@ -504,22 +504,44 @@
         </span><span style="font-family: Times New Roman, Times, serif;"><font
             size="+1">&nbsp;&nbsp;&nbsp; boot</font></span></li>
     </ul>
-    <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
-      font-style: normal; font-variant-caps: normal; font-weight: 400;
-      letter-spacing: normal; text-align: start; text-indent: 0px;
-      text-transform: none; white-space: normal; word-spacing: 0px;
-      -webkit-text-stroke-width: 0px; text-decoration: none;"><span
-        style="font-family: Times New Roman, Times, serif;"><span
-          style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
-          font-size: medium; font-style: normal; font-variant-caps:
-          normal; font-weight: 400; letter-spacing: normal; text-align:
-          start; text-indent: 0px; text-transform: none; white-space:
-          normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
-          text-decoration: none; float: none; display: inline
-          !important;">If things go wrong and you end up with a bricked
-          system the only recourse is to use the Vivado Hardware Manager
-          to download the image through the USB/JTAG adapter.<br>
-        </span></span></p>
+    <span style="font-family: Times New Roman, Times, serif;"><span
+        style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+        font-size: medium; font-style: normal; font-variant-caps:
+        normal; font-weight: 400; letter-spacing: normal; text-align:
+        start; text-indent: 0px; text-transform: none; white-space:
+        normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        text-decoration: none; float: none; display: inline !important;"></span></span><span
+      style="font-family: Times New Roman, Times, serif;"><span
+        style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+        font-size: medium; font-style: normal; font-variant-caps:
+        normal; font-weight: 400; letter-spacing: normal; text-align:
+        start; text-indent: 0px; text-transform: none; white-space:
+        normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        text-decoration: none; float: none; display: inline !important;">If
+        things go wrong and you end up with a bricked system the only
+        recourse is to use the Vivado Hardware Manager to download the
+        image through the USB/JTAG adapter.<br>
+      </span></span><br>
+    <span style="font-family: Times New Roman, Times, serif;"><span
+        style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+        font-size: medium; font-style: normal; font-variant-caps:
+        normal; font-weight: 400; letter-spacing: normal; text-align:
+        start; text-indent: 0px; text-transform: none; white-space:
+        normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+        text-decoration: none; float: none; display: inline !important;"><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+            font-size: medium; font-style: normal; font-variant-caps:
+            normal; font-weight: 400; letter-spacing: normal;
+            text-align: start; text-indent: 0px; text-transform: none;
+            white-space: normal; word-spacing: 0px;
+            -webkit-text-stroke-width: 0px; text-decoration: none;
+            float: none; display: inline !important;">If the Marble is
+            configured with a LBNL 'Golden Image' at the beginning of
+            write-protected flash memory then only the alternate file
+            can be written.&nbsp; In this case the update procedure is
+            much simpler -- simply write the new bootable image to
+            BOOT_A.bin and restart the FPGA.</span></span> </span></span>
     <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-style: normal; font-variant-caps: normal; font-weight: 400;
       letter-spacing: normal; text-align: start; text-indent: 0px;
