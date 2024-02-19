@@ -20,8 +20,8 @@
         style="font-family: Times New Roman, Times, serif;">The
         processor in the FPGA provides a simple command
         interpreter.&nbsp; The console interpreter can be accessed
-        through the penultimate port of the USB/Serial adapter (serial
-        settings 115200-8N1) or through a UDP port and the console.py
+        through port C of the USB/Serial adapter (serial settings
+        115200-8N1) or through a UDP port and the console.py
         script.&nbsp; Typing a character to the USB/Serial port disables
         the UDP connection.</span><span style="font-family: Times New
         Roman, Times, serif;"><br>
@@ -536,72 +536,106 @@
           bootstrap images the TFTP server provides access to other
           'files'.&nbsp; The complete list of these is:<br>
         </span></span></p>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <div style="margin-left: 40px;"> </div>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <table style="text-align: left; width: 70%; margin-left: 40px;"
       cellspacing="2" cellpadding="2" border="1">
       <tbody>
         <tr>
-          <td style="text-align: center;"><span style="font-weight:
-              bold;"><span style="font-family: Times New Roman, Times,
-                serif;">Name</span></span><br>
-          </td>
-          <td style="text-align: center;"><span style="font-weight:
-              bold;">Description</span><br>
-          </td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-weight:
+                bold;">Name</span></span><span style="font-family: Times
+              New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-weight:
+                bold;">Description</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">BOOT.bin<br>
-          </td>
-          <td style=" text-align: left;">Primary bootstrap image.<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">BOOT.bin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style=" text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Primary bootstrap image.</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">BOOT_A.bin<br>
-          </td>
-          <td style="text-align: left;">Secondary (alternate) bootstrap
-            image.<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">BOOT_A.bin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Secondary (alternate) bootstrap
+              image.</span><span style="font-family: Times New Roman,
+              Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">SYSPARAM.dat<br>
-          </td>
-          <td style="text-align: left;">System parameter values (Startup
-            debug flags, NTP server settings).<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">SYSPARAM.dat</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">System parameter values (Startup
+              debug flags, NTP server settings).</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">FullFlash.bin<br>
-          </td>
-          <td style="text-align: left;">Complete flash memory contents
-            (16 MiB).<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FullFlash.bin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Complete flash memory contents
+              (16 MiB).</span><span style="font-family: Times New Roman,
+              Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">QSFP1_EEPROM.bin<br>
-          </td>
-          <td style="text-align: left;">First QSFP module values
-            (SFF-8636, read only).<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">QSFP1_EEPROM.bin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span> </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">First QSFP module values
+              (SFF-8636, read only).</span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">QSFP2_EEPROM.bin</td>
-          <td style="text-align: left;">Second QSFP module values
-            (SFF-8636, read only).</td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">QSFP2_EEPROM.bin</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Second QSFP module values
+              (SFF-8636, read only).</span></td>
         </tr>
         <tr>
-          <td style="text-align: left;">FMC1_EEPROM.bin</td>
-          <td style="text-align: left;">IPMI EEPROM of first FMC
-            mezzanine card.<br>
-          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FMC1_EEPROM.bin</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">IPMI EEPROM of first FMC
+              mezzanine card.</span><span style="font-family: Times New
+              Roman, Times, serif;"><br>
+            </span> </td>
         </tr>
         <tr>
-          <td style="text-align: left;">FMC2_EEPROM.bin</td>
-          <td style="text-align: left;">IPMI EEPROM of second FMC
-            mezzanine card.</td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">FMC2_EEPROM.bin</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">IPMI EEPROM of second FMC
+              mezzanine card.</span></td>
         </tr>
       </tbody>
     </table>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <div style="margin-left: 40px;"> </div>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <p style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-style: normal; font-variant-caps: normal; font-weight: 400;
       letter-spacing: normal; text-align: start; text-indent: 0px;
@@ -616,7 +650,9 @@
           -webkit-text-stroke-width: 0px; text-decoration: none; float:
           none; display: inline !important;"><br>
         </span></span></p>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <div style="margin-left: 40px;"> </div>
+    <span style="font-family: Times New Roman, Times, serif;"> </span>
     <h2 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-style: normal; font-variant-caps: normal; letter-spacing:
       normal; text-align: start; text-indent: 0px; text-transform: none;
@@ -633,7 +669,7 @@
         MAC address and IPv4 network address are set using the
         microcontroller USB/serial port</span><span style="font-family:
         Times New Roman, Times, serif;"> (115200-8N1).&nbsp; The
-        microcontroller serial port is connected to the top port of the
+        microcontroller serial port is connected to the port D of the
         USB/serial adapter.&nbsp; After connecting, type a '?' followed
         by a carriage return to obtain the menu of commands. <br>
       </span></p>

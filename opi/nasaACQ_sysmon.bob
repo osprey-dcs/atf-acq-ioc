@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-19 09:07:12 by eric-->
+<!--Saved on 2024-02-19 13:47:16 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -994,7 +994,7 @@
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_48</name>
-        <text>Quartz 2.5V P1</text>
+        <text>Quartz 2.5 V P1</text>
         <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
@@ -1017,7 +1017,7 @@
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_50</name>
-        <text>Quartz 2.5V P2</text>
+        <text>Quartz 2.5 V P2</text>
         <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
@@ -1040,7 +1040,7 @@
       </widget>
       <widget type="label" version="2.0.0">
         <name>INA219val_40</name>
-        <text>Quartz 3.3V</text>
+        <text>Quartz 3.3 V</text>
         <width>150</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
