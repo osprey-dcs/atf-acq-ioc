@@ -1,12 +1,45 @@
 #
-# Send all pending output packets
-#
-record(bo, "$(P)$(R)send_") {
-    field(DTYP, "PSC Ctrl Send All")
-    field(OUT , "@$(PORT)")
-    field(ZNAM, "Send")
-    field(ONAM, "Send")
+# Update values to FPGA on reconnection.
+# Monitor a readback record to detect
+# reconnection or FPGA power up.
+record(longin, "$(P)$(R)FGPA:powerUp)") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "PSC Reg")
+    field(INP,  "@$(PORT) 16952 0")
+    field(SCAN, "I/O Intr")
 }
+record(calcout, "$(P)$(R)reconnChk_") {
+    field(DESC, "Push on reconnect")
+    field(INPA, "$(P)$(R)FPGA:powerUp.STAT NPP")
+    field(INPB, "$(P)$(R)FPGA:powerUp NPP")
+    field(INPD, "0")
+    field(CALC, "A=0&&((D!=0)||B);D:=A")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(R)reconnA_.PROC")
+}
+record(fanout, "$(P)$(R)reconnA_") {
+    field(PINI, "YES")
+    field(LNK1, "$(P)$(R)LLRF:Freq")
+    field(LNK2, "$(P)$(R)reconnX_")
+    field(FLNK, "$(P)$(R)clrPowerup_")
+}
+record(event, "$(P)$(R)reconnX_") {
+    field(DTYP, "Soft Channel")
+    field(VAL,  "RECON")
+    field(PINI, "RUNNING")
+}
+record(longout, "$(P)$(R)clrPowerup_") {
+    field(DESC, "Clear FPGA power-up status")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16951 1")
+}
+
+# FIXME: Should this trigger an acquisition (re)sync too???
+record(fanout, "$(P)$(R)reconA_") {
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
+    field(LNK0, "$(P)$(R)ACQ:setActive")
+    field(LNK1, "$(P)ACQ:rate.RVAL CPP")
 
 #
 # Trigger a system monitor readback
@@ -20,6 +53,16 @@ record(bo, "$(P)$(R)sysmonTrig_") {
     field(ONAM, "Readback")
     field(SCAN, "5 second")
     field(FLNK, "$(P)$(R)send_")
+}
+
+#
+# Send all pending output packets
+#
+record(bo, "$(P)$(R)send_") {
+    field(DTYP, "PSC Ctrl Send All")
+    field(OUT , "@$(PORT)")
+    field(ZNAM, "Send")
+    field(ONAM, "Send")
 }
 
 #
@@ -44,7 +87,6 @@ record(longout, "$(P)$(R)ACQ:setActive") {
     field(DESC, "Set active channel bitmap")
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 11")
-    field(FLNK, "$(P)$(R)ACQ:alphaCMP_")
     field(FLNK, "$(P)$(R)send_")
 }
 
