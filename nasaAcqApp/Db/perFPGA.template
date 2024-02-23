@@ -3,7 +3,7 @@
 # Monitor a readback record to detect
 # reconnection or FPGA power up.
 record(longin, "$(P)$(R)FGPA:powerUp)") {
-    field(DESC, "$(DESC)")
+    field(DESC, "$(DESC=)")
     field(DTYP, "PSC Reg")
     field(INP,  "@$(PORT) 16952 0")
     field(SCAN, "I/O Intr")
@@ -32,7 +32,7 @@ record(event, "$(P)$(R)reconnX_") {
 }
 record(longout, "$(P)$(R)FPGA:clrPowerUp") {
     field(DESC, "Clear FPGA power-up status")
-    field(DTYP, "PSC Single U32")
+    field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 1")
 }
 
@@ -42,6 +42,7 @@ record(fanout, "$(P)$(R)reconA_") {
     field(EVNT, "RECON")
     field(LNK0, "$(P)$(R)ACQ:setActive")
     field(LNK1, "$(P)ACQ:rate.RVAL CPP")
+}
 
 #
 # Trigger a system monitor readback
