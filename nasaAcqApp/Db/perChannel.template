@@ -1,4 +1,5 @@
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
+field(TPRO,1)
     field(DESC, "Set input coupling for channel $(N)")
     field(DTYP, "PSC Single U32")
     field(OUT,  "@$(PORT) 16951 1$(N)")
@@ -17,4 +18,12 @@ record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 3$(N)")
     field(FLNK, "$(P)$(R)send_")
+}
+record(fanout, "$(P)$(R)$(N):recon_") {
+    field(DESC, "Update node:$(R)chan:$(N) on (rec)connect")
+    field(LNK1, "$(P)$(R)ACQ:coupling:$(N)") 
+    field(LNK2, "$(P)$(R)ACQ:ofst:$(N)")
+    field(LNK3, "$(P)$(R)ACQ:gain:$(N)")
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
 }

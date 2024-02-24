@@ -9,13 +9,13 @@
     <p><span style="font-family: Times New Roman, Times, serif;">This
         support module uses a PSCDRV driver to communicate with NASA ACQ
         nodes and provides an example IOC, and some Engineering CSS
-        screens.&nbsp; All the records mentioned in the following
+        screens.&nbsp; Most of the records mentioned in the following
         sections have names beginning with </span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">$(P)$(R)
           macros.&nbsp; Typically the P macro is set to 'NASA_ACQ:' and
-          the R macro to the acquisition node number followed by a
-          colon.<br>
+          the R macro to the acquisition node number (01 through 32)
+          followed by a colon.<br>
         </span></span></p>
     <h2><span style="font-family: Times New Roman, Times, serif;">System
         Monitoring <br>
@@ -496,6 +496,8 @@
               of active ADC channels.&nbsp; Least significant bit
               corresponds to ADC channel 0.</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
+              Note that this record updates only when acquisition is
+              inactive.<br>
             </span></td>
         </tr>
         <tr>
@@ -538,7 +540,17 @@
           Roman, Times, serif;"></span></span><span style="font-family:
         Times New Roman, Times, serif;"></span> </div>
     <div style="margin-left: 40px;"> </div>
-    <h2><span style="font-family: Times New Roman, Times, serif;">Controls</span></h2>
+    <p><span style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;">When
+          acquisition is enabled </span>acquisition activity is delayed
+        until the middle of the next sample interval.&nbsp; This ensures
+        that there are no race conditions between nodes beginning to
+        fill their acquistion buffers.&nbsp; When acquisition is
+        disabled acquisition activity continues until the
+        currently-active packet has been filled and transmitted.</span><br>
+    </p>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+        Controls</span></h2>
     <div style="margin-left: 40px;"> </div>
     <table style=" text-align: left; width: 80%;" cellspacing="2"
       cellpadding="2" border="1">
@@ -562,48 +574,21 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">FPGA:clrPowerUp</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
+              Times New Roman, Times, serif;">ACQ:setActive</span></td>
           <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">longout</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Cleear
-              FPGA power-up status when processed.&nbsp;&nbsp; Value
-              written is ignored.</span><span style="font-family: Times
-              New Roman, Times, serif;"><br>
-            </span></td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ACQ:enable</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">bo</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
           <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Enable/disable (1/0) data
-              acquisition.</span><span style="font-family: Times New
-              Roman, Times, serif;"><br>
-            </span></td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ACQ:rate</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">mbbo</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Set the sampling rate.&nbsp; The
-              sampling rate is 250 kHz divided by the menu item RVAL.<br>
-            </span></td>
+              New Roman, Times, serif;">Bitmap of channels to include in
+              fast data stream.&nbsp; Least significant bit corresponds
+              to input 1, most significant bit to input 32.&nbsp; Values
+              of 0 are treated as if 1 to ensure that the fast data
+              stream always contains data.</span><br>
+            <span style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">
+                Changes made while acquisition is active are deferred
+                until acquisition ceases.</span></span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -657,6 +642,28 @@
               of channel 0 to VAL+0x555555.<br>
             </span></td>
         </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:reboot </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Writing 1, then 100, then 10000
+              will cause the FPGA to reboot.</span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+                font-size: medium; font-style: normal;
+                font-variant-caps: normal; font-weight: 400;
+                letter-spacing: normal; text-align: center; text-indent:
+                0px; text-transform: none; white-space: normal;
+                word-spacing: 0px; -webkit-text-stroke-width: 0px;
+                text-decoration: none; display: inline !important;
+                float: none;">&nbsp; The requirement of three write
+                operations with different values is to guard against
+                accidental reboots.</span></span></td>
+        </tr>
       </tbody>
     </table>
     <div style="margin-left: 40px;"> </div>
@@ -668,21 +675,75 @@
     <h2 style="margin-left: 40px;"><span style="font-family: Times New
         Roman, Times, serif;"></span></h2>
     <div style="margin-left: 40px;"> </div>
-    <h2>FPGA Reboot<br>
-    </h2>
-    <p><span style="font-family: Times New Roman, Times, serif;">Writing
-        1, then 100, then 10000 to the FPGA:reboot record will cause the
-        FPGA to reboot.</span><span style="font-family: Times New Roman,
-        Times, serif;"><span style="caret-color: rgb(0, 0, 0); color:
-          rgb(0, 0, 0); font-size: medium; font-style: normal;
-          font-variant-caps: normal; font-weight: 400; letter-spacing:
-          normal; text-align: center; text-indent: 0px; text-transform:
-          none; white-space: normal; word-spacing: 0px;
-          -webkit-text-stroke-width: 0px; text-decoration: none;
-          display: inline !important; float: none;">&nbsp; The
-          requirement of three write operations with different values is
-          to guard against accidental reboots.<br>
-        </span></span></p>
+    <br>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+        Controls</span></h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">These
+        records are prefixed with only the $(P) macro.<span
+          style="font-family: sans-serif;"></span></span><br>
+    </p>
+    <div style="margin-left: 40px;"> </div>
+    <table style=" text-align: left; width: 80%;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Name</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Type</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family: Times
+                New Roman, Times, serif;">Description</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:enable</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">bo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Enable/disable (1/0) data
+              acquisition.</span><span style="font-family: Times New
+              Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:rate</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">mbbo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Set the sampling rate.&nbsp; The
+              sampling rate is 250 kHz divided by the menu item RVAL.<br>
+            </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-left: 40px;"> </div>
+    <div style="margin-left: 80px;"> <span style="font-family: Times
+        New Roman, Times, serif;"><span style="font-family: Times New
+          Roman, Times, serif;"></span></span><span style="font-family:
+        Times New Roman, Times, serif;"></span> </div>
+    <div style="margin-left: 40px;"> </div>
+    <h2 style="margin-left: 40px;"><span style="font-family: Times New
+        Roman, Times, serif;"></span></h2>
+    <div style="margin-left: 40px;"> </div>
+    <br>
     <h2><span style="font-family: Times New Roman, Times, serif;">Inte</span><span
         style="font-family: Times New Roman, Times, serif;">rnal Records</span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Records

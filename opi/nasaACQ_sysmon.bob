@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-19 13:47:16 by eric-->
+<!--Saved on 2024-02-23 13:02:50 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -687,7 +687,7 @@
     <widget type="led" version="2.0.0">
       <name>LED</name>
       <pv_name>$(P)$(R)ACQ:status</pv_name>
-      <bit>31</bit>
+      <bit>30</bit>
       <x>65</x>
       <width>25</width>
       <height>25</height>
@@ -933,7 +933,7 @@
     <transparent>true</transparent>
     <widget type="textupdate" version="2.0.0">
       <name>Text Update_51</name>
-      <pv_name>$(P)$(R)Quartz:MON:Temp</pv_name>
+      <pv_name>$(P)$(R)Quartz:Temp</pv_name>
       <x>155</x>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>

@@ -79,6 +79,7 @@
 
 
 
+
             [-s] [<span style="font-style: italic;">n</span>]</span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">The
           debugging flags are set to the specified value, if one is
@@ -119,6 +120,7 @@
 
 
 
+
                 — Enable messages related to the event generator.<br>
               </span></span></span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
@@ -148,6 +150,7 @@
 
 
 
+
                 &nbsp; — Show input coupling relay operations.<br>
               </span></span></span></span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">B</span><span
@@ -168,8 +171,12 @@
           interface.<br>
         </span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">Bit
-          13&nbsp; — Dump the register contents of the AD7768 ADC chips.<br>
-        </span></li>
+          13&nbsp; — Dump the register contents of the AD7768 ADC chips.</span></li>
+      <li><span style=" font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;">Bit
+            15&nbsp; — Provide fake AD7768 data.&nbsp; Effective only at
+            startup.<br>
+          </span></span></li>
       <li><span style="font-family: Times New Roman, Times, serif;"><span
             style="font-family: Times New Roman, Times, serif;">Bit
             17&nbsp; — Show the MGT clock multiplexer registers.</span></span></li>
@@ -230,9 +237,11 @@
 
 
 
+
               [vvv.www.xxx.yyy[/nn]]<span class="Apple-converted-space"></span><br>
             </span></span></span></dt>
       <dd><span style="font-family: Times New Roman, Times, serif;">Specify
+
           the IPv4 address of the gateway machine (vvv.www.xxx.yyy) and
           optionally the number of bits in the network address (default
           24 – a class C network).<br>
@@ -247,6 +256,7 @@
       0);">
       <dt><span style="font-family: Times New Roman, Times, serif;"><span
             style="font-weight: bold;"><span style="font-weight: bold;">help
+
 
 
 
@@ -275,6 +285,7 @@
 
 
 
+
           the console startup messages.</span><span style="font-family:
           Times New Roman, Times, serif;"></span></dd>
     </dl>
@@ -286,6 +297,7 @@
       0);">
       <dt><span style="font-family: Times New Roman, Times, serif;"><span
             style="font-weight: bold;"><span style="font-weight: bold;">ntp
+
 
 
 
@@ -400,6 +412,7 @@
 
 
 
+
         can be uploaded to, or downloaded from, the Marble bootstrap
         flash memory using the TFTP server in the FPGA application.</span><span
         style="font-family: Times New Roman, Times, serif;"><span
@@ -412,6 +425,7 @@
       word-spacing: 0px; -webkit-text-stroke-width: 0px;
       text-decoration: none; caret-color: rgb(0, 0, 0); color: rgb(0, 0,
       0);"><span style="font-family: Times New Roman, Times, serif;">File
+
 
 
 
@@ -465,9 +479,11 @@
 
 
 
+
           the new image from the host machine to the alternate file
           (BOOT_A.bin).</span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">Issue
+
 
 
 
@@ -499,6 +515,7 @@
 
 
 
+
           the console command to boot the default image:</span><span
           style="font-family: Times New Roman, Times, serif;"><br>
         </span><span style="font-family: Times New Roman, Times, serif;"><font
@@ -518,6 +535,7 @@
         start; text-indent: 0px; text-transform: none; white-space:
         normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
         text-decoration: none; float: none; display: inline !important;">If
+
         things go wrong and you end up with a bricked system the only
         recourse is to use the Vivado Hardware Manager to download the
         image through the USB/JTAG adapter.<br>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2023-07-13 10:27:36 by eric-->
+<!--Saved on 2024-02-23 09:48:10 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ FPGA Reboot</name>
   <x>300</x>
@@ -32,36 +32,34 @@
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
   </widget>
-  <widget type="label" version="2.0.0">
-    <name>EDM activeXTextClass_1</name>
-    <text>FPGA Reboot</text>
-    <x>2</x>
-    <y>25</y>
-    <width>470</width>
-    <height>21</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="18.0">
-      </font>
-    </font>
-    <foreground_color>
-      <color name="black-14" red="0" green="0" blue="0">
-      </color>
-    </foreground_color>
-    <background_color>
-      <color name="green-19" red="0" green="128" blue="0">
-      </color>
-    </background_color>
-    <horizontal_alignment>1</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <x>20</x>
-    <y>50</y>
+    <y>25</y>
     <width>420</width>
-    <height>35</height>
+    <height>60</height>
     <style>3</style>
     <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>EDM activeXTextClass_1</name>
+      <text>FPGA Reboot</text>
+      <width>420</width>
+      <height>21</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="black-14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="green-19" red="0" green="128" blue="0">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
     <widget type="action_button" version="3.0.0">
       <name>Action Button_16</name>
       <actions>
@@ -72,6 +70,7 @@
         </action>
       </actions>
       <text>Step One</text>
+      <y>25</y>
       <width>120</width>
       <height>35</height>
       <background_color>
@@ -91,6 +90,7 @@
       </actions>
       <text>Step Two</text>
       <x>150</x>
+      <y>25</y>
       <width>120</width>
       <height>35</height>
       <background_color>
@@ -110,6 +110,7 @@
       </actions>
       <text>Step Three</text>
       <x>300</x>
+      <y>25</y>
       <width>120</width>
       <height>35</height>
       <background_color>
