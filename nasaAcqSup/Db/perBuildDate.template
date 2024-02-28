@@ -1,0 +1,7 @@
+record(stringin, "$(P)$(R)$(NAME)") {
+    field(DESC, "$(NAME) string")
+    field(DTYP, "asynOctetRead")
+    field(INP,  "@asyn($(PORT), 0x01$(IDX), 0)")
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
+}

@@ -1,6 +1,0 @@
-record(longin, "$(P)$(R)$(NAME)") {
-    field(DESC, "$(NAME) POSIX seconds")
-    field(DTYP, "PSC Reg")
-    field(INP,  "@$(PORT) 16953 $(IDX)")
-    field(SCAN, "I/O Intr")
-}

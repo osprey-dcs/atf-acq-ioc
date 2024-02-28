@@ -1,0 +1,117 @@
+#
+# Trigger a system monitor readback
+# Value is the FPGA power-up status
+#
+record(bi, "$(P)$(R)sysmonTrig_") {
+    field(DESC, "Trigger system monitor readback")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0x2000, 0)")
+    field(ZNAM, "Running")
+    field(ONAM, "Rebooted")
+    field(SCAN, "5 second")
+    field(PINI, "YES")
+    field(FLNK, "$(P)$(R)reconnChk_")
+}
+
+#
+# Update values to FPGA on reconnection.
+# Monitor the status of a periodically-scanned readback to
+# detect reconnection or FPGA power up.
+#
+record(calcout, "$(P)$(R)reconnChk_") {
+    field(DESC, "Push on reconnect")
+    field(INPA, "$(P)$(R)sysmonTrig_.STAT NPP")
+    field(INPB, "$(P)$(R)sysmonTrig_ NPP")
+    field(INPD, "0")
+    field(CALC, "A=0&&((D!=0)||B);D:=A")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(R)reconnA_.PROC")
+}
+record(fanout, "$(P)$(R)reconnA_") {
+    field(PINI, "YES")
+    field(LNK1, "$(P)$(NODE):reconnX_")
+    field(FLNK, "$(P)$(R)clrPowerup_")
+}
+record(event, "$(P)$(R)reconnX_") {
+    field(DTYP, "Soft Channel")
+    field(VAL,  "RECON")
+    field(PINI, "RUNNING")
+}
+record(longout, "$(P)$(R)clrPowerup_") {
+    field(DESC, "Clear FPGA power-up status")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT), 0x1000, 0)")
+}
+
+#
+# EPICS-controlled FPGA reboot
+#
+record(longout, "$(P)$(R)FPGA:reboot") {
+    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT), 0x1100, 0)")
+}
+
+#
+# Align ADC with EVR PPS marker
+# Driven from common align record
+#
+record(longout, "$(P)$(R)ADC:align_") {
+    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT), 0x1120, 0)")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ADC:align CPP")
+}
+
+#
+# I/O statistics
+#
+record(longin, "$(P)$(R)Cmd0RetryCount") {
+    field(DESC, "Commands immediately acknowledged")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF000, 0)")
+    field(SCAN, "10 second")
+    field(FLNK, "$(P)$(R)Cmd1RetryCount")
+}
+record(longin, "$(P)$(R)Cmd1RetryCount") {
+    field(DESC, "Commands acknowledged with one retry")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF001, 0)")
+    field(FLNK, "$(P)$(R)Cmd2RetryCount")
+}
+record(longin, "$(P)$(R)Cmd2RetryCount") {
+    field(DESC, "Commands acknowledged with two retries")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF002, 0)")
+    field(FLNK, "$(P)$(R)Cmd3RetryCount")
+}
+record(longin, "$(P)$(R)Cmd3RetryCount") {
+    field(DESC, "Commands acknowledged with three retries")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF003, 0)")
+    field(FLNK, "$(P)$(R)Cmd4RetryCount")
+}
+record(longin, "$(P)$(R)Cmd4RetryCount") {
+    field(DESC, "Commands acknowledged with four retries")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF004, 0)")
+    field(FLNK, "$(P)$(R)Cmd5RetryCount")
+}
+record(longin, "$(P)$(R)Cmd5RetryCount") {
+    field(DESC, "Commands acknowledged with five retries")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF005, 0)")
+    field(FLNK, "$(P)$(R)CmdFailedCount")
+}
+record(longin, "$(P)$(R)CmdFailedCount") {
+    field(DESC, "Commands never acknowledged")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF006, 0)")
+    field(FLNK, "$(P)$(R)DiagLostCount")
+}
+record(longin, "$(P)$(R)DiagLostCount") {
+    field(DESC, "Diagnostic monitor packets lost")
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(PORT), 0xF006, 0)")
+}

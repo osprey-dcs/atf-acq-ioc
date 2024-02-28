@@ -1,0 +1,33 @@
+record(bo, "$(P)$(R)ACQ:enable:$(CHAN)") {
+    field(DESC, "Enable/disable channel $(CHAN)")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT) 0x14$(IDX) 0)")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+record(bo, "$(P)$(R)ACQ:coupling:$(CHAN)") {
+    field(DESC, "Set input coupling for channel $(CHAN)")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT) 0x15$(IDX) 0)")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+}
+record(longout, "$(P)$(R)ACQ:ofst:$(CHAN)") {
+    field(DESC, "Channel $(CHAN) calibration offset")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT) 0x16$(IDX) 0)")
+}
+record(longout, "$(P)$(R)ACQ:gain:$(CHAN)") {
+    field(DESC, "Channel $(CHAN) calibration gain")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT) 0x17$(IDX) 0)")
+}
+record(fanout, "$(P)$(R)$(CHAN):recon_") {
+    field(DESC, "Update node:$(R)chan:$(CHAN) on (rec)connect")
+    field(LNK1, "$(P)$(R)ACQ:coupling:$(CHAN)") 
+    field(LNK2, "$(P)$(R)ACQ:ofst:$(CHAN)")
+    field(LNK3, "$(P)$(R)ACQ:gain:$(CHAN)")
+    field(LNK4, "$(P)$(R)ACQ:enable:$(CHAN)") 
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
+}

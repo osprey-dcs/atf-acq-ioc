@@ -1,9 +1,12 @@
 #
-# Global acquisition control
+# Global acquisition control.
+# Fanned out by the event generator.
+# Hardwire the first node to be the event generator.
 #
 record(bo, "$(P)ACQ:enable") {
     field(DESC, "Enable/disable data acquisition")
-    field(PINI, "YES")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT) 0x1121 0)")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
 }
@@ -21,3 +24,12 @@ record(mbbo, "$(P)ACQ:rate") {
     field(VAL,  "0")
     field(PINI, "YES")
 }
+
+#
+# Align ADCs with EVR PPS marker
+# The actual I/O is done by the per-FPGA records
+#
+record(longout, "$(P)ADC:align") {
+    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
+}
+

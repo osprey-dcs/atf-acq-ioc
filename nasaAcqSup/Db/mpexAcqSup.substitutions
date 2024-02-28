@@ -1,0 +1,135 @@
+file "perFPGA.template" {
+  pattern { P R,PORT,   NRETRY }
+  { \$(P),\$(R),\$(PORT), 6 }
+}
+
+file "perBuildDate.template"
+{ pattern
+{       P,       R,       PORT,            NAME,        A }
+  { "\$(P)", "\$(R)", "\$(PORT)",  "firmwareBuildDate", 0 }
+  { "\$(P)", "\$(R)", "\$(PORT)",  "softwareBuildDate", 1 }
+}
+
+file "perSysmonAI.template" {
+  pattern { P R,PORT,                     NAME, LO, IDX,         EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
+  { \$(P),\$(R),\$(PORT),   "FPGA:Temperature",  3,  01,     "deg C",   0.0076885223, -273.15,    1      0,     0,    70,    75, "FPGA temperature" }
+  { \$(P),\$(R),\$(PORT),        "FPGA:VccINT",  4,  01,         "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
+  { \$(P),\$(R),\$(PORT),        "FPGA:VccAUX",  3,  02,         "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
+  { \$(P),\$(R),\$(PORT),         "FPGA:VBRAM",  4,  02,         "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
+  { \$(P),\$(R),\$(PORT),   "QSFP:Temperature",  3,  03,     "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP temperature" }
+  { \$(P),\$(R),\$(PORT),           "QSFP:Vcc",  4,  03,         "V",         1.0e-4,       0,    3, 3.145, 3.201, 3.399, 3.465, "QSFP Vcc" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower1",  3,  04,        "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 1 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:TxPower1",  4,  04,        "uW",            0.1,       0,    1,    80,   100, 10000, 10000, "QSFP channel 1 transmitter power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower2",  3,  05,        "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP channel 2 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:TxPower2",  4,  05,        "uW",            0.1,       0,    1,    80,   100, 10000, 10000, "QSFP channel 2 transmitter power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower3",  3,  06,        "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:TxPower3",  4,  06,        "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 3 transmitter power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:RxPower4",  3,  07,        "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 receiver power" }
+  { \$(P),\$(R),\$(PORT),      "QSFP:TxPower4",  4,  07,        "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP channel 4 transmitter power" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12I",  1,  08,         "A",     121.951e-6,       0,    2,   0.0,   0.1,   1.9,   2.0, "INA219 U17 current" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC1:P12V",  4,  08,         "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12I",  1,  09,         "A",     121.951e-6,       0,    2,   0.0,   0.1,   1.9,   2.0, "INA219 U32 current" }
+  { \$(P),\$(R),\$(PORT),   "MARBLE:FMC2:P12V",  4,  09,         "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
+  { \$(P),\$(R),\$(PORT),        "MARBLE:P12I",  1,  0A,         "A",    -365.854e-6,       0,    2,   0.5,   0.6,   2.8,   3.0, "INA219 U57 current" }
+  { \$(P),\$(R),\$(PORT),        "MARBLE:P12V",  4,  0A,         "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+  { \$(P),\$(R),\$(PORT),         "Zest:V2P2V",  4,  0D,         "V", 1.220703125e-3,       0,    3, 2.046, 2.090, 2.310, 2.354, "Zest 2.2V supply voltage (reg 1)" }
+  { \$(P),\$(R),\$(PORT),         "Zest:V3P7V",  3,  0D,         "V", 1.220703125e-3,       0,    3, 3.441, 3.515, 3.885, 3.959, "Zest 3.7V supply voltage (reg 2)" }
+  { \$(P),\$(R),\$(PORT),        "Zest:V12P0V",  4,  0E,         "V",  3.43724301e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Zest 12V supply voltage (reg 3)" }
+  { \$(P),\$(R),\$(PORT),      "Zest:ClkLevel",  4,  0E,      "Vp-p",        2.74e-4,       0,    3,  0.41,  0.45,  1.10,  1.15, "Zest clock input level (reg 5)" }
+  { \$(P),\$(R),\$(PORT),        "Zest:V12P0I",  3,  0F,         "A", 6.10351563e-04,       0,    3,  0.01,  0.015  1.00,  1.10, "Zest 12.0V supply current (reg 6)" }
+  { \$(P),\$(R),\$(PORT),         "Zest:V3P3V",  4,  10,         "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Zest 3.3V supply voltage (reg 7)" }
+  { \$(P),\$(R),\$(PORT),      "Zest:ADC:Temp",  3,  10,     "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Zest monitor ADC temperature (reg 8)" }
+}
+
+file "perSysmonLI.template" {
+  pattern { P R,PORT,                 NAME, LO, IDX,       EGU,        LOLO,         LOW,       HIGH,       HIHI, DESC }
+  { \$(P),\$(R),\$(PORT),     "MGT:status",  0,  0B,  "bitmap", -2147483648, -2147483648, 2147483647, 2147483647, "MGT link status" }
+  { \$(P),\$(R),\$(PORT),     "MPS:status",  0,  11,  "bitmap", -2147483648, -2147483648, 2147483647, 2147483647, "MPS CSR" }
+}
+
+file "perWaveformRecorder.template" {
+  pattern { P, R,  PORT,      WNAM,  WIDX,     PRE,    SIZE },
+  { \$(P),\$(R),\$(PORT),    "ADC",     0,    4000,  131072 }
+  { \$(P),\$(R),\$(PORT), "LLRF_A",     1,  131071,  131072 }
+  { \$(P),\$(R),\$(PORT), "LLRF_B",     2,  131071,  131072 }
+  { \$(P),\$(R),\$(PORT), "ZEST_A",     3,  131071,  131072 }
+  { \$(P),\$(R),\$(PORT), "ZEST_B",     4, 2097151, 2097152 }
+}
+
+file "perWaveformRecorderChannel.template" {
+  pattern { P R,PORT,             WNAM, WIDX,    SIZE,     TYPE, CNAM,   CIDX },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c0",     00 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c1",     01 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c2",     02 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c3",     03 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c4",     04 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c5",     05 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c6",     06 },
+  { \$(P),\$(R),\$(PORT),        "ADC",    0,  131072,  "SHORT", "c7",     07 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c0",     00 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c1",     02 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c2",     04 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c3",     06 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c4",     08 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c5",     0A },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c6",     0C },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:mag",    1,  131072, "USHORT", "c7",     0E },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c0",     01 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c1",     03 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c2",     05 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c3",     07 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c4",     09 },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c5",     0B },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c6",     0D },
+  { \$(P),\$(R),\$(PORT), "LLRF_A:phs",    1,  131072,  "SHORT", "c7",     0F },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c0",     00 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c1",     02 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c2",     04 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c3",     06 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c4",     08 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c5",     0A },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c6",     0C },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:mag",    2,  131072, "USHORT", "c7",     0E },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c0",     01 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c1",     03 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c2",     05 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c3",     07 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c4",     09 },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c5",     0B },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c6",     0D },
+  { \$(P),\$(R),\$(PORT), "LLRF_B:phs",    2,  131072,  "SHORT", "c7",     0F },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c0",     00 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c1",     01 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c2",     02 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c3",     03 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c4",     04 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c5",     05 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c6",     06 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_A",    3,  131072,  "SHORT", "c7",     07 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c0",     00 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c1",     01 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c2",     02 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c3",     03 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c4",     04 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c5",     05 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c6",     06 },
+  { \$(P),\$(R),\$(PORT),     "ZEST_B",    4, 2097152,  "SHORT", "c7",     07 },
+}
+
+file "perLLRF_ADC.template" {
+  pattern { P R,PORT,    CHAN, IDX }
+  { \$(P),\$(R),\$(PORT),   0,  01 }
+  { \$(P),\$(R),\$(PORT),   1,  02 }
+  { \$(P),\$(R),\$(PORT),   2,  03 }
+  { \$(P),\$(R),\$(PORT),   3,  04 }
+  { \$(P),\$(R),\$(PORT),   4,  05 }
+  { \$(P),\$(R),\$(PORT),   5,  06 }
+  { \$(P),\$(R),\$(PORT),   6,  07 }
+  { \$(P),\$(R),\$(PORT),   7,  08 }
+}
+
+file "perLLRF_DAC.template" {
+  pattern { P R,PORT,     IDX }
+  { \$(P),\$(R),\$(PORT),  0 }
+  { \$(P),\$(R),\$(PORT),  1 }
+}
