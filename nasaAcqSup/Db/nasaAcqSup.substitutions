@@ -16,7 +16,7 @@ file "perSysmonAI.template" {
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "FPGA:VccINT", 4,  01,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "FPGA:VccAUX", 3,  02,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),        "FPGA:VBRAM", 4,  02,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC1:P12I", 1,  03,       "A",     121.951e-6,       0,    2,  0.10,  0.15,   0.9,   1.0, "INA219 U17 current" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC1:P12I", 1,  03,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   0.9,   1.0, "INA219 U17 current" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC1:P12V", 4,  03,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC2:P12I", 1,  04,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "MARBLE:FMC2:P12V", 4,  04,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
