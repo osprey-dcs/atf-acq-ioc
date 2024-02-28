@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-28 10:30:06 by eric-->
+<!--Saved on 2024-02-28 11:59:56 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -145,7 +145,7 @@
     </actions>
     <text>More...</text>
     <x>470</x>
-    <y>760</y>
+    <y>780</y>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
@@ -1307,6 +1307,105 @@
         <name>INA219val_56</name>
         <text>Software:</text>
         <width>65</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>FPGAmon_1</name>
+    <x>300</x>
+    <y>635</y>
+    <width>255</width>
+    <height>95</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group_8</name>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_10</name>
+        <text>Read Rate</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>$(P)$(R)RXRate-I</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_9</name>
+      <y>25</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Write Rate</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_13</name>
+        <pv_name>$(P)$(R)WrtRate-I</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_10</name>
+      <y>50</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Dropped Packets</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_14</name>
+        <pv_name>$(P)$(R)NDrp-I</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_11</name>
+      <y>75</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Ignored Packets</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_15</name>
+        <pv_name>$(P)$(R)NIgn-I</pv_name>
+        <x>155</x>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
       </widget>

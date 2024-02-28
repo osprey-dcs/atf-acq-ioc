@@ -32,9 +32,10 @@ cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 
 
-dbpf "$(P)FileDir-SP" "/tmp"
-dbpf "$(P)FileBase-SP" "FOO-"
-dbpf "$(P)Record-Sel" 1
+# FIXME -- this needs to go to a per-node 'iocshLoad' file
+dbpf "$(P)01:FileDir-SP" "/tmp"
+dbpf "$(P)01:FileBase-SP" "FOO-"
+dbpf "$(P)01:Record-Sel" 1
 
 dbpf "$(P)01:ACQ:coupling:01" "DC"
 dbpf "$(P)01:ACQ:coupling:02" "DC"
