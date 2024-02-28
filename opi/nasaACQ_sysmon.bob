@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-23 13:02:50 by eric-->
+<!--Saved on 2024-02-28 10:30:06 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -15,7 +15,7 @@
     <name>EDM activeXTextClass</name>
     <text>$(P)$(R)</text>
     <y>2</y>
-    <width>300</width>
+    <width>615</width>
     <height>21</height>
     <font>
       <font family="Liberation Sans" style="REGULAR" size="18.0">
@@ -144,14 +144,14 @@
       </action>
     </actions>
     <text>More...</text>
-    <x>390</x>
-    <y>70</y>
+    <x>470</x>
+    <y>760</y>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon</name>
     <x>300</x>
-    <y>270</y>
+    <y>294</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -327,7 +327,6 @@
         </color>
       </off_color>
       <labels>
-        <text>0</text>
         <text>1</text>
         <text>2</text>
         <text>3</text>
@@ -335,6 +334,7 @@
         <text>5</text>
         <text>6</text>
         <text>7</text>
+        <text>8</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -351,7 +351,6 @@
         </color>
       </off_color>
       <labels>
-        <text>8</text>
         <text>9</text>
         <text>10</text>
         <text>11</text>
@@ -359,6 +358,7 @@
         <text>13</text>
         <text>14</text>
         <text>15</text>
+        <text>16</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -376,7 +376,6 @@
         </color>
       </off_color>
       <labels>
-        <text>16</text>
         <text>17</text>
         <text>18</text>
         <text>19</text>
@@ -384,6 +383,7 @@
         <text>21</text>
         <text>22</text>
         <text>23</text>
+        <text>24</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -400,7 +400,6 @@
         </color>
       </off_color>
       <labels>
-        <text>24</text>
         <text>25</text>
         <text>26</text>
         <text>27</text>
@@ -408,6 +407,7 @@
         <text>29</text>
         <text>30</text>
         <text>31</text>
+        <text>32</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -591,7 +591,6 @@
         </color>
       </off_color>
       <labels>
-        <text>0</text>
         <text>1</text>
         <text>2</text>
         <text>3</text>
@@ -599,6 +598,7 @@
         <text>5</text>
         <text>6</text>
         <text>7</text>
+        <text>8</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -615,7 +615,6 @@
         </color>
       </off_color>
       <labels>
-        <text>8</text>
         <text>9</text>
         <text>10</text>
         <text>11</text>
@@ -623,6 +622,7 @@
         <text>13</text>
         <text>14</text>
         <text>15</text>
+        <text>16</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -640,7 +640,6 @@
         </color>
       </off_color>
       <labels>
-        <text>16</text>
         <text>17</text>
         <text>18</text>
         <text>19</text>
@@ -648,6 +647,7 @@
         <text>21</text>
         <text>22</text>
         <text>23</text>
+        <text>24</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -664,7 +664,6 @@
         </color>
       </off_color>
       <labels>
-        <text>24</text>
         <text>25</text>
         <text>26</text>
         <text>27</text>
@@ -672,6 +671,7 @@
         <text>29</text>
         <text>30</text>
         <text>31</text>
+        <text>32</text>
       </labels>
       <border_alarm_sensitive>false</border_alarm_sensitive>
     </widget>
@@ -708,7 +708,7 @@
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon_2</name>
     <x>300</x>
-    <y>440</y>
+    <y>464</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -1069,6 +1069,247 @@
       <width>150</width>
       <horizontal_alignment>2</horizontal_alignment>
       <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>380</x>
+    <y>101</y>
+    <width>175</width>
+    <height>170</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_59</name>
+        <pv_name>$(P)$(R)Cmd0RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_55</name>
+        <text>0 Retries</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_2</name>
+      <y>25</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_60</name>
+        <pv_name>$(P)$(R)Cmd1RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_57</name>
+        <text>1 Retry</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_3</name>
+      <y>50</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_61</name>
+        <pv_name>$(P)$(R)Cmd2RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_58</name>
+        <text>2 Retries</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_4</name>
+      <y>75</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_62</name>
+        <pv_name>$(P)$(R)Cmd3RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_59</name>
+        <text>3 Retries</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_5</name>
+      <y>100</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_63</name>
+        <pv_name>$(P)$(R)Cmd4RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_60</name>
+        <text>4 Retries</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_6</name>
+      <y>125</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_64</name>
+        <pv_name>$(P)$(R)Cmd5RetryCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_61</name>
+        <text>5 Retries</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_7</name>
+      <y>150</y>
+      <width>175</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_65</name>
+        <pv_name>$(P)$(R)CmdFailedCount</pv_name>
+        <x>75</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_62</name>
+        <text>Failed</text>
+        <width>70</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>345</x>
+    <y>38</y>
+    <width>230</width>
+    <height>45</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <width>230</width>
+      <height>45</height>
+      <style>3</style>
+      <transparent>true</transparent>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>340</x>
+    <y>38</y>
+    <width>230</width>
+    <height>45</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_57</name>
+        <pv_name>$(P)$(R)firmwareBuildDate</pv_name>
+        <x>70</x>
+        <width>150</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_54</name>
+        <text>Firmware:</text>
+        <width>65</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>25</y>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_58</name>
+        <pv_name>$(P)$(R)softwareBuildDate</pv_name>
+        <x>70</x>
+        <width>150</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_56</name>
+        <text>Software:</text>
+        <width>65</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
   </widget>
 </display>

@@ -7,7 +7,7 @@ file "perBuildDate.template"
 { pattern
 {       P,          R,        PORT,                           NAME, IDX }
   { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "firmwareBuildDate",   0 }
-  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "softwareBuildDate",   4 }
+  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "softwareBuildDate",   1 }
 }
 
 file "perSysmonAI.template" {
@@ -55,37 +55,37 @@ file "perSysmonLI.template" {
 }
 
 file "perChannel.template" {
-  pattern { P,   R,      PORT,        N  }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 00 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 01 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 02 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 03 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 04 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 05 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 06 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 07 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 08 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 09 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 10 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 11 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 12 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 13 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 14 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 15 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 16 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 17 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 18 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 19 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 20 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 21 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 22 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 23 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 24 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 25 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 26 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 27 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 28 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 29 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 30 }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 31 }
+  pattern { P,   R,      PORT,           N,  IDX }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 00,   00 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 01,   01 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 02,   02 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 03,   03 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 04,   04 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 05,   05 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 06,   06 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 07,   07 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 08,   08 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 09,   09 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 10,   0A }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 11,   0B }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 12,   0C }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 13,   0D }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 14,   0E }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 15,   0F }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 16,   10 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 17,   11 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 18,   12 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 19,   13 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 20,   14 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 21,   15 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 22,   16 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 23,   17 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 24,   18 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 25,   19 }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 26,   1A }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 27,   1B }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 28,   1C }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 29,   1D }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 30,   1E }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE), 31,   1F }
 }
