@@ -48,10 +48,10 @@ file "perSysmonAI.template" {
 file "perSysmonLI.template" {
   pattern { P,   R,      PORT,                    NAME, LO, IDX,       EGU,        LOLO,         LOW,        HIGH,        HIHI, DESC }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE), "FPGA:powerUp_", 0,  00,        "",           0,           0,           2,           2, "FPGA has powered up" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:status",  0,  15,        "", -2147483648, -2147483648,           1,           1, "Acquisition status register" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:status",  0,  15,        "", -2147483648, -2147483648,  2147483647,  2147483647, "Acquisition status register" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:active",  0,  16,        "",           0,           0,           0,           0, "Active ADC channels" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),"ACQ:DCcoupled",  0,  17,        "",           0,           0,           0,           0, "DC-coupled ADC channels" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:clkPLL",  0,  18,        "",           0,           0,           0,           0, "Acquisition clock PLL status" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:clkPLL",  0,  18,        "", -2147483648, -2147483648,  2147483647,  2147483647, "Acquisition clock PLL status" }
 }
 
 file "perChannel.template" {

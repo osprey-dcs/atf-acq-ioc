@@ -1,3 +1,5 @@
+# 'Temporary' script to set up an acquisition node
+
 dbpf "$(P)$(NODE):ACQ:coupling:01" "DC"
 dbpf "$(P)$(NODE):ACQ:coupling:02" "DC"
 dbpf "$(P)$(NODE):ACQ:coupling:03" "DC"

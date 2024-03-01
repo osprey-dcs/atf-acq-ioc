@@ -41,6 +41,6 @@ dbpf "$(P)02:FileDir-SP" "/tmp"
 dbpf "$(P)02:FileBase-SP" "BAR-"
 dbpf "$(P)02:Record-Sel" 1
 
-# This should be autosave/restore or some startup client
-iocshLoad "initig_node.cmd" "NODE=01"
-iocshLoad "initig_node.cmd" "NODE=02"
+# FIXME -- should this bebe autosave/restore or some startup client?
+iocshLoad "init_node.cmd" "NODE=01"
+iocshLoad "init_node.cmd" "NODE=02"
