@@ -18,7 +18,7 @@ var PSCDebug 0
 var PSCUDPMaxPacketSize 1500
 cd "$(TOP)/iocBoot/$(IOC)"
 
-# Repeat the following 32 times -- one for each node
+# Repeat the following -- one for each node
 iocshLoad "config_node.cmd" "NODE=01"
 iocshLoad "config_node.cmd" "NODE=02"
 
@@ -32,8 +32,7 @@ dbLoadRecords("db/nasaEVG.db", "P=$(P),PORT=NASA_CMD01")
 cd "$(TOP)/iocBoot/$(IOC)"
 iocInit
 
-
-# FIXME -- this needs to go to a per-node 'iocshLoad' file
+# FIXME -- this needs to go to some client
 dbpf "$(P)01:FileDir-SP" "/tmp"
 dbpf "$(P)01:FileBase-SP" "FOO-"
 dbpf "$(P)01:Record-Sel" 1
@@ -41,6 +40,6 @@ dbpf "$(P)02:FileDir-SP" "/tmp"
 dbpf "$(P)02:FileBase-SP" "BAR-"
 dbpf "$(P)02:Record-Sel" 1
 
-# FIXME -- should this bebe autosave/restore or some startup client?
+# FIXME -- should this be autosave/restore or some startup client?
 iocshLoad "init_node.cmd" "NODE=01"
 iocshLoad "init_node.cmd" "NODE=02"
