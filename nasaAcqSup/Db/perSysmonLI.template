@@ -9,8 +9,8 @@ record(longin, "$(P)$(R)$(NAME)") {
     field(LOW,  "$(LOW)")
     field(HIGH, "$(HIGH)")
     field(HIHI, "$(HIHI)")
-    field(LLSV, "MAJOR")
-    field(LSV,  "MINOR")
-    field(HSV,  "MINOR")
-    field(HHSV, "MAJOR")
+    field(LLSV, "$(LLSV)")
+    field(LSV,  "$(LSV)")
+    field(HSV,  "$(HSV)")
+    field(HHSV, "$(HHSV)")
 }
