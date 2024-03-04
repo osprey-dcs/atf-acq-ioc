@@ -40,6 +40,6 @@ dbpf "$(P)02:FileDir-SP" "/tmp"
 dbpf "$(P)02:FileBase-SP" "BAR-"
 dbpf "$(P)02:Record-Sel" 1
 
-# FIXME -- should this be autosave/restore or some startup client?
+# FIXME -- should this be autosave/restore or some startup client?  And what about the calibration coefficients?
 iocshLoad "init_node.cmd" "NODE=01"
 iocshLoad "init_node.cmd" "NODE=02"
