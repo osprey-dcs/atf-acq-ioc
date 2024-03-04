@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-29 14:59:12 by eric-->
+<!--Saved on 2024-03-03 14:54:04 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
   <y>88</y>
   <width>615</width>
-  <height>845</height>
+  <height>820</height>
   <background_color>
     <color name="GLOBAL canvas" red="200" green="200" blue="200">
     </color>
@@ -35,7 +35,7 @@
   <widget type="group" version="2.0.0">
     <name>FPGAmon</name>
     <x>25</x>
-    <y>275</y>
+    <y>280</y>
     <width>255</width>
     <height>95</height>
     <style>3</style>
@@ -144,14 +144,14 @@
       </action>
     </actions>
     <text>More...</text>
-    <x>470</x>
-    <y>780</y>
+    <x>478</x>
+    <y>747</y>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon</name>
-    <x>300</x>
-    <y>275</y>
+    <x>328</x>
+    <y>492</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -560,229 +560,9 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>INA219val_43</name>
-    <x>25</x>
-    <y>735</y>
-    <width>255</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_52</name>
-      <pv_name>$(P)$(R)Quartz:N15V</pv_name>
-      <x>155</x>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_44</name>
-      <text>Quartz -15 V</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>INA219val_35</name>
-    <x>25</x>
-    <y>760</y>
-    <width>255</width>
-    <height>15</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_48</name>
-      <pv_name>$(P)$(R)Quartz:P12V</pv_name>
-      <x>155</x>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_36</name>
-      <text>Quartz 12 V</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>INA219val_37</name>
-    <x>25</x>
-    <y>785</y>
-    <width>255</width>
-    <height>15</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_49</name>
-      <pv_name>$(P)$(R)Quartz:P12I</pv_name>
-      <x>155</x>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_38</name>
-      <text>Quartz 12 I</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>INA219val_41</name>
-    <x>25</x>
-    <y>810</y>
-    <width>255</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_51</name>
-      <pv_name>$(P)$(R)Quartz:Temp</pv_name>
-      <x>155</x>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_42</name>
-      <text>Quartz Monitor Temp</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
     <name>Group</name>
-    <x>25</x>
-    <y>610</y>
-    <width>255</width>
-    <height>95</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="2.0.0">
-      <name>INA219val_45</name>
-      <y>75</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_53</name>
-        <pv_name>$(P)$(R)Quartz:P5V</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_46</name>
-        <text>Quartz 5 V</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>INA219val_47</name>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_54</name>
-        <pv_name>$(P)$(R)Quartz:2P5V1</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_48</name>
-        <text>Quartz 2.5 V P1</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>INA219val_49</name>
-      <y>25</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_55</name>
-        <pv_name>$(P)$(R)Quartz:2P5V2</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_50</name>
-        <text>Quartz 2.5 V P2</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>INA219val_39</name>
-      <y>50</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_50</name>
-        <pv_name>$(P)$(R)Quartz:3P3V</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_40</name>
-        <text>Quartz 3.3 V</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>INA219val_51</name>
-    <x>25</x>
-    <y>710</y>
-    <width>255</width>
-    <height>20</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_56</name>
-      <pv_name>$(P)$(R)Quartz:P15V</pv_name>
-      <x>155</x>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-    </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_52</name>
-      <text>Quartz +15 V</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <x>380</x>
-    <y>94</y>
+    <x>408</x>
+    <y>302</y>
     <width>175</width>
     <height>170</height>
     <style>3</style>
@@ -949,81 +729,9 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <x>345</x>
-    <y>38</y>
-    <width>230</width>
-    <height>45</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <width>230</width>
-      <height>45</height>
-      <style>3</style>
-      <transparent>true</transparent>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <x>340</x>
-    <y>38</y>
-    <width>230</width>
-    <height>45</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <width>220</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_57</name>
-        <pv_name>$(P)$(R)firmwareBuildDate</pv_name>
-        <x>70</x>
-        <width>150</width>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_54</name>
-        <text>Firmware:</text>
-        <width>65</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <y>25</y>
-      <width>220</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_58</name>
-        <pv_name>$(P)$(R)softwareBuildDate</pv_name>
-        <x>70</x>
-        <width>150</width>
-        <horizontal_alignment>1</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_56</name>
-        <text>Software:</text>
-        <width>65</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
     <name>FPGAmon_1</name>
-    <x>330</x>
-    <y>446</y>
+    <x>328</x>
+    <y>57</y>
     <width>255</width>
     <height>95</height>
     <style>3</style>
@@ -1122,7 +830,7 @@
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <x>25</x>
-    <y>426</y>
+    <y>395</y>
     <width>290</width>
     <height>167</height>
     <style>3</style>
@@ -1299,28 +1007,330 @@
     </widget>
   </widget>
   <widget type="group" version="2.0.0">
-    <name>INA219val_24</name>
-    <x>25</x>
-    <y>385</y>
-    <width>255</width>
-    <height>20</height>
+    <name>Group</name>
+    <x>363</x>
+    <y>172</y>
+    <width>220</width>
+    <height>45</height>
     <style>3</style>
     <transparent>true</transparent>
-    <widget type="textupdate" version="2.0.0">
-      <name>Text Update_66</name>
-      <pv_name>$(P)$(R)ACQ:clkPLL</pv_name>
-      <x>155</x>
-      <format>4</format>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_57</name>
+        <pv_name>$(P)$(R)firmwareBuildDate</pv_name>
+        <x>70</x>
+        <width>150</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_54</name>
+        <text>Firmware:</text>
+        <width>65</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
-    <widget type="label" version="2.0.0">
-      <name>INA219val_25</name>
-      <text>Clock Sync CSR</text>
-      <width>150</width>
-      <horizontal_alignment>2</horizontal_alignment>
-      <vertical_alignment>1</vertical_alignment>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>25</y>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_58</name>
+        <pv_name>$(P)$(R)softwareBuildDate</pv_name>
+        <x>70</x>
+        <width>150</width>
+        <horizontal_alignment>1</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_56</name>
+        <text>Software:</text>
+        <width>65</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>363</x>
+    <y>237</y>
+    <width>220</width>
+    <height>45</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <y>25</y>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_66</name>
+        <pv_name>$(P)$(R)ACQ:clkPLL</pv_name>
+        <x>120</x>
+        <format>4</format>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_25</name>
+        <text>Clock Sync CSR</text>
+        <width>115</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_12</name>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_67</name>
+        <pv_name>$(P)$(R)FPGA:uptime</pv_name>
+        <x>120</x>
+        <format>1</format>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_26</name>
+        <text>Uptime</text>
+        <width>115</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>25</x>
+    <y>582</y>
+    <width>255</width>
+    <height>220</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_43</name>
+      <y>125</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_52</name>
+        <pv_name>$(P)$(R)Quartz:N15V</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_44</name>
+        <text>Quartz -15 V</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_35</name>
+      <y>150</y>
+      <width>255</width>
+      <height>15</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_48</name>
+        <pv_name>$(P)$(R)Quartz:P12V</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_36</name>
+        <text>Quartz 12 V</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_37</name>
+      <y>175</y>
+      <width>255</width>
+      <height>15</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_49</name>
+        <pv_name>$(P)$(R)Quartz:P12I</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_38</name>
+        <text>Quartz 12 I</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_41</name>
+      <y>200</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_51</name>
+        <pv_name>$(P)$(R)Quartz:Temp</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_42</name>
+        <text>Quartz Monitor Temp</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_51</name>
+      <y>100</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_56</name>
+        <pv_name>$(P)$(R)Quartz:P15V</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_52</name>
+        <text>Quartz +15 V</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_45</name>
+      <y>75</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_53</name>
+        <pv_name>$(P)$(R)Quartz:P5V</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_46</name>
+        <text>Quartz 5 V</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_47</name>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_54</name>
+        <pv_name>$(P)$(R)Quartz:2P5V1</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_48</name>
+        <text>Quartz 2.5 V P1</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_49</name>
+      <y>25</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_55</name>
+        <pv_name>$(P)$(R)Quartz:2P5V2</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_50</name>
+        <text>Quartz 2.5 V P2</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>INA219val_39</name>
+      <y>50</y>
+      <width>255</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_50</name>
+        <pv_name>$(P)$(R)Quartz:3P3V</pv_name>
+        <x>155</x>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_40</name>
+        <text>Quartz 3.3 V</text>
+        <width>150</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
     </widget>
   </widget>
 </display>

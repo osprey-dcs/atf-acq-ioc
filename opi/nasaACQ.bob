@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-28 16:06:27 by eric-->
+<!--Saved on 2024-03-02 16:26:05 by eric-->
 <display version="2.0.0">
   <name>NASA Data Acquisition</name>
   <x>9</x>
@@ -52,7 +52,7 @@
         <description>FPGA 02</description>
       </action>
     </actions>
-    <text>More...</text>
+    <text>Per-Node...</text>
     <x>310</x>
     <y>50</y>
     <tooltip>$(actions)</tooltip>
@@ -162,7 +162,7 @@
   <widget type="group" version="2.0.0">
     <name>Group_5</name>
     <x>10</x>
-    <y>180</y>
+    <y>193</y>
     <width>420</width>
     <height>60</height>
     <style>3</style>
@@ -231,6 +231,94 @@
       <actions>
         <action type="write_pv">
           <pv_name>$(P)ADC:align</pv_name>
+          <value>10000</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Step Three</text>
+      <x>300</x>
+      <y>25</y>
+      <width>120</width>
+      <height>35</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Group_6</name>
+    <x>10</x>
+    <y>278</y>
+    <width>420</width>
+    <height>60</height>
+    <style>3</style>
+    <transparent>true</transparent>
+    <widget type="label" version="2.0.0">
+      <name>EDM activeXTextClass_3</name>
+      <text>Reboot ALL Acquisition Nodes</text>
+      <width>420</width>
+      <height>21</height>
+      <font>
+        <font family="Liberation Sans" style="REGULAR" size="18.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="black-14" red="0" green="0" blue="0">
+        </color>
+      </foreground_color>
+      <background_color>
+        <color name="green-19" red="0" green="128" blue="0">
+        </color>
+      </background_color>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_19</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)FPGA:reboot</pv_name>
+          <value>1</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Step One</text>
+      <y>25</y>
+      <width>120</width>
+      <height>35</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_22</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)FPGA:reboot</pv_name>
+          <value>100</value>
+          <description>WritePV</description>
+        </action>
+      </actions>
+      <text>Step Two</text>
+      <x>150</x>
+      <y>25</y>
+      <width>120</width>
+      <height>35</height>
+      <background_color>
+        <color name="Write_Background" red="128" green="255" blue="255">
+        </color>
+      </background_color>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_23</name>
+      <actions>
+        <action type="write_pv">
+          <pv_name>$(P)FPGA:reboot</pv_name>
           <value>10000</value>
           <description>WritePV</description>
         </action>

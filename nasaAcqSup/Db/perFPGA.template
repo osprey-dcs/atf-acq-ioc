@@ -44,12 +44,23 @@ record(longout, "$(P)$(R)clrPowerup_") {
 }
 
 #
-# EPICS-controlled FPGA reboot
+# Reset FPGA -- driven directly by client
 #
 record(longout, "$(P)$(R)FPGA:reboot") {
     field(DESC, "Write 1, 100, 10000 to reboot FPGA")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(PORT), 0x1100, 0)")
+}
+
+#
+# Reset FPGA -- driven from common reboot record
+#
+record(longout, "$(P)$(R)FPGA:reboot_") {
+    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(PORT), 0x1100, 0)")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)FPGA:reboot CPP")
 }
 
 #
