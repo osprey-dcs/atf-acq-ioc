@@ -51,6 +51,246 @@
         <target>window</target>
         <description>FPGA 02</description>
       </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>03:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 03</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>04:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 04</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>05:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 05</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>06:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 06</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>07:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 07</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>08:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 08</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>09:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 09</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>10:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 10</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>11:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 11</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>12:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 12</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>13:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 13</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>14:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 14</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>15:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 15</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>16:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 16</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>17:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 17</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>18:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 18</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>19:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 19</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>20:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 20</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>21:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 21</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>22:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 22</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>23:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 23</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>24:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 24</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>25:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 25</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>26:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 26</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>27:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 27</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>28:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 28</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>29:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 29</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>30:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 30</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>31:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 31</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>32:</R>
+        </macros>
+        <target>window</target>
+        <description>FPGA 32</description>
+      </action>
     </actions>
     <text>Per-Node...</text>
     <x>310</x>
