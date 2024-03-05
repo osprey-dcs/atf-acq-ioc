@@ -6,7 +6,6 @@ record(bo, "$(P)$(R)ACQ:enable:$(N)") {
     field(ONAM, "Enable")
 }
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
-field(TPRO,1)
     field(DESC, "Set channel $(N) input coupling")
     field(DTYP, "PSC Single U32")
     field(OUT,  "@$(PORT) 16951 2$(IDX)")
