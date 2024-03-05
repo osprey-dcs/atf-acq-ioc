@@ -26,10 +26,11 @@ record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(FLNK, "$(P)$(R)send_")
 }
 record(fanout, "$(P)$(R)$(N):recon_") {
-    field(DESC, "Update node:$(R)chan:$(N) on (rec)connect")
+    field(DESC, "Update node:$(R)chan:$(N) on (re)connect")
     field(LNK1, "$(P)$(R)ACQ:coupling:$(N)") 
     field(LNK2, "$(P)$(R)ACQ:ofst:$(N)")
     field(LNK3, "$(P)$(R)ACQ:gain:$(N)")
+    field(LNK4, "$(P)$(R)ACQ:enable:$(N)") 
     field(SCAN, "Event")
     field(EVNT, "RECON")
 }
