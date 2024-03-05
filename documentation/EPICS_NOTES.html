@@ -12,9 +12,10 @@
         screens.&nbsp; Most of the records mentioned in the following
         sections have names beginning with </span><span
         style="font-family: Times New Roman, Times, serif;"><span
-          style="font-family: Times New Roman, Times, serif;">$(P)$(R)
+          style="font-family: Times New Roman, Times, serif;">$(P)$(NODE)
+
           macros.&nbsp; Typically the P macro is set to 'NASA_ACQ:' and
-          the R macro to the acquisition node number (01 through 32)
+          the NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
         </span></span></p>
     <h2><span style="font-family: Times New Roman, Times, serif;">System
@@ -623,7 +624,18 @@
         that there are no race conditions between nodes beginning to
         fill their acquistion buffers.&nbsp; When acquisition is
         disabled acquisition activity continues until the
-        currently-active packet has been filled and transmitted.<br>
+        currently-active packet has been filled and transmitted.</span></p>
+    <p><span style="font-family: Times New Roman, Times, serif;">The
+        time, in POSIX seconds, at which the firmware and software was
+        built is contained in the per-node longin records </span><span
+        style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
+        a</span><span style="font-family: Times New Roman, Times,
+        serif;">nd </span><span style="font-family: Times New Roman,
+        Times, serif;"><br>
+      </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
+        respectively.&nbsp; EPICS does not yet provide a convenient
+        mechanism for turning these values into more human-readable
+        form.<br>
         <br>
       </span> </p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
