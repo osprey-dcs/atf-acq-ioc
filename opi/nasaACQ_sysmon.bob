@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-03 14:54:04 by eric-->
+<!--Saved on 2024-03-05 13:49:40 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -151,7 +151,7 @@
   <widget type="group" version="2.0.0">
     <name>MarbleP12mon</name>
     <x>328</x>
-    <y>492</y>
+    <y>417</y>
     <width>255</width>
     <height>145</height>
     <style>3</style>
@@ -557,175 +557,6 @@
       <width>59</width>
       <height>16</height>
       <auto_size>true</auto_size>
-    </widget>
-  </widget>
-  <widget type="group" version="2.0.0">
-    <name>Group</name>
-    <x>408</x>
-    <y>302</y>
-    <width>175</width>
-    <height>170</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="2.0.0">
-      <name>Group</name>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_59</name>
-        <pv_name>$(P)$(R)Cmd0RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_55</name>
-        <text>0 Retries</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_2</name>
-      <y>25</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_60</name>
-        <pv_name>$(P)$(R)Cmd1RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_57</name>
-        <text>1 Retry</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_3</name>
-      <y>50</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_61</name>
-        <pv_name>$(P)$(R)Cmd2RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_58</name>
-        <text>2 Retries</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_4</name>
-      <y>75</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_62</name>
-        <pv_name>$(P)$(R)Cmd3RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_59</name>
-        <text>3 Retries</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_5</name>
-      <y>100</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_63</name>
-        <pv_name>$(P)$(R)Cmd4RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_60</name>
-        <text>4 Retries</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_6</name>
-      <y>125</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_64</name>
-        <pv_name>$(P)$(R)Cmd5RetryCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_61</name>
-        <text>5 Retries</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="2.0.0">
-      <name>Group_7</name>
-      <y>150</y>
-      <width>175</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_65</name>
-        <pv_name>$(P)$(R)CmdFailedCount</pv_name>
-        <x>75</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_62</name>
-        <text>Failed</text>
-        <width>70</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
     </widget>
   </widget>
   <widget type="group" version="2.0.0">

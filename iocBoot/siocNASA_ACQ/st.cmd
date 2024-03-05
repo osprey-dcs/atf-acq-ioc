@@ -25,7 +25,7 @@ iocshLoad "config_node.cmd" "NODE=02"
 ###############################################################################
 cd "$(TOP)"
 # Load record instances unique to event generator
-dbLoadRecords("db/nasaEVG.db", "P=$(P),PORT=NASA_CMD01")
+dbLoadRecords("db/nasaEVG.db", "P=$(P),PORT=NASA_CTRL01")
 
 ###############################################################################
 # Start IOC

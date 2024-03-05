@@ -22,7 +22,6 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-ASYN=/usr/local/epics/R7.0.6/modules/soft/asyn
 PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv
 
 # EPICS_BASE should appear last so earlier modules can override stuff:

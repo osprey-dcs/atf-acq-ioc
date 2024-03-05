@@ -6,6 +6,8 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
+DB += nasaEVG.db
+DB += nasaAcqSup.db
 DB_INSTALLS += $(PSCDRV)/db/pscudpfast.db
 
 #----------------------------------------------------

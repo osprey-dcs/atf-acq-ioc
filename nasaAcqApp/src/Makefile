@@ -16,19 +16,14 @@ DBD += nasaAcq.dbd
 nasaAcq_DBD += base.dbd
 
 # Include dbd files from all support applications:
-nasaAcq_DBD += nasaAcqSup.dbd
 #nasaAcq_DBD += pscSig.dbd
 nasaAcq_DBD += pscUDPFast.dbd
 nasaAcq_DBD += pscCore.dbd
 
 # Add all the support libraries needed by this IOC
-nasaAcq_LIBS += nasaAcqSup
-nasaAcq_LIBS += asyn
 nasaAcq_LIBS += pscSig
 nasaAcq_LIBS += pscUDPFast
 nasaAcq_LIBS += pscCore
-#myioc_SYS_LIBS += event_core event_extra
-#myioc_SYS_LIBS_DEFAULT = event_pthreads
 
 # nasaAcq_registerRecordDeviceDriver.cpp derives from nasaAcq.dbd
 nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
