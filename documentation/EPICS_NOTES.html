@@ -546,10 +546,7 @@
               register.&nbsp; The least significant 16 bits indicate how
               far the count of system clock ticks between the preceding
               two pulse per second markers differs from its ideal value
-              of 125,000,000.&nbsp; The event generator node takes its
-              pulse per second marker from its hardware input and all
-              other nodes obtain the marker from their event
-              receiver.&nbsp;&nbsp; The most significant bits contain
+              of 125,000,000.&nbsp; The most significant bits contain
               status information:<br>
             </span>
             <table style=" text-align: left; width: 90%;"
@@ -626,8 +623,9 @@
         that there are no race conditions between nodes beginning to
         fill their acquistion buffers.&nbsp; When acquisition is
         disabled acquisition activity continues until the
-        currently-active packet has been filled and transmitted.</span><br>
-    </p>
+        currently-active packet has been filled and transmitted.<br>
+        <br>
+      </span> </p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
 
         Controls</span></h2>
@@ -883,41 +881,14 @@
     <div style="margin-left: 40px;"> </div>
     <h2 style="margin-left: 40px;"><span style="font-family: Times New
         Roman, Times, serif;"></span></h2>
-    <div style="margin-left: 40px;"> <br>
-    </div>
-    <h2><span style="font-family: Times New Roman, Times, serif;">Communication
-
-
-        Statistics</span></h2>
-    <span style="font-family: Times New Roman, Times, serif;">A group of
-      longin records with names </span><span style="font-family: Times
-      New Roman, Times, serif;"><span style="caret-color: rgb(0, 0, 0);
-        color: rgb(0, 0, 0); font-size: medium; font-style: normal;
-        font-variant-caps: normal; font-weight: 400; letter-spacing:
-        normal; text-align: center; text-indent: 0px; text-transform:
-        none; white-space: normal; word-spacing: 0px;
-        -webkit-text-stroke-width: 0px; text-decoration: none; display:
-        inline !important; float: none;">Cmd</span></span><span
-      style="font-style: italic;"><span style="font-family: Times New
-        Roman, Times, serif;"><span style="caret-color: rgb(0, 0, 0);
-          color: rgb(0, 0, 0); font-variant-caps: normal; font-weight:
-          400; letter-spacing: normal; text-align: center; text-indent:
-          0px; text-transform: none; white-space: normal; word-spacing:
-          0px; -webkit-text-stroke-width: 0px; text-decoration: none;">x</span></span></span><span
-      style="font-family: Times New Roman, Times, serif;"><span
+    <br>
+    <span style="font-family: Times New Roman, Times, serif;"><span
         style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
         font-size: medium; font-style: normal; font-variant-caps:
         normal; font-weight: 400; letter-spacing: normal; text-align:
         center; text-indent: 0px; text-transform: none; white-space:
         normal; word-spacing: 0px; -webkit-text-stroke-width: 0px;
-        text-decoration: none; display: inline !important; float: none;">RetryCount,
-        where <span style="font-style: italic;">x</span> is from 0
-        through 5 count the number of IOC to FPGA commands that
-        succeeded with <span style="font-style: italic;">x</span>
-        retries.&nbsp; A longin record named CmdFailedCount counts the
-        number of commands that failed to be acknowledged.<br>
-        <br>
-      </span></span>
+        text-decoration: none; display: inline !important; float: none;"></span></span>
     <h2><span style="font-family: Times New Roman, Times, serif;">Inte</span><span
         style="font-family: Times New Roman, Times, serif;">rnal Records</span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Records
