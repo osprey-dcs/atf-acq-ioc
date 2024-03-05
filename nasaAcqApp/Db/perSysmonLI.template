@@ -1,0 +1,16 @@
+record(longin, "$(P)$(R)$(NAME)") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "PSC Reg")
+    field(INP,  "@$(PORT) 16952 $(IDX)")
+    field(SCAN, "I/O Intr")
+    field(TSE,  "-2")
+    field(EGU,  "$(EGU)")
+    field(LOLO, "$(LOLO)")
+    field(LOW,  "$(LOW)")
+    field(HIGH, "$(HIGH)")
+    field(HIHI, "$(HIHI)")
+    field(LLSV, "$(LLSV)")
+    field(LSV,  "$(LSV)")
+    field(HSV,  "$(HSV)")
+    field(HHSV, "$(HHSV)")
+}

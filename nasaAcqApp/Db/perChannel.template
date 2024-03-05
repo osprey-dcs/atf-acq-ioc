@@ -1,0 +1,36 @@
+record(bo, "$(P)$(R)ACQ:enable:$(N)") {
+    field(DESC, "Enable/disable channel $(N)")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16951 1$(IDX)")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
+field(TPRO,1)
+    field(DESC, "Set channel $(N) input coupling")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16951 2$(IDX)")
+    field(ZNAM, "AC")
+    field(ONAM, "DC")
+    field(FLNK, "$(P)$(R)send_")
+}
+record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
+    field(DESC, "Set channel $(N) calibration offset")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 3$(IDX)")
+    field(FLNK, "$(P)$(R)send_")
+}
+record(longout, "$(P)$(R)ACQ:gain:$(N)") {
+    field(DESC, "Set channel $(N) calibration gain")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 4$(IDX)")
+    field(FLNK, "$(P)$(R)send_")
+}
+record(fanout, "$(P)$(R)$(N):recon_") {
+    field(DESC, "Update node:$(R)chan:$(N) on (rec)connect")
+    field(LNK1, "$(P)$(R)ACQ:coupling:$(N)") 
+    field(LNK2, "$(P)$(R)ACQ:ofst:$(N)")
+    field(LNK3, "$(P)$(R)ACQ:gain:$(N)")
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
+}

@@ -1,0 +1,149 @@
+#
+# Update values to FPGA on reconnection.
+# Monitor a readback record to detect
+# reconnection or FPGA power up.
+record(longin, "$(P)$(NODE):FPGA:powerUp_") {
+    field(FLNK, "$(P)$(R)reconnChk_")
+}
+record(calcout, "$(P)$(R)reconnChk_") {
+    field(DESC, "Push on reconnect")
+    field(INPA, "$(P)$(R)FPGA:powerUp_.STAT NPP")
+    field(INPB, "$(P)$(R)FPGA:powerUp_.VAL NPP")
+    field(INPD, "0")
+    field(CALC, "A=0&&((D!=0)||B);D:=A")
+    field(OOPT, "When Non-zero")
+    field(OUT,  "$(P)$(R)reconnA_.PROC")
+}
+record(fanout, "$(P)$(R)reconnA_") {
+    field(PINI, "RUNNING")
+    field(LNK1, "$(P)$(R)buildDates_")
+    field(LNK2, "$(P)$(R)reconnX_")
+    field(FLNK, "$(P)$(R)FPGA:clrPowerUp_")
+}
+# Records to process on FPGA (re)connect should process on the "RECON" event.
+record(event, "$(P)$(R)reconnX_") {
+    field(DESC, "Send RECON event on FPGA (re)connect")
+    field(DTYP, "Soft Channel")
+    field(VAL,  "RECON")
+}
+record(longout, "$(P)$(R)FPGA:clrPowerUp_") {
+    field(DESC, "Clear FPGA power-up status")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 1")
+}
+
+#
+# Trigger a build date readback
+#
+record(bo, "$(P)$(R)buildDates_") {
+    field(DESC, "Trigger build dates readback")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16953 0")
+    field(ZNAM, "Readback")
+    field(ONAM, "Readback")
+    field(FLNK, "$(P)$(R)send_")
+}
+
+#
+# Trigger a system monitor readback
+#
+record(bo, "$(P)$(R)sysmonTrig_") {
+    field(DESC, "Trigger system monitor readback")
+    field(DTYP, "PSC Single U32")
+    field(OUT,  "@$(PORT) 16952 0")
+    field(ZNAM, "Readback")
+    field(ONAM, "Readback")
+    field(SCAN, "5 second")
+    field(FLNK, "$(P)$(R)send_")
+}
+
+#
+# Send all pending output packets
+#
+record(bo, "$(P)$(R)send_") {
+    field(DTYP, "PSC Ctrl Send All")
+    field(OUT , "@$(PORT)")
+    field(ZNAM, "Send")
+    field(ONAM, "Send")
+}
+
+#
+# Downsampling factor
+#
+record(longout, "$(P)$(R)ACQ:downsample_") {
+    field(DESC, "Set downsampling factor")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 20")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ACQ:rate.RVAL CPP")
+    field(LOPR, "1")
+    field(HOPR, "1023")
+    field(DRVL, "1")
+    field(DRVH, "1023")
+    field(FLNK, "$(P)$(R)ACQ:alphaCMP_")
+}
+
+#
+# Compute downsampling filter alpha (first order IIR lowpass)
+# Place cutoff frequency at 0.4 of downsample rate
+#
+record(calc, "$(P)$(R)ACQ:alphaCMP_") {
+    field(DESC, "Compute downsampling filter alpha")
+    field(INPA, "$(P)$(R)ACQ:downsample_")
+    field(INPB, "-2.513274122871834") # -2 * PI * 0.4
+    field(CALC, "(A<=1)?1:(1-EXP(B/A))")
+    field(FLNK, "$(P)$(R)ACQ:alpha_")
+}
+
+#
+# Send downsampling filter alpha (first order IIR lowpass)
+#
+record(ao, "$(P)$(R)ACQ:alpha_") {
+    field(DESC, "Downsampling filter alpha")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 21")
+    field(OMSL, "closed_loop")
+    field(DOL,  "$(P)$(R)ACQ:alphaCMP_")
+    field(LINR, "SLOPE")
+    field(ESLO, "7.62939453125e-06")  # 1 / (2^17)
+    field(LOPR, "0.0001")
+    field(HOPR, "1")
+    field(DRVL, "0.0001")
+    field(DRVH, "1")
+    field(FLNK, "$(P)$(R)send_")
+}
+
+#
+# Reboot FPGA
+# Driven diretly by client
+#
+record(longout, "$(P)$(R)FPGA:reboot") {
+    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 0")
+    field(FLNK, "$(P)$(R)send_")
+}
+
+#
+# Reset FPGA -- driven from common reboot record
+#
+record(longout, "$(P)$(R)FPGA:reboot_") {
+    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 0")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)FPGA:reboot CPP")
+}
+
+#
+# Align ADC with EVR PPS marker
+# Driven from common align record
+#
+record(longout, "$(P)$(R)ADC:align_") {
+    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 5")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ADC:align CPP")
+    field(FLNK, "$(P)$(R)send_")
+}
