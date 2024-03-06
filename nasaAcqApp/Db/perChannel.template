@@ -4,6 +4,7 @@ record(bo, "$(P)$(R)ACQ:enable:$(N)") {
     field(OUT,  "@$(PORT) 16951 1$(IDX)")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
+    field(FLNK, "$(P)$(R)send_")
 }
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(DESC, "Set channel $(N) input coupling")
