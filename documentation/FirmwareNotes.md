@@ -1,4 +1,4 @@
-#Console Commands
+# Console Commands
 
 The processor in the FPGA provides a simple command interpreter.  The console interpreter can be accessed through port C of the USB/Serial adapter (serial settings 115200-8N1) or through a UDP port and the console.py script.  Typing a character to the USB/Serial port disables the UDP connection.
 
@@ -56,7 +56,7 @@ Show lots of PPS-related information including for the event generator node the 
 Show the contents of **n** (default 1) general-purpose I/O registers starting at register **r** (default 0).
 
 
-#TFTP Server
+# TFTP Server
 
 Files can be uploaded to, or downloaded from, the Marble bootstrap flash memory using the TFTP server in the FPGA application.
 
@@ -88,6 +88,6 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 | FMC2_EEPROM.bin |	IPMI EEPROM of second FMC mezzanine card. |
 
 
-#Network Configuration
+# Network Configuration
 
 The Ethernet MAC address and IPv4 network address are set using the microcontroller USB/serial port (115200-8N1).  The microcontroller serial port is connected to the fourthc prot (port D) of the USB/serial adapter.  After connecting, type a '?' followed by a carriage return to obtain the menu of commands. 
