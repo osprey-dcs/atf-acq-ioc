@@ -39,8 +39,8 @@ file "perSysmonAI.template" {
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.10,  5.25, "Quartz 5V supply voltage" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V1",116,       "V", 1.774676832e-3,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V2",120,       "V", 1.774676832e-3,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:2P5V2",120,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),       "Quartz:P12I", 124,       "A", 6.10351563e-04,       0,    3,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "Quartz:Temp",     128,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
 }
