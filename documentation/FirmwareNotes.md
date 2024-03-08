@@ -47,7 +47,7 @@ Show the value of the frequency counters monitoring various FPGA clocks.  Values
 **ntp 0**  
 The FPGA firmware includes an MRF-compatible event generator which obtains its initial time from an NTP server and then maintains it using a hardware pulse-per-second signal. To enable the event generator use this command with the IPv4 address of the NTP server (**vvv.www.xxx.yyy**) as an argument.  To disable the event generator, set the address of the NTP server to 0.
 
-Issuing the ntp command with no arguments displays the current settings. 
+Issuing the **ntp** command with no arguments displays the current settings. 
 
 **pps**  
 Show lots of PPS-related information including for the event generator node the latency between the hardware PPS marker and the event receiver PPS event arrival. 
