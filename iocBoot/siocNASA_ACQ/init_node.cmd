@@ -32,6 +32,7 @@ dbpf "$(P)$(NODE):ACQ:coupling:29" "DC"
 dbpf "$(P)$(NODE):ACQ:coupling:30" "DC"
 dbpf "$(P)$(NODE):ACQ:coupling:31" "DC"
 dbpf "$(P)$(NODE):ACQ:coupling:32" "DC"
+epicsThreadSleep(1.0)
 
 dbpf "$(P)$(NODE):ACQ:enable:01" 1
 dbpf "$(P)$(NODE):ACQ:enable:02" 1
@@ -65,4 +66,4 @@ dbpf "$(P)$(NODE):ACQ:enable:29" 1
 dbpf "$(P)$(NODE):ACQ:enable:30" 1
 dbpf "$(P)$(NODE):ACQ:enable:31" 1
 dbpf "$(P)$(NODE):ACQ:enable:32" 1
-
+epicsThreadSleep(1.0)

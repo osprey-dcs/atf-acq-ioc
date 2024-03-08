@@ -1,6 +1,14 @@
-record(longin, "$(P)$(R)$(NAME)") {
-    field(DESC, "$(NAME) POSIX seconds")
+record(stringin, "$(P)$(R)$(NAME)") {
+    field(DESC, "$(NAME) (human-readable)")
+    field(DTYP, "Soft Timestamp")
+    field(INP,  "@%Y-%m-%d %H:%M:%S")
+    field(TSEL, "$(P)$(R)$(NAME)_.TIME")
+}
+record(longin, "$(P)$(R)$(NAME)_") {
+    field(DESC, "$(NAME) (POSIX seconds)")
     field(DTYP, "PSC Reg")
     field(INP,  "@$(PORT) 16953 $(IDX)")
+    info(TimeFromBlock, "0") # read 4 bytes sec, 4 bytes nsec posix also from offset 0
     field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)$(R)$(NAME)")
 }
