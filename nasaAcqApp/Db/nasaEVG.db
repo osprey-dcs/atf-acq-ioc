@@ -24,7 +24,12 @@ record(mbbo, "$(P)ACQ:rate") {
     field(FRVL, "250")
     field(FRST, "1 kHz")
     field(VAL,  "0")
-    field(PINI, "YES")
+}
+record(fanout, "$(P)ACQ:rate_") {
+    field(DESC, "Update acquisition speed on (re)connect")
+    field(LNK1, "$(P)ACQ:rate")
+    field(SCAN, "Event")
+    field(EVNT, "RECON")
 }
 
 #
