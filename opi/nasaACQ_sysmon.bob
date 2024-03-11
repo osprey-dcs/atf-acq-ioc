@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-11 09:48:34 by eric-->
+<!--Saved on 2024-03-11 12:19:58 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -584,6 +584,7 @@
         <name>Text Update_11</name>
         <pv_name>$(P)$(R)RXRate-I</pv_name>
         <x>155</x>
+        <precision>2</precision>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
@@ -607,6 +608,8 @@
         <name>Text Update_13</name>
         <pv_name>$(P)$(R)WrtRate-I</pv_name>
         <x>155</x>
+        <format>1</format>
+        <precision>2</precision>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
