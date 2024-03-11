@@ -134,16 +134,3 @@ record(longout, "$(P)$(R)FPGA:reboot_") {
     field(OMSL, "closed_loop")
     field(DOL , "$(P)FPGA:reboot CPP")
 }
-
-#
-# Align ADC with EVR PPS marker
-# Driven from common align record
-#
-record(longout, "$(P)$(R)ADC:align_") {
-    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 5")
-    field(OMSL, "closed_loop")
-    field(DOL , "$(P)ADC:align CPP")
-    field(FLNK, "$(P)$(R)send_")
-}

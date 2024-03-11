@@ -535,6 +535,23 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:DRDY</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: left;"><span
+              style="font-family: Times New Roman, Times, serif;">Most
+              significant 16 bits are number of acquisition clock ticks
+              between event receiver PPS event and ADC DRDY rising edge.<br>
+              Least significant 16 bits are the number of acquisition
+              clock ticks between first and last DRDY rising edges.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">ACQ:clkPLL</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
@@ -830,33 +847,6 @@
                 corresponding downsampling ratio and decimation low-pass
                 filter coefficient to their acquisition node.</span><br>
             </span></td>
-        </tr>
-        <tr>
-          <td style="vertical-align: middle; text-align: center;"><span
-              style="font-family: Times New Roman, Times, serif;">ADC:align</span><br>
-          </td>
-          <td style="vertical-align: middle; text-align: center;"><span
-              style="font-family: Times New Roman, Times, serif;">longout</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Writing
-              1, then 100, then 10000 causes the acquisition nodes to
-              begin an alignment cycle of their fast analog to digital
-              converters.</span><span style="font-family: Times New
-              Roman, Times, serif;"><span style="caret-color: rgb(0, 0,
-                0); color: rgb(0, 0, 0); font-size: medium; font-style:
-                normal; font-variant-caps: normal; font-weight: 400;
-                letter-spacing: normal; text-align: center; text-indent:
-                0px; text-transform: none; white-space: normal;
-                word-spacing: 0px; -webkit-text-stroke-width: 0px;
-                text-decoration: none; display: inline !important;
-                float: none;">&nbsp; The requirement of three write
-                operations with different values is to guard against
-                accidental operation.&nbsp; </span></span><span
-              style="font-family: Times New Roman, Times, serif;">A set
-              of per-node longout records monitor this record and
-              forward the value to their acquisition node.&nbsp; </span></td>
         </tr>
         <tr>
           <td style="vertical-align: middle; text-align: center;"><span

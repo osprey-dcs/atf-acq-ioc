@@ -28,14 +28,6 @@ record(mbbo, "$(P)ACQ:rate") {
 }
 
 #
-# Align ADCs with EVR PPS marker
-# The actual I/O is done by the per-FPGA records
-#
-record(longout, "$(P)ADC:align") {
-    field(DESC, "Write 1, 100, 10000 to align ADC/PPS")
-}
-
-#
 # Reset all FPGAs
 # The actual I/O is done by the per-FPGA records
 #
