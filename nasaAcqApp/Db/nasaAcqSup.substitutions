@@ -7,7 +7,7 @@ file "perBuildDate.template"
 { pattern
 {       P,          R,        PORT,                           NAME, IDX }
   { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "firmwareBuildDate",   0 }
-  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "softwareBuildDate",   4 }
+  { "\$(P)", "\$(NODE):", "\$(PORT)\$(NODE)",  "softwareBuildDate",   8 }
 }
 
 file "perSysmonAI.template" {
