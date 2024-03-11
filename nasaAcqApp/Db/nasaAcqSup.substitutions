@@ -53,7 +53,8 @@ file "perSysmonLI.template" {
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:active", 136,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),"ACQ:DCcoupled", 140,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
   { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "ACQ:clkPLL", 144,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
-  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),     "ACQ:DRDY", 148,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "HI:PPS->DRDY  LO:DRDYs skew" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),  "DRDY:status", 148,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "HI:PPS->DRDY  LO:DRDYs skew" }
+  { \$(P),"\$(NODE):",\$(PORT)\$(NODE),   "PPS:status", 152,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
 }
 
 file "perChannel.template" {

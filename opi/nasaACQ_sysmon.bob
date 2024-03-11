@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-11 08:52:26 by eric-->
+<!--Saved on 2024-03-11 09:48:34 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -1113,12 +1113,12 @@
     <x>363</x>
     <y>237</y>
     <width>220</width>
-    <height>70</height>
+    <height>95</height>
     <style>3</style>
     <transparent>true</transparent>
     <widget type="group" version="2.0.0">
       <name>Group_2</name>
-      <y>50</y>
+      <y>25</y>
       <width>220</width>
       <height>20</height>
       <style>3</style>
@@ -1142,14 +1142,14 @@
     </widget>
     <widget type="group" version="2.0.0">
       <name>Group</name>
-      <y>25</y>
+      <y>50</y>
       <width>220</width>
       <height>20</height>
       <style>3</style>
       <transparent>true</transparent>
       <widget type="textupdate" version="2.0.0">
         <name>Text Update_66</name>
-        <pv_name>$(P)$(R)ACQ:DRDY</pv_name>
+        <pv_name>$(P)$(R)DRDY:status</pv_name>
         <x>120</x>
         <format>4</format>
         <precision>8</precision>
@@ -1183,6 +1183,31 @@
       <widget type="label" version="2.0.0">
         <name>INA219val_26</name>
         <text>Uptime</text>
+        <width>115</width>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group_3</name>
+      <y>75</y>
+      <width>220</width>
+      <height>20</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_69</name>
+        <pv_name>$(P)$(R)PPS:status</pv_name>
+        <x>120</x>
+        <format>4</format>
+        <precision>8</precision>
+        <horizontal_alignment>2</horizontal_alignment>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>INA219val_28</name>
+        <text>PPS Source</text>
         <width>115</width>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>

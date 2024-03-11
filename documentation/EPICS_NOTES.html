@@ -535,23 +535,6 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ACQ:DRDY</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">longin</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Most
-              significant 16 bits are number of acquisition clock ticks
-              between event receiver PPS event and ADC DRDY rising edge.<br>
-              Least significant 16 bits are the number of acquisition
-              clock ticks between first and last DRDY rising edges.<br>
-            </span></td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">ACQ:clkPLL</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
@@ -620,6 +603,103 @@
                       serif;">Set when system clock has locked to pulse
                       per second markers.<br>
                     </span></td>
+                </tr>
+              </tbody>
+            </table>
+            <span style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">DRDY:status</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: top;"><span style="font-family:
+              Times New Roman, Times, serif;">Most significant 16 bits
+              are number of acquisition clock ticks between event
+              receiver PPS event and ADC DRDY rising edge.<br>
+              Least significant 16 bits are the number of acquisition
+              clock ticks between first and last DRDY rising edges.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">PPS:status</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: top;"><span style="font-family:
+              Times New Roman, Times, serif;">Hardware pulse-per-second
+              input status.&nbsp; Meaningful only on event generator
+              node.<br>
+            </span>
+            <table style=" text-align: left; width: 90%;"
+              cellspacing="2" cellpadding="2" border="1">
+              <tbody>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-weight: bold;"><span
+                        style="font-family: Times New Roman, Times,
+                        serif;">Bit</span></span><span
+                      style="font-family: Times New Roman, Times,
+                      serif;"><br>
+                    </span></td>
+                  <td style="vertical-align: middle; text-align:
+                    center;"><span style="font-weight: bold;"><span
+                        style="font-family: Times New Roman, Times,
+                        serif;">Description</span></span><span
+                      style="font-family: Times New Roman, Times,
+                      serif;"><br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">0</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Hardware PPS signal is present at Quartz
+                      FMC board.</span><br>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">1</span><br>
+                  </td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Hardware PPS signal present at Quartz FMC
+                      board is selected.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">2</span><br>
+                  </td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Hardware PPS signal is present at PMOD-GPS
+                      board.</span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">3</span><br>
+                  </td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Hardware PPS signal present at PMOD-GPS
+                      board is selected.</span></td>
                 </tr>
               </tbody>
             </table>
