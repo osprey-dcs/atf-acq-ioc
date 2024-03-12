@@ -545,9 +545,9 @@
           <td style="text-align: left;"><span style="font-family: Times
               New Roman, Times, serif;">System clock alignment status
               register.&nbsp; The least significant 16 bits indicate how
-              far the count of system clock ticks between the preceding
-              two pulse per second markers differs from its ideal value
-              of 125,000,000.&nbsp; The most significant bits contain
+              far the count of clock ticks between the preceding two
+              pulse per second markers differs from its ideal value of
+              125,000,000.&nbsp; The most significant bits contain
               status information:<br>
             </span>
             <table style=" text-align: left; width: 90%;"
@@ -620,8 +620,8 @@
             </span></td>
           <td style="vertical-align: top;"><span style="font-family:
               Times New Roman, Times, serif;">Most significant 16 bits
-              are number of acquisition clock ticks between event
-              receiver PPS event and ADC DRDY rising edge.<br>
+              are number of acquisition clock ticks (8 ns per tick)
+              between event receiver PPS event and ADC DRDY rising edge.<br>
               Least significant 16 bits are the number of acquisition
               clock ticks between first and last DRDY rising edges.</span></td>
         </tr>
@@ -637,7 +637,7 @@
           <td style="vertical-align: top;"><span style="font-family:
               Times New Roman, Times, serif;">Meaningful only on event
               generator node.&nbsp; The most significant 16 bits are the
-              number of system clocks (10 ns per count) between the
+              number of system clock ticks (10 ns per tick) between the
               arrival of the hardware pulse-per-second signal and the
               arrival of the pulse-per-second event from the event
               receiver.&nbsp; A value of all ones indicates that the
