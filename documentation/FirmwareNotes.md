@@ -16,7 +16,6 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 1    — Enable messages related to the TFTP UDP port.
     Bit 2    — Enable messages related to the multi-gigabit transceiver (event receiver and event fanout).
     Bit 3    — Enable messages related to the event generator.
-    Bit 4    — Enable messages related to the system clock frequency adjustment state machine.
     Bit 5    — Show some high-speed acquisition statistics.
     Bit 6    — Show input coupling relay operations.
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
