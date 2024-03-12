@@ -21,11 +21,11 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
     Bit 9    — Show some status information about the bootstrap flash memory.
     Bit 10   — Scan the Marble I2C buses and show the devices attached to each.
-    Bit 12   — Enable messages related to the Marble ethernet interface.
     Bit 13   — Dump the register contents of the AD7768 ADC chips.
     Bit 15   — Provide fake AD7768 data.  Effective only at startup.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
+    Bit 19   – Step the VCXO DAC to a static value to measure its sensitivity.
 
 If the optional -s argument is present the value of the debugging flags set at FPGA startup will be set or shown. 
 
