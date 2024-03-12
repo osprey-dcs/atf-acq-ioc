@@ -635,9 +635,15 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="vertical-align: top;"><span style="font-family:
-              Times New Roman, Times, serif;">Hardware pulse-per-second
-              input status.&nbsp; Meaningful only on event generator
-              node.<br>
+              Times New Roman, Times, serif;">Meaningful only on event
+              generator node.&nbsp; The most significant 16 bits are the
+              number of system clocks (10 ns per count) between the
+              arrival of the hardware pulse-per-second signal and the
+              arrival of the pulse-per-second event from the event
+              receiver.&nbsp; A value of all ones indicates that the
+              event did not arrive.<br>
+              The least significant bits contain information about the
+              source of the hardware pulse-per-second signal.<br>
             </span>
             <table style=" text-align: left; width: 90%;"
               cellspacing="2" cellpadding="2" border="1">
