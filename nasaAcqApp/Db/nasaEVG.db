@@ -24,6 +24,16 @@ record(mbbo, "$(P)ACQ:rate") {
     field(FRVL, "250")
     field(FRST, "1 kHz")
     field(VAL,  "0")
+    field(FLNK, "$(P)ACQ:rateLO_")
+}
+# We want the per-FPGA records to process each time the mbbo above processes.
+# The MBBO record, unfortunately, does not have an MDEL field, so we have to
+# fake it here with this longout.  The per-FPGA records monitor this longout.
+record(longout, "$(P)ACQ:rateLO_") {
+    field(DESC, "Send monitors to per-FPGA records")
+    field(DOL,  "$(P)ACQ:rate.RVAL")
+    field(OMSL, "closed_loop")
+    field(MDEL, "-1")
 }
 record(fanout, "$(P)ACQ:rate_") {
     field(DESC, "Update acquisition speed on (re)connect")
