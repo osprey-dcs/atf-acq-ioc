@@ -1,4 +1,151 @@
 
+# suppliment nasaAcqSup.subtitutions
+
+# breakout ACQ:status word
+record(bi, "$(P)ACQ:clk") {
+    field(DESC, "Acq. clk unlock from PPS")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "1")
+    field(ZNAM, "Lock")
+    field(ONAM, "Unlock")
+    field(OSV , "MAJOR")
+}
+record(bi, "$(P)ACQ:pktoflw") {
+    field(DESC, "Pkt Bldr oflow")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x4000")
+    field(ZNAM, "Normal")
+    field(ONAM, "OFlow")
+    field(OSV , "MAJOR")
+}
+record(bi, "$(P)ACQ:adcoflw") {
+    field(DESC, "ADC oflow")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x8000")
+    field(ZNAM, "Normal")
+    field(ONAM, "OFlow")
+    field(OSV , "MAJOR")
+}
+record(bi, "$(P)ACQ:running") {
+    field(DESC, "Sampling")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x40000000")
+    field(ZNAM, "Idle")
+    field(ONAM, "Run")
+}
+record(bi, "$(P)ACQ:request") {
+    field(DESC, "Request sampling")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x80000000")
+    field(ZNAM, "Idle")
+    field(ONAM, "Request")
+}
+
+# breakout clkPLL word
+record(bi, "$(P)ACQ:loop") {
+    field(DESC, "VXCO loop")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:clkPLL CP MS")
+    field(MASK, "0x20000000")
+    field(ZNAM, "Stop")
+    field(ONAM, "Run")
+    field(ZSV, "MAJOR")
+}
+record(bi, "$(P)ACQ:ppsTog") {
+    field(DESC, "PPS toggle")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:clkPLL CP MS")
+    field(MASK, "0x40000000") # toggles state each time PPS arrives
+    field(ZNAM, "0")
+    field(ONAM, "1")
+}
+record(bi, "$(P)ACQ:ppslck") {
+    field(DESC, "Request sampling")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:clkPLL CP MS")
+    field(MASK, "0x80000000")
+    field(ZNAM, "Unlock")
+    field(ONAM, "Lock")
+    field(ZSV , "MAJOR")
+}
+record(calc, "$(P)ACQ:ppsdiff") {
+    field(INPA, "$(P)ACQ:clkPLL CP MS")
+    field(INPB, "0xffff")
+    field(INPC, "0")
+    field(INPD, "") # scratch, unsigned 16
+    field(INPE, "0xffff")
+    field(INPF, "0x8000")
+    field(CALC, "D:=((A&B)>>C);D&F?-(D XOR E)-1:D")
+    field(EGU , "tick")
+}
+
+# number of acquisition clock ticks (8 ns per tick) between event receiver PPS event and ADC DRDY rising edge.
+record(calc, "$(P)DRDY:pps") {
+    field(DESC, "PPS -> DRDY itvl")
+    field(INPA, "$(P)DRDY:status CP MS")
+    field(INPB, "0xffff0000")
+    field(INPC, "16")
+    field(INPD, "8") # raw units are ticks of 125MHz
+    field(CALC, "((A&B)>>C)*D")
+    field(EGU , "ns")
+}
+# number of acquisition clock ticks between first and last DRDY rising edges.
+record(calc, "$(P)DRDY:sprd") {
+    field(DESC, "ADC done spread")
+    field(INPA, "$(P)DRDY:status CP MS")
+    field(INPB, "0x0000ffff")
+    field(INPC, "0")
+    field(INPD, "8") # raw units are ticks of 125MHz
+    field(CALC, "((A&B)>>C)*D")
+    field(EGU , "ns")
+}
+
+# breakout PPS:status  (Only meaningful on EVG node)
+record(bi, "$(P)PPS:fmc") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)PPS:status CP MS")
+    field(MASK, "1")
+    field(ZNAM, "No FMC")
+    field(ONAM, "FMC")
+}
+record(bi, "$(P)PPS:gps") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)PPS:status CP MS")
+    field(MASK, "4")
+    field(ZNAM, "No GPS")
+    field(ONAM, "GPS")
+}
+record(mbbi, "$(P)PPS:src") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)PPS:status CP MS")
+    field(NOBT, "4")
+    field(MASK, "0xa") # 0b1010  (TODO...)
+    field(ZRVL, "0x0")
+    field(ONVL, "0x2")
+    field(TWVL, "0x8")
+    field(THVL, "0xa")
+    field(ZRST, "No PPS")
+    field(ONST, "FMC")
+    field(TWST, "GPS")
+    field(THST, "Both?")
+    field(THSV, "MAJOR")
+}
+record(calc, "$(P)PPS:lat") {
+    field(INPA, "$(P)PPS:status CP MS")
+    field(INPB, "0xffff0000")
+    field(INPC, "16")
+    field(INPD, "1") # TODO: 10 ns per tick?
+    field(CALC, "((A&B)>>C)*D")
+    field(EGU , "tick")
+}
+
+
+
 # setup and control
 
 record(longout, "$(P)SA:BufLim") {

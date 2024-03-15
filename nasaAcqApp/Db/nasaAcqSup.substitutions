@@ -52,7 +52,7 @@ file "perSysmonLI.template" {
   { \$(P),"",\$(PORT),   "ACQ:status", 132,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
   { \$(P),"",\$(PORT),   "ACQ:active", 136,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
   { \$(P),"",\$(PORT),"ACQ:DCcoupled", 140,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
-  { \$(P),"",\$(PORT),   "ACQ:clkPLL", 144,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM,    MAJOR, "Acquisition clock PLL status register" }
+  { \$(P),"",\$(PORT),   "ACQ:clkPLL", 144,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
   { \$(P),"",\$(PORT),  "DRDY:status", 148,   "",   -1,   0,    0,    0,    MAJOR, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:'Misaligned', 20 LSB:PPS->DRDY ticks" }
   { \$(P),"",\$(PORT) ,  "ADC:aligns", 152,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Count of ADC alignment requests" }
   { \$(P),"",\$(PORT),   "PPS:status", 156,   "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
