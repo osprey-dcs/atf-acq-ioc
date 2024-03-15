@@ -1,31 +1,4 @@
-#
-# Update values to FPGA on reconnection.
-# Monitor a readback record to detect
-# reconnection or FPGA power up.
-record(longin, "$(P):FPGA:powerUp_") {
-    field(FLNK, "$(P)$(R)reconnChk_")
-}
-record(calcout, "$(P)$(R)reconnChk_") {
-    field(DESC, "Push on reconnect")
-    field(INPA, "$(P)$(R)FPGA:powerUp_.STAT NPP")
-    field(INPB, "$(P)$(R)FPGA:powerUp_.VAL NPP")
-    field(INPD, "0")
-    field(CALC, "A=0&&((D!=0)||B);D:=A")
-    field(OOPT, "When Non-zero")
-    field(OUT,  "$(P)$(R)reconnA_.PROC")
-}
-record(fanout, "$(P)$(R)reconnA_") {
-    field(PINI, "RUNNING")
-    field(LNK1, "$(P)$(R)buildDates_")
-    field(LNK2, "$(P)$(R)reconnX_")
-    field(FLNK, "$(P)$(R)FPGA:clrPowerUp_")
-}
-# Records to process on FPGA (re)connect should process on the "RECON" event.
-record(event, "$(P)$(R)reconnX_") {
-    field(DESC, "Send RECON event on FPGA (re)connect")
-    field(DTYP, "Soft Channel")
-    field(VAL,  "RECON")
-}
+
 record(longout, "$(P)$(R)FPGA:clrPowerUp_") {
     field(DESC, "Clear FPGA power-up status")
     field(DTYP, "PSC Single I32")
@@ -53,8 +26,150 @@ record(bo, "$(P)$(R)sysmonTrig_") {
     field(OUT,  "@$(PORT) 16952 0")
     field(ZNAM, "Readback")
     field(ONAM, "Readback")
-    field(SCAN, "5 second")
+    field(SCAN, "2 second")
     field(FLNK, "$(P)$(R)send_")
+}
+
+# use sysmon RX to detect comm. fault
+record(longin, "$(P)$(R)sysmonRB_") {
+    field(SCAN, "I/O Intr")
+    field(DTYP, "PSC Reg")
+    field(INP , "@$(PORT) 16952 0")
+    field(FLNK, "$(P)$(R)sysmonRst_")
+}
+record(longout, "$(P)$(R)sysmonRst_") {
+    field(OUT, "$(P)$(R)sysmonAge.A NPP")
+    field(VAL, "0")
+}
+record(ao, "$(P)$(R)sysmonTmo") {
+    field(PINI, "YES")
+    field(VAL, "4.0")
+    field(OUT, "$(P)$(R)sysmonAge.HIGH NPP")
+}
+record(calcout, "$(P)$(R)sysmonAge") {
+    field(SCAN, ".5 second")
+    field(INPA, "99") # initially in timeout
+    field(INPB, "0.5") # SCAN period
+    field(INPC, "$(P)$(R)sysmonTmo NPP")
+    field(CALC, "A:=A+B;A")
+    field(EGU, "s")
+    field(PREC, "1")
+    field(HSV , "MAJOR")
+    field(OUT , "$(P)$(R)conn PP")
+    field(DOPT, "Use OCAL")
+    field(OCAL, "A<C")
+}
+
+record(bi, "$(P)$(R)conn") {
+    field(ZNAM, "Timeout") # no comms
+    field(ONAM, "Normal")  # well, normal operation
+    field(ZSV, "MAJOR")
+}
+
+record(calcout, "$(P)$(R)onconn") {
+    field(INPA, "$(P)$(R)sysmonAge.SEVR CP") # only on edge
+    field(CALC, "A==0")
+    field(OOPT, "When Non-zero")
+    field(OUT , "$(P)$(R)reconn:c1.PROC")
+    field(TPRO, "1")
+}
+# push per-FPGA
+record(seq, "$(P)$(R)reconn:c1") {
+    field(TPRO, "1")
+    field(DOL0, "2") # starting Init
+    field(LNK0, "$(P)$(R)conn PP")
+    # first ensure that acquisition is disabled.  Broken link except with EVG node
+    field(DOL1, "0")
+    field(LNK1, "$(P)ACQ:enable PP")
+    field(DLY1, "0.01") # TODO: hack.  device socket buffer too small to handle this blizzard...
+    # read-back build date
+    field(LNK2, "$(P)$(R)buildDates_.PROC PP")
+    field(DLY2, "0.01")
+    # push decimator
+    field(LNK3, "$(P)$(R)ACQ:downsample_.PROC PP") # also pushs AA filter coeff.
+    field(DLY3, "0.01")
+    field(LNKF, "$(P)$(R)reconn:c2.PROC")
+    field(DLYF, "0.1")
+}
+# push per-channel
+record(seq, "$(P)$(R)reconn:c2") {
+    field(TPRO, "1")
+    field(LNK0, "$(P)$(R)reconn:01.PROC")
+    field(DLY0, "0.1")
+    field(LNK1, "$(P)$(R)reconn:02.PROC")
+    field(DLY1, "0.1")
+    field(LNK2, "$(P)$(R)reconn:03.PROC")
+    field(DLY2, "0.1")
+    field(LNK3, "$(P)$(R)reconn:04.PROC")
+    field(DLY3, "0.1")
+    field(LNK4, "$(P)$(R)reconn:05.PROC")
+    field(DLY4, "0.1")
+    field(LNK5, "$(P)$(R)reconn:06.PROC")
+    field(DLY5, "0.1")
+    field(LNK6, "$(P)$(R)reconn:07.PROC")
+    field(DLY6, "0.1")
+    field(LNK7, "$(P)$(R)reconn:08.PROC")
+    field(DLY7, "0.1")
+    field(LNK8, "$(P)$(R)reconn:09.PROC")
+    field(DLY8, "0.1")
+    field(LNK9, "$(P)$(R)reconn:10.PROC")
+    field(DLY9, "0.1")
+    field(LNKA, "$(P)$(R)reconn:11.PROC")
+    field(DLYA, "0.1")
+    field(LNKB, "$(P)$(R)reconn:12.PROC")
+    field(DLYB, "0.1")
+    field(LNKC, "$(P)$(R)reconn:13.PROC")
+    field(DLYC, "0.1")
+    field(LNKD, "$(P)$(R)reconn:14.PROC")
+    field(DLYD, "0.1")
+    field(LNKE, "$(P)$(R)reconn:15.PROC")
+    field(DLYE, "0.1")
+    field(LNKF, "$(P)$(R)reconn:c3.PROC")
+    field(DLYF, "0.1")
+}
+record(seq, "$(P)$(R)reconn:c3") {
+    field(TPRO, "1")
+    field(LNK0, "$(P)$(R)reconn:16.PROC")
+    field(DLY0, "0.1")
+    field(LNK1, "$(P)$(R)reconn:17.PROC")
+    field(DLY1, "0.1")
+    field(LNK2, "$(P)$(R)reconn:18.PROC")
+    field(DLY2, "0.1")
+    field(LNK3, "$(P)$(R)reconn:19.PROC")
+    field(DLY3, "0.1")
+    field(LNK4, "$(P)$(R)reconn:20.PROC")
+    field(DLY4, "0.1")
+    field(LNK5, "$(P)$(R)reconn:21.PROC")
+    field(DLY5, "0.1")
+    field(LNK6, "$(P)$(R)reconn:22.PROC")
+    field(DLY6, "0.1")
+    field(LNK7, "$(P)$(R)reconn:23.PROC")
+    field(DLY7, "0.1")
+    field(LNK8, "$(P)$(R)reconn:24.PROC")
+    field(DLY8, "0.1")
+    field(LNK9, "$(P)$(R)reconn:25.PROC")
+    field(DLY9, "0.1")
+    field(LNKA, "$(P)$(R)reconn:26.PROC")
+    field(DLYA, "0.1")
+    field(LNKB, "$(P)$(R)reconn:27.PROC")
+    field(DLYB, "0.1")
+    field(LNKC, "$(P)$(R)reconn:28.PROC")
+    field(DLYC, "0.1")
+    field(LNKD, "$(P)$(R)reconn:29.PROC")
+    field(DLYD, "0.1")
+    field(LNKE, "$(P)$(R)reconn:30.PROC")
+    field(DLYE, "0.1")
+    field(LNKF, "$(P)$(R)reconn:c4.PROC")
+    field(DLYF, "0.1")
+}
+record(seq, "$(P)$(R)reconn:c4") {
+    field(LNK0, "$(P)$(R)reconn:31.PROC")
+    field(DLY0, "0.1")
+    field(LNK1, "$(P)$(R)reconn:32.PROC")
+    field(DLY1, "0.1")
+    # done...
+    field(DOLF, "1") # Return to Normal
+    field(LNKF, "$(P)$(R)conn PP")
 }
 
 #

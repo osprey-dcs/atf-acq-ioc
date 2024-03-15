@@ -35,12 +35,6 @@ record(longout, "$(P)ACQ:rateLO_") {
     field(OMSL, "closed_loop")
     field(MDEL, "-1")
 }
-record(fanout, "$(P)ACQ:rate_") {
-    field(DESC, "Update acquisition speed on (re)connect")
-    field(LNK1, "$(P)ACQ:rate")
-    field(SCAN, "Event")
-    field(EVNT, "RECON")
-}
 
 #
 # Reset all FPGAs
