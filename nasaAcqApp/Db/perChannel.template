@@ -1,9 +1,21 @@
+record(seq, "$(P)$(R)reconn:$(N)") {
+    field(LNK0, "$(P)$(R)ACQ:enable:$(N).PROC")
+    field(DLY0, "0.01")
+    field(LNK1, "$(P)$(R)ACQ:coupling:$(N).PROC")
+    field(DLY1, "0.01")
+    # TODO: gain/offset settings in ADC untested...
+    #field(LNK2, "$(P)$(R)ACQ:ofst:$(N).PROC")
+    #field(DLY2, "0.01")
+    #field(LNK3, "$(P)$(R)ACQ:gain:$(N).PROC")
+    #field(DLY3, "0.01")
+}
 record(bo, "$(P)$(R)ACQ:enable:$(N)") {
     field(DESC, "Enable/disable channel $(N)")
     field(DTYP, "PSC Single U32")
     field(OUT,  "@$(PORT) 16951 1$(IDX)")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
+    field(RVAL, "1") # initially Enable
     field(FLNK, "$(P)$(R)send_")
 }
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
@@ -12,6 +24,7 @@ record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(OUT,  "@$(PORT) 16951 2$(IDX)")
     field(ZNAM, "AC")
     field(ONAM, "DC")
+    field(RVAL, "1") # initially DC
     field(FLNK, "$(P)$(R)send_")
 }
 record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
@@ -25,13 +38,4 @@ record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 4$(IDX)")
     field(FLNK, "$(P)$(R)send_")
-}
-record(fanout, "$(P)$(R)$(N):recon_") {
-    field(DESC, "Update node:$(R)chan:$(N) on (re)connect")
-    field(LNK1, "$(P)$(R)ACQ:coupling:$(N)") 
-    field(LNK2, "$(P)$(R)ACQ:ofst:$(N)")
-    field(LNK3, "$(P)$(R)ACQ:gain:$(N)")
-    field(LNK4, "$(P)$(R)ACQ:enable:$(N)") 
-    field(SCAN, "Event")
-    field(EVNT, "RECON")
 }
