@@ -5,71 +5,71 @@ file "quartzAcqBase.template" {
 }
 
 file "psc-psd.db" {
-{N=01, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=02, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=03, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=04, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=05, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=06, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=07, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=08, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=09, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=10, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=11, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=12, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=13, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=14, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=15, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=16, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=17, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=18, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=19, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=20, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=21, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=22, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=23, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=24, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=25, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=26, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=27, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=28, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=29, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=30, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=31, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
-{N=32, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)"}
+{N=01, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=02, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=03, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=04, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=05, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=06, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=07, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=08, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=09, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=10, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=11, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=12, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=13, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=14, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=15, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=16, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=17, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=18, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=19, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=20, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=21, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=22, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=23, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=24, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=25, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=26, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=27, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=28, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=29, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=30, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=31, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
+{N=32, P="\$(P)SA:Ch$(N):FFT:", NELM="\$(NELM)", INP="\$(P)SA:Ch$(N)_"}
 }
 
 file "quartzAcqChan.template" {
-{N=01,  OFF=24,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch02"}
-{N=02,  OFF=27,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch03"}
-{N=03,  OFF=30,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch04"}
-{N=04,  OFF=33,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch05"}
-{N=05,  OFF=36,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch06"}
-{N=06,  OFF=39,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch07"}
-{N=07,  OFF=42,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch08"}
-{N=08,  OFF=45,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch09"}
-{N=09,  OFF=48,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch10"}
-{N=10,  OFF=51,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch11"}
-{N=11,  OFF=54,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch12"}
-{N=12,  OFF=57,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch13"}
-{N=13,  OFF=60,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch14"}
-{N=14,  OFF=63,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch15"}
-{N=15,  OFF=66,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch16"}
-{N=16,  OFF=69,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch17"}
-{N=17,  OFF=72,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch18"}
-{N=18,  OFF=75,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch19"}
-{N=19,  OFF=78,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch20"}
-{N=20,  OFF=81,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch21"}
-{N=21,  OFF=84,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch22"}
-{N=22,  OFF=87,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch23"}
-{N=23,  OFF=90,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch24"}
-{N=24,  OFF=93,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch25"}
-{N=25,  OFF=96,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch26"}
-{N=26,  OFF=99,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch27"}
-{N=27,  OFF=102,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch28"}
-{N=28,  OFF=105,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch29"}
-{N=29,  OFF=108,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch30"}
-{N=30,  OFF=111,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch31"}
-{N=31,  OFF=114,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch32"}
+{N=01,  OFF=24,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch02_"}
+{N=02,  OFF=27,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch03_"}
+{N=03,  OFF=30,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch04_"}
+{N=04,  OFF=33,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch05_"}
+{N=05,  OFF=36,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch06_"}
+{N=06,  OFF=39,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch07_"}
+{N=07,  OFF=42,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch08_"}
+{N=08,  OFF=45,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch09_"}
+{N=09,  OFF=48,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch10_"}
+{N=10,  OFF=51,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch11_"}
+{N=11,  OFF=54,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch12_"}
+{N=12,  OFF=57,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch13_"}
+{N=13,  OFF=60,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch14_"}
+{N=14,  OFF=63,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch15_"}
+{N=15,  OFF=66,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch16_"}
+{N=16,  OFF=69,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch17_"}
+{N=17,  OFF=72,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch18_"}
+{N=18,  OFF=75,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch19_"}
+{N=19,  OFF=78,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch20_"}
+{N=20,  OFF=81,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch21_"}
+{N=21,  OFF=84,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch22_"}
+{N=22,  OFF=87,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch23_"}
+{N=23,  OFF=90,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch24_"}
+{N=24,  OFF=93,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch25_"}
+{N=25,  OFF=96,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch26_"}
+{N=26,  OFF=99,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch27_"}
+{N=27,  OFF=102,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch28_"}
+{N=28,  OFF=105,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch29_"}
+{N=29,  OFF=108,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch30_"}
+{N=30,  OFF=111,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch31_"}
+{N=31,  OFF=114,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:Ch32_"}
 {N=32,  OFF=117,  P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)", FLNK="$(P)SA:AutClr_"}
 }

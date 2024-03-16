@@ -225,7 +225,7 @@ record(calcout, "$(P)SA:BufFul_") {
     field(INPA, "$(P)SA:BufFul")
     field(CALC, "A")
     field(OOPT, "When Non-zero")
-    field(OUT , "$(P)SA:Ch01.PROC") # --> quartzAcqChan.template
+    field(OUT , "$(P)SA:Ch01_.PROC") # --> quartzAcqChan.template
 }
 
 # /-- back after last channel processed
