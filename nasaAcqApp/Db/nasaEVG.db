@@ -12,16 +12,16 @@ record(bo, "$(P)ACQ:enable") {
 }
 
 record(mbbo, "$(P)ACQ:rate") {
-    field(DESC, "Set acquisition speed")
-    field(ZRVL, "1")
+    field(DESC, "Set acquisition rate")
+    field(ZRVL, "250000")
     field(ZRST, "250 kHz")
-    field(ONVL, "5")
+    field(ONVL, "50000")
     field(ONST, "50 kHz")
-    field(TWVL, "25")
+    field(TWVL, "10000")
     field(TWST, "10 kHz")
-    field(THVL, "50")
+    field(THVL, "5000")
     field(THST, "5 kHz")
-    field(FRVL, "250")
+    field(FRVL, "1000")
     field(FRST, "1 kHz")
     field(VAL,  "0")
     field(FLNK, "$(P)ACQ:rateLO_")
