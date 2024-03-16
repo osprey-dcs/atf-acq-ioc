@@ -1,15 +1,75 @@
 
+record(ao, "$(P)SA:Ch$(N):ASLO") {
+    field(VAL, "1.0")
+    field(PREC, "9")
+}
+record(ao, "$(P)SA:Ch$(N):AOFF") {
+    field(VAL, "0.0")
+    field(PREC, "9")
+}
+record(ao, "$(P)SA:Ch$(N):ESLO") {
+    field(VAL, "1.0")
+    field(PREC, "9")
+}
+record(ao, "$(P)SA:Ch$(N):EOFF") {
+    field(VAL, "0.0")
+    field(PREC, "9")
+}
+record(stringin, "$(P)SA:Ch$(N):EGU") {}
+
+# V = ASLO*ADC + AOFF
+# EU= ESLO*V   + EOFF
+#
+# EU= ESLO*(ASLO*ADC + AOFF) + EOFF
+# EU= (ESLO*ASLO)*ADC + (ESLO*AOFF + EOFF)
+record(calcout, "$(P)SA:Ch$(N):SLO") {
+    field(PREC, "9")
+    field(INPA, "$(P)SA:Ch$(N):ASLO CP MS")
+    field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
+    field(CALC, "A*B")
+    field(OUT , "$(P)SA:Ch$(N):S_.B PP MS")
+}
+record(calcout, "$(P)SA:Ch$(N):OFF") {
+    field(PREC, "9")
+    field(INPA, "$(P)SA:Ch$(N):AOFF CP MS")
+    field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
+    field(INPC, "$(P)SA:Ch$(N):EOFF CP MS")
+    field(CALC, "A*B + C")
+    field(OUT , "$(P)SA:Ch$(N):S_.C PP MS")
+}
+
 # /-- from quartzAcq (Chan0) or previous channel
 # |
 # V
 
-record(aai, "$(P)SA:Ch$(N)") {
+record(aai, "$(P)SA:Ch$(N)_") {
     field(DTYP, "PSCUDPFast Get Short I24 packed")
     field(INP , "@$(NAME) 20033 $(OFF=24) 96")
     field(FTVL, "LONG")
     field(NELM, "$(NELM)")
     field(TSEL, "$(TSEL=0)")
+    field(FLNK, "$(P)SA:Ch$(N):S_")
+}
+
+record(aSub, "$(P)SA:Ch$(N):S_") {
+    field(SNAM, "wf_scale")
+    field(FTA , "LONG")
+    field(FTB , "DOUBLE")
+    field(FTC , "DOUBLE")
+    field(FTVA, "DOUBLE")
+    field(NOA , "$(NELM)")
+    field(NOVA, "$(NELM)")
+    field(INPA, "$(P)SA:Ch$(N) NPP MS")
+    field(INPB, "1.0") # overwritten above
+    field(INPC, "0.0") # overwritten above
+    field(OUTA, "$(P)SA:Ch$(N) PP MS")
     field(FLNK, "$(P)SA:Ch$(N):Stats-Calc_")
+}
+
+record(aai, "$(P)SA:Ch$(N)") {
+    field(FTVL, "DOUBLE")
+    field(NELM, "$(NELM)")
+    field(TSEL, "$(TSEL=0)")
 }
 
 record(aSub, "$(P)SA:Ch$(N):Stats-Calc_") {
