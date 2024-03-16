@@ -59,7 +59,7 @@ record(aSub, "$(P)SA:Ch$(N):S_") {
     field(FTVA, "DOUBLE")
     field(NOA , "$(NELM)")
     field(NOVA, "$(NELM)")
-    field(INPA, "$(P)SA:Ch$(N) NPP MS")
+    field(INPA, "$(P)SA:Ch$(N)_ NPP MS")
     field(INPB, "1.0") # overwritten above
     field(INPC, "0.0") # overwritten above
     field(OUTA, "$(P)SA:Ch$(N) PP MS")
