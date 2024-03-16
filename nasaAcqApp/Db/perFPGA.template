@@ -76,10 +76,10 @@ record(longout, "$(P)$(R)ACQ:rate_") {
     field(OUT,  "@$(PORT) 16951 20")
     field(OMSL, "closed_loop")
     field(DOL , "$(P)ACQ:rateLO_ CPP")
-    field(LOPR, "1")
-    field(HOPR, "1023")
-    field(DRVL, "1")
-    field(DRVH, "1023")
+    field(LOPR, "1000")
+    field(HOPR, "250000")
+    field(DRVL, "1000")
+    field(DRVH, "250000")
 }
 
 #
