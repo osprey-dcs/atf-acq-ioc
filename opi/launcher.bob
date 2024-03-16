@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-13 11:13:32 by dev-->
+<!--Saved on 2024-03-16 06:36:23 by dev-->
 <display version="2.0.0">
-  <name>ACQ Main</name>
+  <name>ACQ $(P)Ch$(N)</name>
   <macros>
     <EVG>NASA_ACQ:01:</EVG>
   </macros>
@@ -1010,6 +1010,30 @@
         <target>replace</target>
         <description>Chassis 2</description>
       </action>
+      <action type="open_display">
+        <file></file>
+        <macros>
+          <P>NASA_ACQ:03:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 3</description>
+      </action>
+      <action type="open_display">
+        <file></file>
+        <macros>
+          <P>NASA_ACQ:04:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 4</description>
+      </action>
+      <action type="open_display">
+        <file></file>
+        <macros>
+          <P>NASA_ACQ:05:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 5</description>
+      </action>
     </actions>
     <text>Box Sel</text>
     <x>20</x>
@@ -1091,5 +1115,102 @@
     <y>120</y>
     <width>87</width>
     <height>25</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)SA:Ch$(N):ASLO</pv_name>
+    <x>100</x>
+    <y>820</y>
+    <width>90</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(P)SA:Ch$(N):AOFF</pv_name>
+    <x>100</x>
+    <y>865</y>
+    <width>90</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(P)SA:Ch$(N):EOFF</pv_name>
+    <x>200</x>
+    <y>865</y>
+    <width>90</width>
+    <height>30</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_5</name>
+    <pv_name>$(P)SA:Ch$(N):ESLO</pv_name>
+    <x>200</x>
+    <y>820</y>
+    <width>90</width>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)SA:Ch$(N):SLO</pv_name>
+    <x>300</x>
+    <y>820</y>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)SA:Ch$(N):OFF</pv_name>
+    <x>300</x>
+    <y>865</y>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>Slope</text>
+    <x>30</x>
+    <y>820</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Offset</text>
+    <x>30</x>
+    <y>865</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>ADC</text>
+    <x>100</x>
+    <y>790</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>EGU</text>
+    <x>200</x>
+    <y>790</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Combined</text>
+    <x>300</x>
+    <y>790</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)sysmonAge</pv_name>
+    <x>533</x>
+    <y>60</y>
+    <width>80</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Age</text>
+    <x>490</x>
+    <y>60</y>
+    <width>30</width>
   </widget>
 </display>
