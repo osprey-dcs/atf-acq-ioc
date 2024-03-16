@@ -163,7 +163,7 @@ record(ao, "$(P)SA:WinSt") {
 
 record(ao, "$(P)SA:WinSz") {
     field(DESC, "Window length")
-    field(VAL, "10")
+    field(VAL, "100")
     field(EGU, "s")
 }
 
@@ -178,19 +178,11 @@ record(bo, "$(P)SA:AutClr") {
 
 record(calc, "$(P)SA:Pr") {
     field(DESC, "Sample period")
+    field(INPA, "$(P)SA:Pr")
     field(INPA, "$(EVG)ACQ:rate.RVAL CP") # decimation factor
-    field(INPB, "250e3")
-    field(CALC, "A/B")
+    field(CALC, "1/A")
     field(EGU , "s")
     field(PREC, "6")
-    field(FLNK, "$(P)SA:Fq")
-}
-
-record(calc, "$(P)SA:Fq") {
-    field(DESC, "Sample freq.")
-    field(INPA, "$(P)SA:Pr")
-    field(CALC, "1/A")
-    field(EGU, "Hz")
 }
 
 record(aSub, "$(P)SA:T_") {
@@ -228,7 +220,7 @@ record(calcout, "$(P)SA:BufFul_") {
     field(INPA, "$(P)SA:BufFul")
     field(CALC, "A")
     field(OOPT, "When Non-zero")
-    field(OUT , "$(P)SA:Ch01.PROC") # --> quartzAcqChan.template
+    field(OUT , "$(P)SA:Ch01_.PROC") # --> quartzAcqChan.template
 }
 
 # /-- back after last channel processed
