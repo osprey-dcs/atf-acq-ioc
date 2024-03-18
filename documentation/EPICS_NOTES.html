@@ -546,10 +546,18 @@
           <td style="text-align: left;"><span style="font-family: Times
               New Roman, Times, serif;">System clock alignment status
               register.&nbsp; The least significant 16 bits are a signed
-              value indicating how far the number of acquisition clock
-              ticks between the preceding two pulse-per-second markers
-              differs from its ideal value of 125,000,000.&nbsp; The
-              most significant bits contain status information:<br>
+              value indicating how far the accumulated number of
+              acquisition clock ticks </span><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-family:
+                Times New Roman, Times, serif;">differs from its ideal
+                value.</span>&nbsp; The value is updated on the arrival
+              of the pulse per second marker with the amount by which
+              the number of acquisition clock ticks between this and the
+              previous marker </span><span style="font-family: Times
+              New Roman, Times, serif;"><span style="font-family: Times
+                New Roman, Times, serif;">differs from its ideal value
+                of 125,000,000.</span><br>
+              The most significant bits contain status information:<br>
             </span>
             <table style=" text-align: left; width: 90%;"
               cellspacing="2" cellpadding="2" border="1">
