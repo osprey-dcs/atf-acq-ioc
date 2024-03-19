@@ -86,7 +86,7 @@ record(seq, "$(P)$(R)reconn:c1") {
     field(LNK2, "$(P)$(R)buildDates_.PROC PP")
     field(DLY2, "0.01")
     # push decimator
-    field(LNK3, "$(P)$(R)ACQ:downsample_.PROC PP") # also pushs AA filter coeff.
+    field(LNK3, "$(P)$(R)ACQ:rate_.PROC PP") # also pushs AA filter coeff.
     field(DLY3, "0.01")
     field(LNKF, "$(P)$(R)reconn:c2.PROC")
     field(DLYF, "0.1")
