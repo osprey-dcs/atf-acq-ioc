@@ -21,6 +21,7 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
     Bit 9    — Show some status information about the bootstrap flash memory.
     Bit 10   — Scan the Marble I2C buses and show the devices attached to each.
+    Bit 12   – Show all AD7768 register writes as they occur.
     Bit 13   — Dump the register contents of the AD7768 ADC chips.
     Bit 15   — Provide fake AD7768 data.  Effective only at startup.
     Bit 17   — Show the MGT clock multiplexer registers.
@@ -28,6 +29,8 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 19   – Step the VCXO DAC to a static value to measure its sensitivity.
 
 If the optional -s argument is present the value of the debugging flags set at FPGA startup will be set or shown. 
+
+Setting bit 19 in the startup flags will enable a display of the first 30 seconds of clock synchronization state machine on startup.
 
 **fmon**  
 Show the value of the frequency counters monitoring various FPGA clocks.  Values shown with only 3 fractional digits indicate that the FPGA is not receiving a 'pulse per second' marker directly or indirectly from the facility timing system and that the accuracy of the measurement is somewhat suspect. 
@@ -48,8 +51,8 @@ The FPGA firmware includes an MRF-compatible event generator which obtains its i
 
 Issuing the **ntp** command with no arguments displays the current settings. 
 
-**pps**  
-Show lots of PPS-related information including for the event generator node the latency between the hardware PPS marker and the event receiver PPS event arrival. 
+**pps [-l]**  
+Show lots of PPS-related information including for the event generator node the latency between the hardware PPS marker and the event receiver PPS event arrival.   Specifying the '**-l**' option will enter a loop showing the clock synchronization state machine for 30 seconds of pulse-per-second updates.  Don't use that flag lightly since while the loop is active the FPGA will not respond to network activity.
 
 **reg [r] [n]**  
 Show the contents of **n** (default 1) general-purpose I/O registers starting at register **r** (default 0).
