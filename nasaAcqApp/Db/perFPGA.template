@@ -41,44 +41,35 @@ record(longout, "$(P)$(R)sysmonRst_") {
     field(OUT, "$(P)$(R)sysmonAge.A NPP")
     field(VAL, "0")
 }
-record(calc, "$(P)$(R)sysmonAge") {
-    field(PINI, "YES") # initialize alarm state
+record(ao, "$(P)$(R)sysmonTmo") {
+    field(PINI, "YES")
+    field(VAL, "4.0")
+    field(OUT, "$(P)$(R)sysmonAge.HIGH NPP")
+}
+record(calcout, "$(P)$(R)sysmonAge") {
     field(SCAN, ".5 second")
     field(INPA, "99") # initially in timeout
     field(INPB, "0.5") # SCAN period
+    field(INPC, "$(P)$(R)sysmonTmo NPP")
     field(CALC, "A:=A+B;A")
     field(EGU, "s")
     field(PREC, "1")
-    field(HIGH, "4")
     field(HSV , "MAJOR")
-    field(FLNK, "$(P)$(R)ondis") # ensure timeout always noted
-}
-
-record(mbbi, "$(P)$(R)conn") {
-    field(ZRVL, "0")
-    field(ONVL, "1")
-    field(TWVL, "2")
-    field(ZRST, "Timeout") # no comms
-    field(ONST, "Normal")  # well, normal operation
-    field(TWST, "Init")    # (re)pushing settings
-    field(ZRSV, "MAJOR")
-    field(ONSV, "NO_ALARM")
-    field(TWSV, "MINOR")
-}
-
-record(calcout, "$(P)$(R)ondis") {
-    field(INPA, "$(P)$(R)sysmonAge.SEVR")
-    field(CALC, "A==0")
-    field(OOPT, "When Non-zero") # ensure timeout always noted (eg. Timeout during Init)
-    field(DOPT, "Use OCAL")
-    field(OCAL, "0") # set state to Timeout
     field(OUT , "$(P)$(R)conn PP")
+    field(DOPT, "Use OCAL")
+    field(OCAL, "A<C")
+}
+
+record(bi, "$(P)$(R)conn") {
+    field(ZNAM, "Timeout") # no comms
+    field(ONAM, "Normal")  # well, normal operation
+    field(ZSV, "MAJOR")
 }
 
 record(calcout, "$(P)$(R)onconn") {
     field(INPA, "$(P)$(R)sysmonAge.SEVR CP") # only on edge
-    field(CALC, "A<2")
-    field(OOPT, "Transition To Zero") # alarm -> ok
+    field(CALC, "A==0")
+    field(OOPT, "When Non-zero")
     field(OUT , "$(P)$(R)reconn:c1.PROC")
     field(TPRO, "1")
 }
