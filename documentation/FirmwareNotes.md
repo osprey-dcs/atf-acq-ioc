@@ -22,7 +22,7 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 9    — Show some status information about the bootstrap flash memory.
     Bit 10   — Scan the Marble I2C buses and show the devices attached to each.
     Bit 12   – Show all AD7768 register writes as they occur.
-    Bit 13   — Dump the register contents of the AD7768 ADC chips.
+    Bit 13   — Dump the register contents (there are a lot) of the AD7768 ADC chips.
     Bit 15   — Provide fake AD7768 data.  Effective only at startup.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
