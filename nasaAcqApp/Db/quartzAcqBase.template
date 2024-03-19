@@ -9,6 +9,7 @@ record(bi, "$(P)ACQ:clk") {
     field(MASK, "1")
     field(ZNAM, "Lock")
     field(ONAM, "Unlock")
+    field(OSV , "MAJOR")
 }
 record(bi, "$(P)ACQ:pktoflw") {
     field(DESC, "Pkt Bldr oflow")
@@ -107,14 +108,14 @@ record(bi, "$(P)PPS:fmc") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
     field(MASK, "1")
-    field(ZNAM, "Absent")
+    field(ZNAM, "No FMC")
     field(ONAM, "FMC")
 }
 record(bi, "$(P)PPS:gps") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
     field(MASK, "4")
-    field(ZNAM, "Absent")
+    field(ZNAM, "No GPS")
     field(ONAM, "GPS")
 }
 record(mbbi, "$(P)PPS:src") {
@@ -126,7 +127,7 @@ record(mbbi, "$(P)PPS:src") {
     field(ONVL, "0x2")
     field(TWVL, "0x8")
     field(THVL, "0xa")
-    field(ZRST, "None")
+    field(ZRST, "No PPS")
     field(ONST, "FMC")
     field(TWST, "GPS")
     field(THST, "Both?")
