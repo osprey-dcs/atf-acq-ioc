@@ -107,8 +107,9 @@ The AD7768 has signal processing to low pass filter the incoming data to less th
 
 * Filter pass band (less than 0.005 dB ripple) is DC to 0.4*Fsamp.
 * Filter stop band (attenuation greater than 105 dB) begins at 0.5*Fsamp.
-* There is reduced anti-aliasing (attenuation between 90 and 60 dB) at bands centered on 2*Fchop.
+* There is reduced anti-aliasing (attenuation between 90 and 60 dB) at bands centered on N\*2*Fchop.
 * First aliasing band is centered on 2*Fmod.
+* Fchop is Fmod/32.
 * Decimation factor is Fmod/Fsamp.
 
 
