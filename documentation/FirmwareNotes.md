@@ -92,4 +92,26 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 
 # Network Configuration
 
-The Ethernet MAC address and IPv4 network address are set using the microcontroller USB/serial port (115200-8N1).  The microcontroller serial port is connected to the fourthc prot (port D) of the USB/serial adapter.  After connecting, type a '?' followed by a carriage return to obtain the menu of commands. 
+The Ethernet MAC address and IPv4 network address are set using the microcontroller USB/serial port (115200-8N1).  The microcontroller serial port is connected to the fourth port (port D) of the USB/serial adapter.  After connecting, type a '?' followed by a carriage return to obtain the menu of commands.
+
+# ADC Operation
+The AD7768 has signal processing to low pass filter the incoming data to less than the Nyquist frequency.
+
+| Fsamp (kHz) | MCLK (MHz) | Fmod (MHz) | Fchop (kHz) |
+|:----:|:----:|:----:|:----:|
+| 250 | 32 | 8 | 250 |
+| 50 | 25.6 | 6.4 | 200 |
+| 10 | 20.48 | 5.12 | 160 |
+| 5 | 20.48 | 5.12 | 160 |
+| 1 | 16.384 | 0.512 | 16 |
+
+* Filter pass band (less than 0.005 dB ripple) is DC to 0.4*Fsamp.
+* Filter stop band (attenuation greater than 105 dB) begins at 0.5*Fsamp.
+* There is reduced anti-aliasing (attenuation between 90 and 60 dB) at bands centered on 2*Fchop.
+* First aliasing band is centered on 2*Fmod.
+* Decimation factor is Fmod/Fsamp.
+
+
+
+
+
