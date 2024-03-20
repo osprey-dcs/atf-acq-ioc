@@ -77,8 +77,10 @@ record(calc, "$(P)ACQ:ppsdiff") {
     field(INPA, "$(P)ACQ:clkPLL CP MS")
     field(INPB, "0xffff")
     field(INPC, "0")
-    field(INPD, "1")
-    field(CALC, "((A&B)>>C)*D")
+    field(INPD, "") # scratch, unsigned 16
+    field(INPE, "0xffff")
+    field(INPF, "0x8000")
+    field(CALC, "D:=((A&B)>>C);D&F?-(D XOR E)-1:D")
     field(EGU , "tick")
 }
 
