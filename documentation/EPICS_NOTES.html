@@ -628,16 +628,30 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="vertical-align: top;"><span style="font-family:
-              Times New Roman, Times, serif;">Most significant 20 bits
-              are number of acquisition clock ticks (8 ns per tick)
-              between event receiver PPS event and ADC DRDY rising
-              edge.&nbsp; Values between nodes differing by more than 8
-              indicates that ADC synchronization between those nodes has
-              been lost.<br>
-              Least significant 12 bits are the number of acquisition
-              clock ticks between first and last DRDY rising
-              edges.&nbsp; A value greater than 1 indicates that ADC
-              synchronization within the node has been lost.<br>
+              Times New Roman, Times, serif;">Most significant bit is
+              set when DRDY signals from all Quartz AD7768 ADCs are
+              aligned.<br>
+              Least significant 20 bits are number of acquisition clock
+              ticks (8 ns per tick) between event receiver PPS event and
+              AD7768 ADC DRDY rising edge.&nbsp; Values between nodes
+              differing by more than 8 indicates that ADC
+              synchronization between those nodes has been lost.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ADC:aligns</span><br>
+          </td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: left;"><span
+              style="font-family: Times New Roman, Times, serif;">Number
+              of times that AD7768 ADC alignment has been
+              requested.&nbsp; ADC alignments are requested whenever the
+              DRDY signals are misaligned or whenever the sampling
+              frequency is set.<br>
             </span></td>
         </tr>
         <tr>
@@ -774,9 +788,7 @@
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
 
-        respectively.&nbsp; EPICS does not yet provide a convenient
-        mechanism for turning these values into more human-readable
-        form.<br>
+        respectively.<br>
         <br>
       </span> </p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
