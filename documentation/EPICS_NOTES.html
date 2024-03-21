@@ -743,8 +743,9 @@
                   </td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Quartz present value has changed state at
-                      least once since this bit was last cleared.<br>
+                      serif;">Quartz PPS-present value (bit 0) has
+                      changed state at least once since this bit (bit 8)
+                      was last cleared.<br>
                     </span></td>
                 </tr>
                 <tr>
@@ -754,8 +755,9 @@
                   </td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">PMOD-GSPS present value has changed state
-                      at least once since this bit was last cleared.</span></td>
+                      serif;">PMOD-GSPS PPS-present value (bit 1) has
+                      changed state at least once since this bit (bit 9)
+                      was last cleared.</span></td>
                 </tr>
               </tbody>
             </table>
@@ -779,8 +781,8 @@
         disabled acquisition activity continues until the
         currently-active packet has been filled and transmitted.</span></p>
     <p><span style="font-family: Times New Roman, Times, serif;">The
-        time, in POSIX seconds, at which the firmware and software was
-        built is contained in the per-node longin records </span><span
+        time at which the firmware and software were built is contained
+        in the per-node stringin records </span><span
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
 
         a</span><span style="font-family: Times New Roman, Times,
