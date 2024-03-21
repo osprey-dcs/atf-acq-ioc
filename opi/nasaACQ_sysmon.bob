@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-21 11:14:27 by eric-->
+<!--Saved on 2024-03-21 13:30:57 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ System Monitors</name>
   <x>9</x>
@@ -1154,8 +1154,7 @@
         <name>Text Update_66</name>
         <pv_name>$(P)$(R)DRDY:status</pv_name>
         <x>120</x>
-        <format>4</format>
-        <precision>8</precision>
+        <format>1</format>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
@@ -1227,8 +1226,7 @@
         <name>Text Update_70</name>
         <pv_name>$(P)$(R)ADC:aligns</pv_name>
         <x>120</x>
-        <format>4</format>
-        <precision>8</precision>
+        <format>1</format>
         <horizontal_alignment>2</horizontal_alignment>
         <vertical_alignment>1</vertical_alignment>
         <wrap_words>false</wrap_words>
