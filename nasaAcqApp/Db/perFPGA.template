@@ -84,7 +84,7 @@ record(longout, "$(P)$(R)ACQ:rate_") {
 
 #
 # Reboot FPGA
-# Driven diretly by client
+# Driven directly by client
 #
 record(longout, "$(P)$(R)FPGA:reboot") {
     field(DESC, "Write 1, 100, 10000 to reboot FPGA")
