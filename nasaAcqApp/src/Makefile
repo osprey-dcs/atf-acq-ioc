@@ -7,6 +7,7 @@ include $(TOP)/configure/CONFIG
 
 LIBRARY += nasaSup
 nasaSup_SRCS += goldenBoot.c
+DBD += nasaSup.dbd
 
 #=============================
 # Build the IOC application
