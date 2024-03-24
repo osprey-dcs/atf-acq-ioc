@@ -23,6 +23,10 @@
 
 # Variables and paths to dependent modules:
 PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv
+FEEDCORE=/usr/local/epics/R7.0.6/modules/soft/feed-core
+
+# Optional
+#PVXS=
 
 # EPICS_BASE should appear last so earlier modules can override stuff:
 EPICS_BASE = /usr/local/epics/R7.0.6/base-7.0.6.1
