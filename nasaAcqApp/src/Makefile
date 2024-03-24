@@ -5,6 +5,9 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
 
+LIBRARY += nasaSup
+nasaSup_SRCS += goldenBoot.c
+
 #=============================
 # Build the IOC application
 
@@ -21,12 +24,14 @@ nasaAcq_DBD += pscUDPFast.dbd
 nasaAcq_DBD += pscSig.dbd
 nasaAcq_DBD += pscCore.dbd
 nasaAcq_DBD += feed.dbd
+nasaAcq_DBD += nasaSup.dbd
 
 # Add all the support libraries needed by this IOC
 nasaAcq_LIBS += pscSig
 nasaAcq_LIBS += pscUDPFast
 nasaAcq_LIBS += pscCore
 nasaAcq_LIBS += feed
+nasaAcq_LIBS += nasaSup
 
 ifdef PVXS_MAJOR_VERSION
 nasaAcq_DBD += pvxsIoc.dbd
