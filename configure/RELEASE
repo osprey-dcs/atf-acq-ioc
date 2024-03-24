@@ -24,6 +24,7 @@
 # Variables and paths to dependent modules:
 PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv
 FEEDCORE=/usr/local/epics/R7.0.6/modules/soft/feed-core
+AUTOSAVE=/usr/local/epics/R7.0.6/modules/soft/autosave
 
 # Optional
 #PVXS=

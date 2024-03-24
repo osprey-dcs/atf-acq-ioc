@@ -153,18 +153,21 @@ record(longout, "$(P)SA:BufLim") {
     field(OUT , "@$(NAME)")
     field(VAL , "1") # will automatically grow to fill channel aai NELM
     field(PINI, "YES")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(ao, "$(P)SA:WinSt") {
     field(DESC, "Window start time")
     field(VAL, "0")
     field(EGU, "s")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(ao, "$(P)SA:WinSz") {
     field(DESC, "Window length")
     field(VAL, "100")
     field(EGU, "s")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)SA:AutClr") {
@@ -172,6 +175,7 @@ record(bo, "$(P)SA:AutClr") {
     field(ONAM, "Auto")
     field(VAL , "1")
     field(FLNK, "$(P)SA:AutClr_") # attempt to clear on change
+    info(autosaveFields_pass0, "VAL")
 }
 
 # timebase, assume identical for all.

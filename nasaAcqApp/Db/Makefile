@@ -9,6 +9,7 @@ include $(TOP)/configure/CONFIG
 DB += nasaEVG.db
 DB += nasaAcqSup.db
 DB_INSTALLS += $(PSCDRV)/db/pscudpfast.db
+DB_INSTALLS += $(AUTOSAVE)/db/save_restoreStatus.db
 
 DB += quartzAcq.db
 

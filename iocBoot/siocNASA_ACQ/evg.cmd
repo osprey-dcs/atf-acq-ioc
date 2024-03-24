@@ -27,9 +27,26 @@ dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,
 # Load record instances unique to event generator
 dbLoadRecords("../../db/nasaEVG.db", "P=$(EVG),PORT=NASA_CTRL_EVG")
 
+dbLoadRecords("../../db/save_restoreStatus.db", "P=$(P)AS:")
+save_restoreSet_status_prefix("$(P)AS:")
+
+system "install -d as"
+system "install -d as/$(NODE)"
+
+set_savefile_path("$(PWD)/as", "/$(NODE)")
+set_requestfile_path("$(PWD)/as", "/$(NODE)")
+
+set_pass0_restoreFile("atf_settings.sav")
+set_pass0_restoreFile("atf_values.sav")
+set_pass1_restoreFile("atf_values.sav")
+set_pass1_restoreFile("atf_waveforms.sav")
+
 iocInit
 
-# FIXME -- this needs to go to some client
-dbpf "$(P)FileDir-SP" "/tmp"
-dbpf "$(P)FileBase-SP" "EVG-"
-#dbpf "$(P)Record-Sel" 1
+makeAutosaveFileFromDbInfo("$(PWD)/as/$(NODE)/atf_settings.req", "autosaveFields_pass0")
+makeAutosaveFileFromDbInfo("$(PWD)/as/$(NODE)/atf_values.req", "autosaveFields")
+makeAutosaveFileFromDbInfo("$(PWD)/as/$(NODE)/atf_waveforms.req", "autosaveFields_pass1")
+
+create_monitor_set("atf_settings.req", 10 , "")
+create_monitor_set("atf_values.req", 10 , "")
+create_monitor_set("atf_waveforms.req", 30 , "")

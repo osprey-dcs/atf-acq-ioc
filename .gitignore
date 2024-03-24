@@ -22,3 +22,6 @@ envPaths
 
 *.bin
 *.bit
+
+*.req
+*.sav*
