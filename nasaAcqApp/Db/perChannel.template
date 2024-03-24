@@ -17,6 +17,7 @@ record(bo, "$(P)$(R)ACQ:enable:$(N)") {
     field(ONAM, "Enable")
     field(RVAL, "1") # initially Enable
     field(FLNK, "$(P)$(R)send_")
+    info(autosaveFields_pass0, "RVAL")
 }
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(DESC, "Set channel $(N) input coupling")
@@ -26,16 +27,19 @@ record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(ONAM, "DC")
     field(RVAL, "1") # initially DC
     field(FLNK, "$(P)$(R)send_")
+    info(autosaveFields_pass0, "RVAL")
 }
 record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
     field(DESC, "Set channel $(N) calibration offset")
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 3$(IDX)")
     field(FLNK, "$(P)$(R)send_")
+    info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(DESC, "Set channel $(N) calibration gain")
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 4$(IDX)")
     field(FLNK, "$(P)$(R)send_")
+    info(autosaveFields_pass0, "VAL")
 }

@@ -18,9 +18,10 @@ DBD += nasaAcq.dbd
 
 # nasaAcq.dbd will be made up from these files:
 nasaAcq_DBD += base.dbd
+nasaAcq_DBD += system.dbd
 
 # Include dbd files from all support applications:
-#nasaAcq_DBD += pscSig.dbd
+nasaAcq_DBD += asSupport.dbd
 nasaAcq_DBD += pscUDPFast.dbd
 nasaAcq_DBD += pscSig.dbd
 nasaAcq_DBD += pscCore.dbd
@@ -28,6 +29,7 @@ nasaAcq_DBD += feed.dbd
 nasaAcq_DBD += nasaSup.dbd
 
 # Add all the support libraries needed by this IOC
+nasaAcq_LIBS += autosave
 nasaAcq_LIBS += pscSig
 nasaAcq_LIBS += pscUDPFast
 nasaAcq_LIBS += pscCore

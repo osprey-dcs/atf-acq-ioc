@@ -1,5 +1,9 @@
 # depends on record from feed_base.template and perFPGA.template
 
+record("*", "$(P)GLD:IPADDR") {
+    info(autosaveFields_pass0, "") # inhibit autosave.  IP managed only through iocsh
+}
+
 # monitor $(P)conn from perFPGA.template
 # on 0 -> 1, disable FEED probing for golden image
 # on 1 -> 1, enable probing
@@ -57,6 +61,7 @@ record(bo, "$(P)GLD:autoboot") {
     field(VAL , "0")
     field(ZNAM, "Manual")
     field(ONAM, "Auto boot")
+    info(autosaveFields_pass0, "VAL")
 }
 
 record(bo, "$(P)GLD:boot") {

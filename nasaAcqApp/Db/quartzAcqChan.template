@@ -2,20 +2,30 @@
 record(ao, "$(P)SA:Ch$(N):ASLO") {
     field(VAL, "1.0")
     field(PREC, "9")
+    info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):AOFF") {
     field(VAL, "0.0")
     field(PREC, "9")
+    info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):ESLO") {
     field(VAL, "1.0")
     field(PREC, "9")
+    info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):EOFF") {
     field(VAL, "0.0")
     field(PREC, "9")
+    info(autosaveFields_pass0, "VAL")
 }
-record(stringin, "$(P)SA:Ch$(N):EGU") {}
+record(lso, "$(P)SA:Ch$(N):DESC") {
+    field(SIZV, "128")
+    info(autosaveFields_pass0, "VAL")
+}
+record(stringout, "$(P)SA:Ch$(N):EGU") {
+    info(autosaveFields_pass0, "VAL")
+}
 
 # V = ASLO*ADC + AOFF
 # EU= ESLO*V   + EOFF
