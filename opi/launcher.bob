@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-19 10:48:38 by dev-->
+<!--Saved on 2024-03-20 14:04:04 by dev-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -994,8 +994,8 @@
   <widget type="action_button" version="3.0.0">
     <name>Action Button_3</name>
     <actions>
-      <action type="open_display">
-        <file>launcher.bob</file>
+     <action type="open_display">
+       <file>launcher.bob</file>
         <macros>
           <P>NASA_ACQ:01:</P>
         </macros>
@@ -1011,7 +1011,7 @@
         <description>Chassis 2</description>
       </action>
       <action type="open_display">
-        <file></file>
+        <file>launcher.bob</file>
         <macros>
           <P>NASA_ACQ:03:</P>
         </macros>
@@ -1019,7 +1019,7 @@
         <description>Chassis 3</description>
       </action>
       <action type="open_display">
-        <file></file>
+        <file>launcher.bob</file>
         <macros>
           <P>NASA_ACQ:04:</P>
         </macros>
@@ -1027,12 +1027,228 @@
         <description>Chassis 4</description>
       </action>
       <action type="open_display">
-        <file></file>
+        <file>launcher.bob</file>
         <macros>
           <P>NASA_ACQ:05:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 5</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:06:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 6</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:07:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 7</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:08:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 8</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:09:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 9</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:10:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 10</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:11:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 11</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:12:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 12</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:13:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 13</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:14:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 14</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:15:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 15</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:16:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 16</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:17:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 17</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:18:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 18</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:19:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 19</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:20:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 20</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:21:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 21</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:22:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 22</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:23:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 23</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:24:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 24</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:25:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 25</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:26:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 26</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:27:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 27</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:28:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 28</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:29:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 29</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:30:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 30</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:31:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 31</description>
+      </action>
+      <action type="open_display">
+        <file>launcher.bob</file>
+        <macros>
+          <P>NASA_ACQ:32:</P>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 32</description>
       </action>
     </actions>
     <text>Box Sel</text>
