@@ -20,11 +20,18 @@ nasaAcq_DBD += base.dbd
 nasaAcq_DBD += pscUDPFast.dbd
 nasaAcq_DBD += pscSig.dbd
 nasaAcq_DBD += pscCore.dbd
+nasaAcq_DBD += feed.dbd
 
 # Add all the support libraries needed by this IOC
 nasaAcq_LIBS += pscSig
 nasaAcq_LIBS += pscUDPFast
 nasaAcq_LIBS += pscCore
+nasaAcq_LIBS += feed
+
+ifdef PVXS_MAJOR_VERSION
+nasaAcq_DBD += pvxsIoc.dbd
+nasaAcq_LIBS += pvxsIoc pvxs
+endif
 
 # nasaAcq_registerRecordDeviceDriver.cpp derives from nasaAcq.dbd
 nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
