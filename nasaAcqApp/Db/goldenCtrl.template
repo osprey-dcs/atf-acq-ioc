@@ -1,0 +1,72 @@
+# depends on record from feed_base.template and perFPGA.template
+
+# monitor $(P)conn from perFPGA.template
+# on 0 -> 1, disable FEED probing for golden image
+# on 1 -> 1, enable probing
+
+# monitor $(P)STATUS from feed_base.template
+# on * -> 4, attempt auto-boot if requested
+
+record(calcout, "$(P)GLD:onapp") {
+    field(INPA, "$(P)$(R=)conn CP MS")
+    field(CALC, "A")
+    field(OOPT, "When Non-zero") # 0 -> 1
+    field(OUT , "$(P)GLD:HALT.PROC") # force to error state, stops probing
+    field(TPRO, "1")
+}
+
+record(calcout, "$(P)GLD:ontmo") {
+    field(INPA, "$(P)$(R=)conn CP MS")
+    field(CALC, "A")
+    field(OOPT, "When Zero") # 0 -> 1
+    field(OUT , "$(P)GLD:RESET.PROC") # force out of error state, resume probing
+    field(TPRO, "1")
+}
+
+record(calcout, "$(P)GLD:ongold") {
+    field(INPA, "$(P)GLD:STATUS CP MS")
+    field(INPB, "$(P)GLD:autoboot CP MS")
+    field(CALC, "A==4&&B")
+    field(OOPT, "When Non-zero")
+    field(OUT , "$(P)GLD:boot.PROC") # golden image active, and auto-boot enabled, go ahead
+    field(TPRO, "1")
+}
+
+record(calcout, "$(P)GLD:image_") {
+    field(INPA, "$(P)$(R=)conn CP")
+    field(INPB, "$(P)GLD:STATUS CP")
+    field(CALC, "A<<1 | (B==4)")
+    field(OUT , "$(P)GLD:image PP MS")
+}
+record(mbbi, "$(P)GLD:image") {
+    field(DESC, "Active FPGA image")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(ZRST, "None")
+    field(ONST, "Gold")
+    field(TWST, "Appl")
+    field(THST, "Both") # transient?
+    field(ZRSV, "MAJOR")
+    field(ONSV, "MINOR")
+    field(THST, "INVALID")
+}
+
+record(bo, "$(P)GLD:autoboot") {
+    field(VAL , "0")
+    field(ZNAM, "Manual")
+    field(ONAM, "Auto boot")
+}
+
+record(bo, "$(P)GLD:boot") {
+    field(DESC, "Boot to App img")
+    field(ZNAM, "Boot")
+    field(ONAM, "Boot")
+    field(FLNK, "$(P)GLD:boot_")
+}
+
+record(longout, "$(P)GLD:boot_") {
+    field(DTYP, "Boot to App")
+    field(OUT , "@$(IPADDR)")
+}

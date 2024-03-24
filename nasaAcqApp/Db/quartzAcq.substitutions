@@ -1,4 +1,11 @@
 
+file "feed_base.template" {
+{PREF="\$(P)GLD:", NAME="\$(P)GLD", ADDR="\$(IPADDR):803"}
+}
+
+file "goldenCtrl.template" {
+{P="\$(P)"}
+}
 
 file "quartzAcqBase.template" {
 {P="\$(P)", NAME="\$(NAME)", NELM="\$(NELM)"}
