@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-23 09:48:10 by eric-->
+<!--Saved on 2024-03-24 17:37:05 by eric-->
 <display version="2.0.0">
   <name>NASA-ACQ FPGA Reboot</name>
   <x>300</x>
   <y>150</y>
   <width>470</width>
-  <height>100</height>
+  <height>160</height>
   <background_color>
     <color name="GLOBAL canvas" red="200" green="200" blue="200">
     </color>
@@ -35,7 +35,7 @@
   <widget type="group" version="2.0.0">
     <name>Group</name>
     <x>20</x>
-    <y>25</y>
+    <y>30</y>
     <width>420</width>
     <height>60</height>
     <style>3</style>
@@ -119,5 +119,25 @@
       </background_color>
       <tooltip>$(actions)</tooltip>
     </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_18</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(P)$(R)ADC:reset</pv_name>
+        <value>40</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Reset ADCs</text>
+    <x>20</x>
+    <y>110</y>
+    <width>120</width>
+    <height>35</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
   </widget>
 </display>
