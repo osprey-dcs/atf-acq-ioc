@@ -1,11 +1,11 @@
-#!../../bin/linux-arm/nasaAcq
+#!../../bin/linux-x86_64/nasaAcq
 
 ###############################################################################
 # Set up environment
-epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.0") # TODO: change me
-epicsEnvSet(NODE, "01")
+#epicsEnvSet(NASA_ACQ_BASE_IP, "${NASA_ACQ_BASE_IP=192.168.79.0}") # TODO: change me
+#epicsEnvSet(NODE, "${NODE=05}")
 epicsEnvSet(P, "NASA_ACQ:$(NODE):")
-epicsEnvSet(EVG, "$(P)") # this is the EVG node
+epicsEnvSet(EVG, "NASA_ACQ:01:")
 
 ###############################################################################
 # Register support components
@@ -22,10 +22,7 @@ createPSCUDP("NASA_CTRL_EVG", "$(NASA_ACQ_BASE_IP)", 54398, 0)
 createPSCUDPFast("NASA_CTRL_EVG_FS", "$(NASA_ACQ_BASE_IP)", 54399, 0)
 dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=NASA_CTRL_EVG")
 dbLoadRecords("../../db/pscudpfast.db", "P=$(P),NAME=NASA_CTRL_EVG_FS")
-dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP),NELM=40000")
-
-# Load record instances unique to event generator
-dbLoadRecords("../../db/nasaEVG.db", "P=$(EVG),PORT=NASA_CTRL_EVG")
+dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP),NELM=10000")
 
 dbLoadRecords("../../db/save_restoreStatus.db", "P=$(P)AS:")
 save_restoreSet_status_prefix("$(P)AS:")
