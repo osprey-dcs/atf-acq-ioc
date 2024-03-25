@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 14:07:21 by dev-->
+<!--Saved on 2024-03-25 13:54:40 by dev-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -7,42 +7,12 @@
   </macros>
   <width>1010</width>
   <height>1520</height>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button</name>
-    <actions>
-      <action type="open_display">
-        <file>nasaACQ.bob</file>
-        <target>tab</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Control</text>
-    <x>20</x>
-    <y>20</y>
-    <width>70</width>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_1</name>
-    <actions>
-      <action type="open_display">
-        <file>nasaACQ_faststs.bob</file>
-        <target>tab</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Acquire</text>
-    <x>170</x>
-    <y>20</y>
-    <width>70</width>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
     <x>20</x>
-    <y>150</y>
-    <width>510</width>
-    <height>200</height>
+    <y>130</y>
+    <width>583</width>
+    <height>220</height>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -107,64 +77,11 @@
   <widget type="led" version="2.0.0">
     <name>LED</name>
     <pv_name>$(P)SA:BufFul</pv_name>
-    <x>30</x>
+    <x>570</x>
     <y>105</y>
     <width>30</width>
-    <height>30</height>
+    <height>15</height>
     <square>true</square>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_16</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(EVG)ACQ:enable</pv_name>
-        <value>0</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Disable</text>
-    <x>360</x>
-    <y>105</y>
-    <width>80</width>
-    <height>25</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_17</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(EVG)ACQ:enable</pv_name>
-        <value>1</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Enable</text>
-    <x>447</x>
-    <y>105</y>
-    <width>80</width>
-    <height>25</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED_1</name>
-    <pv_name>$(EVG)ACQ:enable</pv_name>
-    <bit>0</bit>
-    <x>533</x>
-    <y>105</y>
-    <width>25</width>
-    <height>25</height>
-    <off_color>
-      <color name="Button_Background" red="210" green="210" blue="210">
-      </color>
-    </off_color>
   </widget>
   <widget type="choice" version="2.0.0">
     <name>Choice Button_1</name>
@@ -438,9 +355,10 @@
         <description>Channel 32</description>
       </action>
     </actions>
-    <text>Ch Select</text>
-    <x>140</x>
-    <y>60</y>
+    <text>Channel</text>
+    <x>20</x>
+    <y>70</y>
+    <width>197</width>
     <height>35</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -869,7 +787,7 @@
     <name>Text Update_1</name>
     <pv_name>$(P)LastFile-I.VAL$</pv_name>
     <x>840</x>
-    <width>240</width>
+    <width>360</width>
     <format>6</format>
   </widget>
   <widget type="textupdate" version="2.0.0">
@@ -877,7 +795,7 @@
     <pv_name>$(P)LastErr-I.VAL$</pv_name>
     <x>840</x>
     <y>30</y>
-    <width>170</width>
+    <width>325</width>
     <format>6</format>
   </widget>
   <widget type="textentry" version="3.0.0">
@@ -890,9 +808,9 @@
   </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_2</name>
-    <x>30</x>
+    <x>20</x>
     <y>405</y>
-    <width>510</width>
+    <width>593</width>
     <height>330</height>
     <show_toolbar>true</show_toolbar>
     <x_axis>
@@ -972,24 +890,6 @@
       <item>Item 1</item>
       <item>Item 2</item>
     </items>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_2</name>
-    <actions>
-      <action type="open_display">
-        <file>nasaACQ_sysmon.bob</file>
-        <macros>
-          <R></R>
-        </macros>
-        <target>tab</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Sts</text>
-    <x>90</x>
-    <y>20</y>
-    <width>70</width>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Action Button_3</name>
@@ -1251,17 +1151,24 @@
         <description>Chassis 32</description>
       </action>
     </actions>
-    <text>Box Sel</text>
+    <text>Chassis Select</text>
     <x>20</x>
-    <y>60</y>
+    <y>20</y>
+    <width>200</width>
     <height>35</height>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
     <text>Chassis $(P) Channel $(N)</text>
-    <x>30</x>
-    <width>250</width>
+    <x>230</x>
+    <y>90</y>
+    <width>325</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>32</name>
@@ -1323,14 +1230,6 @@
     <x>790</x>
     <y>30</y>
     <width>40</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_12</name>
-    <text>Acquire</text>
-    <x>270</x>
-    <y>105</y>
-    <width>87</width>
-    <height>25</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
@@ -1396,14 +1295,14 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_15</name>
-    <text>ADC</text>
+    <text>ADC -&gt; V</text>
     <x>100</x>
     <y>790</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_16</name>
-    <text>EGU</text>
+    <text>V -&gt; EGU</text>
     <x>200</x>
     <y>790</y>
     <width>90</width>

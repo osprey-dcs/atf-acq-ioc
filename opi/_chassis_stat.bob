@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 14:18:41 by dev-->
+<display version="2.0.0">
+  <name>Stat $(N)</name>
+  <width>1195</width>
+  <height>30</height>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)$(N):conn</pv_name>
+    <x>50</x>
+    <y>5</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)$(N):sysmonAge</pv_name>
+    <x>140</x>
+    <y>5</y>
+    <width>80</width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)$(N):SA:BufFul</pv_name>
+    <x>310</x>
+    <y>5</y>
+    <square>true</square>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)$(N):FPGA:Temperature</pv_name>
+    <x>230</x>
+    <y>5</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_14</name>
+    <pv_name>$(P)$(N):NDrp-I</pv_name>
+    <x>430</x>
+    <y>5</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_15</name>
+    <pv_name>$(P)$(N):RXRate-I</pv_name>
+    <x>340</x>
+    <y>5</y>
+    <width>80</width>
+    <precision>2</precision>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>$(P)$(N):ACQ:ppslck</pv_name>
+    <x>510</x>
+    <y>5</y>
+    <width>60</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_8</name>
+    <pv_name>$(P)$(N):ACQ:clk</pv_name>
+    <x>580</x>
+    <y>5</y>
+    <width>60</width>
+    <off_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>LED_12</name>
+    <pv_name>$(P)$(N):ACQ:ppsdiff</pv_name>
+    <x>650</x>
+    <y>5</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_72</name>
+    <pv_name>$(P)$(N):DRDY:sprd</pv_name>
+    <x>750</x>
+    <y>5</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>nasaACQ_sysmon.bob</file>
+        <macros>
+          <R>$(N):</R>
+        </macros>
+        <target>tab</target>
+        <description>Sysmon</description>
+      </action>
+      <action type="open_display">
+        <file>nasaACQ_faststs.bob</file>
+        <target>tab</target>
+        <description>Acq.</description>
+      </action>
+    </actions>
+    <text>$(N)</text>
+    <y>5</y>
+    <width>40</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_68</name>
+    <pv_name>$(P)$(N):ACQ:clkPLL</pv_name>
+    <x>870</x>
+    <y>5</y>
+    <format>4</format>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_69</name>
+    <pv_name>$(P)$(N):DRDY:status</pv_name>
+    <x>980</x>
+    <y>5</y>
+    <format>1</format>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_70</name>
+    <pv_name>$(P)$(N):ADC:aligns</pv_name>
+    <x>1090</x>
+    <y>5</y>
+    <format>1</format>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+</display>

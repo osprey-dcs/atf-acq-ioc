@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-02-18 16:06:50 by dev-->
+<!--Saved on 2024-03-25 13:03:37 by dev-->
 <display version="2.0.0">
-  <name>UDP Fast Demo</name>
+  <name>Acq $(N)</name>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)Record-I</pv_name>

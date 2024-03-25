@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 14:06:06 by dev-->
+<display version="2.0.0">
+  <name>Acq $(N)</name>
+  <macros>
+    <P>$(P)$(N):</P>
+  </macros>
+  <width>795</width>
+  <height>85</height>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="open_display">
+        <file>nasaACQ_faststs.bob</file>
+        <target>tab</target>
+        <description>Acq.</description>
+      </action>
+    </actions>
+    <text>$(N)</text>
+    <y>5</y>
+    <width>40</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Record-I</pv_name>
+    <x>60</x>
+    <y>5</y>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button</name>
+    <pv_name>$(P)Record-Sel</pv_name>
+    <x>100</x>
+    <y>5</y>
+    <width>170</width>
+    <height>20</height>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)RXBRate-I</pv_name>
+    <x>280</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)NDrp-I</pv_name>
+    <x>390</x>
+    <y>5</y>
+    <width>80</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)FileDir-SP.VAL$</pv_name>
+    <y>35</y>
+    <width>340</width>
+    <format>6</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(P)FileBase-SP.VAL$</pv_name>
+    <x>350</x>
+    <y>35</y>
+    <width>440</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_11</name>
+    <pv_name>$(P)LastFile-I.VAL$</pv_name>
+    <y>60</y>
+    <width>790</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)LstSz-I</pv_name>
+    <x>590</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)WrtRate-I</pv_name>
+    <x>480</x>
+    <y>5</y>
+  </widget>
+</display>

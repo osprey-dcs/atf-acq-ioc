@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-21 13:30:57 by eric-->
+<!--Saved on 2024-03-25 13:58:48 by dev-->
 <display version="2.0.0">
-  <name>Sysmon $(P)</name>
+  <name>Mon $(N)</name>
   <x>9</x>
   <y>88</y>
   <width>615</width>
@@ -1215,7 +1215,7 @@
         <vertical_alignment>1</vertical_alignment>
       </widget>
     </widget>
-    <widget type="group" version="2.0.0">
+    <widget type="group" version="3.0.0">
       <name>Group_4</name>
       <y>75</y>
       <width>220</width>
@@ -1244,7 +1244,7 @@
     <name>INA219val_29</name>
     <text>ACQ</text>
     <x>363</x>
-    <y>337</y>
+    <y>363</y>
     <width>115</width>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
@@ -1253,7 +1253,7 @@
     <name>Text Update_70</name>
     <pv_name>$(P)$(R)ACQ:status</pv_name>
     <x>483</x>
-    <y>337</y>
+    <y>361</y>
     <format>4</format>
     <precision>8</precision>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1264,50 +1264,50 @@
     <name>LED_1</name>
     <pv_name>$(P)$(R)ACQ:clk</pv_name>
     <x>600</x>
-    <y>337</y>
+    <y>362</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
-    <pv_name>$(P)ACQ:pktoflw</pv_name>
+    <pv_name>$(P)$(R)ACQ:pktoflw</pv_name>
     <x>670</x>
-    <y>337</y>
+    <y>362</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
-    <pv_name>$(P)ACQ:adcoflw</pv_name>
+    <pv_name>$(P)$(R)ACQ:adcoflw</pv_name>
     <x>740</x>
-    <y>337</y>
+    <y>362</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
-    <pv_name>$(P)ACQ:request</pv_name>
+    <pv_name>$(P)$(R)ACQ:request</pv_name>
     <x>880</x>
-    <y>337</y>
+    <y>362</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_5</name>
-    <pv_name>$(P)ACQ:running</pv_name>
+    <pv_name>$(P)$(R)ACQ:running</pv_name>
     <x>810</x>
-    <y>337</y>
+    <y>362</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_6</name>
-    <pv_name>$(P)ACQ:ppsTog</pv_name>
+    <pv_name>$(P)$(R)ACQ:ppsTog</pv_name>
     <x>670</x>
     <y>262</y>
     <width>60</width>
@@ -1316,7 +1316,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_7</name>
-    <pv_name>$(P)ACQ:ppslck</pv_name>
+    <pv_name>$(P)$(R)ACQ:ppslck</pv_name>
     <x>740</x>
     <y>262</y>
     <width>60</width>
@@ -1325,7 +1325,7 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_8</name>
-    <pv_name>$(P)ACQ:loop</pv_name>
+    <pv_name>$(P)$(R)ACQ:loop</pv_name>
     <x>600</x>
     <y>262</y>
     <width>60</width>
@@ -1334,7 +1334,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_71</name>
-    <pv_name>$(P)DRDY:pps</pv_name>
+    <pv_name>$(P)$(R)DRDY:pps</pv_name>
     <x>600</x>
     <y>286</y>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1343,7 +1343,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_72</name>
-    <pv_name>$(P)DRDY:sprd</pv_name>
+    <pv_name>$(P)$(R)DRDY:sprd</pv_name>
     <x>710</x>
     <y>286</y>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1352,32 +1352,32 @@
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_9</name>
-    <pv_name>$(P)PPS:gps</pv_name>
+    <pv_name>$(P)$(R)PPS:gps</pv_name>
     <x>670</x>
-    <y>312</y>
+    <y>337</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_10</name>
-    <pv_name>$(P)PPS:fmc</pv_name>
+    <pv_name>$(P)$(R)PPS:fmc</pv_name>
     <x>600</x>
-    <y>312</y>
+    <y>337</y>
     <width>60</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>LED_11</name>
-    <pv_name>$(P)PPS:src</pv_name>
+    <pv_name>$(P)$(R)PPS:src</pv_name>
     <x>740</x>
-    <y>312</y>
+    <y>337</y>
     <width>60</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>LED_12</name>
-    <pv_name>$(P)ACQ:ppsdiff</pv_name>
+    <pv_name>$(P)$(R)ACQ:ppsdiff</pv_name>
     <x>810</x>
     <y>262</y>
     <width>90</width>

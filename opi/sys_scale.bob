@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 13:34:51 by dev-->
+<display version="2.0.0">
+  <name>Scale $(S)</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Scaling factors - $(DESC)</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>01</name>
+    <macros>
+      <N>01</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>50</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>02</name>
+    <macros>
+      <N>02</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>105</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>03</name>
+    <macros>
+      <N>03</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>160</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>04</name>
+    <macros>
+      <N>04</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>215</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>05</name>
+    <macros>
+      <N>05</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>270</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>06</name>
+    <macros>
+      <N>06</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>325</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>07</name>
+    <macros>
+      <N>07</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>380</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>08</name>
+    <macros>
+      <N>08</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>435</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>09</name>
+    <macros>
+      <N>09</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>490</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>10</name>
+    <macros>
+      <N>10</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>545</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>11</name>
+    <macros>
+      <N>11</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>600</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>12</name>
+    <macros>
+      <N>12</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>655</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>13</name>
+    <macros>
+      <N>13</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>710</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>14</name>
+    <macros>
+      <N>14</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>765</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>15</name>
+    <macros>
+      <N>15</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>820</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>16</name>
+    <macros>
+      <N>16</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>875</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>17</name>
+    <macros>
+      <N>17</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>930</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>18</name>
+    <macros>
+      <N>18</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>985</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>19</name>
+    <macros>
+      <N>19</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1040</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>20</name>
+    <macros>
+      <N>20</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1095</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>21</name>
+    <macros>
+      <N>21</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1150</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>22</name>
+    <macros>
+      <N>22</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1205</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>23</name>
+    <macros>
+      <N>23</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1260</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>24</name>
+    <macros>
+      <N>24</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1315</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>25</name>
+    <macros>
+      <N>25</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1370</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>26</name>
+    <macros>
+      <N>26</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1425</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>27</name>
+    <macros>
+      <N>27</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1480</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>28</name>
+    <macros>
+      <N>28</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1535</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>29</name>
+    <macros>
+      <N>29</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1590</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>30</name>
+    <macros>
+      <N>30</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1645</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>31</name>
+    <macros>
+      <N>31</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1700</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>32</name>
+    <macros>
+      <N>32</N>
+    </macros>
+    <file>_chassis_scale.bob</file>
+    <x>10</x>
+    <y>1755</y>
+    <width>1660</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>1</text>
+    <x>80</x>
+    <y>30</y>
+    <width>40</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>32</text>
+    <x>1630</x>
+    <y>31</y>
+    <width>40</width>
+  </widget>
+</display>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 14:09:12 by dev-->
+<display version="2.0.0">
+  <name>Acq</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>ADC Recording</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>270</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>01_1</name>
+    <macros>
+      <N>01</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>31</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>02_1</name>
+    <macros>
+      <N>02</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>116</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>03_1</name>
+    <macros>
+      <N>03</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>201</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>04_1</name>
+    <macros>
+      <N>04</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>286</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>05_1</name>
+    <macros>
+      <N>05</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>371</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>06_1</name>
+    <macros>
+      <N>06</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>456</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>07_1</name>
+    <macros>
+      <N>07</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>541</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>08_1</name>
+    <macros>
+      <N>08</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>626</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>09_1</name>
+    <macros>
+      <N>09</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>711</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>10_1</name>
+    <macros>
+      <N>10</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>796</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>11_1</name>
+    <macros>
+      <N>11</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>881</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>12_1</name>
+    <macros>
+      <N>12</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>966</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>13_1</name>
+    <macros>
+      <N>13</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>1051</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>14_1</name>
+    <macros>
+      <N>14</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>1136</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>15_1</name>
+    <macros>
+      <N>15</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>1221</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>16_1</name>
+    <macros>
+      <N>16</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>10</x>
+    <y>1306</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>17_1</name>
+    <macros>
+      <N>17</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>31</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>18_1</name>
+    <macros>
+      <N>18</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>116</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>19_1</name>
+    <macros>
+      <N>19</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>201</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>20_1</name>
+    <macros>
+      <N>20</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>286</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>21_1</name>
+    <macros>
+      <N>21</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>371</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>22_1</name>
+    <macros>
+      <N>22</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>456</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>23_1</name>
+    <macros>
+      <N>23</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>541</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>24_1</name>
+    <macros>
+      <N>24</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>626</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>25_1</name>
+    <macros>
+      <N>25</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>711</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>26_1</name>
+    <macros>
+      <N>26</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>796</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>27_1</name>
+    <macros>
+      <N>27</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>881</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>28_1</name>
+    <macros>
+      <N>28</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>966</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>29_1</name>
+    <macros>
+      <N>29</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>1051</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>30_1</name>
+    <macros>
+      <N>30</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>1136</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>31_1</name>
+    <macros>
+      <N>31</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>1221</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>32_1</name>
+    <macros>
+      <N>32</N>
+    </macros>
+    <file>_chassis_acq.bob</file>
+    <x>820</x>
+    <y>1306</y>
+    <width>795</width>
+    <height>85</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Network Recv.</text>
+    <x>290</x>
+    <y>10</y>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>File Write</text>
+    <x>500</x>
+    <y>10</y>
+    <width>80</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text># Drop</text>
+    <x>400</x>
+    <y>10</y>
+    <width>60</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>File Size</text>
+    <x>600</x>
+    <y>10</y>
+    <height>21</height>
+  </widget>
+</display>

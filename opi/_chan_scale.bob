@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 14:01:50 by dev-->
+<display version="2.0.0">
+  <name>ch scale</name>
+  <width>50</width>
+  <height>55</height>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)$(N):SA:Ch$(CH):$(S)SLO</pv_name>
+    <x>5</x>
+    <y>5</y>
+    <width>40</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)$(N):SA:Ch$(CH):$(S)OFF</pv_name>
+    <x>5</x>
+    <y>30</y>
+    <width>40</width>
+  </widget>
+</display>

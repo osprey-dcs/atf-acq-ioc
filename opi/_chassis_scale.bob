@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 13:32:23 by dev-->
+<display version="2.0.0">
+  <name>CHA scale</name>
+  <width>1660</width>
+  <height>55</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(N)</text>
+    <y>10</y>
+    <width>20</width>
+    <height>40</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>SL</text>
+    <x>30</x>
+    <y>10</y>
+    <width>30</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>OF</text>
+    <x>30</x>
+    <y>30</y>
+    <width>30</width>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>32_3</name>
+    <macros>
+      <CH>32</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1610</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>31_3</name>
+    <macros>
+      <CH>31</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1560</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>30_3</name>
+    <macros>
+      <CH>30</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1510</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>29_3</name>
+    <macros>
+      <CH>29</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1460</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>28_3</name>
+    <macros>
+      <CH>28</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1410</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>27_3</name>
+    <macros>
+      <CH>27</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1360</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>26_3</name>
+    <macros>
+      <CH>26</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1310</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>25_3</name>
+    <macros>
+      <CH>25</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1260</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>24_3</name>
+    <macros>
+      <CH>24</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1210</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>23_3</name>
+    <macros>
+      <CH>23</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1160</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>22_3</name>
+    <macros>
+      <CH>22</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1110</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>21_3</name>
+    <macros>
+      <CH>21</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1060</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>20_3</name>
+    <macros>
+      <CH>20</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>1010</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>19_3</name>
+    <macros>
+      <CH>19</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>960</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>18_3</name>
+    <macros>
+      <CH>18</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>910</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>17_3</name>
+    <macros>
+      <CH>17</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>860</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>16_3</name>
+    <macros>
+      <CH>16</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>810</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>15_3</name>
+    <macros>
+      <CH>15</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>760</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>14_3</name>
+    <macros>
+      <CH>14</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>710</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>13_3</name>
+    <macros>
+      <CH>13</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>660</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>12_3</name>
+    <macros>
+      <CH>12</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>610</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>11_3</name>
+    <macros>
+      <CH>11</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>560</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>10_3</name>
+    <macros>
+      <CH>10</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>510</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>09_3</name>
+    <macros>
+      <CH>09</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>460</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>08_3</name>
+    <macros>
+      <CH>08</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>410</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>07_3</name>
+    <macros>
+      <CH>07</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>360</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>06_3</name>
+    <macros>
+      <CH>06</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>310</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>05_3</name>
+    <macros>
+      <CH>05</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>260</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>04_3</name>
+    <macros>
+      <CH>04</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>210</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>03_3</name>
+    <macros>
+      <CH>03</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>160</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>02_3</name>
+    <macros>
+      <CH>02</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>110</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>01_3</name>
+    <macros>
+      <CH>01</CH>
+    </macros>
+    <file>_chan_scale.bob</file>
+    <x>60</x>
+    <width>50</width>
+    <height>55</height>
+    <resize>2</resize>
+  </widget>
+</display>

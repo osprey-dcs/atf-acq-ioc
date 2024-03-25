@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 11:44:26 by dev-->
+<display version="2.0.0">
+  <name>Boot $(N)</name>
+  <width>1290</width>
+  <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(N)</text>
+    <y>5</y>
+    <width>40</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)$(N):GLD:image</pv_name>
+    <x>50</x>
+    <y>5</y>
+    <width>60</width>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(P)$(N):GLD:autoboot</pv_name>
+    <x>120</x>
+    <y>5</y>
+    <width>60</width>
+    <height>20</height>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)$(N):GLD:boot</pv_name>
+    <text>Boot App</text>
+    <x>190</x>
+    <y>5</y>
+    <width>80</width>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)$(N):GLD:IPADDR</pv_name>
+    <x>290</x>
+    <y>5</y>
+    <width>125</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)$(N):GLD:FW_DESC</pv_name>
+    <x>425</x>
+    <y>5</y>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)$(N):GLD:FW_CODEHASH</pv_name>
+    <x>535</x>
+    <y>5</y>
+    <width>305</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)$(N):sysmonAge</pv_name>
+    <x>930</x>
+    <y>5</y>
+    <width>40</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)$(N):conn</pv_name>
+    <x>860</x>
+    <y>5</y>
+    <width>50</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_58</name>
+    <pv_name>$(P)$(N):softwareBuildDate</pv_name>
+    <x>1135</x>
+    <y>5</y>
+    <width>150</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_59</name>
+    <pv_name>$(P)$(N):firmwareBuildDate</pv_name>
+    <x>975</x>
+    <y>5</y>
+    <width>150</width>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+</display>

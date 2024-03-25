@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-25 11:08:19 by dev-->
+<display version="2.0.0">
+  <name>Boot</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Quartz Chassis FPGA boot control</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Golden/bootloader image</text>
+    <x>410</x>
+    <y>40</y>
+    <width>200</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Application image</text>
+    <x>870</x>
+    <y>40</y>
+    <width>200</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Auto boot</text>
+    <x>130</x>
+    <y>70</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Sts Age</text>
+    <x>940</x>
+    <y>70</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Active Img</text>
+    <x>50</x>
+    <y>70</y>
+    <width>70</width>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>870</x>
+    <y>310</y>
+    <width>0</width>
+    <height>0</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>01_1</name>
+    <macros>
+      <N>01</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>100</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>02_1</name>
+    <macros>
+      <N>02</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>130</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>03_1</name>
+    <macros>
+      <N>03</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>160</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>04_1</name>
+    <macros>
+      <N>04</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>190</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>05</name>
+    <macros>
+      <N>05</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>220</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>06</name>
+    <macros>
+      <N>06</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>250</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>07</name>
+    <macros>
+      <N>07</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>280</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>08</name>
+    <macros>
+      <N>08</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>310</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>09</name>
+    <macros>
+      <N>09</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>340</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>10</name>
+    <macros>
+      <N>10</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>370</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>11</name>
+    <macros>
+      <N>11</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>400</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>12</name>
+    <macros>
+      <N>12</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>430</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>13</name>
+    <macros>
+      <N>13</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>460</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>14</name>
+    <macros>
+      <N>14</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>490</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>15</name>
+    <macros>
+      <N>15</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>520</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>16</name>
+    <macros>
+      <N>16</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>550</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>17</name>
+    <macros>
+      <N>17</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>580</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>18</name>
+    <macros>
+      <N>18</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>610</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>19</name>
+    <macros>
+      <N>19</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>640</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>20</name>
+    <macros>
+      <N>20</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>670</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>21</name>
+    <macros>
+      <N>21</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>700</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>22</name>
+    <macros>
+      <N>22</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>730</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>23</name>
+    <macros>
+      <N>23</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>760</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>24</name>
+    <macros>
+      <N>24</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>790</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>25</name>
+    <macros>
+      <N>25</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>820</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>26</name>
+    <macros>
+      <N>26</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>850</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>27</name>
+    <macros>
+      <N>27</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>880</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>28</name>
+    <macros>
+      <N>28</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>910</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>29</name>
+    <macros>
+      <N>29</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>940</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>30</name>
+    <macros>
+      <N>30</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>970</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>31</name>
+    <macros>
+      <N>31</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>1000</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>32</name>
+    <macros>
+      <N>32</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>1030</y>
+    <width>960</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>290</x>
+    <y>60</y>
+    <width>0</width>
+    <height>360</height>
+    <points>
+      <point x="0.0" y="360.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_2</name>
+    <x>860</x>
+    <y>70</y>
+    <width>0</width>
+    <height>310</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="310.0">
+      </point>
+      <point x="0.0" y="310.0">
+      </point>
+    </points>
+  </widget>
+</display>
