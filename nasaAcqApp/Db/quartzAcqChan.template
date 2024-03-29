@@ -1,29 +1,39 @@
 
+# ASLO and AOFF are ADC -> V calibration specific to a digitizer
 record(ao, "$(P)SA:Ch$(N):ASLO") {
+    # with Quartz 1.2 this will be roughly 1.62e-06 V/ADC
+    # as opamp gain limits scaling of +-10V to ~70% of full scale 24-bit signed ADC
     field(VAL, "1.0")
     field(PREC, "9")
+    field(EGU , "V/ADC")
     info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):AOFF") {
     field(VAL, "0.0")
     field(PREC, "9")
+    field(EGU , "V")
     info(autosaveFields_pass0, "VAL")
 }
+# ESLO and EOFF are V -> EGU scaling specific to currently connected signal
 record(ao, "$(P)SA:Ch$(N):ESLO") {
     field(VAL, "1.0")
     field(PREC, "9")
+    field(EGU , "EGU/V")
     info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):EOFF") {
     field(VAL, "0.0")
     field(PREC, "9")
+    field(EGU , "EGU")
     info(autosaveFields_pass0, "VAL")
 }
 record(lso, "$(P)SA:Ch$(N):DESC") {
+    field(DESC, "Current signal label")
     field(SIZV, "128")
     info(autosaveFields_pass0, "VAL")
 }
 record(stringout, "$(P)SA:Ch$(N):EGU") {
+    field(DESC, "Current signal units")
     info(autosaveFields_pass0, "VAL")
 }
 
