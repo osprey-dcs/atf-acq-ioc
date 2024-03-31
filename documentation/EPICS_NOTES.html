@@ -544,19 +544,14 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">System clock alignment status
-              register.&nbsp; The least significant 28 bits are a signed
-              value indicating how far the accumulated number of
-              acquisition clock ticks </span><span style="font-family:
-              Times New Roman, Times, serif;"><span style="font-family:
-                Times New Roman, Times, serif;">differs from its ideal
-                value.</span>&nbsp; The value is updated on the arrival
-              of the pulse per second marker with the amount by which
-              the number of acquisition clock ticks between this and the
-              previous marker </span><span style="font-family: Times
-              New Roman, Times, serif;"><span style="font-family: Times
-                New Roman, Times, serif;">differs from its ideal value
-                of 125,000,000.</span><br>
+              New Roman, Times, serif;">System clock alignment
+              phase-locked loop status register.&nbsp; The least
+              significant 24 bits are a signed value indicating the
+              phase difference, in nanoseconds, between the phase-locked
+              loop output pulse-per-second marker and the </span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;"></span>incoming
+              pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
             <table style=" text-align: left; width: 90%;"
@@ -664,15 +659,9 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="vertical-align: top;"><span style="font-family:
-              Times New Roman, Times, serif;">Meaningful only on event
-              generator node.&nbsp; The most significant 16 bits are the
-              number of system clock ticks (10 ns per tick) between the
-              arrival of the hardware pulse-per-second signal and the
-              arrival of the pulse-per-second event from the event
-              receiver.&nbsp; A value of all ones indicates that the
-              hardware signal or event did not arrive.<br>
-              The least significant bits contain information about the
-              source of the hardware pulse-per-second signal.<br>
+              Times New Roman, Times, serif;">The most significant bits
+              contain information about the source of the hardware
+              pulse-per-second signal:<br>
             </span>
             <table style=" text-align: left; width: 90%;"
               cellspacing="2" cellpadding="2" border="1">
@@ -696,72 +685,59 @@
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">0</span><span style="font-family: Times
+                      serif;">28</span><span style="font-family: Times
                       New Roman, Times, serif;"><br>
                     </span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Hardware PPS signal is present at Quartz
-                      FMC board.</span><br>
+                      serif;">The primary PPS source is valid.&nbsp; For
+                      the event generator node this is the signal from
+                      the Quartz FMC board.&nbsp; For all other nodes
+                      this is the event receiver PPS event.</span><br>
                   </td>
                 </tr>
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">1</span><br>
+                      serif;">29</span><br>
                   </td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Hardware PPS signal present at Quartz FMC
-                      board is selected.<br>
+                      serif;"></span><span style="font-family: Times New
+                      Roman, Times, serif;"><span style="font-family:
+                        Times New Roman, Times, serif;">The secondary
+                        PPS source is valid.&nbsp; For the event
+                        generator node this is the signal from the
+                        PMOD-GPS card.&nbsp; For all other nodes there
+                        is no secondary source.</span> </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">30</span><br>
+                  </td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Changes state on arrival of pulse per
+                      second marker.</span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">31</span><br>
+                  </td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">At least one of the PPS sources is valid.<br>
                     </span></td>
-                </tr>
-                <tr>
-                  <td style="text-align: center;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">2</span><br>
-                  </td>
-                  <td style="text-align: left;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">Hardware PPS signal is present at PMOD-GPS
-                      board.</span></td>
-                </tr>
-                <tr>
-                  <td style="text-align: center;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">3</span><br>
-                  </td>
-                  <td style="text-align: left;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">Hardware PPS signal present at PMOD-GPS
-                      board is selected.</span></td>
-                </tr>
-                <tr>
-                  <td style="text-align: center;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">8</span><br>
-                  </td>
-                  <td style="text-align: left;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">Quartz PPS-present value (bit 0) has
-                      changed state at least once since this bit (bit 8)
-                      was last cleared.<br>
-                    </span></td>
-                </tr>
-                <tr>
-                  <td style="text-align: center;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">9</span><br>
-                  </td>
-                  <td style="text-align: left;"><span
-                      style="font-family: Times New Roman, Times,
-                      serif;">PMOD-GSPS PPS-present value (bit 1) has
-                      changed state at least once since this bit (bit 9)
-                      was last cleared.</span></td>
                 </tr>
               </tbody>
             </table>
-            <span style="font-family: Times New Roman, Times, serif;"><br>
+            <br>
+            <span style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">The
+                least significant 16 bits are estimate of the average
+                jitter, in nanoseconds, in the pulse per second marker.</span>
             </span></td>
         </tr>
       </tbody>

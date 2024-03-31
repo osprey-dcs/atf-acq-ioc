@@ -51,8 +51,8 @@ The FPGA firmware includes an MRF-compatible event generator which obtains its i
 
 Issuing the **ntp** command with no arguments displays the current settings. 
 
-**pps [-l]**  
-Show lots of PPS-related information including for the event generator node the latency between the hardware PPS marker and the event receiver PPS event arrival.   Specifying the '**-l**' option will enter a loop showing the clock synchronization state machine for 30 seconds of pulse-per-second updates.  Don't use that flag lightly since while the loop is active the FPGA will not respond to network activity.
+**pps**  
+Show lots of PPS-related information including for the event generator node the latency between the hardware PPS marker and the event receiver PPS event arrival.
 
 **reg [r] [n]**  
 Show the contents of **n** (default 1) general-purpose I/O registers starting at register **r** (default 0).
