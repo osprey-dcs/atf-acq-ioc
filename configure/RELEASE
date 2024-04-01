@@ -23,8 +23,8 @@
 
 # Variables and paths to dependent modules:
 PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv
-FEEDCORE=/usr/local/epics/R7.0.6/modules/soft/feed-core
-AUTOSAVE=/usr/local/epics/R7.0.6/modules/soft/autosave
+FEEDCORE=/usr/local/epics/R7.0.6/modules/soft/feed-core/head
+AUTOSAVE=/usr/local/epics/R7.0.6/modules/soft/synapps/synApps_6_1/support/autosave-R5-10
 
 # Optional
 #PVXS=

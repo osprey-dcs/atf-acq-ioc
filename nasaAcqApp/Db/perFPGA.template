@@ -227,3 +227,16 @@ record(longout, "$(P)$(R)ADC:reset") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 30")
 }
+
+#
+# Drive PLL VCXO DAC
+#
+record(longout, "$(P)$(R)PLL:VCXO_DAC") {
+    field(DESC, "Non-zero to drive VCXO DAC directly")
+    field(DTYP, "PSC Single I32")
+    field(OUT,  "@$(PORT) 16951 34")
+    field(LOPR, "-32768")
+    field(HOPR, "32767")
+    field(DRVL, "-32768")
+    field(DRVH, "32767")
+}
