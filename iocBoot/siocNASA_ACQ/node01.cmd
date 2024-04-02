@@ -5,7 +5,7 @@
 epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.18")
 epicsEnvSet(NODE, "01")
 epicsEnvSet(P, "NASA_ACQ:$(NODE):")
-epicsEnvSet(EVG, "$(P)") # this is the EVG node
+epicsEnvSet(EVG, "NASA_ACQ:") # this is the EVG node
 
 ###############################################################################
 # Register support components
