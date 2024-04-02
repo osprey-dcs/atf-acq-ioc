@@ -16,6 +16,7 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 1    — Enable messages related to the TFTP UDP port.
     Bit 2    — Enable messages related to the multi-gigabit transceiver (event receiver and event fanout).
     Bit 3    — Enable messages related to the event generator.
+    Bit 4    — Enable messages showing the operation of the clock synchronization PLL.
     Bit 5    — Show some high-speed acquisition statistics.
     Bit 6    — Show input coupling relay operations.
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
@@ -26,11 +27,10 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 15   — Provide fake AD7768 data.  Effective only at startup.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
-    Bit 19   – Step the VCXO DAC to a static value to measure its sensitivity.
+    Bit 19   – Add severe jitter to the secondary PPS reference (PMOD-GPS).
 
 If the optional -s argument is present the value of the debugging flags set at FPGA startup will be set or shown. 
 
-Setting bit 19 in the startup flags will enable a display of the first 30 seconds of clock synchronization state machine on startup.
 
 **fmon**  
 Show the value of the frequency counters monitoring various FPGA clocks.  Values shown with only 3 fractional digits indicate that the FPGA is not receiving a 'pulse per second' marker directly or indirectly from the facility timing system and that the accuracy of the measurement is somewhat suspect. 
