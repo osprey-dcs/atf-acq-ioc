@@ -216,7 +216,7 @@ record(longout, "$(P)$(R)FPGA:reboot_") {
     field(DTYP, "PSC Single I32")
     field(OUT,  "@$(PORT) 16951 0")
     field(OMSL, "closed_loop")
-    field(DOL , "$(P)FPGA:reboot CPP")
+    field(DOL , "$(EVG)FPGA:reboot CPP")
 }
 
 #
