@@ -20,6 +20,7 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 5    — Show some high-speed acquisition statistics.
     Bit 6    — Show input coupling relay operations.
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
+    Bit 8    — Show ADC calibration operations.
     Bit 9    — Show some status information about the bootstrap flash memory.
     Bit 10   — Scan the Marble I2C buses and show the devices attached to each.
     Bit 12   – Show all AD7768 register writes as they occur.
@@ -83,12 +84,14 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 | BOOT.bin  |	Primary bootstrap image. |
 | BOOT_A.bin 	| Secondary (alternate) bootstrap image.
 | SYSPARAM.dat |	System parameter values (Startup debug flags, NTP server settings). |
+| Calibration.csv | Comma-separated-values file of ADC calibration values. |
 | FullFlash.bin| 	Complete flash memory contents (16 MiB). |
 | QSFP1_EEPROM.bin |	First QSFP module values (SFF-8636, read only). |
 | QSFP2_EEPROM.bin| 	Second QSFP module values (SFF-8636, read only). |
 | FMC1_EEPROM.bin |	IPMI EEPROM of first FMC mezzanine card. |
 | FMC2_EEPROM.bin |	IPMI EEPROM of second FMC mezzanine card. |
 
+The Calibration.csv file must contain 33 lines.  The first line contains a single number of the time at which the calibration values were measured specified as the number of seconds since January 1, 1970 (POSIX seconds).  The remaining lines contain two comma-separated numbers specifying the ADC calibration values for each of the 32 channels.  The first value on each line is the offset, in units of ADC counts, to be subtracted from each ADC reading.  The second value on each line is the gain adustment, in units of parts-per-million, to be applied to the ADC reading.  The offset is subtracted before the gain is adjusted.  The offset is limited to ±10000000 counts and the gain adjustment is limited to ±50000 parts per million.  Values outside these ranges are clipped to the appropriate value.
 
 # Network Configuration
 
