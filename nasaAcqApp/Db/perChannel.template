@@ -1,45 +1,59 @@
-record(seq, "$(P)$(R)reconn:$(N)") {
-    field(LNK0, "$(P)$(R)ACQ:enable:$(N).PROC")
-    field(DLY0, "0.01")
-    field(LNK1, "$(P)$(R)ACQ:coupling:$(N).PROC")
-    field(DLY1, "0.01")
-    # TODO: gain/offset settings in ADC untested...
-    #field(LNK2, "$(P)$(R)ACQ:ofst:$(N).PROC")
-    #field(DLY2, "0.01")
-    #field(LNK3, "$(P)$(R)ACQ:gain:$(N).PROC")
-    #field(DLY3, "0.01")
+# initialize :XX array registers Con connect PHAS=-1
+record(longin, "$(P)$(R)C:$(N)_") {
+    field(DTYP, "FEED On Connect")
+    field(INP , "@name=$(PORT)")
+    field(SCAN, "I/O Intr")
+    field(PHAS, "-1") # prepare for Flush in perFPGA.template
+    field(FLNK, "$(P)$(R)C:$(N)F_")
 }
+record(fanout, "$(P)$(R)C:$(N)F_") {
+    field(LNK1 , "$(P)$(R)ACQ:enable:$(N)_")
+    field(LNK2 , "$(P)$(R)ACQ:coupling:$(N)")
+    # TODO: gone?
+    #field(LNK3 , "$(P)$(R)ACQ:ofst:$(N)")
+    #field(LNK4 , "$(P)$(R)ACQ:gain:$(N)")
+}
+record(longout, "$(P)$(R)ACQ:enable:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:enable:XX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(R)ACQ:enable:$(N).RVAL")
+}
+record(longout, "$(P)$(R)ACQ:coupling:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:coupling:XX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(R)ACQ:coupling:$(N).RVAL")
+}
+
+
 record(bo, "$(P)$(R)ACQ:enable:$(N)") {
     field(DESC, "Enable/disable channel $(N)")
-    field(DTYP, "PSC Single U32")
-    field(OUT,  "@$(PORT) 16951 1$(IDX)")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:enable:XX offset=$(IDX)")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
     field(RVAL, "1") # initially Enable
-    field(FLNK, "$(P)$(R)send_")
     info(autosaveFields_pass0, "RVAL")
 }
 record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(DESC, "Set channel $(N) input coupling")
-    field(DTYP, "PSC Single U32")
-    field(OUT,  "@$(PORT) 16951 2$(IDX)")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:coupling:XX offset=$(IDX)")
     field(ZNAM, "AC")
     field(ONAM, "DC")
     field(RVAL, "1") # initially DC
-    field(FLNK, "$(P)$(R)send_")
     info(autosaveFields_pass0, "RVAL")
 }
+
+# TODO: gone?
 record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
     field(DESC, "Set channel $(N) calibration offset")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 3$(IDX)")
-    field(FLNK, "$(P)$(R)send_")
+    # TODO: gone?
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)ACQ:gain:$(N)") {
     field(DESC, "Set channel $(N) calibration gain")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 4$(IDX)")
-    field(FLNK, "$(P)$(R)send_")
+    # TODO: gone?
     info(autosaveFields_pass0, "VAL")
 }

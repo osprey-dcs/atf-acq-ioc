@@ -5,7 +5,7 @@
 #epicsEnvSet(NASA_ACQ_BASE_IP, "${NASA_ACQ_BASE_IP=192.168.79.0}") # TODO: change me
 #epicsEnvSet(NODE, "${NODE=05}")
 epicsEnvSet(P, "NASA_ACQ:$(NODE):")
-epicsEnvSet(EVG, "NASA_ACQ:01:")
+epicsEnvSet(EVG, "NASA_ACQ:")
 
 ###############################################################################
 # Register support components
@@ -16,11 +16,11 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 # Set up connections
 var PSCDebug 0
 var PSCUDPMaxPacketSize 1500
+var PSCUDPMaxLenMB 23000
 
 # Configure a single acquisition node
-createPSCUDP("NASA_CTRL_EVG", "$(NASA_ACQ_BASE_IP)", 54398, 0)
 createPSCUDPFast("NASA_CTRL_EVG_FS", "$(NASA_ACQ_BASE_IP)", 54399, 0)
-dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=NASA_CTRL_EVG")
+dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=$(P)APP,IPADDR=$(NASA_ACQ_BASE_IP)")
 dbLoadRecords("../../db/pscudpfast.db", "P=$(P),NAME=NASA_CTRL_EVG_FS")
 dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP),NELM=10000")
 

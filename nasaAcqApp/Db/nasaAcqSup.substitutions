@@ -1,3 +1,7 @@
+file "feed_base.template" {
+  { PREF="\$(P)APP:", NAME="\$(PORT)", ADDR="\$(IPADDR):50006"}
+}
+
 file "perFPGA.template" {
   pattern { P,   R,      PORT }
   { \$(P),"",\$(PORT), }
@@ -60,16 +64,16 @@ file "perSysmonLI.template" {
 
 file "perChannel.template" {
   pattern { P,   R,      PORT,           N,  IDX }
-  { \$(P),"",\$(PORT), 01,   00 }
-  { \$(P),"",\$(PORT), 02,   01 }
-  { \$(P),"",\$(PORT), 03,   02 }
-  { \$(P),"",\$(PORT), 04,   03 }
-  { \$(P),"",\$(PORT), 05,   04 }
-  { \$(P),"",\$(PORT), 06,   05 }
-  { \$(P),"",\$(PORT), 07,   06 }
-  { \$(P),"",\$(PORT), 08,   07 }
-  { \$(P),"",\$(PORT), 09,   08 }
-  { \$(P),"",\$(PORT), 10,   09 }
+  { \$(P),"",\$(PORT), 01,   0 }
+  { \$(P),"",\$(PORT), 02,   1 }
+  { \$(P),"",\$(PORT), 03,   2 }
+  { \$(P),"",\$(PORT), 04,   3 }
+  { \$(P),"",\$(PORT), 05,   4 }
+  { \$(P),"",\$(PORT), 06,   5 }
+  { \$(P),"",\$(PORT), 07,   6 }
+  { \$(P),"",\$(PORT), 08,   7 }
+  { \$(P),"",\$(PORT), 09,   8 }
+  { \$(P),"",\$(PORT), 10,   9 }
   { \$(P),"",\$(PORT), 11,   10 }
   { \$(P),"",\$(PORT), 12,   11 }
   { \$(P),"",\$(PORT), 13,   12 }

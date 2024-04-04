@@ -1,8 +1,8 @@
 record(longin, "$(P)$(R)$(NAME)") {
     field(DESC, "$(DESC)")
-    field(DTYP, "PSC Reg")
-    field(INP,  "@$(PORT) 16952 $(IDX)")
-    field(SCAN, "I/O Intr")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=$(NAME)")
+    field(SCAN, "2 second")
     field(TSE,  "-2")
     field(EGU,  "$(EGU)")
     field(LOLO, "$(LOLO)")

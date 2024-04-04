@@ -5,8 +5,8 @@
 #
 record(bo, "$(P)ACQ:enable") {
     field(DESC, "Enable/disable data acquisition")
-    field(DTYP, "PSC Single U32")
-    field(OUT,  "@$(PORT) 16951 10")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:enable")
     field(ZNAM, "Disable")
     field(ONAM, "Enable")
 }

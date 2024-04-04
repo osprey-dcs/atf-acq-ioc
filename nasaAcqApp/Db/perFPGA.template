@@ -1,194 +1,38 @@
 
-record(longout, "$(P)$(R)FPGA:clrPowerUp_") {
-    field(DESC, "Clear FPGA power-up status")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 1")
+record("*", "$(P)APP:IPADDR") {
+    info(autosaveFields_pass0, "") # inhibit autosave.  IP managed only through iocsh
 }
 
-#
-# Trigger a build date readback
-#
-record(bo, "$(P)$(R)buildDates_") {
-    field(DESC, "Trigger build dates readback")
-    field(DTYP, "PSC Single U32")
-    field(OUT,  "@$(PORT) 16953 0")
-    field(ZNAM, "Readback")
-    field(ONAM, "Readback")
-    field(FLNK, "$(P)$(R)send_")
-}
-
-#
-# Trigger a system monitor readback
-#
-record(bo, "$(P)$(R)sysmonTrig_") {
-    field(DESC, "Trigger system monitor readback")
-    field(DTYP, "PSC Single U32")
-    field(OUT,  "@$(PORT) 16952 0")
-    field(ZNAM, "Readback")
-    field(ONAM, "Readback")
-    field(SCAN, "2 second")
-    field(FLNK, "$(P)$(R)send_")
-}
-
-# use sysmon RX to detect comm. fault
-record(longin, "$(P)$(R)sysmonRB_") {
+record(longin, "$(P)$(R)C_") {
+    field(DTYP, "FEED On Connect")
+    field(INP , "@name=$(PORT)")
     field(SCAN, "I/O Intr")
-    field(DTYP, "PSC Reg")
-    field(INP , "@$(PORT) 16952 0")
-    field(FLNK, "$(P)$(R)sysmonRst_")
+    field(PHAS, "0")
+    field(FLNK, "$(P)$(R)C:F_")
 }
-record(longout, "$(P)$(R)sysmonRst_") {
-    field(OUT, "$(P)$(R)sysmonAge.A NPP")
-    field(VAL, "0")
+record(fanout, "$(P)$(R)C:F_") {
+    field(LNK1, "$(P)$(R)ACQ:rate_")
+    field(LNK2, "$(P)$(R)ACQ:enable:XX_")
+    field(LNK3, "$(P)$(R)ACQ:coupling:XX_")
 }
-record(ao, "$(P)$(R)sysmonTmo") {
-    field(PINI, "YES")
-    field(VAL, "4.0")
-    field(OUT, "$(P)$(R)sysmonAge.HIGH NPP")
+# flush out array registers previously initialized in perChannel.template during PHAS=-1
+record(bo, "$(P)$(R)ACQ:enable:XX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:enable:XX")
 }
-record(calcout, "$(P)$(R)sysmonAge") {
-    field(SCAN, ".5 second")
-    field(INPA, "99") # initially in timeout
-    field(INPB, "0.5") # SCAN period
-    field(INPC, "$(P)$(R)sysmonTmo NPP")
-    field(CALC, "A:=A+B;A")
-    field(EGU, "s")
-    field(PREC, "1")
-    field(HSV , "MAJOR")
-    field(OUT , "$(P)$(R)conn PP")
-    field(DOPT, "Use OCAL")
-    field(OCAL, "A<C")
+record(bo, "$(P)$(R)ACQ:coupling:XX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:coupling:XX")
 }
 
-record(bi, "$(P)$(R)conn") {
-    field(ZNAM, "Timeout") # no comms
-    field(ONAM, "Normal")  # well, normal operation
-    field(ZSV, "MAJOR")
-}
-
-record(calcout, "$(P)$(R)onconn") {
-    field(INPA, "$(P)$(R)sysmonAge.SEVR CP") # only on edge
-    field(CALC, "A==0")
-    field(OOPT, "When Non-zero")
-    field(OUT , "$(P)$(R)reconn:c1.PROC")
-    field(TPRO, "1")
-}
-# push per-FPGA
-record(seq, "$(P)$(R)reconn:c1") {
-    field(TPRO, "1")
-    field(DOL0, "2") # starting Init
-    field(LNK0, "$(P)$(R)conn PP")
-    # first ensure that acquisition is disabled.  Broken link except with EVG node
-    field(DOL1, "0")
-    field(LNK1, "$(P)ACQ:enable PP")
-    field(DLY1, "0.01") # TODO: hack.  device socket buffer too small to handle this blizzard...
-    # read-back build date
-    field(LNK2, "$(P)$(R)buildDates_.PROC PP")
-    field(DLY2, "0.01")
-    # push decimator
-    field(LNK3, "$(P)$(R)ACQ:rate_.PROC PP") # also pushs AA filter coeff.
-    field(DLY3, "0.01")
-    field(LNKF, "$(P)$(R)reconn:c2.PROC")
-    field(DLYF, "0.1")
-}
-# push per-channel
-record(seq, "$(P)$(R)reconn:c2") {
-    field(TPRO, "1")
-    field(LNK0, "$(P)$(R)reconn:01.PROC")
-    field(DLY0, "0.1")
-    field(LNK1, "$(P)$(R)reconn:02.PROC")
-    field(DLY1, "0.1")
-    field(LNK2, "$(P)$(R)reconn:03.PROC")
-    field(DLY2, "0.1")
-    field(LNK3, "$(P)$(R)reconn:04.PROC")
-    field(DLY3, "0.1")
-    field(LNK4, "$(P)$(R)reconn:05.PROC")
-    field(DLY4, "0.1")
-    field(LNK5, "$(P)$(R)reconn:06.PROC")
-    field(DLY5, "0.1")
-    field(LNK6, "$(P)$(R)reconn:07.PROC")
-    field(DLY6, "0.1")
-    field(LNK7, "$(P)$(R)reconn:08.PROC")
-    field(DLY7, "0.1")
-    field(LNK8, "$(P)$(R)reconn:09.PROC")
-    field(DLY8, "0.1")
-    field(LNK9, "$(P)$(R)reconn:10.PROC")
-    field(DLY9, "0.1")
-    field(LNKA, "$(P)$(R)reconn:11.PROC")
-    field(DLYA, "0.1")
-    field(LNKB, "$(P)$(R)reconn:12.PROC")
-    field(DLYB, "0.1")
-    field(LNKC, "$(P)$(R)reconn:13.PROC")
-    field(DLYC, "0.1")
-    field(LNKD, "$(P)$(R)reconn:14.PROC")
-    field(DLYD, "0.1")
-    field(LNKE, "$(P)$(R)reconn:15.PROC")
-    field(DLYE, "0.1")
-    field(LNKF, "$(P)$(R)reconn:c3.PROC")
-    field(DLYF, "0.1")
-}
-record(seq, "$(P)$(R)reconn:c3") {
-    field(TPRO, "1")
-    field(LNK0, "$(P)$(R)reconn:16.PROC")
-    field(DLY0, "0.1")
-    field(LNK1, "$(P)$(R)reconn:17.PROC")
-    field(DLY1, "0.1")
-    field(LNK2, "$(P)$(R)reconn:18.PROC")
-    field(DLY2, "0.1")
-    field(LNK3, "$(P)$(R)reconn:19.PROC")
-    field(DLY3, "0.1")
-    field(LNK4, "$(P)$(R)reconn:20.PROC")
-    field(DLY4, "0.1")
-    field(LNK5, "$(P)$(R)reconn:21.PROC")
-    field(DLY5, "0.1")
-    field(LNK6, "$(P)$(R)reconn:22.PROC")
-    field(DLY6, "0.1")
-    field(LNK7, "$(P)$(R)reconn:23.PROC")
-    field(DLY7, "0.1")
-    field(LNK8, "$(P)$(R)reconn:24.PROC")
-    field(DLY8, "0.1")
-    field(LNK9, "$(P)$(R)reconn:25.PROC")
-    field(DLY9, "0.1")
-    field(LNKA, "$(P)$(R)reconn:26.PROC")
-    field(DLYA, "0.1")
-    field(LNKB, "$(P)$(R)reconn:27.PROC")
-    field(DLYB, "0.1")
-    field(LNKC, "$(P)$(R)reconn:28.PROC")
-    field(DLYC, "0.1")
-    field(LNKD, "$(P)$(R)reconn:29.PROC")
-    field(DLYD, "0.1")
-    field(LNKE, "$(P)$(R)reconn:30.PROC")
-    field(DLYE, "0.1")
-    field(LNKF, "$(P)$(R)reconn:c4.PROC")
-    field(DLYF, "0.1")
-}
-record(seq, "$(P)$(R)reconn:c4") {
-    field(LNK0, "$(P)$(R)reconn:31.PROC")
-    field(DLY0, "0.1")
-    field(LNK1, "$(P)$(R)reconn:32.PROC")
-    field(DLY1, "0.1")
-    # done...
-    field(DOLF, "1") # Return to Normal
-    field(LNKF, "$(P)$(R)conn PP")
-}
-
-#
-# Send all pending output packets
-#
-record(bo, "$(P)$(R)send_") {
-    field(DTYP, "PSC Ctrl Send All")
-    field(OUT , "@$(PORT)")
-    field(ZNAM, "Send")
-    field(ONAM, "Send")
-}
 
 #
 # Downsampling factor
 #
 record(longout, "$(P)$(R)ACQ:rate_") {
     field(DESC, "Set sampling rate")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 20")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:rate")
     field(OMSL, "closed_loop")
     field(DOL , "$(EVG)ACQ:rateLO_ CPP")
     field(LOPR, "1000")
@@ -201,31 +45,31 @@ record(longout, "$(P)$(R)ACQ:rate_") {
 # Reboot FPGA
 # Driven directly by client
 #
-record(longout, "$(P)$(R)FPGA:reboot") {
-    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 0")
-    field(FLNK, "$(P)$(R)send_")
+record(bo, "$(P)$(R)FPGA:reboot") {
+    field(ZNAM, "Boot")
+    field(ONAM, "Boot")
+    field(FLNK, "$(P)$(R)FPGA:reboot_")
 }
-
-#
-# Reset FPGA -- driven from common reboot record
-#
 record(longout, "$(P)$(R)FPGA:reboot_") {
     field(DESC, "Write 1, 100, 10000 to reboot FPGA")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 0")
-    field(OMSL, "closed_loop")
-    field(DOL , "$(EVG)FPGA:reboot CPP")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=FPGA:reboot")
+    field(VAL , "100")
 }
 
 #
 # Reset ADCs
 #
-record(longout, "$(P)$(R)ADC:reset") {
+record(bo, "$(P)$(R)ADC:reset") {
+    field(ZNAM, "Reset")
+    field(ONAM, "Reset")
+    field(FLNK, "$(P)$(R)ADC:reset_")
+}
+record(longout, "$(P)$(R)ADC:reset_") {
     field(DESC, "Write 40 to reset ADCs")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 30")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ADC:reset")
+    field(VAL , "40")
 }
 
 #
@@ -233,8 +77,8 @@ record(longout, "$(P)$(R)ADC:reset") {
 #
 record(longout, "$(P)$(R)PLL:VCXO_DAC") {
     field(DESC, "Non-zero to drive VCXO DAC directly")
-    field(DTYP, "PSC Single I32")
-    field(OUT,  "@$(PORT) 16951 40")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=PLL:VCXO_DAC")
     field(LOPR, "-32768")
     field(HOPR, "32767")
     field(DRVL, "-32768")

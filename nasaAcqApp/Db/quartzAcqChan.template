@@ -1,5 +1,5 @@
 
-# ASLO and AOFF are ADC -> V calibration specific to a digitizer
+# ASLO and AOFF are ADC count -> Volt calibration specific to a digitizer
 record(ao, "$(P)SA:Ch$(N):ASLO") {
     # with Quartz 1.2 this will be roughly 1.62e-06 V/ADC
     # as opamp gain limits scaling of +-10V to ~70% of full scale 24-bit signed ADC

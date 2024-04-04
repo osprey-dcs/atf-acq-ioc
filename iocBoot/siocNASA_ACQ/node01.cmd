@@ -16,16 +16,16 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 # Set up connections
 var PSCDebug 0
 var PSCUDPMaxPacketSize 1500
+var PSCUDPMaxLenMB 23000
 
 # Configure a single acquisition node
-createPSCUDP("NASA_CTRL_EVG", "$(NASA_ACQ_BASE_IP)", 54398, 0)
 createPSCUDPFast("NASA_CTRL_EVG_FS", "$(NASA_ACQ_BASE_IP)", 54399, 0)
-dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=NASA_CTRL_EVG")
+dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=$(P)APP,IPADDR=$(NASA_ACQ_BASE_IP)")
 dbLoadRecords("../../db/pscudpfast.db", "P=$(P),NAME=NASA_CTRL_EVG_FS")
 dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP), NELM=10000")
 
 # Load record instances unique to event generator
-dbLoadRecords("../../db/nasaEVG.db", "P=$(EVG),PORT=NASA_CTRL_EVG")
+dbLoadRecords("../../db/nasaEVG.db", "P=$(EVG),PORT=$(P)APP")
 
 system "install -d as"
 system "install -d as/$(NODE)"
