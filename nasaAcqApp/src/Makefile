@@ -7,6 +7,7 @@ include $(TOP)/configure/CONFIG
 
 LIBRARY += nasaSup
 nasaSup_SRCS += goldenBoot.c
+nasaSup_SRCS += copyTime.c
 DBD += nasaSup.dbd
 
 #=============================

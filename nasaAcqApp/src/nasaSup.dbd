@@ -1,1 +1,2 @@
 device(longout, INST_IO, goldenBootLO, "Boot to App")
+device(ai, CONSTANT, copyTimeAI, "Copy VAL to TIME")
