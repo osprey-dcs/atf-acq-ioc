@@ -14,6 +14,10 @@ record(fanout, "$(P)$(R)C:F_") {
     field(LNK1, "$(P)$(R)ACQ:rate_")
     field(LNK2, "$(P)$(R)ACQ:enable:XX_")
     field(LNK3, "$(P)$(R)ACQ:coupling:XX_")
+    field(LNK4, "$(P)$(R)ACQ:LOLOlimXX_")
+    field(LNK5, "$(P)$(R)ACQ:LOlimXX_")
+    field(LNK6, "$(P)$(R)ACQ:HIlimXX_")
+    field(LNK7, "$(P)$(R)ACQ:HIHIlimXX_")
 }
 # flush out array registers previously initialized in perChannel.template during PHAS=-1
 record(bo, "$(P)$(R)ACQ:enable:XX_") {
@@ -23,6 +27,22 @@ record(bo, "$(P)$(R)ACQ:enable:XX_") {
 record(bo, "$(P)$(R)ACQ:coupling:XX_") {
     field(DTYP, "FEED Register Flush")
     field(OUT,  "@name=$(PORT) reg=ACQ:coupling:XX")
+}
+record(bo, "$(P)$(R)ACQ:LOLOlimXX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:LOLOlimXX")
+}
+record(bo, "$(P)$(R)ACQ:LOlimXX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:LOlimXX")
+}
+record(bo, "$(P)$(R)ACQ:HIlimXX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:HIlimXX")
+}
+record(bo, "$(P)$(R)ACQ:HIHIlimXX_") {
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ACQ:HIHIlimXX")
 }
 
 

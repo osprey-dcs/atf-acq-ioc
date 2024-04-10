@@ -12,6 +12,10 @@ record(fanout, "$(P)$(R)C:$(N)F_") {
     # TODO: gone?
     #field(LNK3 , "$(P)$(R)ACQ:ofst:$(N)")
     #field(LNK4 , "$(P)$(R)ACQ:gain:$(N)")
+    field(LNK5, "$(P)ACQ:LOLOlim:$(N)_")
+    field(LNK6, "$(P)ACQ:LOlim:$(N)_")
+    field(LNK7, "$(P)ACQ:HIlim:$(N)_")
+    field(LNK8, "$(P)ACQ:HIHIlim:$(N)_")
 }
 record(longout, "$(P)$(R)ACQ:enable:$(N)_") {
     field(DTYP, "FEED Register Write")
@@ -24,6 +28,98 @@ record(longout, "$(P)$(R)ACQ:coupling:$(N)_") {
     field(OUT,  "@name=$(PORT) reg=ACQ:coupling:XX offset=$(IDX) commit=false")
     field(OMSL, "closed_loop")
     field(DOL , "$(P)$(R)ACQ:coupling:$(N).RVAL")
+}
+record(ao, "$(P)ACQ:LOLOlim:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ACQ:LOLOlim:$(N).RVAL")
+}
+record(ao, "$(P)ACQ:LOlim:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:LOlimXX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ACQ:LOlim:$(N).RVAL")
+}
+record(ao, "$(P)ACQ:HIlim:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:HIlimXX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ACQ:HIlim:$(N).RVAL")
+}
+record(ao, "$(P)ACQ:HIHIlim:$(N)_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX) commit=false")
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)ACQ:HIlim:$(N)HI.RVAL")
+}
+
+
+
+record(ao, "$(P)ACQ:LOLOlim:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(RVAL, "0x800000")
+    info(autosaveFields_pass0, "RVAL")
+}
+record(ao, "$(P)ACQ:LOlim:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:LOlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(RVAL, "0x800001")
+    info(autosaveFields_pass0, "RVAL")
+}
+record(ao, "$(P)ACQ:HIlim:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:HIlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(RVAL, "0x7ffffe")
+    info(autosaveFields_pass0, "RVAL")
+}
+record(ao, "$(P)ACQ:HIlim:$(N)HI") {
+    field(DTYP, "FEED Register Write")
+    field(OUT , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(RVAL, "0x7fffff")
+    info(autosaveFields_pass0, "RVAL")
+}
+
+record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOLOstatus")
+    field(SCAN, ".1 second")
+    field(MASK, "$(MASK)")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+record(bi, "$(P)ACQ:LOstatus:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOstatus")
+    field(SCAN, ".1 second")
+    field(MASK, "$(MASK)")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MINOR")
+}
+record(bi, "$(P)ACQ:HIstatus:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIstatus")
+    field(SCAN, ".1 second")
+    field(MASK, "$(MASK)")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MINOR")
+}
+record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIHIstatus")
+    field(SCAN, ".1 second")
+    field(MASK, "$(MASK)")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
 }
 
 
