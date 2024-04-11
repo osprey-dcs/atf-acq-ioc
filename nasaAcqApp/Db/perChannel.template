@@ -29,29 +29,29 @@ record(longout, "$(P)$(R)ACQ:coupling:$(N)_") {
     field(OMSL, "closed_loop")
     field(DOL , "$(P)$(R)ACQ:coupling:$(N).RVAL")
 }
-record(ao, "$(P)ACQ:LOLOlim:$(N)_") {
+record(longout, "$(P)ACQ:LOLOlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX) commit=false")
     field(OMSL, "closed_loop")
     field(DOL , "$(P)ACQ:LOLOlim:$(N).RVAL")
 }
-record(ao, "$(P)ACQ:LOlim:$(N)_") {
+record(longout, "$(P)ACQ:LOlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOlimXX offset=$(IDX) commit=false")
     field(OMSL, "closed_loop")
     field(DOL , "$(P)ACQ:LOlim:$(N).RVAL")
 }
-record(ao, "$(P)ACQ:HIlim:$(N)_") {
+record(longout, "$(P)ACQ:HIlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:HIlimXX offset=$(IDX) commit=false")
     field(OMSL, "closed_loop")
     field(DOL , "$(P)ACQ:HIlim:$(N).RVAL")
 }
-record(ao, "$(P)ACQ:HIHIlim:$(N)_") {
+record(longout, "$(P)ACQ:HIHIlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX) commit=false")
     field(OMSL, "closed_loop")
-    field(DOL , "$(P)ACQ:HIlim:$(N)HI.RVAL")
+    field(DOL , "$(P)ACQ:HIlim:$(N).RVAL")
 }
 
 
@@ -77,7 +77,7 @@ record(ao, "$(P)ACQ:HIlim:$(N)") {
     field(RVAL, "0x7ffffe")
     info(autosaveFields_pass0, "RVAL")
 }
-record(ao, "$(P)ACQ:HIlim:$(N)HI") {
+record(ao, "$(P)ACQ:HIlim:$(N)") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX)")
     field(EGU , "ADC")
