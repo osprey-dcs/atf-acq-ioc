@@ -35,7 +35,8 @@ C  |   Active ADC bitmap   |
 Multi-byte values are big endian
 Body Length -- Includes 'Status' and everything following
             -- 40 + 3 * ADC_COUNT
-Status      -- Bit 3: Packet transmission overrun
+Status      -- Bit 4: Calibration factors are invalid.
+               Bit 3: Packet transmission overrun
                Bit 2: Packet building overrun
                Bit 1: Time of day (Seconds/Nanosecods fields) may be invalid
                Bit 0: System clock PLL unlocked

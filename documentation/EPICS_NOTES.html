@@ -15,6 +15,7 @@
           style="font-family: Times New Roman, Times, serif;">$(P)$(NODE)
 
 
+
           macros.&nbsp; Typically the P macro is set to 'NASA_ACQ:' and
           the NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -447,7 +448,17 @@
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">14</span><span style="font-family: Times
+                      serif;"></span><span style="font-family: Times New
+                      Roman, Times, serif;">1<br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when time-of-day value is invalid.</span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">2</span><span style="font-family: Times
                       New Roman, Times, serif;"><br>
                     </span></td>
                   <td style="text-align: left;"><span
@@ -460,7 +471,7 @@
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">15</span><span style="font-family: Times
+                      serif;">3</span><span style="font-family: Times
                       New Roman, Times, serif;"><br>
                     </span></td>
                   <td style="text-align: left;"><span
@@ -473,8 +484,26 @@
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">30</span><span style="font-family: Times
-                      New Roman, Times, serif;"><br>
+                      serif;">28</span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set to indicate that the system
+                      calibration factors are valid.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">29</span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Set when a fast data subscriber is
+                      present.</span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">30<br>
                     </span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
@@ -551,6 +580,7 @@
               loop output pulse-per-second marker and the </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"></span>incoming
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -761,10 +791,12 @@
         in the per-node stringin records </span><span
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
 
+
         a</span><span style="font-family: Times New Roman, Times,
         serif;">nd </span><span style="font-family: Times New Roman,
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
+
 
         respectively.&nbsp; The time at which the calibration factors
         were measured is contained in the per-node stringin record
@@ -774,6 +806,7 @@
         <br>
       </span> </p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
         Controls</span></h2>
@@ -901,6 +934,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
               40 will reset the Quartz high speed ADCs.&nbsp; Writing
               any other value will have no effect.<br>
             </span></td>
@@ -914,6 +948,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
               a non-zero value opens the system clock phase-locked-loop
               and drives the VCXO DAC to the specified value.&nbsp;
               Normal closed loop operation resumes when a zero is
@@ -933,6 +968,7 @@
     <div style="margin-left: 40px;"> </div>
     <br>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
 
 
         Controls</span></h2>
@@ -994,6 +1030,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">Note
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1007,6 +1044,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
               100 causes the acquisition nodes to reboot themselves</span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
