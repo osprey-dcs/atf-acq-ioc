@@ -869,7 +869,7 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ACQ:ofst:<span
+              Times New Roman, Times, serif;">ACQ:LOLOlim:<span
                 style="font-style: italic;">nn</span></span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
@@ -878,20 +878,18 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Set the AD7768 offset register
-              of channel <span style="font-style: italic;">nn</span> to
-              VAL.&nbsp; If the channel gain setting is at its nominal
-              value of 0x555555 (</span><span style="font-family: Times
-              New Roman, Times, serif;"><span style="font-family: Times
-                New Roman, Times, serif;">ACQ:gain:<span
-                  style="font-style: italic;">nn</span>=0)</span>, an
-              LSB of offset register adjustment changes the digital
-              output by −4/3 LSBs.<br>
-            </span></td>
+              New Roman, Times, serif;">An ADC reading at or below this
+              value will set the corresponding </span><span
+              style="font-family: Times New Roman, Times, serif;">ACQ:LOLOstatus:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;">
+              binary-in record to one.<br>
+            </span><span style="font-family: Times New Roman, Times,
+              serif;"> </span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ACQ:gain:<span
+              Times New Roman, Times, serif;">ACQ:LOlim:<span
                 style="font-style: italic;">nn</span></span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
@@ -900,10 +898,48 @@
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Set the AD7768 offset register
-              of channel <span style="font-style: italic;">nn</span> to
-              VAL+0x555555.<br>
+              New Roman, Times, serif;">An ADC reading at or below this
+              value will set the corresponding </span><span
+              style="font-family: Times New Roman, Times, serif;">ACQ:LOstatus:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;">
+              binary-in record to one.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:HIlim:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">An ADC reading at or above this
+              value will set the corresponding </span><span
+              style="font-family: Times New Roman, Times, serif;">ACQ:HIstatus:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;">
+              binary-in record to one.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ACQ:HIHIlim:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">An ADC reading at or above this
+              value will set the corresponding </span><span
+              style="font-family: Times New Roman, Times, serif;">ACQ:HIHIstatus:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;">
+              binary-in record to one.</span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -932,11 +968,10 @@
               Times New Roman, Times, serif;">longout</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Writing
-
-              40 will reset the Quartz high speed ADCs.&nbsp; Writing
-              any other value will have no effect.<br>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Writing 40 will reset the Quartz
+              high speed ADCs.&nbsp; Writing any other value will have
+              no effect.<br>
             </span></td>
         </tr>
         <tr>
@@ -946,13 +981,11 @@
               Times New Roman, Times, serif;">longout</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Writing
-
-              a non-zero value opens the system clock phase-locked-loop
-              and drives the VCXO DAC to the specified value.&nbsp;
-              Normal closed loop operation resumes when a zero is
-              written.<br>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Writing a non-zero value opens
+              the system clock phase-locked-loop and drives the VCXO DAC
+              to the specified value.&nbsp; Normal closed loop operation
+              resumes when a zero is written.<br>
             </span></td>
         </tr>
       </tbody>
