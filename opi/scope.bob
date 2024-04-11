@@ -99,7 +99,7 @@
     <name>Action Button_5</name>
     <actions>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>01</N>
         </macros>
@@ -107,7 +107,7 @@
         <description>Channel 1</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>02</N>
         </macros>
@@ -115,7 +115,7 @@
         <description>Channel 2</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>03</N>
         </macros>
@@ -123,7 +123,7 @@
         <description>Channel 3</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>04</N>
         </macros>
@@ -131,7 +131,7 @@
         <description>Channel 4</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>05</N>
         </macros>
@@ -139,7 +139,7 @@
         <description>Channel 5</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>06</N>
         </macros>
@@ -147,7 +147,7 @@
         <description>Channel 6</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>07</N>
         </macros>
@@ -155,7 +155,7 @@
         <description>Channel 7</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>08</N>
         </macros>
@@ -163,7 +163,7 @@
         <description>Channel 8</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>09</N>
         </macros>
@@ -171,7 +171,7 @@
         <description>Channel 9</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>10</N>
         </macros>
@@ -179,7 +179,7 @@
         <description>Channel 10</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>11</N>
         </macros>
@@ -187,7 +187,7 @@
         <description>Channel 11</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>12</N>
         </macros>
@@ -195,7 +195,7 @@
         <description>Channel 12</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>13</N>
         </macros>
@@ -203,7 +203,7 @@
         <description>Channel 13</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>14</N>
         </macros>
@@ -211,7 +211,7 @@
         <description>Channel 14</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>15</N>
         </macros>
@@ -219,7 +219,7 @@
         <description>Channel 15</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>16</N>
         </macros>
@@ -227,7 +227,7 @@
         <description>Channel 16</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>17</N>
         </macros>
@@ -235,7 +235,7 @@
         <description>Channel 17</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>18</N>
         </macros>
@@ -243,7 +243,7 @@
         <description>Channel 18</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>19</N>
         </macros>
@@ -251,7 +251,7 @@
         <description>Channel 19</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>20</N>
         </macros>
@@ -259,7 +259,7 @@
         <description>Channel 20</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>21</N>
         </macros>
@@ -267,7 +267,7 @@
         <description>Channel 21</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>22</N>
         </macros>
@@ -275,7 +275,7 @@
         <description>Channel 22</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>23</N>
         </macros>
@@ -283,7 +283,7 @@
         <description>Channel 23</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>24</N>
         </macros>
@@ -291,7 +291,7 @@
         <description>Channel 24</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>25</N>
         </macros>
@@ -299,7 +299,7 @@
         <description>Channel 25</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>26</N>
         </macros>
@@ -307,7 +307,7 @@
         <description>Channel 26</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>27</N>
         </macros>
@@ -315,7 +315,7 @@
         <description>Channel 27</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>28</N>
         </macros>
@@ -323,7 +323,7 @@
         <description>Channel 28</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>29</N>
         </macros>
@@ -331,7 +331,7 @@
         <description>Channel 29</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>30</N>
         </macros>
@@ -339,7 +339,7 @@
         <description>Channel 30</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>31</N>
         </macros>
@@ -347,7 +347,7 @@
         <description>Channel 31</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <N>32</N>
         </macros>
@@ -895,7 +895,7 @@
     <name>Action Button_3</name>
     <actions>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:01:</P>
         </macros>
@@ -903,7 +903,7 @@
         <description>Chassis 1</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:02:</P>
         </macros>
@@ -911,7 +911,7 @@
         <description>Chassis 2</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:03:</P>
         </macros>
@@ -919,7 +919,7 @@
         <description>Chassis 3</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:04:</P>
         </macros>
@@ -927,7 +927,7 @@
         <description>Chassis 4</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:05:</P>
         </macros>
@@ -935,7 +935,7 @@
         <description>Chassis 5</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:06:</P>
         </macros>
@@ -943,7 +943,7 @@
         <description>Chassis 6</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:07:</P>
         </macros>
@@ -951,7 +951,7 @@
         <description>Chassis 7</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:08:</P>
         </macros>
@@ -959,7 +959,7 @@
         <description>Chassis 8</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:09:</P>
         </macros>
@@ -967,7 +967,7 @@
         <description>Chassis 9</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:10:</P>
         </macros>
@@ -975,7 +975,7 @@
         <description>Chassis 10</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:11:</P>
         </macros>
@@ -983,7 +983,7 @@
         <description>Chassis 11</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:12:</P>
         </macros>
@@ -991,7 +991,7 @@
         <description>Chassis 12</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:13:</P>
         </macros>
@@ -999,7 +999,7 @@
         <description>Chassis 13</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:14:</P>
         </macros>
@@ -1007,7 +1007,7 @@
         <description>Chassis 14</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:15:</P>
         </macros>
@@ -1015,7 +1015,7 @@
         <description>Chassis 15</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:16:</P>
         </macros>
@@ -1023,7 +1023,7 @@
         <description>Chassis 16</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:17:</P>
         </macros>
@@ -1031,7 +1031,7 @@
         <description>Chassis 17</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:18:</P>
         </macros>
@@ -1039,7 +1039,7 @@
         <description>Chassis 18</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:19:</P>
         </macros>
@@ -1047,7 +1047,7 @@
         <description>Chassis 19</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:20:</P>
         </macros>
@@ -1055,7 +1055,7 @@
         <description>Chassis 20</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:21:</P>
         </macros>
@@ -1063,7 +1063,7 @@
         <description>Chassis 21</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:22:</P>
         </macros>
@@ -1071,7 +1071,7 @@
         <description>Chassis 22</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:23:</P>
         </macros>
@@ -1079,7 +1079,7 @@
         <description>Chassis 23</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:24:</P>
         </macros>
@@ -1087,7 +1087,7 @@
         <description>Chassis 24</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:25:</P>
         </macros>
@@ -1095,7 +1095,7 @@
         <description>Chassis 25</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:26:</P>
         </macros>
@@ -1103,7 +1103,7 @@
         <description>Chassis 26</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:27:</P>
         </macros>
@@ -1111,7 +1111,7 @@
         <description>Chassis 27</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:28:</P>
         </macros>
@@ -1119,7 +1119,7 @@
         <description>Chassis 28</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:29:</P>
         </macros>
@@ -1127,7 +1127,7 @@
         <description>Chassis 29</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:30:</P>
         </macros>
@@ -1135,7 +1135,7 @@
         <description>Chassis 30</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:31:</P>
         </macros>
@@ -1143,7 +1143,7 @@
         <description>Chassis 31</description>
       </action>
       <action type="open_display">
-        <file>launcher.bob</file>
+        <file>scope.bob</file>
         <macros>
           <P>NASA_ACQ:32:</P>
         </macros>
