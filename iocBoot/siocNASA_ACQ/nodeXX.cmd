@@ -1,9 +1,8 @@
-#!../../bin/linux-x86_64/nasaAcq
+# source me from node??.cmd
+# after setting NASA_ACQ_BASE_IP and NODE
 
 ###############################################################################
 # Set up environment
-#epicsEnvSet(NASA_ACQ_BASE_IP, "${NASA_ACQ_BASE_IP=192.168.79.0}") # TODO: change me
-#epicsEnvSet(NODE, "${NODE=05}")
 epicsEnvSet(P, "NASA_ACQ:$(NODE):")
 epicsEnvSet(EVG, "NASA_ACQ:")
 
