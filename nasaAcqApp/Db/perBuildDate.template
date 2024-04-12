@@ -14,6 +14,7 @@ record(longin, "$(P)$(R)$(NAME)_") {
 }
 record(ai, "$(P)$(R)$(NAME):T_") {
     field(DTYP, "Copy VAL to TIME")
+    field(TSE , "-2")
     field(INP , "$(P)$(R)$(NAME)_")
     field(FLNK, "$(P)$(R)$(NAME)")
 }
