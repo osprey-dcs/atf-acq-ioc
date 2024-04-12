@@ -22,7 +22,7 @@ void val2time(aiRecord *prec)
 
     } else if(prec->tse==epicsTimeEventDeviceTime) {
         double nsec = fmod(prec->val, 1.0) * 1e9;
-        prec->time.secPastEpoch = prec->val; // truncate
+        prec->time.secPastEpoch = prec->val - POSIX_TIME_AT_EPICS_EPOCH; // truncate
         prec->time.nsec = nsec + 0.5; // round to nearest
     }
 }
