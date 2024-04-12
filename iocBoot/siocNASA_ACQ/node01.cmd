@@ -1,8 +1,8 @@
-#!../../bin/darwin-x86/nasaAcq
+#!../../bin/linux-x86_64/nasaAcq
 
 ###############################################################################
 # Set up environment
-epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.19.101")
+epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.18")
 epicsEnvSet(NODE, "01")
 epicsEnvSet(P, "NASA_ACQ:$(NODE):")
 epicsEnvSet(EVG, "NASA_ACQ:") # this is the EVG node
