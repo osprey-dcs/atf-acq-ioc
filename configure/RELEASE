@@ -22,7 +22,8 @@
 # the CONFIG_SITE file.
 
 # Variables and paths to dependent modules:
-PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv
+#PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv/head
+PSCDRV=/usr/local/epics/R7.0.6/modules/soft/pscdrv/atf-dev
 FEEDCORE=/usr/local/epics/R7.0.6/modules/soft/feed-core/head
 AUTOSAVE=/usr/local/epics/R7.0.6/modules/soft/synapps/synApps_6_1/support/autosave-R5-10
 

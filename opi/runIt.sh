@@ -9,7 +9,7 @@ usage() {
 }
 
 case "$#" in
-    0) BOB="NASAacq.bob" ;;
+    0) BOB="atf-main.bob" ;;
     1) BOB="$1" ;;
     *) usage ;;
 esac

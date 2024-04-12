@@ -7,12 +7,13 @@
   <body>
     <h2>Introduction</h2>
     <p><span style="font-family: Times New Roman, Times, serif;">This
-        support module uses a PSCDRV driver to communicate with NASA ACQ
+        support module uses a LEEP driver to communicate with NASA ACQ
         nodes and provides an example IOC, and some Engineering CSS
         screens.&nbsp; Most of the records mentioned in the following
         sections have names beginning with </span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">$(P)$(NODE)
+
 
 
 
@@ -23,10 +24,6 @@
     <h2><span style="font-family: Times New Roman, Times, serif;">System
         Monitoring <br>
       </span></h2>
-    <span style="font-family: Times New Roman, Times, serif;">Processing
-      the sysmonTrig_ record causes the IOC to read back a set of system
-      monitor values and push them into the records described in the
-      following table.</span><br>
     <div style="margin-left: 80px;"><span style="font-family: Times New
         Roman, Times, serif;"><span style="font-family: Times New Roman,
           Times, serif;"> </span></span><br>
@@ -581,6 +578,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"></span>incoming
 
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -792,20 +790,31 @@
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
 
 
+
         a</span><span style="font-family: Times New Roman, Times,
         serif;">nd </span><span style="font-family: Times New Roman,
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
 
 
+
         respectively.&nbsp; The time at which the calibration factors
         were measured is contained in the per-node stringin record
         calibrationDate.&nbsp; The status of the calibration file
         parsing and application is contained in the longin record
-        calibrationStatus.<br>
-        <br>
-      </span> </p>
+        calibrationStatus.&nbsp; A value of 0 indicates that the
+        contents of Calibration.csv are correct.&nbsp; If that file is
+        invalid the least significant 16 bits of </span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;">calibrationStatus
+          contain the line number where thing have gone wrong.&nbsp; The
+          most significant 16 bits contain an error code.&nbsp; Some of
+          the possible error codes are 3 (Calibration.csv does not
+          exist), 5 (end-of-file was reached before all calibration
+          values were read),&nbsp; 6 (syntax error), 7 (invalid
+          character), and 8 (bad number).</span> </span> </p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1004,6 +1013,7 @@
 
 
 
+
         Controls</span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">These
         records are prefixed with only the $(P) macro.<span
@@ -1064,6 +1074,7 @@
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">Note
 
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1077,6 +1088,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
 
               100 causes the acquisition nodes to reboot themselves</span><span
               style="font-family: Times New Roman, Times, serif;"><span
