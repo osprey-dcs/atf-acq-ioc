@@ -64,7 +64,7 @@ record(calcout, "$(P)SA:Ch$(N):OFF") {
 
 record(aai, "$(P)SA:Ch$(N)_") {
     field(DTYP, "PSCUDPFast Get Short I24 packed")
-    field(INP , "@$(NAME) 20033 $(OFF=24) 96")
+    field(INP , "@$(NAME) 20034 $(OFF=24) 96")
     field(FTVL, "LONG")
     field(NELM, "$(NELM)")
     field(TSEL, "$(TSEL=0)")
