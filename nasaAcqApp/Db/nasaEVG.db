@@ -13,6 +13,7 @@ record(bo, "$(P)ACQ:enable") {
 
 record(mbbo, "$(P)ACQ:rate") {
     field(DESC, "Set acquisition rate")
+    field(PINI, "YES")
     field(ZRVL, "250000")
     field(ZRST, "250 kHz")
     field(ONVL, "50000")
