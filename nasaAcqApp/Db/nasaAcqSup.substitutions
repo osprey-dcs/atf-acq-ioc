@@ -40,7 +40,7 @@ file "perSysmonAI.template" {
   { \$(P),"",\$(PORT),    "QSFP2:RxPower4",  92,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
   { \$(P),"",\$(PORT),       "Quartz:N15V",  96,       "V",-5.765477231e-3,       0,    3,-15.75,-15.30,-14.70,-14.25, "Quartz -15V supply voltage" }
   { \$(P),"",\$(PORT),       "Quartz:P15V", 100,       "V", 5.531712581e-3,       0,    3, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.10,  5.25, "Quartz 5V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.15,  5.25, "Quartz 5V supply voltage" }
   { \$(P),"",\$(PORT),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
   { \$(P),"",\$(PORT),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
   { \$(P),"",\$(PORT),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }

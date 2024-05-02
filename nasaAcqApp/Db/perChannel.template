@@ -54,8 +54,6 @@ record(longout, "$(P)ACQ:HIHIlim:$(N)_") {
     field(DOL , "$(P)ACQ:HIHIlim:$(N).RVAL")
 }
 
-
-
 record(ao, "$(P)ACQ:LOLOlim:$(N)") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX)")
@@ -142,14 +140,23 @@ record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     info(autosaveFields_pass0, "RVAL")
 }
 
-# TODO: gone?
-record(longout, "$(P)$(R)ACQ:ofst:$(N)") {
-    field(DESC, "Set channel $(N) calibration offset")
-    # TODO: gone?
-    info(autosaveFields_pass0, "VAL")
+record(longin, "$(P)$(R)CALIB:offset:$(N)") {
+    field(DESC, "Channel $(N) calibration offset")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=CALIB:offset:XX offset=$(IDX)")
+    field(EGU,  "ADC counts")
+    field(PINI, "YES")
 }
-record(longout, "$(P)$(R)ACQ:gain:$(N)") {
-    field(DESC, "Set channel $(N) calibration gain")
-    # TODO: gone?
-    info(autosaveFields_pass0, "VAL")
+# Relationship between parts-per-million and ADC gain counts
+#      PPM     Gain Counts
+#    ------- = -----------
+#    1000000   (2^24) / 12
+record(ai, "$(P)$(R)CALIB:gain:$(N)") {
+    field(DESC, "Channel $(N) calibration gain")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=CALIB:gain:XX offset=$(IDX)")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.7152557373046875")
+    field(EGU,  "PPM")
+    field(PINI, "YES")
 }

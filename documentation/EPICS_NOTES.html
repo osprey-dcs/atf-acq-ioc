@@ -17,6 +17,7 @@
 
 
 
+
           macros.&nbsp; Typically the P macro is set to 'NASA_ACQ:' and
           the NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -579,6 +580,7 @@
                 style="font-family: Times New Roman, Times, serif;"></span>incoming
 
 
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -791,10 +793,12 @@
 
 
 
+
         a</span><span style="font-family: Times New Roman, Times,
         serif;">nd </span><span style="font-family: Times New Roman,
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
+
 
 
 
@@ -807,13 +811,83 @@
         invalid the least significant 16 bits of </span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">calibrationStatus
+
           contain the line number where thing have gone wrong.&nbsp; The
           most significant 16 bits contain an error code.&nbsp; Some of
           the possible error codes are 3 (Calibration.csv does not
           exist), 5 (end-of-file was reached before all calibration
           values were read),&nbsp; 6 (syntax error), 7 (invalid
-          character), and 8 (bad number).</span> </span> </p>
+          character), and 8 (bad number).<br>
+        </span></span></p>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
+      </span></h2>
+    <p><span style="font-family: Times New Roman, Times, serif;">The
+        value <span style="font-style: italic;">nn</span> in the
+        following table is the channel number, ranging from 01 to
+        32.&nbsp; The calibration values are stored in a
+        comma-separated-values file in the node flash memory.<br>
+      </span></p>
+    <div style="margin-left: 40px;"> </div>
+    <table style=" text-align: left; width: 80%;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Name</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Type</span></span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family: Times
+                New Roman, Times, serif;">Description</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">CALIB:offset:<span
+                style="font-style: italic;">nn</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longin</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">&nbsp;Channel <span
+                style="font-style: italic;">nn</span> calibration offset
+              in units of ADC counts.</span><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">CALIB:gain:<span
+                style="font-style: italic;">nn</span></span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">&nbsp;Channel <span
+                style="font-style: italic;">nn</span> calibration gain
+              adustment in units of parts per million.</span> </td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="margin-left: 40px;"> </div>
+    <div style="margin-left: 80px;"> <span style="font-family: Times
+        New Roman, Times, serif;"><span style="font-family: Times New
+          Roman, Times, serif;"></span></span><span style="font-family:
+        Times New Roman, Times, serif;"></span> </div>
+    <div style="margin-left: 40px;"> </div>
+    <br>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1014,6 +1088,7 @@
 
 
 
+
         Controls</span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">These
         records are prefixed with only the $(P) macro.<span
@@ -1075,6 +1150,7 @@
                   style="font-family: Times New Roman, Times, serif;">Note
 
 
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1088,6 +1164,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
 
 
               100 causes the acquisition nodes to reboot themselves</span><span
