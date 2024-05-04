@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 13:58:48 by dev-->
+<!--Saved on 2024-05-03 18:45:05 by dev-->
 <display version="2.0.0">
   <name>Mon $(N)</name>
   <x>9</x>
@@ -1341,15 +1341,6 @@
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_72</name>
-    <pv_name>$(P)$(R)DRDY:sprd</pv_name>
-    <x>710</x>
-    <y>286</y>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
   <widget type="led" version="2.0.0">
     <name>LED_9</name>
     <pv_name>$(P)$(R)PPS:gps</pv_name>
@@ -1381,5 +1372,39 @@
     <x>810</x>
     <y>262</y>
     <width>90</width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_13</name>
+    <pv_name>$(P)$(R)ACQ:tod</pv_name>
+    <x>950</x>
+    <y>362</y>
+    <width>60</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_14</name>
+    <pv_name>$(P)$(R)ACQ:sub</pv_name>
+    <x>1020</x>
+    <y>362</y>
+    <width>60</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>$(P)$(R)DRDY:align</pv_name>
+    <x>710</x>
+    <y>286</y>
+    <width>60</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>LED_16</name>
+    <pv_name>$(P)$(R)PPS:jtr</pv_name>
+    <x>810</x>
+    <y>337</y>
+    <width>60</width>
   </widget>
 </display>
