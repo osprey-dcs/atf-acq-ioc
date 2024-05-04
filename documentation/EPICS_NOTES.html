@@ -606,12 +606,40 @@
                 <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
+                      serif;">27</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">The jitter on the pulse per second
+                      reference is low enough to allow the clock
+                      alignment phase-locked loop to operate in its
+                      low-jitter mode.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">28</span><span style="font-family: Times
+                      New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Large jitter is being added to the
+                      secondary (PMOD-GPS) pulse per second
+                      reference.&nbsp; Used for confirming the operation
+                      of the clock alignment PLL jitter reduction.<br>
+                    </span></td>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><span
+                      style="font-family: Times New Roman, Times,
                       serif;">29</span><span style="font-family: Times
                       New Roman, Times, serif;"><br>
                     </span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Closed loop correction of system clock
+                      serif;">Closed loop correction of the system clock
                       VCXO is enabled.</span><br>
                   </td>
                 </tr>
@@ -623,8 +651,8 @@
                     </span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Changes state on arrival of pulse per
-                      second marker.<br>
+                      serif;">Changes state on rising edge of the pulse
+                      per second reference.<br>
                     </span></td>
                 </tr>
                 <tr>
@@ -634,8 +662,8 @@
                       Roman, Times, serif;">31</span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Set when system clock has locked to pulse
-                      per second markers.<br>
+                      serif;">Set when the system clock has locked to
+                      the pulse per second reference.<br>
                     </span></td>
                 </tr>
               </tbody>
@@ -723,10 +751,10 @@
                     </span></td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">The primary PPS source is valid.&nbsp; For
-                      the event generator node this is the signal from
-                      the Quartz FMC board.&nbsp; For all other nodes
-                      this is the event receiver PPS event.</span><br>
+                      serif;">The primary PPS reference is valid.&nbsp;
+                      For the event generator node this is the signal
+                      from the Quartz FMC board.&nbsp; For all other
+                      nodes this is the event receiver PPS event.</span><br>
                   </td>
                 </tr>
                 <tr>
@@ -739,7 +767,7 @@
                       serif;"></span><span style="font-family: Times New
                       Roman, Times, serif;"><span style="font-family:
                         Times New Roman, Times, serif;">The secondary
-                        PPS source is valid.&nbsp; For the event
+                        PPS reference is valid.&nbsp; For the event
                         generator node this is the signal from the
                         PMOD-GPS card.&nbsp; For all other nodes there
                         is no secondary source.</span> </span></td>
@@ -751,8 +779,8 @@
                   </td>
                   <td style="text-align: left;"><span
                       style="font-family: Times New Roman, Times,
-                      serif;">Changes state on arrival of pulse per
-                      second marker.</span></td>
+                      serif;">Changes state on the rising edge of the
+                      pulse per second reference.</span></td>
                 </tr>
                 <tr>
                   <td style="text-align: center;"><span
@@ -770,8 +798,8 @@
             <span style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">The
                 least significant 16 bits are estimate of the average
-                jitter, in nanoseconds, in the pulse per second marker.</span>
-            </span></td>
+                jitter, in nanoseconds, in the pulse per second
+                reference.</span> </span></td>
         </tr>
       </tbody>
     </table>
