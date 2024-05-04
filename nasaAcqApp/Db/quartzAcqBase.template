@@ -11,11 +11,20 @@ record(bi, "$(P)ACQ:clk") {
     field(ONAM, "Unlock")
     field(OSV , "MAJOR")
 }
+record(bi, "$(P)ACQ:tod") {
+    field(DESC, "Time of day invalid")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "2")
+    field(ZNAM, "Invalid")
+    field(ONAM, "Valid")
+    field(OSV , "MAJOR")
+}
 record(bi, "$(P)ACQ:pktoflw") {
     field(DESC, "Pkt Bldr oflow")
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)ACQ:status CP MS")
-    field(MASK, "0x4000")
+    field(MASK, "4")
     field(ZNAM, "Normal")
     field(ONAM, "OFlow")
     field(OSV , "MAJOR")
@@ -24,10 +33,26 @@ record(bi, "$(P)ACQ:adcoflw") {
     field(DESC, "ADC oflow")
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)ACQ:status CP MS")
-    field(MASK, "0x8000")
+    field(MASK, "8")
     field(ZNAM, "Normal")
     field(ONAM, "OFlow")
     field(OSV , "MAJOR")
+}
+record(bi, "$(P)ACQ:loadcal") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x10000000")
+    field(ZNAM, "Idle")
+    field(ONAM, "Run")
+}
+record(bi, "$(P)ACQ:sub") {
+    field(DESC, "Fast data subscriber")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:status CP MS")
+    field(MASK, "0x20000000")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    field(ZSV , "MAJOR")
 }
 record(bi, "$(P)ACQ:running") {
     field(DESC, "Sampling")
@@ -75,48 +100,49 @@ record(bi, "$(P)ACQ:ppslck") {
 }
 record(calc, "$(P)ACQ:ppsdiff") {
     field(INPA, "$(P)ACQ:clkPLL CP MS")
-    field(INPB, "0xffff")
-    field(INPC, "0")
+    # mask out field
+    field(INPB, "0xffffff") # mask
+    field(INPC, "0")        # offset
     field(INPD, "") # scratch, unsigned 16
-    field(INPE, "0xffff")
-    field(INPF, "0x8000")
-    field(CALC, "D:=((A&B)>>C);D&F?-(D XOR E)-1:D")
+    field(INPF, "0x800000") # sign bit
+    field(CALC, "D:=((A&B)>>C);D&F?-(D XOR B)-1:D")
     field(EGU , "tick")
 }
 
+record(bi, "$(P)DRDY:align") {
+    field(DESC, "DRDY aligned")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)DRDY:status CP MS")
+    field(MASK, "0x80000000")
+    field(ZNAM, "Aligned")
+    field(ONAM, "Skew")
+    field(OSV , "MAJOR")
+}
 # number of acquisition clock ticks (8 ns per tick) between event receiver PPS event and ADC DRDY rising edge.
 record(calc, "$(P)DRDY:pps") {
     field(DESC, "PPS -> DRDY itvl")
     field(INPA, "$(P)DRDY:status CP MS")
-    field(INPB, "0xffff0000")
-    field(INPC, "16")
-    field(INPD, "8") # raw units are ticks of 125MHz
-    field(CALC, "((A&B)>>C)*D")
-    field(EGU , "ns")
-}
-# number of acquisition clock ticks between first and last DRDY rising edges.
-record(calc, "$(P)DRDY:sprd") {
-    field(DESC, "ADC done spread")
-    field(INPA, "$(P)DRDY:status CP MS")
-    field(INPB, "0x0000ffff")
+    field(INPB, "0xfffff")
     field(INPC, "0")
     field(INPD, "8") # raw units are ticks of 125MHz
     field(CALC, "((A&B)>>C)*D")
     field(EGU , "ns")
+    field(HIGH, "64")
+    field(HSV , "MAJOR")
 }
 
 # breakout PPS:status  (Only meaningful on EVG node)
 record(bi, "$(P)PPS:fmc") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
-    field(MASK, "1")
+    field(MASK, "0x10000000")
     field(ZNAM, "No FMC")
     field(ONAM, "FMC")
 }
 record(bi, "$(P)PPS:gps") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
-    field(MASK, "4")
+    field(MASK, "0x20000000")
     field(ZNAM, "No GPS")
     field(ONAM, "GPS")
 }
@@ -124,21 +150,17 @@ record(mbbi, "$(P)PPS:src") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
     field(NOBT, "4")
-    field(MASK, "0xa") # 0b1010  (TODO...)
+    field(SHFT, "28")
+    field(MASK, "0xb") # 0b1011
     field(ZRVL, "0x0")
-    field(ONVL, "0x2")
-    field(TWVL, "0x8")
-    field(THVL, "0xa")
-    field(ZRST, "No PPS")
-    field(ONST, "FMC")
-    field(TWST, "GPS")
-    field(THST, "Both?")
-    field(THSV, "MAJOR")
+    field(ONVL, "0x9") # 0b1001
+    field(TWVL, "0xa") # 0b1010
+    field(UNSV, "MAJOR")
 }
-record(calc, "$(P)PPS:lat") {
+record(calc, "$(P)PPS:jtr") {
     field(INPA, "$(P)PPS:status CP MS")
-    field(INPB, "0xffff0000")
-    field(INPC, "16")
+    field(INPB, "0xffff")
+    field(INPC, "0")
     field(INPD, "1") # TODO: 10 ns per tick?
     field(CALC, "((A&B)>>C)*D")
     field(EGU , "tick")
