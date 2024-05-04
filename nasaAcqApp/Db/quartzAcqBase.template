@@ -161,9 +161,9 @@ record(calc, "$(P)PPS:jtr") {
     field(INPA, "$(P)PPS:status CP MS")
     field(INPB, "0xffff")
     field(INPC, "0")
-    field(INPD, "1") # TODO: 10 ns per tick?
+    field(INPD, "1")
     field(CALC, "((A&B)>>C)*D")
-    field(EGU , "tick")
+    field(EGU , "ns")
 }
 
 
