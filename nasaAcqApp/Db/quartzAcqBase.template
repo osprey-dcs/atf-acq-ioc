@@ -155,6 +155,9 @@ record(mbbi, "$(P)PPS:src") {
     field(ZRVL, "0x0")
     field(ONVL, "0x9") # 0b1001
     field(TWVL, "0xa") # 0b1010
+    field(ZRST, "No PPS")
+    field(ONST, "FMC")
+    field(TWST, "PMOD")
     field(UNSV, "MAJOR")
 }
 record(calc, "$(P)PPS:jtr") {
