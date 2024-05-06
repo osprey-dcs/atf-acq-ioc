@@ -45,6 +45,12 @@ record(bo, "$(P)$(R)ACQ:HIHIlimXX_") {
     field(OUT,  "@name=$(PORT) reg=ACQ:HIHIlimXX")
 }
 
+record(longin, "$(P)$(R)Quartz:serno") {
+    field(DESC, "Quartz IPMI serial number")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=FMC1:SerialNumber")
+    field(PINI, "YES")
+}
 
 #
 # Downsampling factor
