@@ -37,11 +37,6 @@ nasaAcq_LIBS += pscCore
 nasaAcq_LIBS += feed
 nasaAcq_LIBS += nasaSup
 
-ifdef PVXS_MAJOR_VERSION
-nasaAcq_DBD += pvxsIoc.dbd
-nasaAcq_LIBS += pvxsIoc pvxs
-endif
-
 # nasaAcq_registerRecordDeviceDriver.cpp derives from nasaAcq.dbd
 nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
 
@@ -55,12 +50,17 @@ nasaAcq_SRCS_vxWorks += -nil-
 # Finally link to the EPICS Base libraries
 nasaAcq_LIBS += $(EPICS_BASE_IOC_LIBS)
 
-# Link QSRV (pvAccess Server) if available
-ifdef EPICS_QSRV_MAJOR_VERSION
+# Link QSRV
+ifdef PVXS_MAJOR_VERSION # prefer v2
+nasaAcq_DBD += pvxsIoc.dbd
+nasaAcq_LIBS += pvxsIoc pvxs
+else
+ifdef EPICS_QSRV_MAJOR_VERSION # fallback to v1
 nasaAcq_LIBS += qsrv
 nasaAcq_LIBS += $(EPICS_BASE_PVA_CORE_LIBS)
 nasaAcq_DBD += PVAServerRegister.dbd
 nasaAcq_DBD += qsrv.dbd
+endif
 endif
 
 #===========================
