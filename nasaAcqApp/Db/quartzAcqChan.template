@@ -27,6 +27,12 @@ record(ao, "$(P)SA:Ch$(N):EOFF") {
     field(EGU , "EGU")
     info(autosaveFields_pass0, "VAL")
 }
+record(bo, "$(P)SA:Ch$(N):USE") {
+    field(VAL, "1")
+    field(ZNAM, "No")
+    field(ONAM, "Yes")
+    info(autosaveFields_pass0, "VAL")
+}
 record(lso, "$(P)SA:Ch$(N):DESC") {
     field(DESC, "Current signal label")
     field(SIZV, "128")
