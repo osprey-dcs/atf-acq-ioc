@@ -36,11 +36,3 @@ record(longout, "$(P)ACQ:rateLO_") {
     field(OMSL, "closed_loop")
     field(MDEL, "-1")
 }
-
-#
-# Reset all FPGAs
-# The actual I/O is done by the per-FPGA records
-#
-record(longout, "$(P)FPGA:reboot") {
-    field(DESC, "Write 1, 100, 10000 to reboot FPGA")
-}
