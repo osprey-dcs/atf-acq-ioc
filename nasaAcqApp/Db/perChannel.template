@@ -54,6 +54,40 @@ record(longout, "$(P)ACQ:HIHIlim:$(N)_") {
     field(DOL , "$(P)ACQ:HIHIlim:$(N).RVAL")
 }
 
+# reflect ADC -> EGU scaling factors to limits
+record(dfanout, "$(P)ACQ:limSLO:$(N)_") {
+    field(DOL, "$(P)SA:Ch$(N):SLO CP MS")
+    field(OMSL, "closed_loop")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).ASLO PP MS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).ASLO PP MS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).ASLO PP MS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).ASLO PP MS")
+}
+record(dfanout, "$(P)ACQ:limOFF:$(N)_") {
+    field(DOL, "$(P)SA:Ch$(N):OFF CP MS")
+    field(OMSL, "closed_loop")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).AOFF PP MS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).AOFF PP MS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).AOFF PP MS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).AOFF PP MS")
+}
+record(dfanout, "$(P)ACQ:limMAX:$(N)_") {
+    field(DOL, "$(P)SA:Ch$(N):MAX CP MS")
+    field(OMSL, "closed_loop")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).DRVH PP MS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).DRVH PP MS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).DRVH PP MS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).DRVH PP MS")
+}
+record(dfanout, "$(P)ACQ:limMIN:$(N)_") {
+    field(DOL, "$(P)SA:Ch$(N):MIN CP MS")
+    field(OMSL, "closed_loop")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).DRVL PP MS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).DRVL PP MS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).DRVL PP MS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).DRVL PP MS")
+}
+
 record(ao, "$(P)ACQ:LOLOlim:$(N)") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX)")

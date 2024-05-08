@@ -49,19 +49,37 @@ record(stringout, "$(P)SA:Ch$(N):EGU") {
 # EU= ESLO*(ASLO*ADC + AOFF) + EOFF
 # EU= (ESLO*ASLO)*ADC + (ESLO*AOFF + EOFF)
 record(calcout, "$(P)SA:Ch$(N):SLO") {
-    field(PREC, "9")
+    field(PREC, "6")
+    field(EGU , "EGU/ADC")
     field(INPA, "$(P)SA:Ch$(N):ASLO CP MS")
     field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
     field(CALC, "A*B")
     field(OUT , "$(P)SA:Ch$(N):S_.B PP MS")
 }
 record(calcout, "$(P)SA:Ch$(N):OFF") {
-    field(PREC, "9")
+    field(PREC, "6")
+    field(EGU , "EGU")
     field(INPA, "$(P)SA:Ch$(N):AOFF CP MS")
     field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
     field(INPC, "$(P)SA:Ch$(N):EOFF CP MS")
     field(CALC, "A*B + C")
     field(OUT , "$(P)SA:Ch$(N):S_.C PP MS")
+}
+
+# project ADC range into EGU
+record(calc, "$(P)SA:Ch$(N):MAX") {
+    field(INPA, "$(P)SA:Ch$(N):SLO CP MS")
+    field(INPB, "$(P)SA:Ch$(N):OFF CP MS")
+    field(INPC, "8388607")
+    field(INPD, "-8388608")
+    field(CALC, "A * (A>0 ? C : D) + B")
+}
+record(calc, "$(P)SA:Ch$(N):MIN") {
+    field(INPA, "$(P)SA:Ch$(N):SLO CP MS")
+    field(INPB, "$(P)SA:Ch$(N):OFF CP MS")
+    field(INPC, "8388607")
+    field(INPD, "-8388608")
+    field(CALC, "A * (A<0 ? C : D) + B")
 }
 
 # /-- from quartzAcq (Chan0) or previous channel
