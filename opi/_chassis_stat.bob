@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 14:18:41 by dev-->
+<!--Saved on 2024-05-07 13:06:36 by atf-->
 <display version="2.0.0">
   <name>Stat $(N)</name>
   <width>1195</width>
   <height>30</height>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
-    <pv_name>$(P)$(N):conn</pv_name>
+    <pv_name>$(P)$(N):GLD:image</pv_name>
     <x>50</x>
-    <y>5</y>
-    <width>80</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_4</name>
-    <pv_name>$(P)$(N):sysmonAge</pv_name>
-    <x>140</x>
     <y>5</y>
     <width>80</width>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED</name>
     <pv_name>$(P)$(N):SA:BufFul</pv_name>
-    <x>310</x>
+    <x>220</x>
     <y>5</y>
     <square>true</square>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_8</name>
     <pv_name>$(P)$(N):FPGA:Temperature</pv_name>
-    <x>230</x>
+    <x>140</x>
     <y>5</y>
     <width>70</width>
     <horizontal_alignment>2</horizontal_alignment>
@@ -38,7 +31,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_14</name>
     <pv_name>$(P)$(N):NDrp-I</pv_name>
-    <x>430</x>
+    <x>340</x>
     <y>5</y>
     <width>70</width>
     <horizontal_alignment>2</horizontal_alignment>
@@ -48,7 +41,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_15</name>
     <pv_name>$(P)$(N):RXRate-I</pv_name>
-    <x>340</x>
+    <x>250</x>
     <y>5</y>
     <width>80</width>
     <precision>2</precision>
@@ -59,7 +52,7 @@
   <widget type="led" version="2.0.0">
     <name>LED_7</name>
     <pv_name>$(P)$(N):ACQ:ppslck</pv_name>
-    <x>510</x>
+    <x>420</x>
     <y>5</y>
     <width>60</width>
     <off_color>
@@ -72,7 +65,7 @@
   <widget type="led" version="2.0.0">
     <name>LED_8</name>
     <pv_name>$(P)$(N):ACQ:clk</pv_name>
-    <x>580</x>
+    <x>490</x>
     <y>5</y>
     <width>60</width>
     <off_color>
@@ -89,15 +82,17 @@
   <widget type="textupdate" version="2.0.0">
     <name>LED_12</name>
     <pv_name>$(P)$(N):ACQ:ppsdiff</pv_name>
-    <x>650</x>
+    <x>560</x>
     <y>5</y>
     <width>90</width>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_72</name>
-    <pv_name>$(P)$(N):DRDY:sprd</pv_name>
-    <x>750</x>
+    <pv_name>$(P)$(N):PPS:status</pv_name>
+    <x>660</x>
     <y>5</y>
+    <format>4</format>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -128,7 +123,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_68</name>
     <pv_name>$(P)$(N):ACQ:clkPLL</pv_name>
-    <x>870</x>
+    <x>780</x>
     <y>5</y>
     <format>4</format>
     <horizontal_alignment>2</horizontal_alignment>
@@ -138,9 +133,9 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_69</name>
     <pv_name>$(P)$(N):DRDY:status</pv_name>
-    <x>980</x>
+    <x>890</x>
     <y>5</y>
-    <format>1</format>
+    <format>4</format>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -148,7 +143,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_70</name>
     <pv_name>$(P)$(N):ADC:aligns</pv_name>
-    <x>1090</x>
+    <x>1000</x>
     <y>5</y>
     <format>1</format>
     <horizontal_alignment>2</horizontal_alignment>

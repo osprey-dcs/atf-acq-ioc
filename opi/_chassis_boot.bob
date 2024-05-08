@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 11:44:26 by dev-->
+<!--Saved on 2024-05-06 14:53:43 by atf-->
 <display version="2.0.0">
   <name>Boot $(N)</name>
-  <width>1290</width>
+  <width>1790</width>
   <height>30</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
@@ -65,25 +65,11 @@
     <format>6</format>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_4</name>
-    <pv_name>$(P)$(N):sysmonAge</pv_name>
-    <x>930</x>
-    <y>5</y>
-    <width>40</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_5</name>
-    <pv_name>$(P)$(N):conn</pv_name>
-    <x>860</x>
-    <y>5</y>
-    <width>50</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
     <name>Text Update_58</name>
     <pv_name>$(P)$(N):softwareBuildDate</pv_name>
-    <x>1135</x>
+    <x>1570</x>
     <y>5</y>
-    <width>150</width>
+    <width>135</width>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -91,11 +77,67 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_59</name>
     <pv_name>$(P)$(N):firmwareBuildDate</pv_name>
-    <x>975</x>
+    <x>1425</x>
     <y>5</y>
-    <width>150</width>
+    <width>135</width>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>280</x>
+    <width>0</width>
+    <height>30</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="30.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_2</name>
+    <x>859</x>
+    <y>0\</y>
+    <width>1</width>
+    <height>30</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="30.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>$(P)$(N):FPGA:reboot</pv_name>
+    <text>Boot Gold</text>
+    <x>865</x>
+    <y>5</y>
+    <width>80</width>
+    <height>20</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)$(N):APP:IPADDR</pv_name>
+    <x>960</x>
+    <y>5</y>
+    <width>140</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_6</name>
+    <pv_name>$(P)$(N):APP:FW_CODEHASH</pv_name>
+    <x>1120</x>
+    <y>5</y>
+    <width>305</width>
+    <format>6</format>
   </widget>
 </display>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-16 10:30:24 by dev-->
+<!--Saved on 2024-05-06 13:46:40 by atf-->
 <display version="2.0.0">
   <name>Display</name>
-  <width>545</width>
-  <height>40</height>
+  <width>645</width>
+  <height>35</height>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)SA:Ch$(N):Min-I</pv_name>
@@ -25,14 +25,14 @@
     <pv_name>$(P)SA:Ch$(N):Std-I</pv_name>
     <x>325</x>
     <y>5</y>
-    <width>60</width>
+    <width>65</width>
     <height>25</height>
     <format>3</format>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>$(P)SA:Ch$(N):Max-I</pv_name>
-    <x>395</x>
+    <x>400</x>
     <y>5</y>
     <width>60</width>
     <height>25</height>
@@ -40,7 +40,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P)SA:Ch$(N):Cnt-I</pv_name>
-    <x>465</x>
+    <x>470</x>
     <y>5</y>
     <width>60</width>
     <height>25</height>
@@ -77,5 +77,65 @@
       <item>Item 1</item>
       <item>Item 2</item>
     </items>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(P)ACQ:HIHIstatus:$(N)</pv_name>
+    <x>620</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(P)ACQ:HIstatus:$(N)</pv_name>
+    <x>595</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(P)ACQ:LOstatus:$(N)</pv_name>
+    <x>570</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>$(P)ACQ:LOLOstatus:$(N)</pv_name>
+    <x>545</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
   </widget>
 </display>

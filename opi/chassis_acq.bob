@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 14:09:12 by dev-->
+<!--Saved on 2024-05-07 14:29:05 by atf-->
 <display version="2.0.0">
   <name>Acq</name>
   <widget type="label" version="2.0.0">
@@ -433,5 +433,86 @@
     <x>600</x>
     <y>10</y>
     <height>21</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(EVG)ACQ:rate</pv_name>
+    <x>1657</x>
+    <y>141</y>
+    <width>126</width>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>ADC Acquire</text>
+    <x>1630</x>
+    <y>31</y>
+    <width>167</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_16</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(EVG)ACQ:enable</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Disable</text>
+    <x>1630</x>
+    <y>61</y>
+    <width>80</width>
+    <height>25</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_17</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(EVG)ACQ:enable</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Enable</text>
+    <x>1717</x>
+    <y>61</y>
+    <width>80</width>
+    <height>25</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(EVG)ACQ:enable</pv_name>
+    <bit>0</bit>
+    <x>1803</x>
+    <y>61</y>
+    <width>25</width>
+    <height>25</height>
+    <off_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>ADC Samp. Rate</text>
+    <x>1657</x>
+    <y>111</y>
+    <width>126</width>
+    <height>25</height>
   </widget>
 </display>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 11:08:19 by dev-->
+<!--Saved on 2024-05-06 14:56:15 by atf-->
 <display version="2.0.0">
   <name>Boot</name>
   <widget type="label" version="2.0.0">
@@ -36,17 +36,11 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
-    <text>Auto boot</text>
+    <text>Auto boot to App</text>
     <x>130</x>
-    <y>70</y>
+    <y>50</y>
     <width>70</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_4</name>
-    <text>Sts Age</text>
-    <x>940</x>
-    <y>70</y>
-    <width>70</width>
+    <height>40</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
@@ -59,8 +53,8 @@
     <name>Polyline_1</name>
     <x>870</x>
     <y>310</y>
-    <width>0</width>
-    <height>0</height>
+    <width>1</width>
+    <height>1</height>
     <points>
       <point x="0.0" y="0.0">
       </point>
@@ -74,7 +68,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>100</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -86,7 +80,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>130</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -98,7 +92,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>160</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -110,7 +104,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>190</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -122,7 +116,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>220</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -134,7 +128,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>250</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -146,7 +140,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>280</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -158,7 +152,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>310</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -170,7 +164,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>340</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -182,7 +176,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>370</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -194,7 +188,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>400</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -206,7 +200,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>430</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -218,7 +212,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>460</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -230,7 +224,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>490</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -242,7 +236,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>520</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -254,7 +248,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>550</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -266,7 +260,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>580</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -278,7 +272,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>610</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -290,7 +284,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>640</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -302,7 +296,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>670</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -314,7 +308,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>700</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -326,7 +320,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>730</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -338,7 +332,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>760</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -350,7 +344,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>790</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -362,7 +356,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>820</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -374,7 +368,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>850</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -386,7 +380,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>880</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -398,7 +392,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>910</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -410,7 +404,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>940</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -422,7 +416,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>970</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -434,7 +428,7 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>1000</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -446,38 +440,51 @@
     <file>_chassis_boot.bob</file>
     <x>10</x>
     <y>1030</y>
-    <width>960</width>
+    <width>1790</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
-  <widget type="polyline" version="2.0.0">
-    <name>Polyline</name>
-    <x>290</x>
-    <y>60</y>
-    <width>0</width>
-    <height>360</height>
-    <points>
-      <point x="0.0" y="360.0">
-      </point>
-      <point x="0.0" y="0.0">
-      </point>
-      <point x="0.0" y="0.0">
-      </point>
-    </points>
-  </widget>
-  <widget type="polyline" version="2.0.0">
-    <name>Polyline_2</name>
-    <x>860</x>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Address</text>
+    <x>320</x>
     <y>70</y>
-    <width>0</width>
-    <height>310</height>
-    <points>
-      <point x="0.0" y="0.0">
-      </point>
-      <point x="0.0" y="310.0">
-      </point>
-      <point x="0.0" y="310.0">
-      </point>
-    </points>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Address</text>
+    <x>980</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Name</text>
+    <x>440</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>FW VCS Hash</text>
+    <x>570</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>FW VCS Hash</text>
+    <x>1180</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>FW Build Date</text>
+    <x>1450</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>MCU SW Build Date</text>
+    <x>1590</x>
+    <y>70</y>
+    <width>140</width>
   </widget>
 </display>
