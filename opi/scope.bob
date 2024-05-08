@@ -3,7 +3,7 @@
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
-    <EVG>NASA_ACQ:01:</EVG>
+    <EVG>FDAS:01:</EVG>
   </macros>
   <width>1010</width>
   <height>1520</height>
@@ -897,7 +897,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:01:</P>
+          <P>FDAS:01:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 1</description>
@@ -905,7 +905,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:02:</P>
+          <P>FDAS:02:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 2</description>
@@ -913,7 +913,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:03:</P>
+          <P>FDAS:03:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 3</description>
@@ -921,7 +921,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:04:</P>
+          <P>FDAS:04:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 4</description>
@@ -929,7 +929,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:05:</P>
+          <P>FDAS:05:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 5</description>
@@ -937,7 +937,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:06:</P>
+          <P>FDAS:06:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 6</description>
@@ -945,7 +945,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:07:</P>
+          <P>FDAS:07:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 7</description>
@@ -953,7 +953,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:08:</P>
+          <P>FDAS:08:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 8</description>
@@ -961,7 +961,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:09:</P>
+          <P>FDAS:09:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 9</description>
@@ -969,7 +969,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:10:</P>
+          <P>FDAS:10:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 10</description>
@@ -977,7 +977,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:11:</P>
+          <P>FDAS:11:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 11</description>
@@ -985,7 +985,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:12:</P>
+          <P>FDAS:12:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 12</description>
@@ -993,7 +993,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:13:</P>
+          <P>FDAS:13:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 13</description>
@@ -1001,7 +1001,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:14:</P>
+          <P>FDAS:14:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 14</description>
@@ -1009,7 +1009,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:15:</P>
+          <P>FDAS:15:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 15</description>
@@ -1017,7 +1017,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:16:</P>
+          <P>FDAS:16:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 16</description>
@@ -1025,7 +1025,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:17:</P>
+          <P>FDAS:17:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 17</description>
@@ -1033,7 +1033,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:18:</P>
+          <P>FDAS:18:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 18</description>
@@ -1041,7 +1041,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:19:</P>
+          <P>FDAS:19:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 19</description>
@@ -1049,7 +1049,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:20:</P>
+          <P>FDAS:20:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 20</description>
@@ -1057,7 +1057,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:21:</P>
+          <P>FDAS:21:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 21</description>
@@ -1065,7 +1065,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:22:</P>
+          <P>FDAS:22:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 22</description>
@@ -1073,7 +1073,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:23:</P>
+          <P>FDAS:23:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 23</description>
@@ -1081,7 +1081,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:24:</P>
+          <P>FDAS:24:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 24</description>
@@ -1089,7 +1089,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:25:</P>
+          <P>FDAS:25:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 25</description>
@@ -1097,7 +1097,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:26:</P>
+          <P>FDAS:26:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 26</description>
@@ -1105,7 +1105,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:27:</P>
+          <P>FDAS:27:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 27</description>
@@ -1113,7 +1113,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:28:</P>
+          <P>FDAS:28:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 28</description>
@@ -1121,7 +1121,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:29:</P>
+          <P>FDAS:29:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 29</description>
@@ -1129,7 +1129,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:30:</P>
+          <P>FDAS:30:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 30</description>
@@ -1137,7 +1137,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:31:</P>
+          <P>FDAS:31:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 31</description>
@@ -1145,7 +1145,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>NASA_ACQ:32:</P>
+          <P>FDAS:32:</P>
         </macros>
         <target>replace</target>
         <description>Chassis 32</description>

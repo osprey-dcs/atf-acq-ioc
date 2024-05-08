@@ -3,8 +3,8 @@
 
 ###############################################################################
 # Set up environment
-epicsEnvSet(P, "NASA_ACQ:$(NODE):")
-epicsEnvSet(EVG, "NASA_ACQ:")
+epicsEnvSet(P, "FDAS:$(NODE):")
+epicsEnvSet(EVG, "FDAS:")
 
 ###############################################################################
 # Register support components

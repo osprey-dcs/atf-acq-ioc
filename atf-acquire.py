@@ -18,7 +18,7 @@ def getargs():
     P = ArgumentParser()
     P.add_argument('outdir', type=Path,
                    help='Output directory')
-    P.add_argument('--pv-prefix', default='NASA_ACQ:')
+    P.add_argument('--pv-prefix', default='FDAS:')
     P.add_argument('-n', '--dry-run', action='store_false',
                    dest='doit', default=True,
                    help='Only show actions, do not execute')

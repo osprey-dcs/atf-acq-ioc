@@ -3,7 +3,7 @@
 <display version="2.0.0">
   <name>Main</name>
   <macros>
-    <P>NASA_ACQ:</P>
+    <P>FDAS:</P>
     <EVG>$(P)</EVG>
   </macros>
   <widget type="label" version="2.0.0">

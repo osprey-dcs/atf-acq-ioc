@@ -47,7 +47,7 @@
     <pv>
       <display_name>1</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch01:Mean-I</name>
+      <name>FDAS:01:SA:Ch01:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -67,7 +67,7 @@
     <pv>
       <display_name>2</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch02:Mean-I</name>
+      <name>FDAS:01:SA:Ch02:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -87,7 +87,7 @@
     <pv>
       <display_name>3</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch02:Mean-I</name>
+      <name>FDAS:01:SA:Ch02:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -107,7 +107,7 @@
     <pv>
       <display_name>4</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch04:Mean-I</name>
+      <name>FDAS:01:SA:Ch04:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>127</red>
@@ -127,7 +127,7 @@
     <pv>
       <display_name>5</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch05:Mean-I</name>
+      <name>FDAS:01:SA:Ch05:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -147,7 +147,7 @@
     <pv>
       <display_name>6</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch06:Mean-I</name>
+      <name>FDAS:01:SA:Ch06:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -167,7 +167,7 @@
     <pv>
       <display_name>7</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch07:Mean-I</name>
+      <name>FDAS:01:SA:Ch07:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -187,7 +187,7 @@
     <pv>
       <display_name>8</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch08:Mean-I</name>
+      <name>FDAS:01:SA:Ch08:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>127</red>
@@ -207,7 +207,7 @@
     <pv>
       <display_name>9</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch09:Mean-I</name>
+      <name>FDAS:01:SA:Ch09:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -227,7 +227,7 @@
     <pv>
       <display_name>10</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch10:Mean-I</name>
+      <name>FDAS:01:SA:Ch10:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>255</red>
@@ -247,7 +247,7 @@
     <pv>
       <display_name>11</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch11:Mean-I</name>
+      <name>FDAS:01:SA:Ch11:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -267,7 +267,7 @@
     <pv>
       <display_name>12</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch12:Mean-I</name>
+      <name>FDAS:01:SA:Ch12:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>0</red>
@@ -287,7 +287,7 @@
     <pv>
       <display_name>13</display_name>
       <visible>true</visible>
-      <name>NASA_ACQ:01:SA:Ch13:Mean-I</name>
+      <name>FDAS:01:SA:Ch13:Mean-I</name>
       <axis>0</axis>
       <color>
         <red>127</red>
