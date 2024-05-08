@@ -44,11 +44,10 @@ nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
 nasaAcq_SRCS_DEFAULT += nasaAcqMain.cpp
 nasaAcq_SRCS_vxWorks += -nil-
 
-# Add support from base/src/vxWorks if needed
-#nasaAcq_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
-
-# Finally link to the EPICS Base libraries
-nasaAcq_LIBS += $(EPICS_BASE_IOC_LIBS)
+ifdef RECSYNC
+nasaAcq_DBD += reccaster.dbd
+nasaAcq_LIBS += reccaster
+endif
 
 # Link QSRV
 ifdef PVXS_MAJOR_VERSION # prefer v2
@@ -62,6 +61,9 @@ nasaAcq_DBD += PVAServerRegister.dbd
 nasaAcq_DBD += qsrv.dbd
 endif
 endif
+
+# Finally link to the EPICS Base libraries
+nasaAcq_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 #===========================
 
