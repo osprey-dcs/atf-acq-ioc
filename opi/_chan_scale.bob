@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-03-25 14:01:50 by dev-->
+<!--Saved on 2024-05-08 16:35:17 by atf-->
 <display version="2.0.0">
   <name>ch scale</name>
   <width>50</width>
@@ -10,6 +10,7 @@
     <x>5</x>
     <y>5</y>
     <width>40</width>
+    <format>3</format>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
@@ -17,5 +18,6 @@
     <x>5</x>
     <y>30</y>
     <width>40</width>
+    <format>3</format>
   </widget>
 </display>
