@@ -52,6 +52,12 @@ record(longin, "$(P)$(R)Quartz:serno") {
     field(INP,  "@name=$(PORT) reg=FMC1:SerialNumber")
 }
 
+record(longin, "$(P)$(R)DRDY:history") {
+    field(DESC, "DRDY mini-logic analyzer")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=DRDY:history")
+}
+
 #
 # Downsampling factor
 #
