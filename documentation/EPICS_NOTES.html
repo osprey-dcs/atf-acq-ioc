@@ -744,6 +744,18 @@
                     </span></td>
                 </tr>
                 <tr>
+                  <td style="vertical-align: middle; text-align:
+                    center;"><span style="font-family: Times New Roman,
+                      Times, serif;">27</span><span style="font-family:
+                      Times New Roman, Times, serif;"><br>
+                    </span></td>
+                  <td style="vertical-align: middle; text-align: left;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">The node is acting as an event generator
+                      (NTP server address is non-zero).<br>
+                    </span></td>
+                </tr>
+                <tr>
                   <td style="text-align: center;"><span
                       style="font-family: Times New Roman, Times,
                       serif;">28</span><span style="font-family: Times
@@ -855,6 +867,100 @@
           number of the Quartz FMC card is contained in the per-node
           longin record Quartz:serno.<br>
         </span></span></p>
+    <p><span style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;">The
+          history of the Quartz analog to digital converter DRDY lines
+          is captured in the longin record DRDY:history.&nbsp; Each
+          nibble, shown as a hexadecimal value, holds the status of the
+          four DRDY lines with an 8 ns sampling clock.&nbsp; The least
+          significant bit of each nibble corresponds to the first
+          ADC.&nbsp; The least significant nibble is the value of the
+          lines at the first rising edge of any of the lines after all
+          lines have been low.&nbsp; Sampling stops when all four lines
+          are high.&nbsp; The following table describes the conditions
+          associated with some possible values where '<span
+            style="font-style: italic;">x</span>' indicates a "don't
+          care" value and '<span style="font-style: italic;">y</span>'
+          indicates a value other then 'F':<br>
+        </span></span></p>
+    <table style=" text-align: left; width: 80%;" cellspacing="2"
+      cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">DRDY:history</span></span><br>
+          </td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-weight:
+                bold;">DRDY</span><span style="font-weight: bold;"><br>
+              </span><span style="font-weight: bold;">Aligned</span><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: Times New Roman, Times,
+                serif;">Description</span></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-style:
+                italic;">xxx</span>F</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">1</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">All DRDY rising edges are
+              aligned within about 8 ns.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-style:
+                italic;">xx</span>F<span style="font-style: italic;">y</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">1</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">All DRDY rising edges are
+              aligned within about 16 ns.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-style:
+                italic;">x</span>F<span style="font-style: italic;">yy</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">1</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">One or more DRDY </span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">rising
+                edges</span> are misaligned by more than about 8 ns, but
+              all are aligned within about 24 ns.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-style:
+                italic;"></span>F<span style="font-style: italic;">yyy</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">0</span><br>
+          </td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">One or more DRDY </span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">rising
+                edges</span> are misaligned by more than about 16 ns,</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;"><span style="font-style:
+                italic;"></span><span style="font-style: italic;">yyyy</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">0</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">DRDY </span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;">rising
+                edges</span> are misaligned. </span></td>
+        </tr>
+      </tbody>
+    </table>
     <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
       </span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">The
