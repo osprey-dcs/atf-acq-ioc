@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-07 14:36:03 by atf-->
+<!--Saved on 2024-05-09 15:18:48 by atf-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -370,8 +370,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>105</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -382,8 +382,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>145</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -394,8 +394,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>185</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -406,8 +406,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>225</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -418,8 +418,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>265</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -430,8 +430,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>305</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -442,8 +442,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>345</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -454,8 +454,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>385</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -466,8 +466,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>425</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -478,8 +478,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>465</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -490,8 +490,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>505</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -502,8 +502,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>545</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -514,8 +514,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>585</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -526,8 +526,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>625</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -538,8 +538,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>665</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -550,8 +550,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>705</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -562,8 +562,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>745</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -574,8 +574,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>785</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -586,8 +586,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>825</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -598,8 +598,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>865</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -610,8 +610,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>905</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -622,8 +622,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>945</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -634,8 +634,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>985</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -646,8 +646,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1025</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -658,8 +658,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1065</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -670,8 +670,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1105</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -682,8 +682,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1145</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -694,8 +694,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1185</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -706,8 +706,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1225</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -718,8 +718,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1265</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -730,8 +730,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1305</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
@@ -778,8 +778,8 @@
     <name>Active</name>
     <file>_chan_stats.bob</file>
     <y>360</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="textupdate" version="2.0.0">
@@ -1162,7 +1162,7 @@
     <text>Chassis $(P) Channel $(N)</text>
     <x>230</x>
     <y>90</y>
-    <width>250</width>
+    <width>320</width>
     <height>30</height>
     <font>
       <font family="Liberation Sans" style="BOLD" size="18.0">
@@ -1177,8 +1177,8 @@
     <file>_chan_stats.bob</file>
     <x>620</x>
     <y>1345</y>
-    <width>545</width>
-    <height>40</height>
+    <width>645</width>
+    <height>35</height>
     <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
@@ -1233,8 +1233,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
     <pv_name>$(P)SA:Ch$(N):ASLO</pv_name>
-    <x>100</x>
-    <y>895</y>
+    <x>80</x>
+    <y>935</y>
     <width>117</width>
     <height>30</height>
     <format>3</format>
@@ -1242,8 +1242,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_5</name>
     <pv_name>$(P)SA:Ch$(N):ESLO</pv_name>
-    <x>230</x>
-    <y>895</y>
+    <x>210</x>
+    <y>935</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -1251,8 +1251,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)SA:Ch$(N):SLO</pv_name>
-    <x>350</x>
-    <y>895</y>
+    <x>330</x>
+    <y>935</y>
     <width>120</width>
     <height>30</height>
     <format>3</format>
@@ -1260,37 +1260,37 @@
   <widget type="label" version="2.0.0">
     <name>Label_13</name>
     <text>Slope</text>
-    <x>30</x>
-    <y>895</y>
+    <x>10</x>
+    <y>935</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_15</name>
     <text>ADC -&gt; V</text>
-    <x>100</x>
-    <y>865</y>
+    <x>80</x>
+    <y>905</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_16</name>
     <text>V -&gt; EGU</text>
-    <x>240</x>
-    <y>865</y>
+    <x>220</x>
+    <y>905</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_17</name>
     <text>Combined</text>
-    <x>360</x>
-    <y>865</y>
+    <x>340</x>
+    <y>905</y>
     <width>90</width>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
     <pv_name>$(P)ACQ:LOLOstatus:$(N)</pv_name>
     <x>600</x>
-    <y>825</y>
+    <y>850</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1306,7 +1306,7 @@
     <name>LED_2</name>
     <pv_name>$(P)ACQ:LOstatus:$(N)</pv_name>
     <x>600</x>
-    <y>795</y>
+    <y>820</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1322,7 +1322,7 @@
     <name>LED_3</name>
     <pv_name>$(P)ACQ:HIstatus:$(N)</pv_name>
     <x>600</x>
-    <y>765</y>
+    <y>790</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1338,7 +1338,7 @@
     <name>LED_4</name>
     <pv_name>$(P)ACQ:HIHIstatus:$(N)</pv_name>
     <x>600</x>
-    <y>735</y>
+    <y>760</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1353,8 +1353,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_3</name>
     <pv_name>$(P)SA:Ch$(N):AOFF</pv_name>
-    <x>100</x>
-    <y>931</y>
+    <x>80</x>
+    <y>971</y>
     <width>117</width>
     <height>30</height>
     <format>3</format>
@@ -1362,8 +1362,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_4</name>
     <pv_name>$(P)SA:Ch$(N):EOFF</pv_name>
-    <x>230</x>
-    <y>931</y>
+    <x>210</x>
+    <y>971</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -1371,8 +1371,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>$(P)SA:Ch$(N):OFF</pv_name>
-    <x>350</x>
-    <y>931</y>
+    <x>330</x>
+    <y>971</y>
     <width>120</width>
     <height>30</height>
     <format>3</format>
@@ -1380,8 +1380,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_14</name>
     <text>Offset</text>
-    <x>30</x>
-    <y>931</y>
+    <x>10</x>
+    <y>971</y>
     <width>60</width>
     <height>30</height>
   </widget>
@@ -1389,29 +1389,33 @@
     <name>Text Entry_6</name>
     <pv_name>$(P)ACQ:HIHIlim:$(N)</pv_name>
     <x>480</x>
-    <y>735</y>
+    <y>760</y>
     <width>110</width>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_8</name>
     <pv_name>$(P)ACQ:HIlim:$(N)</pv_name>
     <x>480</x>
-    <y>765</y>
+    <y>790</y>
     <width>110</width>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_9</name>
     <pv_name>$(P)ACQ:LOlim:$(N)</pv_name>
     <x>480</x>
-    <y>795</y>
+    <y>820</y>
     <width>110</width>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_10</name>
     <pv_name>$(P)ACQ:LOLOlim:$(N)</pv_name>
     <x>480</x>
-    <y>825</y>
+    <y>850</y>
     <width>110</width>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_11</name>
@@ -1425,8 +1429,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_12</name>
     <pv_name>$(P)SA:Ch$(N):EGU</pv_name>
-    <x>480</x>
-    <y>905</y>
+    <x>117</x>
+    <y>860</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -1434,8 +1438,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_19</name>
     <text>EGU Label</text>
-    <x>490</x>
-    <y>881</y>
+    <x>20</x>
+    <y>860</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
@@ -1449,28 +1453,28 @@
     <name>Label_21</name>
     <text>HIHI</text>
     <x>390</x>
-    <y>735</y>
+    <y>760</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_22</name>
     <text>HI</text>
     <x>390</x>
-    <y>765</y>
+    <y>790</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_23</name>
     <text>LO</text>
     <x>390</x>
-    <y>795</y>
+    <y>820</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_24</name>
     <text>LOLO</text>
     <x>390</x>
-    <y>825</y>
+    <y>850</y>
     <width>90</width>
   </widget>
   <widget type="bool_button" version="2.0.0">
@@ -1480,5 +1484,53 @@
     <y>820</y>
     <width>51</width>
     <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)SA:Ch$(N):MAX</pv_name>
+    <x>480</x>
+    <y>735</y>
+    <width>110</width>
+    <height>21</height>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)SA:Ch$(N):MIN</pv_name>
+    <x>480</x>
+    <y>880</y>
+    <width>110</width>
+    <height>21</height>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>Max. in EGU</text>
+    <x>390</x>
+    <y>735</y>
+    <width>90</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_26</name>
+    <text>Min in EGU</text>
+    <x>390</x>
+    <y>880</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_5</name>
+    <pv_name>$(P)SA:Ch$(N):LASTCAL</pv_name>
+    <x>127</x>
+    <y>1020</y>
+    <width>260</width>
+    <format>3</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>Last OK Calib.</text>
+    <x>10</x>
+    <y>1020</y>
+    <width>107</width>
+    <height>30</height>
   </widget>
 </display>
