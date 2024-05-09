@@ -43,6 +43,37 @@ record(stringout, "$(P)SA:Ch$(N):EGU") {
     info(autosaveFields_pass0, "VAL")
 }
 
+# note about most recent calibration run
+record(ao, "$(P)SA:Ch$(N):TCAL") {
+    field(PINI, "YES")
+    # out of bounds invalid...  (prevents -1, which would break SDIS logic below)
+    field(HIHI, "0xffffffff")
+    field(LOLO, "-1")
+    field(HHSV, "INVALID")
+    field(LLSV, "INVALID")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+    # 0 for out of cal
+    field(LOW , "0")
+    field(LSV , "MAJOR")
+    field(FLNK, "$(P)SA:Ch$(N):LASTCAL_")
+    info(autosaveFields_pass0, "VAL")
+}
+record(ai, "$(P)SA:Ch$(N):LASTCAL_") {
+    field(DTYP, "Copy VAL to TIME")
+    field(TSE , "-2")
+    field(INP , "$(P)SA:Ch$(N):TCAL")
+    field(FLNK, "$(P)SA:Ch$(N):LASTCAL")
+}
+record(stringin, "$(P)SA:Ch$(N):LASTCAL") {
+    field(SDIS, "$(P)SA:Ch$(N):TCAL MS")
+    field(DISV, "-1")
+    field(DESC, "$(NAME) (human-readable)")
+    field(DTYP, "Soft Timestamp")
+    field(INP,  "@%Y-%m-%d %H:%M:%S")
+    field(TSEL, "$(P)SA:Ch$(N):LASTCAL_.TIME")
+}
+
 # V = ASLO*ADC + AOFF
 # EU= ESLO*V   + EOFF
 #
