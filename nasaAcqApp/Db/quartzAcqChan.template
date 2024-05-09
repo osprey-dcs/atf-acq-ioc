@@ -73,6 +73,8 @@ record(calc, "$(P)SA:Ch$(N):MAX") {
     field(INPC, "8388607")
     field(INPD, "-8388608")
     field(CALC, "A * (A>0 ? C : D) + B")
+    field(EGU , "EGU")
+    field(PREC, "6")
 }
 record(calc, "$(P)SA:Ch$(N):MIN") {
     field(INPA, "$(P)SA:Ch$(N):SLO CP MS")
@@ -80,6 +82,8 @@ record(calc, "$(P)SA:Ch$(N):MIN") {
     field(INPC, "8388607")
     field(INPD, "-8388608")
     field(CALC, "A * (A<0 ? C : D) + B")
+    field(EGU , "EGU")
+    field(PREC, "6")
 }
 
 # /-- from quartzAcq (Chan0) or previous channel
