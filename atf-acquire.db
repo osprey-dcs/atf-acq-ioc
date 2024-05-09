@@ -1,0 +1,9 @@
+record(lso, "$(P)SA:DESC") {
+    field(SIZV, "128")
+}
+record(lso, "$(P)SA:FILE") {
+    field(SIZV, "128")
+}
+record(lso, "$(P)SA:FILEHASH") {
+    field(SIZV, "128")
+}
