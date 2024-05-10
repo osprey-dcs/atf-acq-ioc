@@ -102,17 +102,15 @@ record(calc, "$(P)SA:Ch$(N):MAX") {
     field(INPA, "$(P)SA:Ch$(N):ESLO CP MS")
     field(INPB, "$(P)SA:Ch$(N):EOFF CP MS")
     field(INPC, "10")
-    field(INPD, "-10")
-    field(CALC, "A * (A>0 ? C : D) + B")
+    field(CALC, "A*C+B")
     field(EGU , "EGU")
     field(PREC, "6")
 }
 record(calc, "$(P)SA:Ch$(N):MIN") {
     field(INPA, "$(P)SA:Ch$(N):ESLO CP MS")
     field(INPB, "$(P)SA:Ch$(N):EOFF CP MS")
-    field(INPC, "10")
-    field(INPD, "-10")
-    field(CALC, "A * (A<0 ? C : D) + B")
+    field(INPC, "-10")
+    field(CALC, "A*C+B")
     field(EGU , "EGU")
     field(PREC, "6")
 }
