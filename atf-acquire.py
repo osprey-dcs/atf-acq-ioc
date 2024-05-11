@@ -22,6 +22,8 @@ def getargs():
     P.add_argument('-n', '--dry-run', action='store_false',
                    dest='doit', default=True,
                    help='Only show actions, do not execute')
+    P.add_argument('-v', '--verbose', dest='level', default=logging.INFO,
+                   action='store_const', const=logging.DEBUG)
     return P
 
 class PV:
@@ -98,8 +100,8 @@ def main(args):
     info = {
         'AcquisitionId': PV(f'{prefix}SA:DESC'),
         #'Role1Name': PV(f'{prefix}SA:OPER'),
-        #'CCCR': PV(f'{prefix}SA:CCCR:FILE'),
-        #'CCCR_SHA256': PV(f'{prefix}SA:CCCR:HASH256'),
+        'CCCR': PV(f'{prefix}SA:FILE'),
+        'CCCR_SHA256': PV(f'{prefix}SA:FILEHASH'),
         'SampleRate': PV(f'{prefix}ACQ:rate'),
         # AcquisitionStartDate
         # AcquisitionEndDate
@@ -110,8 +112,9 @@ def main(args):
     nodeUsed = [False]*32
     for node in range(1, 33):
         for ch in range(1, 33):
+            signum = (node-1)*32 + ch # 1-1024
             use = int(next(Iinuse))
-            _log.debug('Use %d %d %s', node, ch, use)
+            _log.debug('Use %d %d / %d %s', node, ch, signum, use)
             if use==0:
                 continue
             elif use!=1:
@@ -119,17 +122,28 @@ def main(args):
             nodeUsed[node-1] = True
             S = {
                 'Address': {'Chassis':node, 'Channel':ch},
-                'Alias': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:DESC'),
+                'Name': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:DESC'),
                 'Egu': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:EGU'),
                 'Slope': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:SLO'),
                 'Intercept': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:OFF'),
                 'Coupling': PV(f'{prefix}{node:02d}:ACQ:coupling:{ch:02d}'),
+                #TODO: from PV
+                'SigNum': signum,
+                'Type': 0,
+                'Desc': '',
+                'ResponseNode':'',
+                'ResponseDirection':0,
+                'ReferenceNode':'',
+                'ReferenceDirection':0,
             }
             info['Signals'].append(S)
 
     assert any(nodeUsed)
 
     PV.fetch_all()
+    # can't allow duplicate Name among Use'd channels
+    sig_names = sorted([S['Name'].read() for S in info['Signals']])
+    assert not any([A==B for A,B in zip(sig_names[:1], sig_names[1:])]), sig_names
 
     _log.info('Setting up directory tree')
     _log.info('mkdir %s', args.outdir)
@@ -156,7 +170,7 @@ def main(args):
     batch.exec_(args.doit)
 
     if args.doit:
-        with (args.outdir / (desc[:] + '.json.before')).open('w') as F:
+        with (args.outdir / (desc[:] + '.json.before')).open('x') as F:
             json.dump(info, F, cls=PVEncoder, indent='  ')
 
     _log.info('Begin acquisition')
@@ -215,5 +229,5 @@ def main(args):
 
 if __name__=="__main__":
     args = getargs().parse_args()
-    logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(level=args.level)
     main(args)
