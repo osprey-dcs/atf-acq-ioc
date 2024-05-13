@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-04-11 16:20:33 by dev-->
+<!--Saved on 2024-05-13 13:23:05 by atf-->
 <display version="2.0.0">
   <name>Main</name>
   <macros>
-    <P>FDAS:</P>
+    <P>$(SYS)</P>
     <EVG>$(P)</EVG>
+    <SYS>FDAS:</SYS>
   </macros>
   <widget type="label" version="2.0.0">
     <name>Label</name>
@@ -188,7 +189,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>$(P)01:</P>
+          <P>$(SYS)01:</P>
           <N>01</N>
         </macros>
         <target>tab</target>

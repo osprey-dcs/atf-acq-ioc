@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-09 15:18:48 by atf-->
+<!--Saved on 2024-05-14 13:26:13 by atf-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -9,8 +9,8 @@
   <height>1520</height>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
-    <x>20</x>
-    <y>130</y>
+    <x>210</x>
+    <y>80</y>
     <width>583</width>
     <height>220</height>
     <x_axis>
@@ -77,290 +77,11 @@
   <widget type="led" version="2.0.0">
     <name>LED</name>
     <pv_name>$(P)SA:BufFul</pv_name>
-    <x>570</x>
-    <y>90</y>
+    <x>760</x>
+    <y>40</y>
     <width>30</width>
     <height>15</height>
     <square>true</square>
-  </widget>
-  <widget type="choice" version="2.0.0">
-    <name>Choice Button_1</name>
-    <pv_name>$(P)Record-Sel</pv_name>
-    <x>270</x>
-    <y>60</y>
-    <width>170</width>
-    <height>20</height>
-    <items>
-      <item>Item 1</item>
-      <item>Item 2</item>
-    </items>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_5</name>
-    <actions>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>01</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 1</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>02</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 2</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>03</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 3</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>04</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 4</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>05</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 5</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>06</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 6</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>07</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 7</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>08</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 8</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>09</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 9</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>10</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 10</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>11</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 11</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>12</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 12</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>13</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 13</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>14</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 14</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>15</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 15</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>16</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 16</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>17</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 17</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>18</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 18</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>19</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 19</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>20</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 20</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>21</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 21</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>22</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 22</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>23</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 23</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>24</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 24</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>25</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 25</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>26</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 26</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>27</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 27</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>28</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 28</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>29</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 29</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>30</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 30</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>31</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 31</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <N>32</N>
-        </macros>
-        <target>replace</target>
-        <description>Channel 32</description>
-      </action>
-    </actions>
-    <text>Channel</text>
-    <x>20</x>
-    <y>70</y>
-    <width>197</width>
-    <height>35</height>
-    <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>1</name>
@@ -368,8 +89,8 @@
       <N>01</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>105</y>
+    <x>835</x>
+    <y>55</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -380,8 +101,8 @@
       <N>02</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>145</y>
+    <x>835</x>
+    <y>95</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -392,8 +113,8 @@
       <N>03</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>185</y>
+    <x>835</x>
+    <y>135</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -404,8 +125,8 @@
       <N>04</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>225</y>
+    <x>835</x>
+    <y>175</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -416,8 +137,8 @@
       <N>05</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>265</y>
+    <x>835</x>
+    <y>215</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -428,8 +149,8 @@
       <N>06</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>305</y>
+    <x>835</x>
+    <y>255</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -440,8 +161,8 @@
       <N>07</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>345</y>
+    <x>835</x>
+    <y>295</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -452,8 +173,8 @@
       <N>08</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>385</y>
+    <x>835</x>
+    <y>335</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -464,8 +185,8 @@
       <N>09</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>425</y>
+    <x>835</x>
+    <y>375</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -476,8 +197,8 @@
       <N>10</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>465</y>
+    <x>835</x>
+    <y>415</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -488,8 +209,8 @@
       <N>11</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>505</y>
+    <x>835</x>
+    <y>455</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -500,8 +221,8 @@
       <N>12</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>545</y>
+    <x>835</x>
+    <y>495</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -512,8 +233,8 @@
       <N>13</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>585</y>
+    <x>835</x>
+    <y>535</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -524,8 +245,8 @@
       <N>14</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>625</y>
+    <x>835</x>
+    <y>575</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -536,8 +257,8 @@
       <N>15</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>665</y>
+    <x>835</x>
+    <y>615</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -548,8 +269,8 @@
       <N>16</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>705</y>
+    <x>835</x>
+    <y>655</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -560,8 +281,8 @@
       <N>17</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>745</y>
+    <x>835</x>
+    <y>695</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -572,8 +293,8 @@
       <N>18</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>785</y>
+    <x>835</x>
+    <y>735</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -584,8 +305,8 @@
       <N>19</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>825</y>
+    <x>835</x>
+    <y>775</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -596,8 +317,8 @@
       <N>20</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>865</y>
+    <x>835</x>
+    <y>815</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -608,8 +329,8 @@
       <N>21</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>905</y>
+    <x>835</x>
+    <y>855</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -620,8 +341,8 @@
       <N>22</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>945</y>
+    <x>835</x>
+    <y>895</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -632,8 +353,8 @@
       <N>23</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>985</y>
+    <x>835</x>
+    <y>935</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -644,8 +365,8 @@
       <N>24</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1025</y>
+    <x>835</x>
+    <y>975</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -656,8 +377,8 @@
       <N>25</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1065</y>
+    <x>835</x>
+    <y>1015</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -668,8 +389,8 @@
       <N>26</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1105</y>
+    <x>835</x>
+    <y>1055</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -680,8 +401,8 @@
       <N>27</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1145</y>
+    <x>835</x>
+    <y>1095</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -692,8 +413,8 @@
       <N>28</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1185</y>
+    <x>835</x>
+    <y>1135</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -704,8 +425,8 @@
       <N>29</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1225</y>
+    <x>835</x>
+    <y>1175</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -716,8 +437,8 @@
       <N>30</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1265</y>
+    <x>835</x>
+    <y>1215</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -728,8 +449,8 @@
       <N>31</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1305</y>
+    <x>835</x>
+    <y>1255</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -737,78 +458,56 @@
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <text>Min</text>
-    <x>800</x>
-    <y>70</y>
+    <x>1015</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
     <text>Mean</text>
-    <x>880</x>
-    <y>70</y>
+    <x>1095</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>Std</text>
-    <x>950</x>
-    <y>70</y>
+    <x>1165</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Max</text>
-    <x>1020</x>
-    <y>70</y>
+    <x>1235</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>Cnt</text>
-    <x>1090</x>
-    <y>70</y>
+    <x>1305</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Active</name>
     <file>_chan_stats.bob</file>
-    <y>360</y>
+    <x>190</x>
+    <y>310</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>$(P)LastFile-I.VAL$</pv_name>
-    <x>840</x>
-    <width>360</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_7</name>
-    <pv_name>$(P)LastErr-I.VAL$</pv_name>
-    <x>840</x>
-    <y>30</y>
-    <width>325</width>
-    <format>6</format>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>$(P)FileBase-SP.VAL$</pv_name>
-    <x>310</x>
-    <y>30</y>
-    <width>470</width>
-    <format>6</format>
-  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_2</name>
-    <x>20</x>
-    <y>405</y>
+    <x>210</x>
+    <y>355</y>
     <width>593</width>
     <height>330</height>
     <show_toolbar>true</show_toolbar>
@@ -876,10 +575,10 @@
   <widget type="choice" version="2.0.0">
     <name>Text Entry_7</name>
     <pv_name>$(P)SA:Ch$(N):FFT:Run-Sel</pv_name>
-    <x>127</x>
-    <y>745</y>
+    <x>317</x>
+    <y>695</y>
     <width>130</width>
-    <height>40</height>
+    <height>25</height>
     <background_color>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
@@ -890,278 +589,11 @@
       <item>Item 2</item>
     </items>
   </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_3</name>
-    <actions>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:01:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 1</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:02:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 2</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:03:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 3</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:04:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 4</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:05:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 5</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:06:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 6</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:07:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 7</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:08:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 8</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:09:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 9</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:10:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 10</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:11:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 11</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:12:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 12</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:13:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 13</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:14:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 14</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:15:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 15</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:16:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 16</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:17:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 17</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:18:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 18</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:19:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 19</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:20:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 20</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:21:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 21</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:22:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 22</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:23:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 23</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:24:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 24</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:25:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 25</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:26:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 26</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:27:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 27</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:28:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 28</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:29:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 29</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:30:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 30</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:31:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 31</description>
-      </action>
-      <action type="open_display">
-        <file>scope.bob</file>
-        <macros>
-          <P>FDAS:32:</P>
-        </macros>
-        <target>replace</target>
-        <description>Chassis 32</description>
-      </action>
-    </actions>
-    <text>Chassis Select</text>
-    <x>20</x>
-    <y>20</y>
-    <width>200</width>
-    <height>35</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
     <text>Chassis $(P) Channel $(N)</text>
-    <x>230</x>
-    <y>90</y>
+    <x>10</x>
+    <y>50</y>
     <width>320</width>
     <height>30</height>
     <font>
@@ -1175,8 +607,8 @@
       <N>32</N>
     </macros>
     <file>_chan_stats.bob</file>
-    <x>620</x>
-    <y>1345</y>
+    <x>835</x>
+    <y>1295</y>
     <width>645</width>
     <height>35</height>
     <resize>2</resize>
@@ -1184,57 +616,24 @@
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
     <text>Coupling</text>
-    <x>700</x>
-    <y>70</y>
+    <x>915</x>
+    <y>20</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_7</name>
-    <text>Channel FFT Enable</text>
-    <x>20</x>
-    <y>745</y>
+    <text>FFT Enable</text>
+    <x>210</x>
+    <y>695</y>
     <width>97</width>
-    <height>40</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_2</name>
-    <pv_name>$(P)FileDir-SP.VAL$</pv_name>
-    <x>310</x>
-    <width>470</width>
-    <format>6</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_8</name>
-    <text>Dir</text>
-    <x>260</x>
-    <width>40</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_9</name>
-    <text>File</text>
-    <x>260</x>
-    <y>30</y>
-    <width>40</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_10</name>
-    <text>Last</text>
-    <x>790</x>
-    <width>40</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_11</name>
-    <text>Err</text>
-    <x>790</x>
-    <y>30</y>
-    <width>40</width>
+    <height>25</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
     <pv_name>$(P)SA:Ch$(N):ASLO</pv_name>
-    <x>80</x>
-    <y>935</y>
+    <x>260</x>
+    <y>980</y>
     <width>117</width>
     <height>30</height>
     <format>3</format>
@@ -1242,8 +641,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_5</name>
     <pv_name>$(P)SA:Ch$(N):ESLO</pv_name>
-    <x>210</x>
-    <y>935</y>
+    <x>390</x>
+    <y>980</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -1251,8 +650,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)SA:Ch$(N):SLO</pv_name>
-    <x>330</x>
-    <y>935</y>
+    <x>510</x>
+    <y>980</y>
     <width>120</width>
     <height>30</height>
     <format>3</format>
@@ -1260,37 +659,37 @@
   <widget type="label" version="2.0.0">
     <name>Label_13</name>
     <text>Slope</text>
-    <x>10</x>
-    <y>935</y>
+    <x>190</x>
+    <y>980</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_15</name>
     <text>ADC -&gt; V</text>
-    <x>80</x>
-    <y>905</y>
+    <x>260</x>
+    <y>950</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_16</name>
     <text>V -&gt; EGU</text>
-    <x>220</x>
-    <y>905</y>
+    <x>400</x>
+    <y>950</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_17</name>
     <text>Combined</text>
-    <x>340</x>
-    <y>905</y>
+    <x>520</x>
+    <y>950</y>
     <width>90</width>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
     <pv_name>$(P)ACQ:LOLOstatus:$(N)</pv_name>
-    <x>600</x>
-    <y>850</y>
+    <x>790</x>
+    <y>800</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1305,8 +704,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
     <pv_name>$(P)ACQ:LOstatus:$(N)</pv_name>
-    <x>600</x>
-    <y>820</y>
+    <x>790</x>
+    <y>770</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1321,8 +720,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
     <pv_name>$(P)ACQ:HIstatus:$(N)</pv_name>
-    <x>600</x>
-    <y>790</y>
+    <x>790</x>
+    <y>740</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1337,8 +736,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
     <pv_name>$(P)ACQ:HIHIstatus:$(N)</pv_name>
-    <x>600</x>
-    <y>760</y>
+    <x>790</x>
+    <y>710</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -1353,8 +752,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_3</name>
     <pv_name>$(P)SA:Ch$(N):AOFF</pv_name>
-    <x>80</x>
-    <y>971</y>
+    <x>260</x>
+    <y>1016</y>
     <width>117</width>
     <height>30</height>
     <format>3</format>
@@ -1362,8 +761,8 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_4</name>
     <pv_name>$(P)SA:Ch$(N):EOFF</pv_name>
-    <x>210</x>
-    <y>971</y>
+    <x>390</x>
+    <y>1016</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -1371,8 +770,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>$(P)SA:Ch$(N):OFF</pv_name>
-    <x>330</x>
-    <y>971</y>
+    <x>510</x>
+    <y>1016</y>
     <width>120</width>
     <height>30</height>
     <format>3</format>
@@ -1380,48 +779,48 @@
   <widget type="label" version="2.0.0">
     <name>Label_14</name>
     <text>Offset</text>
-    <x>10</x>
-    <y>971</y>
+    <x>190</x>
+    <y>1016</y>
     <width>60</width>
     <height>30</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_6</name>
     <pv_name>$(P)ACQ:HIHIlim:$(N)</pv_name>
-    <x>480</x>
-    <y>760</y>
+    <x>670</x>
+    <y>710</y>
     <width>110</width>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_8</name>
     <pv_name>$(P)ACQ:HIlim:$(N)</pv_name>
-    <x>480</x>
-    <y>790</y>
+    <x>670</x>
+    <y>740</y>
     <width>110</width>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_9</name>
     <pv_name>$(P)ACQ:LOlim:$(N)</pv_name>
-    <x>480</x>
-    <y>820</y>
+    <x>670</x>
+    <y>770</y>
     <width>110</width>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_10</name>
     <pv_name>$(P)ACQ:LOLOlim:$(N)</pv_name>
-    <x>480</x>
-    <y>850</y>
+    <x>670</x>
+    <y>800</y>
     <width>110</width>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_11</name>
-    <pv_name>$(P)SA:Ch$(N):DESC.VAL$</pv_name>
-    <x>65</x>
-    <y>820</y>
+    <pv_name>$(P)SA:Ch$(N):NAME.VAL$</pv_name>
+    <x>255</x>
+    <y>770</y>
     <width>310</width>
     <height>30</height>
     <format>6</format>
@@ -1429,67 +828,72 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_12</name>
     <pv_name>$(P)SA:Ch$(N):EGU</pv_name>
-    <x>117</x>
-    <y>860</y>
+    <x>377</x>
+    <y>730</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_19</name>
-    <text>EGU Label</text>
-    <x>20</x>
-    <y>860</y>
-    <width>90</width>
+    <text>EGU</text>
+    <x>317</x>
+    <y>730</y>
+    <width>60</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_20</name>
-    <text>Signal Name</text>
-    <x>90</x>
-    <y>795</y>
-    <width>90</width>
+    <text>Name</text>
+    <x>180</x>
+    <y>770</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_21</name>
     <text>HIHI</text>
-    <x>390</x>
-    <y>760</y>
+    <x>580</x>
+    <y>710</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_22</name>
     <text>HI</text>
-    <x>390</x>
-    <y>790</y>
+    <x>580</x>
+    <y>740</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_23</name>
     <text>LO</text>
-    <x>390</x>
-    <y>820</y>
+    <x>580</x>
+    <y>770</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_24</name>
     <text>LOLO</text>
-    <x>390</x>
-    <y>850</y>
+    <x>580</x>
+    <y>800</y>
     <width>90</width>
   </widget>
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button</name>
     <pv_name>$(P)SA:Ch$(N):USE</pv_name>
-    <x>10</x>
-    <y>820</y>
+    <x>255</x>
+    <y>730</y>
     <width>51</width>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>$(P)SA:Ch$(N):MAX</pv_name>
-    <x>480</x>
-    <y>735</y>
+    <x>670</x>
+    <y>685</y>
     <width>110</width>
     <height>21</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1497,8 +901,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P)SA:Ch$(N):MIN</pv_name>
-    <x>480</x>
-    <y>880</y>
+    <x>670</x>
+    <y>830</y>
     <width>110</width>
     <height>21</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1506,31 +910,1345 @@
   <widget type="label" version="2.0.0">
     <name>Label_25</name>
     <text>Max. in EGU</text>
-    <x>390</x>
-    <y>735</y>
+    <x>580</x>
+    <y>685</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_26</name>
     <text>Min in EGU</text>
-    <x>390</x>
-    <y>880</y>
+    <x>580</x>
+    <y>830</y>
     <width>90</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_5</name>
     <pv_name>$(P)SA:Ch$(N):LASTCAL</pv_name>
-    <x>127</x>
-    <y>1020</y>
+    <x>307</x>
+    <y>1065</y>
     <width>260</width>
     <format>3</format>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_18</name>
     <text>Last OK Calib.</text>
-    <x>10</x>
-    <y>1020</y>
+    <x>190</x>
+    <y>1065</y>
     <width>107</width>
     <height>30</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 1</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:01:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 1</text>
+    <x>10</x>
+    <y>90</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 2</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:02:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 2</text>
+    <x>10</x>
+    <y>110</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 3</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:03:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 3</text>
+    <x>10</x>
+    <y>130</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 4</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:04:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 4</text>
+    <x>10</x>
+    <y>150</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 5</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:05:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 5</text>
+    <x>10</x>
+    <y>170</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 6</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:06:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 6</text>
+    <x>10</x>
+    <y>190</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 7</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:07:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 7</text>
+    <x>10</x>
+    <y>210</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 8</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:08:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 8</text>
+    <x>10</x>
+    <y>230</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 9</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:09:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 9</text>
+    <x>10</x>
+    <y>250</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 10</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:10:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 10</text>
+    <x>10</x>
+    <y>270</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 11</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:11:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 11</text>
+    <x>10</x>
+    <y>290</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 12</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:12:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 12</text>
+    <x>10</x>
+    <y>310</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 13</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:13:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 13</text>
+    <x>10</x>
+    <y>330</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 14</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:14:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 14</text>
+    <x>10</x>
+    <y>350</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 15</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:15:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 15</text>
+    <x>10</x>
+    <y>370</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 16</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:16:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 16</text>
+    <x>10</x>
+    <y>390</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 17</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:17:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 17</text>
+    <x>10</x>
+    <y>410</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 18</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:18:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 18</text>
+    <x>10</x>
+    <y>430</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 19</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:19:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 19</text>
+    <x>10</x>
+    <y>450</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 20</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:20:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 20</text>
+    <x>10</x>
+    <y>470</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 21</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:21:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 21</text>
+    <x>10</x>
+    <y>490</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 22</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:22:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 22</text>
+    <x>10</x>
+    <y>510</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 23</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:23:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 23</text>
+    <x>10</x>
+    <y>530</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 24</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:24:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 24</text>
+    <x>10</x>
+    <y>550</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 25</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:25:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 25</text>
+    <x>10</x>
+    <y>570</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 26</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:26:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 26</text>
+    <x>10</x>
+    <y>590</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 27</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:27:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 27</text>
+    <x>10</x>
+    <y>610</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 28</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:28:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 28</text>
+    <x>10</x>
+    <y>630</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 29</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:29:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 29</text>
+    <x>10</x>
+    <y>650</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 30</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:30:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 30</text>
+    <x>10</x>
+    <y>670</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 31</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:31:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 31</text>
+    <x>10</x>
+    <y>690</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 32</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <P>FDAS:32:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 32</text>
+    <x>10</x>
+    <y>710</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>sys://time</pv_name>
+    <x>10</x>
+    <y>10</y>
+    <width>180</width>
+    <height>25</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 1</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>01</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 1</text>
+    <x>90</x>
+    <y>90</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 2</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>02</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 2</text>
+    <x>90</x>
+    <y>110</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 3</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>03</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 3</text>
+    <x>90</x>
+    <y>130</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 4</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>04</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 4</text>
+    <x>90</x>
+    <y>150</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 5</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>05</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 5</text>
+    <x>90</x>
+    <y>170</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 6</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>06</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 6</text>
+    <x>90</x>
+    <y>190</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 7</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>07</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 7</text>
+    <x>90</x>
+    <y>210</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 8</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>08</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 8</text>
+    <x>90</x>
+    <y>230</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 9</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>09</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 9</text>
+    <x>90</x>
+    <y>250</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 10</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>10</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 10</text>
+    <x>90</x>
+    <y>270</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 11</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>11</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 11</text>
+    <x>90</x>
+    <y>290</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 12</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>12</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 12</text>
+    <x>90</x>
+    <y>310</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 13</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>13</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 13</text>
+    <x>90</x>
+    <y>330</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 14</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>14</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 14</text>
+    <x>90</x>
+    <y>350</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 15</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>15</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 15</text>
+    <x>90</x>
+    <y>370</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 16</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>16</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 16</text>
+    <x>90</x>
+    <y>390</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 17</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>17</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 17</text>
+    <x>90</x>
+    <y>410</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 18</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>18</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 18</text>
+    <x>90</x>
+    <y>430</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 19</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>19</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 19</text>
+    <x>90</x>
+    <y>450</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 20</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>20</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 20</text>
+    <x>90</x>
+    <y>470</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 21</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>21</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 21</text>
+    <x>90</x>
+    <y>490</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 22</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>22</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 22</text>
+    <x>90</x>
+    <y>510</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 23</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>23</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 23</text>
+    <x>90</x>
+    <y>530</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 24</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>24</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 24</text>
+    <x>90</x>
+    <y>550</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 25</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>25</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 25</text>
+    <x>90</x>
+    <y>570</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 26</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>26</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 26</text>
+    <x>90</x>
+    <y>590</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 27</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>27</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 27</text>
+    <x>90</x>
+    <y>610</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 28</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>28</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 28</text>
+    <x>90</x>
+    <y>630</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 29</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>29</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 29</text>
+    <x>90</x>
+    <y>650</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 30</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>30</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 30</text>
+    <x>90</x>
+    <y>670</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 31</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>31</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 31</text>
+    <x>90</x>
+    <y>690</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 32</name>
+    <actions>
+      <action type="open_display">
+        <file>scope.bob</file>
+        <macros>
+          <N>32</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 32</text>
+    <x>90</x>
+    <y>710</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_27</name>
+    <text>In Use</text>
+    <x>170</x>
+    <y>730</y>
+    <width>80</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_13</name>
+    <pv_name>$(P)SA:Ch$(N):DESC.VAL$</pv_name>
+    <x>255</x>
+    <y>810</y>
+    <width>310</width>
+    <height>30</height>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>Desc.</text>
+    <x>180</x>
+    <y>810</y>
+    <width>70</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>Line 5</text>
+    <x>180</x>
+    <y>850</y>
+    <width>70</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_14</name>
+    <pv_name>$(P)SA:Ch$(N):DESC5.VAL$</pv_name>
+    <x>255</x>
+    <y>850</y>
+    <width>310</width>
+    <height>30</height>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
+    <text>Resp. Node</text>
+    <x>120</x>
+    <y>895</y>
+    <width>130</width>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_15</name>
+    <pv_name>$(P)SA:Ch$(N):RESPNODE</pv_name>
+    <x>255</x>
+    <y>895</y>
+    <width>75</width>
+    <height>30</height>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box</name>
+    <pv_name>$(P)SA:Ch$(N):RESPDIR</pv_name>
+    <x>340</x>
+    <y>895</y>
+    <width>160</width>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>$(P)SA:Ch$(N):SDTYP</pv_name>
+    <x>580</x>
+    <y>895</y>
+    <width>110</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_31</name>
+    <text>Type</text>
+    <x>510</x>
+    <y>895</y>
+    <width>55</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>
