@@ -19,6 +19,8 @@ def getargs():
     P.add_argument('outdir', type=Path,
                    help='Output directory')
     P.add_argument('--pv-prefix', default='FDAS:')
+    P.add_argument('--force-all', action='store_true',
+                   help='Acquire with all chassis regardless of USE flags')
     P.add_argument('-n', '--dry-run', action='store_false',
                    dest='doit', default=True,
                    help='Only show actions, do not execute')
@@ -109,7 +111,7 @@ def main(args):
         'Chassis': [],
     }
     Iinuse = iter(inuse)
-    nodeUsed = [False]*32
+    nodeUsed = [args.force_all]*32
     for node in range(1, 33):
         for ch in range(1, 33):
             signum = (node-1)*32 + ch # 1-1024
@@ -118,7 +120,7 @@ def main(args):
             if use==0:
                 continue
             elif use!=1:
-                _log.debug('Use?? %d %d %s', node, ch, use)
+                _log.warning('Use?? %d %d %s', node, ch, use)
             nodeUsed[node-1] = True
             S = {
                 'Address': {'Chassis':node, 'Channel':ch},
