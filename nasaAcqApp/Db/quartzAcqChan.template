@@ -33,8 +33,102 @@ record(bo, "$(P)SA:Ch$(N):USE") {
     field(ONAM, "Yes")
     info(autosaveFields_pass0, "VAL")
 }
+# export to UFF58b ID Line 1
+record(lso, "$(P)SA:Ch$(N):NAME") {
+    field(DESC, "Canonical signal name")
+    field(SIZV, "128")
+    info(autosaveFields_pass0, "VAL")
+}
+# export to UFF58b ID Line 2
 record(lso, "$(P)SA:Ch$(N):DESC") {
-    field(DESC, "Current signal label")
+    field(DESC, "Friendly signal label")
+    field(SIZV, "128")
+    info(autosaveFields_pass0, "VAL")
+}
+# export to UFF58b ID Line 5
+record(lso, "$(P)SA:Ch$(N):DESC5") {
+    field(DESC, "Extra signal label")
+    field(SIZV, "128")
+    info(autosaveFields_pass0, "VAL")
+}
+# export to UFF58b Record 6, Field 6
+record(longout, "$(P)SA:Ch$(N):RESPNODE") {
+    info(autosaveFields_pass0, "VAL")
+}
+# export to UFF58b Record 6, Field 7
+record(mbbo, "$(P)SA:Ch$(N):RESPDIR") {
+    field(DTYP, "Raw Soft Channel")
+    field(DESC, "Response Direction")
+    field(ZRST, "Scalar")
+    field(ONST, "+X Translation")
+    field(TWST, "+Y Translation")
+    field(THST, "+Z Translation")
+    field(FRST, "-X Translation")
+    field(FVST, "-Y Translation")
+    field(SXST, "-Z Translation")
+    field(SVST, "+X Rotation")
+    field(EIST, "+Y Rotation")
+    field(NIST, "+Z Rotation")
+    field(TEST, "-X Rotation")
+    field(ELST, "-Y Rotation")
+    field(TVST, "-Z Rotation")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "-1")
+    field(FVVL, "-2")
+    field(SXVL, "-3")
+    field(SVVL, "4")
+    field(EIVL, "5")
+    field(NIVL, "6")
+    field(TEVL, "-4")
+    field(ELVL, "-5")
+    field(TVVL, "-6")
+    field(UNSV, "INVALID")
+    info(autosaveFields_pass0, "VAL")
+}
+# export to UFF58b Record 8, Field 1
+record(mbbo, "$(P)SA:Ch$(N):SDTYP") {
+    field(DTYP, "Raw Soft Channel")
+    field(ZRST, "unknown")
+    field(ONST, "general")
+    field(TWST, "stress")
+    field(THST, "strain")
+    field(FRST, "temperature")
+    field(FVST, "heat flux")
+    field(SXST, "displacement")
+    field(SVST, "reaction force")
+    field(EIST, "velocity")
+    field(NIST, "acceleration")
+    field(TEST, "excitation force")
+    field(ELST, "pressure")
+    field(TVST, "mass")
+    field(TTST, "time")
+    field(FTST, "frequency")
+    field(FFST, "rpm")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(TWVL, "2")
+    field(THVL, "3")
+    field(FRVL, "5")
+    field(FVVL, "6")
+    field(SXVL, "8")
+    field(SVVL, "9")
+    field(EIVL, "11")
+    field(NIVL, "12")
+    field(TEVL, "13")
+    field(ELVL, "15")
+    field(TVVL, "16")
+    field(TTVL, "17")
+    field(FTVL, "18")
+    field(FFVL, "19")
+    # skip "order" / 20, out of states.  (what is this anyway?)
+    field(UNSV, "INVALID")
+}
+
+record(lso, "$(P)SA:Ch$(N):DESC5") {
+    field(DESC, "Extra signal label")
     field(SIZV, "128")
     info(autosaveFields_pass0, "VAL")
 }
