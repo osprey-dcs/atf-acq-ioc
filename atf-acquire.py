@@ -32,8 +32,9 @@ class PV:
     all_pvs = WeakSet()
     last_value = {}
     ctxt = None
-    def __init__(self, name:str):
+    def __init__(self, name:str, index=False, signed=False):
         self.name = name
+        self.__index, self.__signed = index, signed
         self.all_pvs.add(self)
     def read(self):
         o = self.last_value[self.name]
@@ -42,12 +43,17 @@ class PV:
             o = o[:]
         elif isinstance(o, float): # ntfloat
             o = float(o)
+        elif hasattr(o, 'choice'): # ntenum
+            o = int(o) if self.__index else str(o)
         elif isinstance(o, int):
             o = int(o)
+            if self.__signed and (o&0x80000000): # int32 masquerading as uint32...
+                o = -(o^0xffffffff)-1
         return o
     @classmethod
     def fetch_all(klass):
-        names = [pv.name for pv in klass.all_pvs]
+        # sorted, unique, list of PV names
+        names = list(set([pv.name for pv in klass.all_pvs]))
         values = klass.ctxt.get(names)
         klass.last_value = dict(zip(names, values))
 
@@ -104,7 +110,7 @@ def main(args):
         #'Role1Name': PV(f'{prefix}SA:OPER'),
         'CCCR': PV(f'{prefix}SA:FILE'),
         'CCCR_SHA256': PV(f'{prefix}SA:FILEHASH'),
-        'SampleRate': PV(f'{prefix}ACQ:rate'),
+        'SampleRate': PV(f'{prefix}ACQ:rate.RVAL'), # Hz
         # AcquisitionStartDate
         # AcquisitionEndDate
         'Signals': [],
@@ -124,18 +130,19 @@ def main(args):
             nodeUsed[node-1] = True
             S = {
                 'Address': {'Chassis':node, 'Channel':ch},
-                'Name': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:DESC'),
+                'Name': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:NAME'),
+                'Desc': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:DESC'),
                 'Egu': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:EGU'),
                 'Slope': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:SLO'),
                 'Intercept': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:OFF'),
                 'Coupling': PV(f'{prefix}{node:02d}:ACQ:coupling:{ch:02d}'),
+                'ResponseNode': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:RESPNODE'),
+                'ResponseDirection': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:RESPDIR.RVAL', signed=True),
+                'Type': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:SDTYP.RVAL'),
+                'LastCal': PV(f'{prefix}{node:02d}:SA:Ch{ch:02d}:TCAL'), # posix time
                 #TODO: from PV
                 'SigNum': signum,
-                'Type': 0,
-                'Desc': '',
-                'ResponseNode':'',
-                'ResponseDirection':0,
-                'ReferenceNode':'',
+                'ReferenceNode':0,
                 'ReferenceDirection':0,
             }
             info['Signals'].append(S)
