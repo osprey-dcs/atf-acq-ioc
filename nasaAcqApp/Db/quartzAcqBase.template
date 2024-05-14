@@ -107,6 +107,7 @@ record(calc, "$(P)ACQ:ppsdiff") {
     field(INPF, "0x800000") # sign bit
     field(CALC, "D:=((A&B)>>C);D&F?-(D XOR B)-1:D")
     field(EGU , "tick")
+    field(ADEL, "0")
 }
 
 record(bi, "$(P)DRDY:align") {
@@ -129,6 +130,7 @@ record(calc, "$(P)DRDY:pps") {
     field(EGU , "ns")
     field(HIGH, "64")
     field(HSV , "MAJOR")
+    field(ADEL, "0")
 }
 
 # breakout PPS:status  (Only meaningful on EVG node)
@@ -167,6 +169,7 @@ record(calc, "$(P)PPS:jtr") {
     field(INPD, "1")
     field(CALC, "((A&B)>>C)*D")
     field(EGU , "ns")
+    field(ADEL, "0")
 }
 
 
