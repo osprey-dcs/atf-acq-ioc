@@ -128,9 +128,19 @@ record(calc, "$(P)DRDY:pps") {
     field(INPD, "8") # raw units are ticks of 125MHz
     field(CALC, "((A&B)>>C)*D")
     field(EGU , "ns")
-    field(HIGH, "64")
-    field(HSV , "MAJOR")
     field(ADEL, "0")
+    field(FLNK, "$(P)DRDY:err")
+}
+# compare this node with EVG node
+record(calc, "$(P)DRDY:err") {
+    field(INPA, "$(P)DRDY:pps MS")
+    field(INPB, "$(EVG)DRDY:pps CP MS")
+    field(CALC, "A-B")
+    field(EGU , "ns")
+    field(HIGH, "65")
+    field(LOW , "-65")
+    field(HSV , "MAJOR")
+    field(LSV , "MAJOR")
 }
 
 # breakout PPS:status  (Only meaningful on EVG node)
