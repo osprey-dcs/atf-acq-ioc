@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-07 13:06:36 by atf-->
+<!--Saved on 2024-05-14 17:10:54 by atf-->
 <display version="2.0.0">
   <name>Stat $(N)</name>
-  <width>1195</width>
+  <width>1155</width>
   <height>30</height>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
@@ -131,23 +131,40 @@
     <wrap_words>false</wrap_words>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_69</name>
-    <pv_name>$(P)$(N):DRDY:status</pv_name>
-    <x>890</x>
-    <y>5</y>
-    <format>4</format>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
     <name>Text Update_70</name>
     <pv_name>$(P)$(N):ADC:aligns</pv_name>
-    <x>1000</x>
+    <x>1050</x>
     <y>5</y>
     <format>1</format>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_71</name>
+    <pv_name>$(P)$(N):DRDY:err</pv_name>
+    <x>960</x>
+    <y>5</y>
+    <width>77</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_9</name>
+    <pv_name>$(P)$(N):DRDY:align</pv_name>
+    <x>890</x>
+    <y>5</y>
+    <width>60</width>
+    <off_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
   </widget>
 </display>

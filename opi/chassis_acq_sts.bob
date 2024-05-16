@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-15 15:56:09 by atf-->
+<!--Saved on 2024-05-15 16:03:33 by atf-->
 <display version="2.0.0">
-  <name>Acq</name>
-  <width>2150</width>
-  <height>1391</height>
+  <name>Acq Monitor</name>
+  <width>1610</width>
+  <height>541</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -27,11 +27,11 @@
     <macros>
       <N>01</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>31</y>
-    <width>795</width>
-    <height>85</height>
+    <y>61</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -39,11 +39,11 @@
     <macros>
       <N>02</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>116</y>
-    <width>795</width>
-    <height>85</height>
+    <y>91</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -51,11 +51,11 @@
     <macros>
       <N>03</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>201</y>
-    <width>795</width>
-    <height>85</height>
+    <y>121</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -63,11 +63,11 @@
     <macros>
       <N>04</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>286</y>
-    <width>795</width>
-    <height>85</height>
+    <y>151</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -75,11 +75,11 @@
     <macros>
       <N>05</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>371</y>
-    <width>795</width>
-    <height>85</height>
+    <y>181</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -87,11 +87,11 @@
     <macros>
       <N>06</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>456</y>
-    <width>795</width>
-    <height>85</height>
+    <y>211</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -99,11 +99,11 @@
     <macros>
       <N>07</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>541</y>
-    <width>795</width>
-    <height>85</height>
+    <y>241</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -111,11 +111,11 @@
     <macros>
       <N>08</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>626</y>
-    <width>795</width>
-    <height>85</height>
+    <y>271</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -123,11 +123,11 @@
     <macros>
       <N>09</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>711</y>
-    <width>795</width>
-    <height>85</height>
+    <y>301</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -135,11 +135,11 @@
     <macros>
       <N>10</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>796</y>
-    <width>795</width>
-    <height>85</height>
+    <y>331</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -147,11 +147,11 @@
     <macros>
       <N>11</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>881</y>
-    <width>795</width>
-    <height>85</height>
+    <y>361</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -159,11 +159,11 @@
     <macros>
       <N>12</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>966</y>
-    <width>795</width>
-    <height>85</height>
+    <y>391</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -171,11 +171,11 @@
     <macros>
       <N>13</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>1051</y>
-    <width>795</width>
-    <height>85</height>
+    <y>421</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -183,11 +183,11 @@
     <macros>
       <N>14</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>1136</y>
-    <width>795</width>
-    <height>85</height>
+    <y>451</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -195,11 +195,11 @@
     <macros>
       <N>15</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>1221</y>
-    <width>795</width>
-    <height>85</height>
+    <y>481</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -207,11 +207,11 @@
     <macros>
       <N>16</N>
     </macros>
-    <file>_chassis_acq.bob</file>
+    <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>1306</y>
-    <width>795</width>
-    <height>85</height>
+    <y>511</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -219,11 +219,11 @@
     <macros>
       <N>17</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>31</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>61</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -231,11 +231,11 @@
     <macros>
       <N>18</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>116</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>91</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -243,11 +243,11 @@
     <macros>
       <N>19</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>201</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>121</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -255,11 +255,11 @@
     <macros>
       <N>20</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>286</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>151</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -267,11 +267,11 @@
     <macros>
       <N>21</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>371</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>181</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -279,11 +279,11 @@
     <macros>
       <N>22</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>456</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>211</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -291,11 +291,11 @@
     <macros>
       <N>23</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>541</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>241</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -303,11 +303,11 @@
     <macros>
       <N>24</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>626</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>271</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -315,11 +315,11 @@
     <macros>
       <N>25</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>711</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>301</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -327,11 +327,11 @@
     <macros>
       <N>26</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>796</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>331</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -339,11 +339,11 @@
     <macros>
       <N>27</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>881</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>361</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -351,11 +351,11 @@
     <macros>
       <N>28</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>966</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>391</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -363,11 +363,11 @@
     <macros>
       <N>29</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>1051</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>421</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -375,11 +375,11 @@
     <macros>
       <N>30</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>1136</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>451</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -387,11 +387,11 @@
     <macros>
       <N>31</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>1221</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>481</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="embedded" version="2.0.0">
@@ -399,154 +399,168 @@
     <macros>
       <N>32</N>
     </macros>
-    <file>_chassis_acq.bob</file>
-    <x>820</x>
-    <y>1306</y>
-    <width>795</width>
-    <height>85</height>
+    <file>_chassis_acq_sts.bob</file>
+    <x>550</x>
+    <y>511</y>
+    <width>520</width>
+    <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
-    <text>Network Recv.</text>
-    <x>290</x>
-    <y>10</y>
+    <text>Net Rate</text>
+    <x>110</x>
+    <y>31</y>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
-    <text>File Write</text>
-    <x>500</x>
-    <y>10</y>
+    <text>File Rate</text>
+    <x>300</x>
+    <y>31</y>
     <width>80</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
-    <text># Drop</text>
-    <x>400</x>
-    <y>10</y>
+    <text>Drop Rate</text>
+    <x>210</x>
+    <y>31</y>
     <width>60</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>File Size</text>
-    <x>600</x>
-    <y>10</y>
+    <x>410</x>
+    <y>31</y>
     <height>21</height>
   </widget>
-  <widget type="combo" version="2.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Combo Box</name>
     <pv_name>$(EVG)ACQ:rate</pv_name>
-    <x>1657</x>
-    <y>141</y>
+    <x>1210</x>
+    <y>481</y>
     <width>126</width>
+    <height>29</height>
     <font>
       <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
       </font>
     </font>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_12</name>
-    <text>ADC Acquire</text>
-    <x>1630</x>
-    <y>31</y>
-    <width>167</width>
+    <text>Acquiring</text>
+    <x>1080</x>
+    <y>440</y>
+    <width>110</width>
     <height>25</height>
-    <horizontal_alignment>1</horizontal_alignment>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_16</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(EVG)ACQ:enable</pv_name>
-        <value>0</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Disable</text>
-    <x>1630</x>
-    <y>61</y>
-    <width>80</width>
-    <height>25</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Action Button_17</name>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(EVG)ACQ:enable</pv_name>
-        <value>1</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
-    <text>Enable</text>
-    <x>1717</x>
-    <y>61</y>
-    <width>80</width>
-    <height>25</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <tooltip>$(actions)</tooltip>
+    <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
     <pv_name>$(EVG)ACQ:enable</pv_name>
     <bit>0</bit>
-    <x>1803</x>
-    <y>61</y>
-    <width>25</width>
+    <x>1210</x>
+    <y>440</y>
+    <width>126</width>
     <height>25</height>
     <off_color>
       <color name="Button_Background" red="210" green="210" blue="210">
       </color>
     </off_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_13</name>
-    <text>ADC Samp. Rate</text>
-    <x>1657</x>
-    <y>111</y>
-    <width>126</width>
-    <height>25</height>
+    <text>Samp. Rate</text>
+    <x>1080</x>
+    <y>481</y>
+    <width>110</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>File Size</text>
+    <x>940</x>
+    <y>31</y>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>File Rate</text>
+    <x>830</x>
+    <y>31</y>
+    <width>80</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Net Rate</text>
+    <x>640</x>
+    <y>31</y>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Drop Rate</text>
+    <x>740</x>
+    <y>31</y>
+    <width>60</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>In Use</text>
+    <x>30</x>
+    <y>31</y>
+    <width>50</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>In Use</text>
+    <x>570</x>
+    <y>31</y>
+    <width>50</width>
+    <height>21</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)SA:FILE.VAL$</pv_name>
+    <x>1090</x>
+    <y>60</y>
+    <width>520</width>
+    <format>6</format>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)SA:DESC.VAL$</pv_name>
+    <x>1090</x>
+    <y>121</y>
+    <width>520</width>
+    <format>6</format>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_11</name>
     <text>CCCR Name</text>
-    <x>1630</x>
-    <y>190</y>
+    <x>1090</x>
+    <y>30</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_14</name>
     <text>Run Name</text>
-    <x>1630</x>
-    <y>251</y>
+    <x>1090</x>
+    <y>91</y>
     <width>310</width>
     <height>22</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry</name>
-    <pv_name>$(P)SA:FILE.VAL$</pv_name>
-    <x>1630</x>
-    <y>212</y>
-    <width>520</width>
-    <format>6</format>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_1</name>
-    <pv_name>$(P)SA:DESC.VAL$</pv_name>
-    <x>1630</x>
-    <y>273</y>
-    <width>520</width>
-    <format>6</format>
   </widget>
 </display>

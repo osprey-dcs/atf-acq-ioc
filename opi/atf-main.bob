@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-13 13:23:05 by atf-->
+<!--Saved on 2024-05-15 15:49:41 by atf-->
 <display version="2.0.0">
   <name>Main</name>
   <macros>
@@ -142,9 +142,14 @@
     <name>Action Button_18</name>
     <actions>
       <action type="open_display">
+        <file>chassis_acq_sts.bob</file>
+        <target>tab</target>
+        <description>Monitor</description>
+      </action>
+      <action type="open_display">
         <file>chassis_acq.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
+        <description>Expert</description>
       </action>
     </actions>
     <text>Acq. Recording</text>

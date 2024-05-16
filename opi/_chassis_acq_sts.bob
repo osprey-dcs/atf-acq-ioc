@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-15 16:00:39 by atf-->
+<display version="2.0.0">
+  <name>Acq $(N)</name>
+  <macros>
+    <P>$(P)$(N):</P>
+  </macros>
+  <width>520</width>
+  <height>30</height>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Record-I</pv_name>
+    <x>20</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)RXBRate-I</pv_name>
+    <x>90</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)DrpRate-I</pv_name>
+    <x>200</x>
+    <y>5</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)LstSz-I</pv_name>
+    <x>400</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)WrtRate-I</pv_name>
+    <x>290</x>
+    <y>5</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(P)Record-Sel</pv_name>
+    <x>50</x>
+    <y>5</y>
+  </widget>
+</display>

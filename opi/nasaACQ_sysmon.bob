@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-03 18:45:05 by dev-->
+<!--Saved on 2024-05-14 17:07:05 by atf-->
 <display version="2.0.0">
   <name>Mon $(N)</name>
   <x>9</x>
@@ -1406,5 +1406,14 @@
     <x>810</x>
     <y>337</y>
     <width>60</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_72</name>
+    <pv_name>$(P)$(R)DRDY:err</pv_name>
+    <x>780</x>
+    <y>286</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
 </display>
