@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-15 16:03:33 by atf-->
+<!--Saved on 2024-05-17 09:04:19 by atf-->
 <display version="2.0.0">
   <name>Acq Monitor</name>
   <width>1610</width>
@@ -557,10 +557,26 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_14</name>
-    <text>Run Name</text>
+    <text>Run Description</text>
     <x>1090</x>
     <y>91</y>
     <width>310</width>
     <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>Last Run Name</text>
+    <x>1090</x>
+    <y>151</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)SA:LASTRUN.VAL$</pv_name>
+    <x>1090</x>
+    <y>181</y>
+    <width>520</width>
+    <format>6</format>
   </widget>
 </display>
