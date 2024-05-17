@@ -16,14 +16,10 @@ _log = logging.getLogger(__name__)
 def getargs():
     from argparse import ArgumentParser
     P = ArgumentParser()
-    P.add_argument('outdir', type=Path,
-                   help='Output directory')
     P.add_argument('--pv-prefix', default='FDAS:')
+    P.add_argument('--root', type=Path, default=Path('/data'))
     P.add_argument('--force-all', action='store_true',
                    help='Acquire with all chassis regardless of USE flags')
-    P.add_argument('-n', '--dry-run', action='store_false',
-                   dest='doit', default=True,
-                   help='Only show actions, do not execute')
     P.add_argument('-v', '--verbose', dest='level', default=logging.INFO,
                    action='store_const', const=logging.DEBUG)
     return P
@@ -73,10 +69,9 @@ class Putter:
         self.names.append(name)
         self.values.append(value)
 
-    def exec_(self, doit=True):
+    def exec_(self):
         try:
-            if doit:
-                self.ctxt.put(self.names, self.values)
+            self.ctxt.put(self.names, self.values)
         finally:
             self.reset()
 
@@ -91,7 +86,9 @@ class PVEncoder(json.JSONEncoder):
         return o
 
 def main(args):
+    gmnow = time.gmtime()
     prefix = args.pv_prefix
+
     PV.ctxt = ctxt = Context()
     batch = Putter(ctxt)
     exit = 0
@@ -111,7 +108,7 @@ def main(args):
         'CCCR': PV(f'{prefix}SA:FILE'),
         'CCCR_SHA256': PV(f'{prefix}SA:FILEHASH'),
         'SampleRate': PV(f'{prefix}ACQ:rate.RVAL'), # Hz
-        # AcquisitionStartDate
+        'AcquisitionStartDate': time.strftime('%Y%m%d-%H%M%S', gmnow),
         # AcquisitionEndDate
         'Signals': [],
         'Chassis': [],
@@ -155,54 +152,64 @@ def main(args):
     assert not any([A==B for A,B in zip(sig_names[:1], sig_names[1:])]), sig_names
 
     _log.info('Setting up directory tree')
-    _log.info('mkdir %s', args.outdir)
-    if args.doit:
-        args.outdir.mkdir(parents=True, exist_ok=True)
 
-    desc = info['AcquisitionId'].read()
+    desc = info['AcquisitionId'].read()[:]
+    # /data/2024/05/20240517-125412-rec/
+    outdir = args.root \
+        / time.strftime('%Y', gmnow) \
+        / time.strftime('%m', gmnow) \
+        / f"{time.strftime('%Y%m%d-%H%M%S', gmnow)}-{desc}"
+    file_prefix = f"{desc}-{time.strftime('%Y%m%d-%H%M%S', gmnow)}"
+
+    _log.info('mkdir %s', outdir)
+    outdir.mkdir(parents=True, exist_ok=True)
+    ctxt.put(f'{prefix}SA:LASTRUN', file_prefix)
+
     CHprefix = [None]*32
 
     for node,used in enumerate(nodeUsed, 1):
-        CHprefix[node-1] = f'{desc}-CH{node:02d}-'
-        batch.put(f'{prefix}{node:02d}:FileDir-SP', str(args.outdir) if used else '')
+        CHprefix[node-1] = f'{file_prefix}-CH{node:02d}-'
+        batch.put(f'{prefix}{node:02d}:FileDir-SP', str(outdir) if used else '')
         batch.put(f'{prefix}{node:02d}:FileBase-SP', CHprefix[node-1] if used else '')
         batch.put(f'{prefix}{node:02d}:Record-Sel', used)
 
-    if args.doit and ctxt.get(f'{prefix}ACQ:enable'):
-        _log.info('Stop current acquisition')
-        if args.doit:
-            ctxt.put(f'{prefix}ACQ:enable', False)
-        _log.info('Wait for acquisition to complete')
-        time.sleep(10) # TODO: how to tell??
+    if args.ctxt.get(f'{prefix}ACQ:enable'):
+        _log.error('Stop current acquisition')
+        sys.exit(1)
 
     _log.info('Configure filenames')
-    batch.exec_(args.doit)
+    batch.exec_()
 
-    if args.doit:
-        with (args.outdir / (desc[:] + '.json.before')).open('x') as F:
-            json.dump(info, F, cls=PVEncoder, indent='  ')
+    fbefore = outdir / f'{file_prefix}.json.before'
+    with fbefore.open('x') as F:
+        json.dump(info, F, cls=PVEncoder, indent='  ')
 
     _log.info('Begin acquisition')
-    if args.doit:
-        ctxt.put(f'{prefix}ACQ:enable', True)
+    ctxt.put(f'{prefix}ACQ:enable', True)
 
     try:
         T0 = ctxt.get(f'{prefix}ACQ:enable').timestamp
 
         _log.info('Recording...')
         _log.info('Ctrl+c to stop')
+        time.sleep(60)
+        _log.info('60 elapsed')
         while True:
             time.sleep(60)
 
     except KeyboardInterrupt:
-        pass
+        _log.info('Stopping in 60 seconds...')
+        try:
+            time.sleep(60)
+            _log.info('60 elapsed')
+        except KeyboardInterrupt:
+            _log.info('...skip')
     except:
         _log.exception("Unexpected error") # log
         exit = 1 # exit with error
         # continue to hopefully recover
     finally:
-        if args.doit:
-            ctxt.put(f'{prefix}ACQ:enable', False)
+        ctxt.put(f'{prefix}ACQ:enable', False)
 
     _log.info('Wait for acquisition to complete')
     time.sleep(5) # TODO: how to tell??
@@ -213,26 +220,27 @@ def main(args):
         batch.put(f'{prefix}{node:02d}:FileDir-SP', '')
         batch.put(f'{prefix}{node:02d}:FileBase-SP', '')
 
-    batch.exec_(args.doit)
+    batch.exec_()
 
     _log.info('List data file names')
     for node,used in enumerate(nodeUsed, 1):
         if not used:
             continue
-        Chas = {
-            'Chassis': node,
-        }
-        Chas['Dat'] = dats = []
-        for datfile in args.outdir.glob(glob.escape(CHprefix[node-1])+'*.dat'):
+        dats = []
+        for datfile in outdir.glob(f'{glob.escape(CHprefix[node-1])}*.dat'):
             _log.info('Found %r', datfile)
             dats.append(datfile.relative_to(args.outdir))
-        info['Chassis'].append(Chas)
+        info['Chassis'].append({
+            'Chassis': node,
+            'Dat': dats,
+        })
 
-    if args.doit:
-        with (args.outdir / (desc[:] + '.json')).open('w') as F:
-            json.dump(info, F, cls=PVEncoder, indent='  ')
-    else:
-        print(json.dumps(info, cls=PVEncoder, indent='  '))
+    gmnow=time.gmtime()
+    info['AcquisitionEndDate']= time.strftime('%Y%m%d-%H%M%S', gmnow)
+
+    with (outdir / f'{file_prefix}.json').open('w') as F:
+        json.dump(info, F, cls=PVEncoder, indent='  ')
+    fbefore.unlink()
 
     sys.exit(exit)
 

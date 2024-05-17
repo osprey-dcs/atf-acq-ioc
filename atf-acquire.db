@@ -7,3 +7,6 @@ record(lso, "$(P)SA:FILE") {
 record(lso, "$(P)SA:FILEHASH") {
     field(SIZV, "128")
 }
+record(lso, "$(P)SA:LASTRUN") {
+    field(SIZV, "128")
+}
