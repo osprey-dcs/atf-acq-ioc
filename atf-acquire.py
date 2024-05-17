@@ -173,7 +173,7 @@ def main(args):
         batch.put(f'{prefix}{node:02d}:FileBase-SP', CHprefix[node-1] if used else '')
         batch.put(f'{prefix}{node:02d}:Record-Sel', used)
 
-    if args.ctxt.get(f'{prefix}ACQ:enable'):
+    if ctxt.get(f'{prefix}ACQ:enable'):
         _log.error('Stop current acquisition')
         sys.exit(1)
 
@@ -229,7 +229,7 @@ def main(args):
         dats = []
         for datfile in outdir.glob(f'{glob.escape(CHprefix[node-1])}*.dat'):
             _log.info('Found %r', datfile)
-            dats.append(datfile.relative_to(args.outdir))
+            dats.append(datfile.relative_to(outdir))
         info['Chassis'].append({
             'Chassis': node,
             'Dat': dats,
