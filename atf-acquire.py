@@ -211,16 +211,16 @@ def main(args):
     finally:
         ctxt.put(f'{prefix}ACQ:enable', False)
 
-    _log.info('Wait for acquisition to complete')
-    time.sleep(5) # TODO: how to tell??
-    Tf = ctxt.get(f'{prefix}ACQ:enable').timestamp
+        _log.info('Wait for acquisition to complete')
+        time.sleep(5) # TODO: how to tell??
+        Tf = ctxt.get(f'{prefix}ACQ:enable').timestamp
 
-    for node,used in enumerate(nodeUsed, 1):
-        batch.put(f'{prefix}{node:02d}:Record-Sel', False)
-        batch.put(f'{prefix}{node:02d}:FileDir-SP', '')
-        batch.put(f'{prefix}{node:02d}:FileBase-SP', '')
+        for node,used in enumerate(nodeUsed, 1):
+            batch.put(f'{prefix}{node:02d}:Record-Sel', False)
+            batch.put(f'{prefix}{node:02d}:FileDir-SP', '')
+            batch.put(f'{prefix}{node:02d}:FileBase-SP', '')
 
-    batch.exec_()
+        batch.exec_()
 
     _log.info('List data file names')
     for node,used in enumerate(nodeUsed, 1):
@@ -228,7 +228,7 @@ def main(args):
             continue
         dats = []
         for datfile in outdir.glob(f'{glob.escape(CHprefix[node-1])}*.dat'):
-            _log.info('Found %r', datfile)
+            _log.debug('Found %r', datfile)
             dats.append(datfile.relative_to(outdir))
         info['Chassis'].append({
             'Chassis': node,
@@ -238,9 +238,11 @@ def main(args):
     gmnow=time.gmtime()
     info['AcquisitionEndDate']= time.strftime('%Y%m%d-%H%M%S', gmnow)
 
-    with (outdir / f'{file_prefix}.json').open('w') as F:
+    ffinal = outdir / f'{file_prefix}.json'
+    with ffinal.open('w') as F:
         json.dump(info, F, cls=PVEncoder, indent='  ')
     fbefore.unlink()
+    _log.info(f'Wrote: {ffinal.absolute()}')
 
     sys.exit(exit)
 
