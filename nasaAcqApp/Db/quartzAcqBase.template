@@ -137,10 +137,26 @@ record(calc, "$(P)DRDY:err") {
     field(INPB, "$(EVG)DRDY:pps CP MS")
     field(CALC, "A-B")
     field(EGU , "ns")
-    field(HIGH, "65")
-    field(LOW , "-65")
+    # difference should be abs()<65ns
+    # however, polling is unsynchronized
+    # so off by N is common.  Set bounds
+    # wide enough to account for this,
+    # but narrow enough to catch chassis reboot
+    field(HIGH, "256")
+    field(LOW , "-256")
     field(HSV , "MAJOR")
     field(LSV , "MAJOR")
+    field(FLNK, "$(P)DRDY:ok_")
+}
+record(calcout, "$(P)DRDY:ok_") {
+    field(INPA, "$(P)DRDY:err.SEVR MS")
+    field(CALC, "A>0")
+    field(OUT , "$(P)DRDY:ok PP MSS")
+}
+record(bi, "$(P)DRDY:ok") {
+    field(ZNAM, "In Sync.")
+    field(ONAM, "Spread")
+    field(OSV , "MAJOR")
 }
 
 # breakout PPS:status  (Only meaningful on EVG node)
