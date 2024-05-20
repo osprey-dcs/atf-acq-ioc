@@ -10,3 +10,9 @@ record(lso, "$(P)SA:FILEHASH") {
 record(lso, "$(P)SA:LASTRUN") {
     field(SIZV, "128")
 }
+record(bi, "$(P)SA:READY") {
+    field(DESC, "System ready to record")
+    field(ZNAM, "Not Ready")
+    field(ONAM, "Ready")
+    field(ZSV , "MAJOR")
+}
