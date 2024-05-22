@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-20 09:50:58 by atf-->
+<!--Saved on 2024-05-22 16:37:34 by atf-->
 <display version="2.0.0">
   <name>Stat $(N)</name>
-  <width>1265</width>
+  <width>1510</width>
   <height>30</height>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
@@ -194,6 +194,49 @@
     <x>430</x>
     <y>5</y>
     <width>60</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_11</name>
+    <pv_name>$(P)$(N):STS</pv_name>
+    <x>1280</x>
+    <y>5</y>
+    <width>70</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_13</name>
+    <pv_name>$(P)$(N):USE</pv_name>
+    <x>1360</x>
+    <y>5</y>
+    <width>70</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>$(P)$(N):RDY</pv_name>
+    <x>1435</x>
+    <y>5</y>
+    <width>70</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
