@@ -37,19 +37,22 @@ record(bo, "$(P)SA:Ch$(N):USE") {
 record(lso, "$(P)SA:Ch$(N):NAME") {
     field(DESC, "Canonical signal name")
     field(SIZV, "128")
-    info(autosaveFields_pass0, "VAL")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
 }
 # export to UFF58b ID Line 2
 record(lso, "$(P)SA:Ch$(N):DESC") {
     field(DESC, "Friendly signal label")
     field(SIZV, "128")
-    info(autosaveFields_pass0, "VAL")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
 }
 # export to UFF58b ID Line 5
 record(lso, "$(P)SA:Ch$(N):DESC5") {
     field(DESC, "Extra signal label")
     field(SIZV, "128")
-    info(autosaveFields_pass0, "VAL")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
 }
 # export to UFF58b Record 6, Field 6
 record(longout, "$(P)SA:Ch$(N):RESPNODE") {
