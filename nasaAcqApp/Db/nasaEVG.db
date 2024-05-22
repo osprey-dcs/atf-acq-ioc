@@ -40,3 +40,73 @@ record(longout, "$(P)ACQ:rateLO_") {
 
 # system wide reference DRDY:pps for comparison and alarming
 alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
+
+# system wide, used by acquisition sequencer
+record(lso, "$(P)SA:DESC") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FILE") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FILEHASH") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+
+record(calc, "$(P)SA:READY:1_") {
+    field(INPA, "$(P)01:RDY CP MS")
+    field(INPB, "$(P)02:RDY CP MS")
+    field(INPC, "$(P)03:RDY CP MS")
+    field(INPD, "$(P)04:RDY CP MS")
+    field(INPE, "$(P)05:RDY CP MS")
+    field(INPF, "$(P)06:RDY CP MS")
+    field(INPG, "$(P)07:RDY CP MS")
+    field(INPH, "$(P)08:RDY CP MS")
+    field(INPI, "$(P)09:RDY CP MS")
+    field(INPJ, "$(P)10:RDY CP MS")
+    field(INPK, "$(P)11:RDY CP MS")
+    field(INPL, "$(P)12:RDY CP MS")
+    field(CALC, "A&&B&&C&&D&&E&&F&&G&&H&&I&&J&&K&&L")
+    field(FLNK, "$(P)SA:READY:3_")
+}
+record(calc, "$(P)SA:READY:2_") {
+    field(INPA, "$(P)13:RDY CP MS")
+    field(INPB, "$(P)14:RDY CP MS")
+    field(INPC, "$(P)15:RDY CP MS")
+    field(INPD, "$(P)16:RDY CP MS")
+    field(INPE, "$(P)17:RDY CP MS")
+    field(INPF, "$(P)18:RDY CP MS")
+    field(INPG, "$(P)19:RDY CP MS")
+    field(INPH, "$(P)20:RDY CP MS")
+    field(INPI, "$(P)21:RDY CP MS")
+    field(INPJ, "$(P)22:RDY CP MS")
+    field(INPK, "$(P)23:RDY CP MS")
+    field(INPL, "$(P)24:RDY CP MS")
+    field(CALC, "A&&B&&C&&D&&E&&F&&G&&H&&I&&J&&K&&L")
+    field(FLNK, "$(P)SA:READY:3_")
+}
+record(calcout, "$(P)SA:READY:3_") {
+    field(INPA, "$(P)SA:READY:1_ MS")
+    field(INPB, "$(P)SA:READY:2_ MS")
+    field(INPC, "$(P)25:RDY CP MS")
+    field(INPD, "$(P)26:RDY CP MS")
+    field(INPE, "$(P)27:RDY CP MS")
+    field(INPF, "$(P)28:RDY CP MS")
+    field(INPG, "$(P)29:RDY CP MS")
+    field(INPH, "$(P)30:RDY CP MS")
+    field(INPI, "$(P)31:RDY CP MS")
+    field(INPJ, "$(P)32:RDY CP MS")
+    field(CALC, "A&&B&&C&&D&&E&&F&&G&&H&&I&&J")
+    field(OUT , "$(P)SA:READY PP MS")
+}
+record(bi, "$(P)SA:READY") {
+    field(DESC, "System ready to record")
+    field(ZNAM, "Not Ready")
+    field(ONAM, "Ready")
+    field(ZSV , "MAJOR")
+}

@@ -90,7 +90,7 @@ record(bi, "$(P)ACQ:ppsTog") {
     field(ONAM, "1")
 }
 record(bi, "$(P)ACQ:ppslck") {
-    field(DESC, "Request sampling")
+    field(DESC, "PPS Locked")
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)ACQ:clkPLL CP MS")
     field(MASK, "0x80000000")
@@ -198,6 +198,89 @@ record(calc, "$(P)PPS:jtr") {
     field(ADEL, "0")
 }
 
+
+# per-chassis summaries
+
+# any channel in use?
+record(calc, "$(P)USE:1_") {
+    field(INPA, "$(P)SA:Ch01:USE CP")
+    field(INPB, "$(P)SA:Ch02:USE CP")
+    field(INPC, "$(P)SA:Ch03:USE CP")
+    field(INPD, "$(P)SA:Ch04:USE CP")
+    field(INPE, "$(P)SA:Ch05:USE CP")
+    field(INPF, "$(P)SA:Ch06:USE CP")
+    field(INPG, "$(P)SA:Ch07:USE CP")
+    field(INPH, "$(P)SA:Ch08:USE CP")
+    field(INPI, "$(P)SA:Ch09:USE CP")
+    field(INPJ, "$(P)SA:Ch10:USE CP")
+    field(INPK, "$(P)SA:Ch11:USE CP")
+    field(INPL, "$(P)SA:Ch12:USE CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)USE:3_")
+}
+record(calc, "$(P)USE:2_") {
+    field(INPA, "$(P)SA:Ch13:USE CP")
+    field(INPB, "$(P)SA:Ch14:USE CP")
+    field(INPC, "$(P)SA:Ch15:USE CP")
+    field(INPD, "$(P)SA:Ch16:USE CP")
+    field(INPE, "$(P)SA:Ch17:USE CP")
+    field(INPF, "$(P)SA:Ch18:USE CP")
+    field(INPG, "$(P)SA:Ch19:USE CP")
+    field(INPH, "$(P)SA:Ch20:USE CP")
+    field(INPI, "$(P)SA:Ch21:USE CP")
+    field(INPJ, "$(P)SA:Ch22:USE CP")
+    field(INPK, "$(P)SA:Ch23:USE CP")
+    field(INPL, "$(P)SA:Ch24:USE CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)USE:3_")
+}
+record(calcout, "$(P)USE:3_") {
+    field(INPA, "$(P)USE:1_ MS")
+    field(INPB, "$(P)USE:2_ MS")
+    field(INPC, "$(P)SA:Ch25:USE CP")
+    field(INPD, "$(P)SA:Ch26:USE CP")
+    field(INPE, "$(P)SA:Ch27:USE CP")
+    field(INPF, "$(P)SA:Ch28:USE CP")
+    field(INPG, "$(P)SA:Ch29:USE CP")
+    field(INPH, "$(P)SA:Ch30:USE CP")
+    field(INPI, "$(P)SA:Ch31:USE CP")
+    field(INPJ, "$(P)SA:Ch32:USE CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J")
+    field(OUT , "$(P)USE PP MS")
+}
+record(bi, "$(P)USE") {
+    field(ZNAM, "No chan")
+    field(ONAM, "In use")
+}
+
+# device status summary
+record(calcout, "$(P)STS_") {
+    field(INPA, "$(P)ACQ:clk CP MS")
+    field(INPB, "$(P)ACQ:ppslck CP MS")
+    field(INPC, "$(P)DRDY:align CP MS")
+    field(INPD, "$(P)DRDY:ok CP MS")
+    field(CALC, "!A&&B&&!C&&!D")
+    field(OUT , "$(P)STS PP MS")
+}
+record(bi, "$(P)STS") {
+    field(ZNAM, "Error")
+    field(ONAM, "Ok")
+}
+
+# ready for global recording
+record(calcout, "$(P)RDY_") {
+    field(INPA, "$(P)USE CP MS")
+    field(INPB, "$(P)STS CP MS")
+    field(CALC, "!A||B") # not in use or OK
+    field(OUT , "$(P)RDY PP MS")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+}
+record(bi, "$(P)RDY") {
+    field(ZNAM, "Not Ready")
+    field(ONAM, "Ready")
+    field(ZSV , "MAJOR")
+}
 
 
 # setup and control
