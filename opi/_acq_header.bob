@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-28 10:32:51 by atf-->
+<display version="2.0.0">
+  <name>ACQ $(P)Ch$(N)</name>
+  <macros>
+    <EVG>FDAS:01:</EVG>
+  </macros>
+  <width>1865</width>
+  <height>20</height>
+  <background_color>
+    <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+    </color>
+  </background_color>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>sys://time</pv_name>
+    <width>160</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_9</name>
+    <pv_name>FDAS:SA:FILE.VAL$</pv_name>
+    <x>262</x>
+    <width>520</width>
+    <format>6</format>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_10</name>
+    <pv_name>FDAS:SA:LASTRUN.VAL$</pv_name>
+    <x>913</x>
+    <width>182</width>
+    <format>6</format>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>CCCR</text>
+    <x>207</x>
+    <width>60</width>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Filename</text>
+    <x>850</x>
+    <width>60</width>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>FDAS:20:Record-I</pv_name>
+    <x>1540</x>
+    <width>108</width>
+    <off_label>Not Recording</off_label>
+    <off_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </off_color>
+    <on_label>Recording</on_label>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>FDAS:ACQ:enable</pv_name>
+    <x>1439</x>
+    <width>103</width>
+    <off_label>Not Acquiring</off_label>
+    <off_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </off_color>
+    <on_label>Acquiring</on_label>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </line_color>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>FDAS:ACQ:rate</pv_name>
+    <x>1135</x>
+    <width>84</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD_ITALIC" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <x>1310</x>
+    <width>131</width>
+    <off_label>Future Time Lock</off_label>
+    <off_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </off_color>
+    <on_label>Time Locked</on_label>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <x>1220</x>
+    <width>90</width>
+    <off_label>Future Alarms</off_label>
+    <off_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </off_color>
+    <on_label>Alarm</on_label>
+    <on_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </on_color>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="16.0">
+      </font>
+    </font>
+    <square>true</square>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>=('FDAS:01:LstSz-I'+'FDAS:02:LstSz-I'+'FDAS:03:LstSz-I'+'FDAS:04:LstSz-I'+'FDAS:05:LstSz-I'+'FDAS:06:LstSz-I'+'FDAS:07:LstSz-I'+'FDAS:08:LstSz-I'+'FDAS:09:LstSz-I'+'FDAS:10:LstSz-I'+'FDAS:11:LstSz-I'+'FDAS:12:LstSz-I'+'FDAS:13:LstSz-I'+'FDAS:14:LstSz-I'+'FDAS:15:LstSz-I'+'FDAS:16:LstSz-I'+'FDAS:17:LstSz-I'+'FDAS:18:LstSz-I'+'FDAS:19:LstSz-I'+'FDAS:20:LstSz-I'+'FDAS:21:LstSz-I'+'FDAS:22:LstSz-I'+'FDAS:23:LstSz-I'+'FDAS:24:LstSz-I'+'FDAS:25:LstSz-I'+'FDAS:26:LstSz-I'+'FDAS:27:LstSz-I'+'FDAS:28:LstSz-I'+'FDAS:29:LstSz-I'+'FDAS:30:LstSz-I'+'FDAS:31:LstSz-I'+'FDAS:32:LstSz-I' /1024)</pv_name>
+    <x>1750</x>
+    <width>115</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD_ITALIC" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://V1&lt;VString&gt;</pv_name>
+        <value>=(fdas:01:lstsz-i)+(fdas:02:lstsz-i)+(fdas:03:lstsz-i)+(fdas:04:lstsz-i)+(fdas:05:lstsz-i)+(fdas:06:lstsz-i)+(fdas:07:lstsz-i)+(fdas:08:lstsz-i)+(fdas:09:lstsz-i)+(fdas:10:lstsz-i)+(fdas:11:lstsz-i)+(fdas:12:lstsz-i)+(fdas:13:lstsz-i)+(fdas:14:lstsz-i)+(fdas:15:lstsz-i)+(fdas:16:lstsz-i)+(fdas:17:lstsz-i)+(fdas:18:lstsz-i)+(fdas:19:lstsz-i)+(fdas:20:lstsz-i)+(fdas:21:lstsz-i)+(fdas:22:lstsz-i)+(fdas:23:lstsz-i)+(fdas:24:lstsz-i)+(fdas:25:lstsz-i)+(fdas:26:lstsz-i)+(fdas:27:lstsz-i)+(fdas:28:lstsz-i)+(fdas:29:lstsz-i)+(fdas:30:lstsz-i)+(fdas:31:lstsz-i)+(fdas:32:lstsz-i)</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Current Filesize:</text>
+    <x>1660</x>
+    <width>120</width>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+</display>

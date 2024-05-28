@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-23 14:53:58 by atf-->
+<display version="2.0.0">
+  <name>ACQ $(P)Ch$(N)</name>
+  <width>400</width>
+  <height>230</height>
+  <background_color>
+    <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+    </color>
+  </background_color>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_46</name>
+    <pv_name>$(P1)SA:Ch$(N1):NAME.VAL$</pv_name>
+    <x>130</x>
+    <y>290</y>
+    <width>280</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 1_1</name>
+    <actions>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:01:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 01</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:02:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 02</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:03:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 03</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:04:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 04</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:05:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 05</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:06:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 06</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:07:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 07</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:08:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 08</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:09:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 09</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:10:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 10</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:11:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 11</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:12:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 12</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:13:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 13</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:14:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 14</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:15:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 15</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:16:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 16</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:17:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 17</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:18:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 18</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:19:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 19</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:20:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 20</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:21:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 21</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:22:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 22</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:23:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 23</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:24:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 24</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:25:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 25</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:26:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 26</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:27:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 27</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:28:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 28</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:29:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 29</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:30:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 30</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:31:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 31</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <P1>FDAS:32:</P1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 32</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>P1</pv_name>
+        <value>FDAS:01:</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>P1</pv_name>
+    <text>Chassis</text>
+    <y>290</y>
+    <width>60</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 1_1</name>
+    <actions>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>01</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 01</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>02</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 02</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>03</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 03</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>04</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 04</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>05</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 05</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>06</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 06</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>07</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 07</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>08</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 08</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>09</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 09</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>10</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 10</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>11</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 11</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>12</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 12</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>13</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 13</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>14</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 14</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>15</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 15</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>16</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 16</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>17</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 17</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>18</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 18</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>19</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 19</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>20</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 20</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>21</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 21</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>22</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 22</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>23</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 23</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>24</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 24</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>25</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 25</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>26</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 26</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>27</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 27</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>28</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 28</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>29</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 29</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>30</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 30</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>31</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 31</description>
+      </action>
+      <action type="open_display">
+        <file>compact chart.bob</file>
+        <macros>
+          <N1>32</N1>
+        </macros>
+        <target>replace</target>
+        <description>Chassis 32</description>
+      </action>
+      <action type="write_pv">
+        <pv_name>N1</pv_name>
+        <value>32</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>N1</pv_name>
+    <text>Channel</text>
+    <x>60</x>
+    <y>290</y>
+    <width>60</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot_2</name>
+    <x>780</x>
+    <y>20</y>
+    <height>210</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <title_font>
+      <font family="Liberation Sans" style="BOLD" size="12.0">
+      </font>
+    </title_font>
+    <show_legend>false</show_legend>
+    <x_axis>
+      <title>Time</title>
+      <autoscale>false</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>0.08</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font family="Liberation Sans" style="ITALIC" size="12.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font family="Liberation Sans" style="REGULAR" size="12.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title></title>
+        <autoscale>true</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>0.0</minimum>
+        <maximum>100.0</maximum>
+        <show_grid>true</show_grid>
+        <title_font>
+          <font family="Liberation Sans" style="ITALIC" size="12.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font family="Liberation Sans" style="REGULAR" size="12.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>false</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>loc://VE1):T</x_pv>
+        <y_pv>$(loc://VE1)</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>2</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://PE1</pv_name>
+        <value>FDAS:01:SA:</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://P1.state</pv_name>
+    <x>520</x>
+    <y>140</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Enter here</name>
+    <pv_name>loc://PE1&lt;VString&gt;</pv_name>
+    <x>450</x>
+    <y>30</y>
+    <width>270</width>
+    <height>30</height>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://PE1&lt;VString&gt;</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Output here</name>
+    <pv_name>loc://PE1</pv_name>
+    <x>450</x>
+    <y>60</y>
+    <width>270</width>
+    <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_47</name>
+    <pv_name>loc://PE1</pv_name>
+    <x>60</x>
+    <y>230</y>
+    <width>280</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://TE1</pv_name>
+        <value>Ch01</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://t1.state</pv_name>
+    <x>520</x>
+    <y>160</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_48</name>
+    <pv_name>loc://TE1</pv_name>
+    <x>360</x>
+    <y>230</y>
+    <width>280</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_49</name>
+    <pv_name>loc://VE1</pv_name>
+    <x>230</x>
+    <y>260</y>
+    <width>280</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>loc://VE1</pv_name>
+        <value>FDAS:01:SA:Ch01</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <pv_name>loc://t1.state</pv_name>
+    <x>520</x>
+    <y>180</y>
+    <width>80</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="xyplot" version="3.0.0">
+    <name>X/Y Plot_1</name>
+    <height>230</height>
+    <x_axis>
+      <title>X</title>
+      <autoscale>true</autoscale>
+      <log_scale>false</log_scale>
+      <minimum>0.0</minimum>
+      <maximum>100.0</maximum>
+      <show_grid>false</show_grid>
+      <title_font>
+        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+        </font>
+      </title_font>
+      <scale_font>
+        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+        </font>
+      </scale_font>
+      <visible>true</visible>
+    </x_axis>
+    <y_axes>
+      <y_axis>
+        <title>$(P)SA:Ch$(N):EGU</title>
+        <autoscale>false</autoscale>
+        <log_scale>false</log_scale>
+        <minimum>-50.0</minimum>
+        <maximum>50.0</maximum>
+        <show_grid>false</show_grid>
+        <title_font>
+          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+          </font>
+        </title_font>
+        <scale_font>
+          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
+          </font>
+        </scale_font>
+        <on_right>false</on_right>
+        <visible>true</visible>
+        <color>
+          <color name="Text" red="0" green="0" blue="0">
+          </color>
+        </color>
+      </y_axis>
+    </y_axes>
+    <traces>
+      <trace>
+        <name>$(traces[0].y_pv)</name>
+        <x_pv>$(P1)SA:T</x_pv>
+        <y_pv>$(P1)SA:Ch$(N1)</y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+    </traces>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>B1</pv_name>
+    <x>490</x>
+    <y>420</y>
+    <width>310</width>
+    <height>60</height>
+    <actions>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>FDAS:17:SA:Ch01</item>
+      <item>FDAS:17:SA:Ch02</item>
+    </items>
+    <editable>true</editable>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_50</name>
+    <pv_name>$(B1):NAME.VAL$</pv_name>
+    <x>500</x>
+    <y>400</y>
+    <width>280</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+</display>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-23 12:46:16 by atf-->
+<display version="2.0.0">
+  <name>ACQ $(P)Ch$(N)</name>
+  <macros>
+    <EVG>FDAS:01:</EVG>
+  </macros>
+  <width>1913</width>
+  <height>250</height>
+  <background_color>
+    <color name="Header_ForeGround" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <widget type="embedded" version="2.0.0">
+    <name>Header</name>
+    <file>_acq_header.bob</file>
+    <width>1913</width>
+    <height>20</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+  </widget>
+</display>

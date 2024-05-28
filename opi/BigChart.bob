@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-15 16:19:14 by atf-->
+<!--Saved on 2024-05-28 10:25:00 by atf-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
     <EVG>FDAS:01:</EVG>
   </macros>
-  <width>1465</width>
-  <height>1135</height>
+  <width>1875</width>
+  <height>1125</height>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
     <x>10</x>
@@ -227,14 +227,6 @@
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>sys://time</pv_name>
-    <x>10</x>
-    <y>10</y>
-    <width>180</width>
-    <height>25</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_27</name>
@@ -5696,90 +5688,137 @@
     <width>60</width>
     <height>30</height>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry</name>
     <pv_name>$(P1)</pv_name>
     <x>740</x>
     <y>850</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_1</name>
     <pv_name>$(P2)</pv_name>
     <x>740</x>
     <y>880</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_2</name>
     <pv_name>$(P4)</pv_name>
     <x>740</x>
     <y>940</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_3</name>
     <pv_name>$(P3)</pv_name>
     <x>740</x>
     <y>910</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_4</name>
     <pv_name>$(P5)</pv_name>
     <x>740</x>
     <y>970</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_5</name>
     <pv_name>$(P6)</pv_name>
     <x>740</x>
     <y>1000</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_6</name>
     <pv_name>$(P7)</pv_name>
     <x>740</x>
     <y>1030</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_7</name>
     <pv_name>$(P8)</pv_name>
     <x>740</x>
     <y>1060</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_8</name>
     <pv_name>$(P9)</pv_name>
     <x>740</x>
     <y>1090</y>
     <width>80</width>
     <height>30</height>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_9</name>
-    <x>1480</x>
-    <y>850</y>
-    <width>60</width>
-    <height>30</height>
-    <actions>
-      <action type="write_pv">
-        <pv_name>$(N1)</pv_name>
-        <value>0</value>
-        <description>WritePV</description>
-      </action>
-    </actions>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display</name>
+    <file>_acq_header.bob</file>
+    <width>1875</width>
+    <height>20</height>
+    <resize>2</resize>
   </widget>
 </display>

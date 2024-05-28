@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-15 09:13:48 by atf-->
+<!--Saved on 2024-05-21 14:35:10 by atf-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -7,6 +7,120 @@
   </macros>
   <width>1260</width>
   <height>725</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Chassis $(P) Channel $(N)</text>
+    <x>10</x>
+    <y>30</y>
+    <width>320</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_27</name>
+    <text>In Use</text>
+    <x>240</x>
+    <y>35</y>
+    <width>60</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>$(P)SA:Ch$(N):USE</pv_name>
+    <bit>0</bit>
+    <x>325</x>
+    <y>45</y>
+    <width>36</width>
+    <height>25</height>
+    <off_label>Off</off_label>
+    <on_label>On</on_label>
+    <on_color>
+      <color red="60" green="255" blue="60">
+      </color>
+    </on_color>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 1</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <P>FDAS:01:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 1</text>
+    <x>10</x>
+    <y>55</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 1</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>01</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 1</text>
+    <x>90</x>
+    <y>55</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 2</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <P>FDAS:02:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 2</text>
+    <x>10</x>
+    <y>75</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 2</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>02</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 2</text>
+    <x>90</x>
+    <y>75</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
     <x>190</x>
@@ -210,240 +324,6 @@
       </trace>
     </traces>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Active</name>
-    <file>_chan_stats.bob</file>
-    <x>220</x>
-    <y>590</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_5</name>
-    <text>Chassis $(P) Channel $(N)</text>
-    <x>10</x>
-    <y>30</y>
-    <width>320</width>
-    <height>30</height>
-    <font>
-      <font family="Liberation Sans" style="BOLD" size="18.0">
-      </font>
-    </font>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_6</name>
-    <pv_name>$(P)ACQ:HIHIlim:$(N)</pv_name>
-    <x>900</x>
-    <y>651</y>
-    <width>110</width>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_8</name>
-    <pv_name>$(P)ACQ:HIlim:$(N)</pv_name>
-    <x>900</x>
-    <y>681</y>
-    <width>110</width>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_9</name>
-    <pv_name>$(P)ACQ:LOlim:$(N)</pv_name>
-    <x>690</x>
-    <y>650</y>
-    <width>110</width>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_10</name>
-    <pv_name>$(P)ACQ:LOLOlim:$(N)</pv_name>
-    <x>690</x>
-    <y>680</y>
-    <width>110</width>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_11</name>
-    <pv_name>$(P)SA:Ch$(N):NAME.VAL$</pv_name>
-    <x>380</x>
-    <y>560</y>
-    <width>310</width>
-    <height>30</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <format>6</format>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_12</name>
-    <pv_name>$(P)SA:Ch$(N):EGU</pv_name>
-    <x>410</x>
-    <y>625</y>
-    <width>110</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_19</name>
-    <text>EGU</text>
-    <x>350</x>
-    <y>625</y>
-    <width>60</width>
-    <height>30</height>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_20</name>
-    <text>Name</text>
-    <x>290</x>
-    <y>560</y>
-    <width>70</width>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_21</name>
-    <text>HIHI</text>
-    <x>810</x>
-    <y>651</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_22</name>
-    <text>HI</text>
-    <x>810</x>
-    <y>681</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_23</name>
-    <text>LO</text>
-    <x>600</x>
-    <y>650</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_24</name>
-    <text>LOLO</text>
-    <x>600</x>
-    <y>680</y>
-    <width>90</width>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>Boolean Button</name>
-    <pv_name>$(P)SA:Ch$(N):USE</pv_name>
-    <bit>0</bit>
-    <x>265</x>
-    <y>625</y>
-    <width>36</width>
-    <height>25</height>
-    <off_label>Off</off_label>
-    <on_label>On</on_label>
-    <on_color>
-      <color red="60" green="255" blue="60">
-      </color>
-    </on_color>
-    <labels_from_pv>true</labels_from_pv>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_3</name>
-    <pv_name>$(P)SA:Ch$(N):MAX</pv_name>
-    <x>700</x>
-    <y>630</y>
-    <width>110</width>
-    <height>21</height>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_4</name>
-    <pv_name>$(P)SA:Ch$(N):MIN</pv_name>
-    <x>310</x>
-    <y>685</y>
-    <width>110</width>
-    <height>21</height>
-    <horizontal_alignment>2</horizontal_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_25</name>
-    <text>Max. in EGU</text>
-    <x>610</x>
-    <y>630</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_26</name>
-    <text>Min in EGU</text>
-    <x>220</x>
-    <y>685</y>
-    <width>90</width>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chas 1</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <P>FDAS:01:</P>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chas 1</text>
-    <x>10</x>
-    <y>55</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chas 2</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <P>FDAS:02:</P>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chas 2</text>
-    <x>10</x>
-    <y>75</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
   <widget type="action_button" version="3.0.0">
     <name>Sel Chas 3</name>
     <actions>
@@ -458,6 +338,25 @@
     </actions>
     <text>Chas 3</text>
     <x>10</x>
+    <y>95</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 3</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>03</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 3</text>
+    <x>90</x>
     <y>95</y>
     <width>70</width>
     <height>20</height>
@@ -483,6 +382,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 4</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>04</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 4</text>
+    <x>90</x>
+    <y>115</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 5</name>
     <actions>
       <action type="open_display">
@@ -496,6 +414,25 @@
     </actions>
     <text>Chas 5</text>
     <x>10</x>
+    <y>135</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 5</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>05</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 5</text>
+    <x>90</x>
     <y>135</y>
     <width>70</width>
     <height>20</height>
@@ -521,6 +458,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 6</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>06</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 6</text>
+    <x>90</x>
+    <y>155</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 7</name>
     <actions>
       <action type="open_display">
@@ -534,6 +490,25 @@
     </actions>
     <text>Chas 7</text>
     <x>10</x>
+    <y>175</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 7</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>07</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 7</text>
+    <x>90</x>
     <y>175</y>
     <width>70</width>
     <height>20</height>
@@ -559,6 +534,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 8</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>08</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 8</text>
+    <x>90</x>
+    <y>195</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 9</name>
     <actions>
       <action type="open_display">
@@ -572,6 +566,25 @@
     </actions>
     <text>Chas 9</text>
     <x>10</x>
+    <y>215</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 9</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>09</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 9</text>
+    <x>90</x>
     <y>215</y>
     <width>70</width>
     <height>20</height>
@@ -597,6 +610,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 10</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>10</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 10</text>
+    <x>90</x>
+    <y>235</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 11</name>
     <actions>
       <action type="open_display">
@@ -610,6 +642,25 @@
     </actions>
     <text>Chas 11</text>
     <x>10</x>
+    <y>255</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 11</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>11</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 11</text>
+    <x>90</x>
     <y>255</y>
     <width>70</width>
     <height>20</height>
@@ -635,6 +686,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 12</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>12</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 12</text>
+    <x>90</x>
+    <y>275</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 13</name>
     <actions>
       <action type="open_display">
@@ -648,6 +718,25 @@
     </actions>
     <text>Chas 13</text>
     <x>10</x>
+    <y>295</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 13</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>13</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 13</text>
+    <x>90</x>
     <y>295</y>
     <width>70</width>
     <height>20</height>
@@ -673,6 +762,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 14</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>14</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 14</text>
+    <x>90</x>
+    <y>315</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 15</name>
     <actions>
       <action type="open_display">
@@ -686,6 +794,25 @@
     </actions>
     <text>Chas 15</text>
     <x>10</x>
+    <y>335</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 15</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>15</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 15</text>
+    <x>90</x>
     <y>335</y>
     <width>70</width>
     <height>20</height>
@@ -711,6 +838,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 16</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>16</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 16</text>
+    <x>90</x>
+    <y>355</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 17</name>
     <actions>
       <action type="open_display">
@@ -724,6 +870,25 @@
     </actions>
     <text>Chas 17</text>
     <x>10</x>
+    <y>375</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 17</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>17</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 17</text>
+    <x>90</x>
     <y>375</y>
     <width>70</width>
     <height>20</height>
@@ -749,6 +914,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 18</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>18</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 18</text>
+    <x>90</x>
+    <y>395</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 19</name>
     <actions>
       <action type="open_display">
@@ -762,6 +946,25 @@
     </actions>
     <text>Chas 19</text>
     <x>10</x>
+    <y>415</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 19</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>19</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 19</text>
+    <x>90</x>
     <y>415</y>
     <width>70</width>
     <height>20</height>
@@ -787,6 +990,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 20</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>20</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 20</text>
+    <x>90</x>
+    <y>435</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 21</name>
     <actions>
       <action type="open_display">
@@ -800,6 +1022,25 @@
     </actions>
     <text>Chas 21</text>
     <x>10</x>
+    <y>455</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 21</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>21</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 21</text>
+    <x>90</x>
     <y>455</y>
     <width>70</width>
     <height>20</height>
@@ -825,6 +1066,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 22</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>22</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 22</text>
+    <x>90</x>
+    <y>475</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 23</name>
     <actions>
       <action type="open_display">
@@ -838,6 +1098,25 @@
     </actions>
     <text>Chas 23</text>
     <x>10</x>
+    <y>495</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 23</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>23</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 23</text>
+    <x>90</x>
     <y>495</y>
     <width>70</width>
     <height>20</height>
@@ -863,6 +1142,25 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 24</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>24</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 24</text>
+    <x>90</x>
+    <y>515</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 25</name>
     <actions>
       <action type="open_display">
@@ -876,6 +1174,25 @@
     </actions>
     <text>Chas 25</text>
     <x>10</x>
+    <y>535</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 25</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>25</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 25</text>
+    <x>90</x>
     <y>535</y>
     <width>70</width>
     <height>20</height>
@@ -901,6 +1218,74 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 26</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>26</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 26</text>
+    <x>90</x>
+    <y>555</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>Desc.</text>
+    <x>810</x>
+    <y>555</y>
+    <width>70</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>Name</text>
+    <x>290</x>
+    <y>560</y>
+    <width>70</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_11</name>
+    <pv_name>$(P)SA:Ch$(N):NAME.VAL$</pv_name>
+    <x>380</x>
+    <y>560</y>
+    <width>310</width>
+    <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_13</name>
+    <pv_name>$(P)SA:Ch$(N):DESC.VAL$</pv_name>
+    <x>885</x>
+    <y>560</y>
+    <width>310</width>
+    <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 27</name>
     <actions>
       <action type="open_display">
@@ -914,6 +1299,25 @@
     </actions>
     <text>Chas 27</text>
     <x>10</x>
+    <y>575</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 27</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>27</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 27</text>
+    <x>90</x>
     <y>575</y>
     <width>70</width>
     <height>20</height>
@@ -939,6 +1343,108 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 28</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>28</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 28</text>
+    <x>90</x>
+    <y>595</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>EGU</text>
+    <x>865</x>
+    <y>595</y>
+    <width>60</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_12</name>
+    <pv_name>$(P)SA:Ch$(N):EGU</pv_name>
+    <x>925</x>
+    <y>595</y>
+    <width>110</width>
+    <height>30</height>
+    <format>3</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>Max. in EGU</text>
+    <x>1035</x>
+    <y>595</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>$(P)SA:Ch$(N):MAX</pv_name>
+    <x>1125</x>
+    <y>595</y>
+    <width>110</width>
+    <height>21</height>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Coupling</text>
+    <x>267</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Min</text>
+    <x>357</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Mean</text>
+    <x>437</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Std</text>
+    <x>497</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Max</text>
+    <x>577</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Cnt</text>
+    <x>647</x>
+    <y>604</y>
+    <width>60</width>
+    <height>30</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 29</name>
     <actions>
       <action type="open_display">
@@ -958,6 +1464,34 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 29</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>29</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 29</text>
+    <x>90</x>
+    <y>615</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Active</name>
+    <file>_chan_stats.bob</file>
+    <x>180</x>
+    <y>615</y>
+    <width>645</width>
+    <height>35</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="action_button" version="3.0.0">
     <name>Sel Chas 30</name>
     <actions>
       <action type="open_display">
@@ -971,6 +1505,25 @@
     </actions>
     <text>Chas 30</text>
     <x>10</x>
+    <y>635</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chan 30</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <N>30</N>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chan 30</text>
+    <x>90</x>
     <y>635</y>
     <width>70</width>
     <height>20</height>
@@ -996,603 +1549,6 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>Sel Chas 32</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <P>FDAS:32:</P>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chas 32</text>
-    <x>10</x>
-    <y>675</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>sys://time</pv_name>
-    <x>10</x>
-    <y>10</y>
-    <width>180</width>
-    <height>25</height>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 1</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>01</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 1</text>
-    <x>90</x>
-    <y>55</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 2</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>02</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 2</text>
-    <x>90</x>
-    <y>75</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 3</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>03</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 3</text>
-    <x>90</x>
-    <y>95</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 4</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>04</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 4</text>
-    <x>90</x>
-    <y>115</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 5</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>05</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 5</text>
-    <x>90</x>
-    <y>135</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 6</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>06</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 6</text>
-    <x>90</x>
-    <y>155</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 7</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>07</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 7</text>
-    <x>90</x>
-    <y>175</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 8</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>08</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 8</text>
-    <x>90</x>
-    <y>195</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 9</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>09</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 9</text>
-    <x>90</x>
-    <y>215</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 10</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>10</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 10</text>
-    <x>90</x>
-    <y>235</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 11</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>11</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 11</text>
-    <x>90</x>
-    <y>255</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 12</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>12</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 12</text>
-    <x>90</x>
-    <y>275</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 13</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>13</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 13</text>
-    <x>90</x>
-    <y>295</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 14</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>14</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 14</text>
-    <x>90</x>
-    <y>315</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 15</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>15</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 15</text>
-    <x>90</x>
-    <y>335</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 16</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>16</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 16</text>
-    <x>90</x>
-    <y>355</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 17</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>17</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 17</text>
-    <x>90</x>
-    <y>375</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 18</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>18</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 18</text>
-    <x>90</x>
-    <y>395</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 19</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>19</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 19</text>
-    <x>90</x>
-    <y>415</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 20</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>20</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 20</text>
-    <x>90</x>
-    <y>435</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 21</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>21</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 21</text>
-    <x>90</x>
-    <y>455</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 22</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>22</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 22</text>
-    <x>90</x>
-    <y>475</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 23</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>23</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 23</text>
-    <x>90</x>
-    <y>495</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 24</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>24</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 24</text>
-    <x>90</x>
-    <y>515</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 25</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>25</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 25</text>
-    <x>90</x>
-    <y>535</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 26</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>26</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 26</text>
-    <x>90</x>
-    <y>555</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 27</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>27</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 27</text>
-    <x>90</x>
-    <y>575</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 28</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>28</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 28</text>
-    <x>90</x>
-    <y>595</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 29</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>29</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 29</text>
-    <x>90</x>
-    <y>615</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
-    <name>Sel Chan 30</name>
-    <actions>
-      <action type="open_display">
-        <file>SingleGraph.bob</file>
-        <macros>
-          <N>30</N>
-        </macros>
-        <target>replace</target>
-        <description>Open Display</description>
-      </action>
-    </actions>
-    <text>Chan 30</text>
-    <x>90</x>
-    <y>635</y>
-    <width>70</width>
-    <height>20</height>
-    <tooltip>$(actions)</tooltip>
-  </widget>
-  <widget type="action_button" version="3.0.0">
     <name>Sel Chan 31</name>
     <actions>
       <action type="open_display">
@@ -1607,6 +1563,92 @@
     <text>Chan 31</text>
     <x>90</x>
     <y>655</y>
+    <width>70</width>
+    <height>20</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>LO</text>
+    <x>600</x>
+    <y>660</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_9</name>
+    <pv_name>$(P)ACQ:LOlim:$(N)</pv_name>
+    <x>690</x>
+    <y>660</y>
+    <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>HIHI</text>
+    <x>810</x>
+    <y>661</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_6</name>
+    <pv_name>$(P)ACQ:HIHIlim:$(N)</pv_name>
+    <x>900</x>
+    <y>661</y>
+    <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>Line 5</text>
+    <x>190</x>
+    <y>665</y>
+    <width>70</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Entry_14</name>
+    <pv_name>$(P)SA:Ch$(N):DESC5.VAL$</pv_name>
+    <x>265</x>
+    <y>665</y>
+    <width>310</width>
+    <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Sel Chas 32</name>
+    <actions>
+      <action type="open_display">
+        <file>SingleGraph.bob</file>
+        <macros>
+          <P>FDAS:32:</P>
+        </macros>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Chas 32</text>
+    <x>10</x>
+    <y>675</y>
     <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
@@ -1631,63 +1673,68 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_27</name>
-    <text>In Use</text>
-    <x>180</x>
-    <y>625</y>
-    <width>60</width>
-    <height>30</height>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
+    <name>Label_24</name>
+    <text>LOLO</text>
+    <x>600</x>
+    <y>690</y>
+    <width>90</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_13</name>
-    <pv_name>$(P)SA:Ch$(N):DESC.VAL$</pv_name>
-    <x>885</x>
-    <y>560</y>
-    <width>310</width>
-    <height>30</height>
+    <name>Text Entry_10</name>
+    <pv_name>$(P)ACQ:LOLOlim:$(N)</pv_name>
+    <x>690</x>
+    <y>690</y>
+    <width>110</width>
     <background_color>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <format>6</format>
+    <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_28</name>
-    <text>Desc.</text>
+    <name>Label_22</name>
+    <text>HI</text>
     <x>810</x>
-    <y>555</y>
-    <width>70</width>
-    <height>30</height>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_29</name>
-    <text>Line 5</text>
-    <x>190</x>
-    <y>655</y>
-    <width>70</width>
-    <height>30</height>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
+    <y>691</y>
+    <width>90</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Entry_14</name>
-    <pv_name>$(P)SA:Ch$(N):DESC5.VAL$</pv_name>
-    <x>265</x>
-    <y>655</y>
-    <width>310</width>
-    <height>30</height>
+    <name>Text Entry_8</name>
+    <pv_name>$(P)ACQ:HIlim:$(N)</pv_name>
+    <x>900</x>
+    <y>691</y>
+    <width>110</width>
     <background_color>
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
-    <format>6</format>
+    <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_26</name>
+    <text>Min in EGU</text>
+    <x>220</x>
+    <y>695</y>
+    <width>90</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)SA:Ch$(N):MIN</pv_name>
+    <x>310</x>
+    <y>695</y>
+    <width>110</width>
+    <height>21</height>
+    <horizontal_alignment>2</horizontal_alignment>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_1</name>
+    <file>_acq_header.bob</file>
+    <x>20</x>
+    <width>1490</width>
+    <height>60</height>
   </widget>
 </display>
