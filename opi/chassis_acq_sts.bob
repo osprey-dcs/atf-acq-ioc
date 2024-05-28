@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-17 09:04:19 by atf-->
+<!--Saved on 2024-05-28 11:25:25 by atf-->
 <display version="2.0.0">
-  <name>Acq Monitor</name>
+  <name>Acq Ctrl</name>
   <width>1610</width>
   <height>541</height>
   <widget type="label" version="2.0.0">
@@ -412,11 +412,12 @@
     <x>110</x>
     <y>31</y>
     <height>21</height>
+    <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>File Rate</text>
-    <x>300</x>
+    <x>310</x>
     <y>31</y>
     <width>80</width>
     <height>21</height>
@@ -424,7 +425,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Drop Rate</text>
-    <x>210</x>
+    <x>220</x>
     <y>31</y>
     <width>60</width>
     <height>21</height>
@@ -432,15 +433,14 @@
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>File Size</text>
-    <x>410</x>
+    <x>420</x>
     <y>31</y>
     <height>21</height>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Combo Box</name>
     <pv_name>$(EVG)ACQ:rate</pv_name>
-    <x>1210</x>
-    <y>481</y>
+    <x>640</x>
     <width>126</width>
     <height>29</height>
     <font>
@@ -455,8 +455,7 @@
   <widget type="label" version="2.0.0">
     <name>Label_12</name>
     <text>Acquiring</text>
-    <x>1080</x>
-    <y>440</y>
+    <x>240</x>
     <width>110</width>
     <height>25</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -465,8 +464,7 @@
     <name>LED_1</name>
     <pv_name>$(EVG)ACQ:enable</pv_name>
     <bit>0</bit>
-    <x>1210</x>
-    <y>440</y>
+    <x>370</x>
     <width>126</width>
     <height>25</height>
     <off_color>
@@ -479,104 +477,385 @@
   <widget type="label" version="2.0.0">
     <name>Label_13</name>
     <text>Samp. Rate</text>
-    <x>1080</x>
-    <y>481</y>
+    <x>510</x>
     <width>110</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_5</name>
-    <text>File Size</text>
-    <x>940</x>
+    <name>Label_9</name>
+    <text>In Use</text>
     <y>31</y>
+    <width>50</width>
+    <height>30</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <pv_name>$(P)SA:FILE.VAL$</pv_name>
+    <x>1070</x>
+    <y>335</y>
+    <width>520</width>
+    <format>6</format>
+  </widget>
+  <widget type="combo" version="2.0.0">
+    <name>Combo Box_1</name>
+    <pv_name>$(EVG)ACQ:rate</pv_name>
+    <x>1300</x>
+    <y>30</y>
+    <width>126</width>
+    <height>25</height>
+    <font>
+      <font name="Header 2" family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>ADC Acquire</text>
+    <x>1070</x>
+    <width>167</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_16</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(EVG)ACQ:enable</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Disable</text>
+    <x>1070</x>
+    <y>30</y>
+    <width>80</width>
+    <height>25</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_17</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(EVG)ACQ:enable</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <text>Enable</text>
+    <x>1157</x>
+    <y>30</y>
+    <width>80</width>
+    <height>25</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>$(EVG)ACQ:enable</pv_name>
+    <bit>0</bit>
+    <x>1243</x>
+    <y>30</y>
+    <width>25</width>
+    <height>25</height>
+    <off_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>ADC Samp. Rate</text>
+    <x>1300</x>
+    <width>126</width>
+    <height>25</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>CCCR Name</text>
+    <x>1070</x>
+    <y>309</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>Run Description</text>
+    <x>1070</x>
+    <y>370</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)SA:DESC.VAL$</pv_name>
+    <x>1070</x>
+    <y>392</y>
+    <width>210</width>
+    <format>6</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>Last Message</text>
+    <x>1070</x>
+    <y>429</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_3</name>
+    <pv_name>pva://$(P)CTRL:LastMsg-I</pv_name>
+    <x>1070</x>
+    <y>456</y>
+    <width>356</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_4</name>
+    <pv_name>pva://$(P)CTRL:LastName-I</pv_name>
+    <x>1070</x>
+    <y>508</y>
+    <width>356</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <vertical_alignment>0</vertical_alignment>
+    <wrap_words>true</wrap_words>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Update_5</name>
+    <pv_name>pva://$(P)CTRL:LastFile-I</pv_name>
+    <x>1070</x>
+    <y>560</y>
+    <width>520</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <vertical_alignment>0</vertical_alignment>
+    <wrap_words>true</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_18</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>Stop</description>
+      </action>
+    </actions>
+    <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+    <x>1070</x>
+    <y>261</y>
+    <width>110</width>
+    <height>40</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_19</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>1</value>
+        <description>Start</description>
+      </action>
+    </actions>
+    <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+    <x>1213</x>
+    <y>261</y>
+    <width>110</width>
+    <height>40</height>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_20</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>2</value>
+        <description>Reset</description>
+      </action>
+    </actions>
+    <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+    <x>1490</x>
+    <y>261</y>
+    <width>58</width>
+    <height>40</height>
+    <background_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)</name>
+    <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+    <x>1360</x>
+    <y>261</y>
+    <width>100</width>
+    <height>40</height>
+    <square>true</square>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Idle</label>
+        <color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Acquire</label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label>Abort</label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>Acquisition Control</text>
+    <x>1070</x>
+    <y>239</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_22</name>
+    <text>Recording Control</text>
+    <x>1070</x>
+    <y>69</y>
+    <width>430</width>
+    <height>22</height>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>pva://$(P)SA:READY_</pv_name>
+    <x>1240</x>
+    <y>170</y>
+    <width>100</width>
+    <height>30</height>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>Can Start?</text>
+    <x>1070</x>
+    <y>170</y>
+    <width>140</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(P)SA:READY</pv_name>
+    <x>1240</x>
+    <y>119</y>
+    <width>100</width>
+    <height>30</height>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_24</name>
+    <text>System Ready?</text>
+    <x>1070</x>
+    <y>119</y>
+    <width>140</width>
+    <height>30</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_26</name>
+    <text>Last Started Name</text>
+    <x>1070</x>
+    <y>481</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_27</name>
+    <text>Last Completed File</text>
+    <x>1070</x>
+    <y>533</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>Record</text>
+    <x>60</x>
+    <y>31</y>
+    <width>50</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_6</name>
+    <name>Label_14</name>
     <text>File Rate</text>
-    <x>830</x>
+    <x>850</x>
     <y>31</y>
     <width>80</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_7</name>
-    <text>Net Rate</text>
-    <x>640</x>
-    <y>31</y>
-    <height>21</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_8</name>
+    <name>Label_15</name>
     <text>Drop Rate</text>
-    <x>740</x>
+    <x>760</x>
     <y>31</y>
     <width>60</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_9</name>
-    <text>In Use</text>
-    <x>30</x>
+    <name>Label_25</name>
+    <text>File Size</text>
+    <x>960</x>
+    <y>31</y>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>Record</text>
+    <x>600</x>
     <y>31</y>
     <width>50</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_10</name>
+    <name>Label_29</name>
+    <text>Net Rate</text>
+    <x>650</x>
+    <y>31</y>
+    <height>21</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
     <text>In Use</text>
-    <x>570</x>
+    <x>540</x>
     <y>31</y>
     <width>50</width>
-    <height>21</height>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>$(P)SA:FILE.VAL$</pv_name>
-    <x>1090</x>
-    <y>60</y>
-    <width>520</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_1</name>
-    <pv_name>$(P)SA:DESC.VAL$</pv_name>
-    <x>1090</x>
-    <y>121</y>
-    <width>520</width>
-    <format>6</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_11</name>
-    <text>CCCR Name</text>
-    <x>1090</x>
-    <y>30</y>
-    <width>310</width>
-    <height>22</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_14</name>
-    <text>Run Description</text>
-    <x>1090</x>
-    <y>91</y>
-    <width>310</width>
-    <height>22</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_15</name>
-    <text>Last Run Name</text>
-    <x>1090</x>
-    <y>151</y>
-    <width>310</width>
-    <height>22</height>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_2</name>
-    <pv_name>$(P)SA:LASTRUN.VAL$</pv_name>
-    <x>1090</x>
-    <y>181</y>
-    <width>520</width>
-    <format>6</format>
+    <height>30</height>
   </widget>
 </display>
