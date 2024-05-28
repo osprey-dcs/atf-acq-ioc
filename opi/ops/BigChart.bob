@@ -270,7 +270,7 @@
       <N>$(N2)</N>
       <P>$(P2)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>880</y>
     <width>645</width>
@@ -324,7 +324,7 @@
       <N>$(N3)</N>
       <P>$(P3)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>910</y>
     <width>645</width>
@@ -378,7 +378,7 @@
       <N>$(N4)</N>
       <P>$(P4)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>940</y>
     <width>645</width>
@@ -432,7 +432,7 @@
       <N>$(N5)</N>
       <P>$(P5)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>970</y>
     <width>645</width>
@@ -486,7 +486,7 @@
       <N>$(N6)</N>
       <P>$(P6)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>1000</y>
     <width>645</width>
@@ -540,7 +540,7 @@
       <N>$(N7)</N>
       <P>$(P7)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>1030</y>
     <width>645</width>
@@ -594,7 +594,7 @@
       <N>$(N8)</N>
       <P>$(P8)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>1060</y>
     <width>645</width>
@@ -648,7 +648,7 @@
       <N>$(N9)</N>
       <P>$(P9)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>1090</y>
     <width>645</width>
@@ -1260,7 +1260,7 @@
       <N>$(N1)</N>
       <P>$(P1)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>820</x>
     <y>850</y>
     <width>645</width>

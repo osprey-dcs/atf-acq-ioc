@@ -76,7 +76,7 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Active</name>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>350</x>
     <y>430</y>
     <width>645</width>

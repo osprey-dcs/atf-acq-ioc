@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-16 09:16:56 by atf-->
+<!--Saved on 2024-05-28 10:56:43 by atf-->
 <display version="2.0.0">
-  <name>ACQ $(P)Ch$(N)</name>
+  <name>4 Graph</name>
   <macros>
     <EVG>FDAS:01:</EVG>
   </macros>
@@ -141,7 +141,7 @@
       <N>$(N2)</N>
       <P>$(P2)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>720</x>
     <y>475</y>
     <width>645</width>
@@ -195,7 +195,7 @@
       <N>$(N3)</N>
       <P>$(P3)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>10</x>
     <y>975</y>
     <width>645</width>
@@ -249,7 +249,7 @@
       <N>$(N4)</N>
       <P>$(P4)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>720</x>
     <y>975</y>
     <width>645</width>
@@ -861,7 +861,7 @@
       <N>$(N1)</N>
       <P>$(P1)</P>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <y>470</y>
     <width>645</width>
     <height>35</height>

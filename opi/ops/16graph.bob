@@ -224,7 +224,7 @@
     <macros>
       <N>05</N>
     </macros>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>900</x>
     <y>830</y>
     <width>645</width>
@@ -486,7 +486,7 @@
     <name>Sel Chas 1</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:01:</P>
         </macros>
@@ -505,7 +505,7 @@
     <name>Sel Chas 2</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:02:</P>
         </macros>
@@ -524,7 +524,7 @@
     <name>Sel Chas 3</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:03:</P>
         </macros>
@@ -543,7 +543,7 @@
     <name>Sel Chas 4</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:04:</P>
         </macros>
@@ -562,7 +562,7 @@
     <name>Sel Chas 5</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:05:</P>
         </macros>
@@ -581,7 +581,7 @@
     <name>Sel Chas 6</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:06:</P>
         </macros>
@@ -600,7 +600,7 @@
     <name>Sel Chas 7</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:07:</P>
         </macros>
@@ -619,7 +619,7 @@
     <name>Sel Chas 8</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:08:</P>
         </macros>
@@ -638,7 +638,7 @@
     <name>Sel Chas 9</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:09:</P>
         </macros>
@@ -657,7 +657,7 @@
     <name>Sel Chas 10</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:10:</P>
         </macros>
@@ -676,7 +676,7 @@
     <name>Sel Chas 11</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:11:</P>
         </macros>
@@ -695,7 +695,7 @@
     <name>Sel Chas 12</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:12:</P>
         </macros>
@@ -714,7 +714,7 @@
     <name>Sel Chas 13</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:13:</P>
         </macros>
@@ -733,7 +733,7 @@
     <name>Sel Chas 14</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:14:</P>
         </macros>
@@ -752,7 +752,7 @@
     <name>Sel Chas 15</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:15:</P>
         </macros>
@@ -771,7 +771,7 @@
     <name>Sel Chas 16</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:16:</P>
         </macros>
@@ -790,7 +790,7 @@
     <name>Sel Chas 17</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:17:</P>
         </macros>
@@ -809,7 +809,7 @@
     <name>Sel Chas 18</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:18:</P>
         </macros>
@@ -828,7 +828,7 @@
     <name>Sel Chas 19</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:19:</P>
         </macros>
@@ -847,7 +847,7 @@
     <name>Sel Chas 20</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:20:</P>
         </macros>
@@ -866,7 +866,7 @@
     <name>Sel Chas 21</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:21:</P>
         </macros>
@@ -885,7 +885,7 @@
     <name>Sel Chas 22</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:22:</P>
         </macros>
@@ -904,7 +904,7 @@
     <name>Sel Chas 23</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:23:</P>
         </macros>
@@ -923,7 +923,7 @@
     <name>Sel Chas 24</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:24:</P>
         </macros>
@@ -942,7 +942,7 @@
     <name>Sel Chas 25</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:25:</P>
         </macros>
@@ -961,7 +961,7 @@
     <name>Sel Chas 26</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:26:</P>
         </macros>
@@ -980,7 +980,7 @@
     <name>Sel Chas 27</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:27:</P>
         </macros>
@@ -999,7 +999,7 @@
     <name>Sel Chas 28</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:28:</P>
         </macros>
@@ -1018,7 +1018,7 @@
     <name>Sel Chas 29</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:29:</P>
         </macros>
@@ -1037,7 +1037,7 @@
     <name>Sel Chas 30</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:30:</P>
         </macros>
@@ -1056,7 +1056,7 @@
     <name>Sel Chas 31</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:31:</P>
         </macros>
@@ -1075,7 +1075,7 @@
     <name>Sel Chas 32</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:32:</P>
         </macros>
@@ -1102,7 +1102,7 @@
     <name>Sel Chan 1</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>01</N>
         </macros>
@@ -1121,7 +1121,7 @@
     <name>Sel Chan 2</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>02</N>
         </macros>
@@ -1140,7 +1140,7 @@
     <name>Sel Chan 3</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>03</N>
         </macros>
@@ -1159,7 +1159,7 @@
     <name>Sel Chan 4</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>04</N>
         </macros>
@@ -1178,7 +1178,7 @@
     <name>Sel Chan 5</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>05</N>
         </macros>
@@ -1197,7 +1197,7 @@
     <name>Sel Chan 6</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>06</N>
         </macros>
@@ -1216,7 +1216,7 @@
     <name>Sel Chan 7</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>07</N>
         </macros>
@@ -1235,7 +1235,7 @@
     <name>Sel Chan 8</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>08</N>
         </macros>
@@ -1254,7 +1254,7 @@
     <name>Sel Chan 9</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>09</N>
         </macros>
@@ -1273,7 +1273,7 @@
     <name>Sel Chan 10</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>10</N>
         </macros>
@@ -1292,7 +1292,7 @@
     <name>Sel Chan 11</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>11</N>
         </macros>
@@ -1311,7 +1311,7 @@
     <name>Sel Chan 12</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>12</N>
         </macros>
@@ -1330,7 +1330,7 @@
     <name>Sel Chan 13</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>13</N>
         </macros>
@@ -1349,7 +1349,7 @@
     <name>Sel Chan 14</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>14</N>
         </macros>
@@ -1368,7 +1368,7 @@
     <name>Sel Chan 15</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>15</N>
         </macros>
@@ -1387,7 +1387,7 @@
     <name>Sel Chan 16</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>16</N>
         </macros>
@@ -1406,7 +1406,7 @@
     <name>Sel Chan 17</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>17</N>
         </macros>
@@ -1425,7 +1425,7 @@
     <name>Sel Chan 18</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>18</N>
         </macros>
@@ -1444,7 +1444,7 @@
     <name>Sel Chan 19</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>19</N>
         </macros>
@@ -1463,7 +1463,7 @@
     <name>Sel Chan 20</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>20</N>
         </macros>
@@ -1482,7 +1482,7 @@
     <name>Sel Chan 21</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>21</N>
         </macros>
@@ -1501,7 +1501,7 @@
     <name>Sel Chan 22</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>22</N>
         </macros>
@@ -1520,7 +1520,7 @@
     <name>Sel Chan 23</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>23</N>
         </macros>
@@ -1539,7 +1539,7 @@
     <name>Sel Chan 24</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>24</N>
         </macros>
@@ -1558,7 +1558,7 @@
     <name>Sel Chan 25</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>25</N>
         </macros>
@@ -1577,7 +1577,7 @@
     <name>Sel Chan 26</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>26</N>
         </macros>
@@ -1596,7 +1596,7 @@
     <name>Sel Chan 27</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>27</N>
         </macros>
@@ -1615,7 +1615,7 @@
     <name>Sel Chan 28</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>28</N>
         </macros>
@@ -1634,7 +1634,7 @@
     <name>Sel Chan 29</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>29</N>
         </macros>
@@ -1653,7 +1653,7 @@
     <name>Sel Chan 30</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>30</N>
         </macros>
@@ -1672,7 +1672,7 @@
     <name>Sel Chan 31</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>31</N>
         </macros>
@@ -1691,7 +1691,7 @@
     <name>Sel Chan 32</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>32</N>
         </macros>
@@ -1778,7 +1778,7 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Active_1</name>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>910</x>
     <y>865</y>
     <width>645</width>

@@ -1484,7 +1484,7 @@
   </widget>
   <widget type="embedded" version="2.0.0">
     <name>Active</name>
-    <file>_chan_stats.bob</file>
+    <file>../_chan_stats.bob</file>
     <x>180</x>
     <y>615</y>
     <width>645</width>
