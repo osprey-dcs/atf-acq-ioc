@@ -270,8 +270,9 @@ record(bi, "$(P)STS") {
 # ready for global recording
 record(calcout, "$(P)RDY_") {
     field(INPA, "$(P)USE CP MS")
-    field(INPB, "$(P)STS CP MS")
-    field(CALC, "!A||B") # not in use or OK
+    field(INPB, "$(P)STS CP")
+    field(INPC, "$(P)STS.SEVR CP")
+    field(CALC, "!A||(B&&!C)") # not in use or STS OK (and not in alarm)
     field(OUT , "$(P)RDY PP MS")
     field(IVOA, "Set output to IVOV")
     field(IVOV, "0")
