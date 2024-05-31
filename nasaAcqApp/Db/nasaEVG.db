@@ -47,6 +47,26 @@ record(lso, "$(P)SA:DESC") {
     field(PINI, "YES")
     info(autosaveFields_pass1, "VAL")
 }
+record(lso, "$(P)SA:CUST") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FACLITY") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:PROJ") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:OPER") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
 record(lso, "$(P)SA:FILE") {
     field(SIZV, "128")
     field(PINI, "YES")
