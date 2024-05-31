@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-28 11:25:25 by atf-->
+<!--Saved on 2024-05-31 19:15:52 by atf-->
 <display version="2.0.0">
   <name>Acq Ctrl</name>
-  <width>1610</width>
-  <height>541</height>
+  <width>1830</width>
+  <height>590</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -29,8 +29,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>61</y>
-    <width>520</width>
+    <y>110</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -41,8 +41,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>91</y>
-    <width>520</width>
+    <y>140</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -53,8 +53,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>121</y>
-    <width>520</width>
+    <y>170</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -65,8 +65,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>151</y>
-    <width>520</width>
+    <y>200</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -77,8 +77,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>181</y>
-    <width>520</width>
+    <y>230</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -89,8 +89,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>211</y>
-    <width>520</width>
+    <y>260</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -101,8 +101,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>241</y>
-    <width>520</width>
+    <y>290</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -113,8 +113,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>271</y>
-    <width>520</width>
+    <y>320</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -125,8 +125,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>301</y>
-    <width>520</width>
+    <y>350</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -137,8 +137,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>331</y>
-    <width>520</width>
+    <y>380</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -149,8 +149,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>361</y>
-    <width>520</width>
+    <y>410</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -161,8 +161,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>391</y>
-    <width>520</width>
+    <y>440</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -173,8 +173,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>421</y>
-    <width>520</width>
+    <y>470</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -185,8 +185,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>451</y>
-    <width>520</width>
+    <y>500</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -197,8 +197,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>481</y>
-    <width>520</width>
+    <y>530</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -209,8 +209,8 @@
     </macros>
     <file>_chassis_acq_sts.bob</file>
     <x>10</x>
-    <y>511</y>
-    <width>520</width>
+    <y>560</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -220,9 +220,9 @@
       <N>17</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>61</y>
-    <width>520</width>
+    <x>679</x>
+    <y>111</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -232,9 +232,9 @@
       <N>18</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>91</y>
-    <width>520</width>
+    <x>679</x>
+    <y>141</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -244,9 +244,9 @@
       <N>19</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>121</y>
-    <width>520</width>
+    <x>679</x>
+    <y>171</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -256,9 +256,9 @@
       <N>20</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>151</y>
-    <width>520</width>
+    <x>679</x>
+    <y>201</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -268,9 +268,9 @@
       <N>21</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>181</y>
-    <width>520</width>
+    <x>679</x>
+    <y>231</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -280,9 +280,9 @@
       <N>22</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>211</y>
-    <width>520</width>
+    <x>679</x>
+    <y>261</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -292,9 +292,9 @@
       <N>23</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>241</y>
-    <width>520</width>
+    <x>679</x>
+    <y>291</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -304,9 +304,9 @@
       <N>24</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>271</y>
-    <width>520</width>
+    <x>679</x>
+    <y>321</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -316,9 +316,9 @@
       <N>25</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>301</y>
-    <width>520</width>
+    <x>679</x>
+    <y>351</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -328,9 +328,9 @@
       <N>26</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>331</y>
-    <width>520</width>
+    <x>679</x>
+    <y>381</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -340,9 +340,9 @@
       <N>27</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>361</y>
-    <width>520</width>
+    <x>679</x>
+    <y>411</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -352,9 +352,9 @@
       <N>28</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>391</y>
-    <width>520</width>
+    <x>679</x>
+    <y>441</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -364,9 +364,9 @@
       <N>29</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>421</y>
-    <width>520</width>
+    <x>679</x>
+    <y>471</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -376,9 +376,9 @@
       <N>30</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>451</y>
-    <width>520</width>
+    <x>679</x>
+    <y>501</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -388,9 +388,9 @@
       <N>31</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>481</y>
-    <width>520</width>
+    <x>679</x>
+    <y>531</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
@@ -400,41 +400,41 @@
       <N>32</N>
     </macros>
     <file>_chassis_acq_sts.bob</file>
-    <x>550</x>
-    <y>511</y>
-    <width>520</width>
+    <x>679</x>
+    <y>561</y>
+    <width>670</width>
     <height>30</height>
     <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_1</name>
     <text>Net Rate</text>
-    <x>110</x>
-    <y>31</y>
+    <x>140</x>
+    <y>84</y>
     <height>21</height>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>File Rate</text>
-    <x>310</x>
-    <y>31</y>
+    <x>340</x>
+    <y>84</y>
     <width>80</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_3</name>
     <text>Drop Rate</text>
-    <x>220</x>
-    <y>31</y>
+    <x>250</x>
+    <y>84</y>
     <width>60</width>
     <height>21</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>File Size</text>
-    <x>420</x>
-    <y>31</y>
+    <x>450</x>
+    <y>84</y>
     <height>21</height>
   </widget>
   <widget type="textupdate" version="2.0.0">
@@ -485,23 +485,25 @@
   <widget type="label" version="2.0.0">
     <name>Label_9</name>
     <text>In Use</text>
-    <y>31</y>
-    <width>50</width>
-    <height>30</height>
+    <x>50</x>
+    <y>47</y>
+    <width>20</width>
+    <height>58</height>
+    <rotation_step>1</rotation_step>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>
     <pv_name>$(P)SA:FILE.VAL$</pv_name>
-    <x>1070</x>
-    <y>335</y>
-    <width>520</width>
+    <x>1360</x>
+    <y>395</y>
+    <width>460</width>
     <format>6</format>
   </widget>
   <widget type="combo" version="2.0.0">
     <name>Combo Box_1</name>
     <pv_name>$(EVG)ACQ:rate</pv_name>
-    <x>1300</x>
-    <y>30</y>
+    <x>1590</x>
+    <y>90</y>
     <width>126</width>
     <height>25</height>
     <font>
@@ -512,7 +514,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_16</name>
     <text>ADC Acquire</text>
-    <x>1070</x>
+    <x>1360</x>
+    <y>60</y>
     <width>167</width>
     <height>25</height>
     <horizontal_alignment>1</horizontal_alignment>
@@ -527,8 +530,8 @@
       </action>
     </actions>
     <text>Disable</text>
-    <x>1070</x>
-    <y>30</y>
+    <x>1360</x>
+    <y>90</y>
     <width>80</width>
     <height>25</height>
     <background_color>
@@ -547,8 +550,8 @@
       </action>
     </actions>
     <text>Enable</text>
-    <x>1157</x>
-    <y>30</y>
+    <x>1447</x>
+    <y>90</y>
     <width>80</width>
     <height>25</height>
     <background_color>
@@ -561,8 +564,8 @@
     <name>LED_2</name>
     <pv_name>$(EVG)ACQ:enable</pv_name>
     <bit>0</bit>
-    <x>1243</x>
-    <y>30</y>
+    <x>1533</x>
+    <y>90</y>
     <width>25</width>
     <height>25</height>
     <off_color>
@@ -573,54 +576,55 @@
   <widget type="label" version="2.0.0">
     <name>Label_17</name>
     <text>ADC Samp. Rate</text>
-    <x>1300</x>
+    <x>1590</x>
+    <y>60</y>
     <width>126</width>
     <height>25</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_18</name>
     <text>CCCR Name</text>
-    <x>1070</x>
-    <y>309</y>
+    <x>1360</x>
+    <y>369</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_19</name>
     <text>Run Description</text>
-    <x>1070</x>
-    <y>370</y>
+    <x>1360</x>
+    <y>430</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_1</name>
     <pv_name>$(P)SA:DESC.VAL$</pv_name>
-    <x>1070</x>
-    <y>392</y>
+    <x>1360</x>
+    <y>452</y>
     <width>210</width>
     <format>6</format>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_20</name>
     <text>Last Message</text>
-    <x>1070</x>
-    <y>429</y>
+    <x>1360</x>
+    <y>489</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>pva://$(P)CTRL:LastMsg-I</pv_name>
-    <x>1070</x>
-    <y>456</y>
+    <x>1360</x>
+    <y>516</y>
     <width>356</width>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Update_4</name>
     <pv_name>pva://$(P)CTRL:LastName-I</pv_name>
-    <x>1070</x>
-    <y>508</y>
+    <x>1360</x>
+    <y>568</y>
     <width>356</width>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
@@ -632,9 +636,9 @@
   <widget type="textentry" version="3.0.0">
     <name>Text Update_5</name>
     <pv_name>pva://$(P)CTRL:LastFile-I</pv_name>
-    <x>1070</x>
-    <y>560</y>
-    <width>520</width>
+    <x>1219</x>
+    <y>620</y>
+    <width>601</width>
     <background_color>
       <color name="Read_Background" red="240" green="240" blue="240">
       </color>
@@ -652,8 +656,8 @@
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
-    <x>1070</x>
-    <y>261</y>
+    <x>1360</x>
+    <y>321</y>
     <width>110</width>
     <height>40</height>
   </widget>
@@ -667,8 +671,8 @@
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
-    <x>1213</x>
-    <y>261</y>
+    <x>1503</x>
+    <y>321</y>
     <width>110</width>
     <height>40</height>
   </widget>
@@ -682,8 +686,8 @@
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
-    <x>1490</x>
-    <y>261</y>
+    <x>1770</x>
+    <y>321</y>
     <width>58</width>
     <height>40</height>
     <background_color>
@@ -694,8 +698,8 @@
   <widget type="multi_state_led" version="2.0.0">
     <name>LED (Multi State)</name>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
-    <x>1360</x>
-    <y>261</y>
+    <x>1650</x>
+    <y>321</y>
     <width>100</width>
     <height>40</height>
     <square>true</square>
@@ -729,16 +733,16 @@
   <widget type="label" version="2.0.0">
     <name>Label_21</name>
     <text>Acquisition Control</text>
-    <x>1070</x>
-    <y>239</y>
+    <x>1360</x>
+    <y>299</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_22</name>
     <text>Recording Control</text>
-    <x>1070</x>
-    <y>69</y>
+    <x>1360</x>
+    <y>129</y>
     <width>430</width>
     <height>22</height>
     <font>
@@ -750,8 +754,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
     <pv_name>pva://$(P)SA:READY_</pv_name>
-    <x>1240</x>
-    <y>170</y>
+    <x>1500</x>
+    <y>231</y>
     <width>100</width>
     <height>30</height>
     <square>true</square>
@@ -760,9 +764,9 @@
   <widget type="label" version="2.0.0">
     <name>Label_23</name>
     <text>Can Start?</text>
-    <x>1070</x>
-    <y>170</y>
-    <width>140</width>
+    <x>1360</x>
+    <y>231</y>
+    <width>110</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
@@ -770,8 +774,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
     <pv_name>$(P)SA:READY</pv_name>
-    <x>1240</x>
-    <y>119</y>
+    <x>1500</x>
+    <y>180</y>
     <width>100</width>
     <height>30</height>
     <square>true</square>
@@ -780,9 +784,9 @@
   <widget type="label" version="2.0.0">
     <name>Label_24</name>
     <text>System Ready?</text>
-    <x>1070</x>
-    <y>119</y>
-    <width>140</width>
+    <x>1360</x>
+    <y>180</y>
+    <width>110</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
@@ -790,72 +794,339 @@
   <widget type="label" version="2.0.0">
     <name>Label_26</name>
     <text>Last Started Name</text>
-    <x>1070</x>
-    <y>481</y>
+    <x>1360</x>
+    <y>541</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_27</name>
     <text>Last Completed File</text>
-    <x>1070</x>
-    <y>533</y>
+    <x>1360</x>
+    <y>593</y>
     <width>310</width>
     <height>22</height>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_11</name>
     <text>Record</text>
-    <x>60</x>
-    <y>31</y>
-    <width>50</width>
-    <height>21</height>
+    <x>80</x>
+    <y>45</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_14</name>
-    <text>File Rate</text>
-    <x>850</x>
-    <y>31</y>
-    <width>80</width>
-    <height>21</height>
+    <name>Label_31</name>
+    <text>LOLO</text>
+    <x>560</x>
+    <y>45</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_15</name>
-    <text>Drop Rate</text>
-    <x>760</x>
-    <y>31</y>
-    <width>60</width>
-    <height>21</height>
+    <name>Label_32</name>
+    <text>LO</text>
+    <x>590</x>
+    <y>45</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_25</name>
-    <text>File Size</text>
-    <x>960</x>
-    <y>31</y>
-    <height>21</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_28</name>
-    <text>Record</text>
-    <x>600</x>
-    <y>31</y>
-    <width>50</width>
-    <height>21</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_29</name>
-    <text>Net Rate</text>
+    <name>Label_33</name>
+    <text>HIHI</text>
     <x>650</x>
-    <y>31</y>
+    <y>45</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_34</name>
+    <text>HI</text>
+    <x>620</x>
+    <y>45</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>40</x>
+    <y>35</y>
+    <width>1290</width>
+    <height>1</height>
+    <points>
+      <point x="1290.0" y="0.0">
+      </point>
+      <point x="280.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </line_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_45</name>
+    <text>Request</text>
+    <x>110</x>
+    <y>35</y>
+    <width>20</width>
+    <height>70</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_46</name>
+    <text>In Use</text>
+    <x>719</x>
+    <y>48</y>
+    <width>20</width>
+    <height>58</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_47</name>
+    <text>Record</text>
+    <x>749</x>
+    <y>46</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_48</name>
+    <text>LOLO</text>
+    <x>1229</x>
+    <y>46</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_49</name>
+    <text>LO</text>
+    <x>1259</x>
+    <y>46</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_50</name>
+    <text>HIHI</text>
+    <x>1319</x>
+    <y>46</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_51</name>
+    <text>HI</text>
+    <x>1289</x>
+    <y>46</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_52</name>
+    <text>Request</text>
+    <x>779</x>
+    <y>36</y>
+    <width>20</width>
+    <height>70</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_53</name>
+    <text>Net Rate</text>
+    <x>809</x>
+    <y>85</y>
     <height>21</height>
     <horizontal_alignment>1</horizontal_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_30</name>
-    <text>In Use</text>
-    <x>540</x>
-    <y>31</y>
-    <width>50</width>
-    <height>30</height>
+    <name>Label_54</name>
+    <text>File Rate</text>
+    <x>1009</x>
+    <y>85</y>
+    <width>80</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_55</name>
+    <text>Drop Rate</text>
+    <x>919</x>
+    <y>85</y>
+    <width>60</width>
+    <height>21</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_56</name>
+    <text>File Size</text>
+    <x>1119</x>
+    <y>85</y>
+    <height>21</height>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(P)LOstatus</pv_name>
+    <x>1730</x>
+    <y>240</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(P)HIstatus</pv_name>
+    <x>1760</x>
+    <y>240</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>$(P)HIHIstatus</pv_name>
+    <x>1790</x>
+    <y>240</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_8</name>
+    <pv_name>$(P)LOLOstatus</pv_name>
+    <x>1700</x>
+    <y>240</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_57</name>
+    <text>LOLO</text>
+    <x>1700</x>
+    <y>170</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_58</name>
+    <text>LO</text>
+    <x>1730</x>
+    <y>170</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_59</name>
+    <text>HI</text>
+    <x>1760</x>
+    <y>170</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_60</name>
+    <text>HIHI</text>
+    <x>1790</x>
+    <y>170</y>
+    <width>20</width>
+    <height>60</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_61</name>
+    <text>Global limit summary</text>
+    <x>1690</x>
+    <y>151</y>
+    <width>140</width>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>1650</x>
+    <y>150</y>
+    <width>1</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Chassis</text>
+    <x>20</x>
+    <y>47</y>
+    <width>20</width>
+    <height>58</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Chassis</text>
+    <x>690</x>
+    <y>48</y>
+    <width>20</width>
+    <height>58</height>
+    <rotation_step>1</rotation_step>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_2</name>
+    <x>1670</x>
+    <y>150</y>
+    <width>140</width>
+    <height>130</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="130.0">
+      </point>
+      <point x="140.0" y="130.0">
+      </point>
+      <point x="140.0" y="130.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Header_Background" red="77" green="77" blue="77">
+      </color>
+    </line_color>
   </widget>
 </display>
