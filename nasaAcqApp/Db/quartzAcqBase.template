@@ -267,6 +267,217 @@ record(bi, "$(P)STS") {
     field(ONAM, "Ok")
 }
 
+# device per-channel limit summary
+
+record(calc, "$(P)HIHIstatus:1_") {
+    field(INPA, "$(P)ACQ:HIHIstatus:01_ CP")
+    field(INPB, "$(P)ACQ:HIHIstatus:02_ CP")
+    field(INPC, "$(P)ACQ:HIHIstatus:03_ CP")
+    field(INPD, "$(P)ACQ:HIHIstatus:04_ CP")
+    field(INPE, "$(P)ACQ:HIHIstatus:05_ CP")
+    field(INPF, "$(P)ACQ:HIHIstatus:06_ CP")
+    field(INPG, "$(P)ACQ:HIHIstatus:07_ CP")
+    field(INPH, "$(P)ACQ:HIHIstatus:08_ CP")
+    field(INPI, "$(P)ACQ:HIHIstatus:09_ CP")
+    field(INPJ, "$(P)ACQ:HIHIstatus:10_ CP")
+    field(INPK, "$(P)ACQ:HIHIstatus:11_ CP")
+    field(INPL, "$(P)ACQ:HIHIstatus:12_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)HIHIstatus:3_")
+}
+record(calc, "$(P)HIHIstatus:2_") {
+    field(INPA, "$(P)ACQ:HIHIstatus:13_ CP")
+    field(INPB, "$(P)ACQ:HIHIstatus:14_ CP")
+    field(INPC, "$(P)ACQ:HIHIstatus:15_ CP")
+    field(INPD, "$(P)ACQ:HIHIstatus:16_ CP")
+    field(INPE, "$(P)ACQ:HIHIstatus:17_ CP")
+    field(INPF, "$(P)ACQ:HIHIstatus:18_ CP")
+    field(INPG, "$(P)ACQ:HIHIstatus:19_ CP")
+    field(INPH, "$(P)ACQ:HIHIstatus:20_ CP")
+    field(INPI, "$(P)ACQ:HIHIstatus:21_ CP")
+    field(INPJ, "$(P)ACQ:HIHIstatus:22_ CP")
+    field(INPK, "$(P)ACQ:HIHIstatus:23_ CP")
+    field(INPL, "$(P)ACQ:HIHIstatus:24_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)HIHIstatus:3_")
+}
+record(calcout, "$(P)HIHIstatus:3_") {
+    field(INPA, "$(P)HIHIstatus:1_ MS")
+    field(INPB, "$(P)HIHIstatus:2_ MS")
+    field(INPC, "$(P)ACQ:HIHIstatus:25_ CP")
+    field(INPD, "$(P)ACQ:HIHIstatus:26_ CP")
+    field(INPE, "$(P)ACQ:HIHIstatus:27_ CP")
+    field(INPF, "$(P)ACQ:HIHIstatus:28_ CP")
+    field(INPG, "$(P)ACQ:HIHIstatus:29_ CP")
+    field(INPH, "$(P)ACQ:HIHIstatus:30_ CP")
+    field(INPI, "$(P)ACQ:HIHIstatus:31_ CP")
+    field(INPJ, "$(P)ACQ:HIHIstatus:32_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J")
+    field(OUT , "$(P)HIHIstatus PP MS")
+}
+record(bi, "$(P)HIHIstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(calc, "$(P)HIstatus:1_") {
+    field(INPA, "$(P)ACQ:HIstatus:01_ CP")
+    field(INPB, "$(P)ACQ:HIstatus:02_ CP")
+    field(INPC, "$(P)ACQ:HIstatus:03_ CP")
+    field(INPD, "$(P)ACQ:HIstatus:04_ CP")
+    field(INPE, "$(P)ACQ:HIstatus:05_ CP")
+    field(INPF, "$(P)ACQ:HIstatus:06_ CP")
+    field(INPG, "$(P)ACQ:HIstatus:07_ CP")
+    field(INPH, "$(P)ACQ:HIstatus:08_ CP")
+    field(INPI, "$(P)ACQ:HIstatus:09_ CP")
+    field(INPJ, "$(P)ACQ:HIstatus:10_ CP")
+    field(INPK, "$(P)ACQ:HIstatus:11_ CP")
+    field(INPL, "$(P)ACQ:HIstatus:12_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)HIstatus:3_")
+}
+record(calc, "$(P)HIstatus:2_") {
+    field(INPA, "$(P)ACQ:HIstatus:13_ CP")
+    field(INPB, "$(P)ACQ:HIstatus:14_ CP")
+    field(INPC, "$(P)ACQ:HIstatus:15_ CP")
+    field(INPD, "$(P)ACQ:HIstatus:16_ CP")
+    field(INPE, "$(P)ACQ:HIstatus:17_ CP")
+    field(INPF, "$(P)ACQ:HIstatus:18_ CP")
+    field(INPG, "$(P)ACQ:HIstatus:19_ CP")
+    field(INPH, "$(P)ACQ:HIstatus:20_ CP")
+    field(INPI, "$(P)ACQ:HIstatus:21_ CP")
+    field(INPJ, "$(P)ACQ:HIstatus:22_ CP")
+    field(INPK, "$(P)ACQ:HIstatus:23_ CP")
+    field(INPL, "$(P)ACQ:HIstatus:24_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)HIstatus:3_")
+}
+record(calcout, "$(P)HIstatus:3_") {
+    field(INPA, "$(P)HIstatus:1_ MS")
+    field(INPB, "$(P)HIstatus:2_ MS")
+    field(INPC, "$(P)ACQ:HIstatus:25_ CP")
+    field(INPD, "$(P)ACQ:HIstatus:26_ CP")
+    field(INPE, "$(P)ACQ:HIstatus:27_ CP")
+    field(INPF, "$(P)ACQ:HIstatus:28_ CP")
+    field(INPG, "$(P)ACQ:HIstatus:29_ CP")
+    field(INPH, "$(P)ACQ:HIstatus:30_ CP")
+    field(INPI, "$(P)ACQ:HIstatus:31_ CP")
+    field(INPJ, "$(P)ACQ:HIstatus:32_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J")
+    field(OUT , "$(P)HIstatus PP MS")
+}
+record(bi, "$(P)HIstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(calc, "$(P)LOstatus:1_") {
+    field(INPA, "$(P)ACQ:LOstatus:01_ CP")
+    field(INPB, "$(P)ACQ:LOstatus:02_ CP")
+    field(INPC, "$(P)ACQ:LOstatus:03_ CP")
+    field(INPD, "$(P)ACQ:LOstatus:04_ CP")
+    field(INPE, "$(P)ACQ:LOstatus:05_ CP")
+    field(INPF, "$(P)ACQ:LOstatus:06_ CP")
+    field(INPG, "$(P)ACQ:LOstatus:07_ CP")
+    field(INPH, "$(P)ACQ:LOstatus:08_ CP")
+    field(INPI, "$(P)ACQ:LOstatus:09_ CP")
+    field(INPJ, "$(P)ACQ:LOstatus:10_ CP")
+    field(INPK, "$(P)ACQ:LOstatus:11_ CP")
+    field(INPL, "$(P)ACQ:LOstatus:12_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)LOstatus:3_")
+}
+record(calc, "$(P)LOstatus:2_") {
+    field(INPA, "$(P)ACQ:LOstatus:13_ CP")
+    field(INPB, "$(P)ACQ:LOstatus:14_ CP")
+    field(INPC, "$(P)ACQ:LOstatus:15_ CP")
+    field(INPD, "$(P)ACQ:LOstatus:16_ CP")
+    field(INPE, "$(P)ACQ:LOstatus:17_ CP")
+    field(INPF, "$(P)ACQ:LOstatus:18_ CP")
+    field(INPG, "$(P)ACQ:LOstatus:19_ CP")
+    field(INPH, "$(P)ACQ:LOstatus:20_ CP")
+    field(INPI, "$(P)ACQ:LOstatus:21_ CP")
+    field(INPJ, "$(P)ACQ:LOstatus:22_ CP")
+    field(INPK, "$(P)ACQ:LOstatus:23_ CP")
+    field(INPL, "$(P)ACQ:LOstatus:24_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)LOstatus:3_")
+}
+record(calcout, "$(P)LOstatus:3_") {
+    field(INPA, "$(P)LOstatus:1_ MS")
+    field(INPB, "$(P)LOstatus:2_ MS")
+    field(INPC, "$(P)ACQ:LOstatus:25_ CP")
+    field(INPD, "$(P)ACQ:LOstatus:26_ CP")
+    field(INPE, "$(P)ACQ:LOstatus:27_ CP")
+    field(INPF, "$(P)ACQ:LOstatus:28_ CP")
+    field(INPG, "$(P)ACQ:LOstatus:29_ CP")
+    field(INPH, "$(P)ACQ:LOstatus:30_ CP")
+    field(INPI, "$(P)ACQ:LOstatus:31_ CP")
+    field(INPJ, "$(P)ACQ:LOstatus:32_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J")
+    field(OUT , "$(P)LOstatus PP MS")
+}
+record(bi, "$(P)LOstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(calc, "$(P)LOLOstatus:1_") {
+    field(INPA, "$(P)ACQ:LOLOstatus:01_ CP")
+    field(INPB, "$(P)ACQ:LOLOstatus:02_ CP")
+    field(INPC, "$(P)ACQ:LOLOstatus:03_ CP")
+    field(INPD, "$(P)ACQ:LOLOstatus:04_ CP")
+    field(INPE, "$(P)ACQ:LOLOstatus:05_ CP")
+    field(INPF, "$(P)ACQ:LOLOstatus:06_ CP")
+    field(INPG, "$(P)ACQ:LOLOstatus:07_ CP")
+    field(INPH, "$(P)ACQ:LOLOstatus:08_ CP")
+    field(INPI, "$(P)ACQ:LOLOstatus:09_ CP")
+    field(INPJ, "$(P)ACQ:LOLOstatus:10_ CP")
+    field(INPK, "$(P)ACQ:LOLOstatus:11_ CP")
+    field(INPL, "$(P)ACQ:LOLOstatus:12_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)LOLOstatus:3_")
+}
+record(calc, "$(P)LOLOstatus:2_") {
+    field(INPA, "$(P)ACQ:LOLOstatus:13_ CP")
+    field(INPB, "$(P)ACQ:LOLOstatus:14_ CP")
+    field(INPC, "$(P)ACQ:LOLOstatus:15_ CP")
+    field(INPD, "$(P)ACQ:LOLOstatus:16_ CP")
+    field(INPE, "$(P)ACQ:LOLOstatus:17_ CP")
+    field(INPF, "$(P)ACQ:LOLOstatus:18_ CP")
+    field(INPG, "$(P)ACQ:LOLOstatus:19_ CP")
+    field(INPH, "$(P)ACQ:LOLOstatus:20_ CP")
+    field(INPI, "$(P)ACQ:LOLOstatus:21_ CP")
+    field(INPJ, "$(P)ACQ:LOLOstatus:22_ CP")
+    field(INPK, "$(P)ACQ:LOLOstatus:23_ CP")
+    field(INPL, "$(P)ACQ:LOLOstatus:24_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J||K||L")
+    field(FLNK, "$(P)LOLOstatus:3_")
+}
+record(calcout, "$(P)LOLOstatus:3_") {
+    field(INPA, "$(P)LOLOstatus:1_ MS")
+    field(INPB, "$(P)LOLOstatus:2_ MS")
+    field(INPC, "$(P)ACQ:LOLOstatus:25_ CP")
+    field(INPD, "$(P)ACQ:LOLOstatus:26_ CP")
+    field(INPE, "$(P)ACQ:LOLOstatus:27_ CP")
+    field(INPF, "$(P)ACQ:LOLOstatus:28_ CP")
+    field(INPG, "$(P)ACQ:LOLOstatus:29_ CP")
+    field(INPH, "$(P)ACQ:LOLOstatus:30_ CP")
+    field(INPI, "$(P)ACQ:LOLOstatus:31_ CP")
+    field(INPJ, "$(P)ACQ:LOLOstatus:32_ CP")
+    field(CALC, "A||B||C||D||E||F||G||H||I||J")
+    field(OUT , "$(P)LOLOstatus PP MS")
+}
+record(bi, "$(P)LOLOstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+
 # ready for global recording
 record(calcout, "$(P)RDY_") {
     field(INPA, "$(P)USE CP MS")

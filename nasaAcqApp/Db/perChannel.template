@@ -127,6 +127,13 @@ record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
     field(OSV , "MAJOR")
+    field(FLNK, "$(P)ACQ:LOLOstatus:$(N)_")
+}
+record(calc, "$(P)ACQ:LOLOstatus:$(N)_") {
+    field(INPA, "$(P)ACQ:LOLOstatus:$(N) MS")
+    field(INPB, "$(P)ACQ:LOLOstatus:$(N).SEVR")
+    field(INPC, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
 }
 record(bi, "$(P)ACQ:LOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -136,6 +143,13 @@ record(bi, "$(P)ACQ:LOstatus:$(N)") {
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
     field(OSV , "MINOR")
+    field(FLNK, "$(P)ACQ:LOstatus:$(N)_")
+}
+record(calc, "$(P)ACQ:LOstatus:$(N)_") {
+    field(INPA, "$(P)ACQ:LOstatus:$(N) MS")
+    field(INPB, "$(P)ACQ:LOstatus:$(N).SEVR")
+    field(INPC, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
 }
 record(bi, "$(P)ACQ:HIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -145,6 +159,13 @@ record(bi, "$(P)ACQ:HIstatus:$(N)") {
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
     field(OSV , "MINOR")
+    field(FLNK, "$(P)ACQ:HIstatus:$(N)_")
+}
+record(calc, "$(P)ACQ:HIstatus:$(N)_") {
+    field(INPA, "$(P)ACQ:HIstatus:$(N) MS")
+    field(INPB, "$(P)ACQ:HIstatus:$(N).SEVR")
+    field(INPC, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
 }
 record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -154,7 +175,15 @@ record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
     field(OSV , "MAJOR")
+    field(FLNK, "$(P)ACQ:HIHIstatus:$(N)_")
 }
+record(calc, "$(P)ACQ:HIHIstatus:$(N)_") {
+    field(INPA, "$(P)ACQ:HIHIstatus:$(N) MS")
+    field(INPB, "$(P)ACQ:HIHIstatus:$(N).SEVR")
+    field(INPC, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
+}
+
 
 
 record(bo, "$(P)$(R)ACQ:enable:$(N)") {
