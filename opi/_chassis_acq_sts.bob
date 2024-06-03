@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-31 19:15:32 by atf-->
+<display version="2.0.0">
+  <name>Acq $(N)</name>
+  <macros>
+    <P>$(P)$(N):</P>
+  </macros>
+  <width>670</width>
+  <height>30</height>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>$(N)</text>
+    <x>10</x>
+    <y>5</y>
+    <width>30</width>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)Record-I</pv_name>
+    <x>70</x>
+    <y>5</y>
+    <square>true</square>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>$(P)RXBRate-I</pv_name>
+    <x>130</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)DrpRate-I</pv_name>
+    <x>240</x>
+    <y>5</y>
+    <width>80</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)LstSz-I</pv_name>
+    <x>440</x>
+    <y>5</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_4</name>
+    <pv_name>$(P)WrtRate-I</pv_name>
+    <x>330</x>
+    <y>5</y>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_1</name>
+    <pv_name>$(P)Record-Sel</pv_name>
+    <x>100</x>
+    <y>5</y>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_2</name>
+    <pv_name>$(P)USE</pv_name>
+    <x>40</x>
+    <y>5</y>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_3</name>
+    <pv_name>$(P)LOLOstatus</pv_name>
+    <x>550</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(P)LOstatus</pv_name>
+    <x>580</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(P)HIstatus</pv_name>
+    <x>610</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MINOR" red="255" green="128" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(P)HIHIstatus</pv_name>
+    <x>640</x>
+    <y>5</y>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+  </widget>
+</display>

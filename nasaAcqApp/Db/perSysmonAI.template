@@ -9,6 +9,7 @@ record(ai, "$(P)$(R)$(NAME)") {
     field(EOFF, "$(EOFF)")
     field(EGU,  "$(EGU)")
     field(EOFF, "$(EOFF)")
+    field(ADEL, "$(ADEL=0)")
     field(LOLO, "$(LOLO)")
     field(LOW,  "$(LOW)")
     field(HIGH, "$(HIGH)")

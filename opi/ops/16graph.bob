@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-16 16:48:33 by atf-->
+<!--Saved on 2024-05-15 09:00:19 by atf-->
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
@@ -9,10 +9,10 @@
   <height>1520</height>
   <widget type="xyplot" version="3.0.0">
     <name>X/Y Plot_1</name>
-    <x>320</x>
+    <x>190</x>
     <y>80</y>
-    <width>583</width>
-    <height>220</height>
+    <width>1410</width>
+    <height>740</height>
     <x_axis>
       <title>X</title>
       <autoscale>true</autoscale>
@@ -72,496 +72,134 @@
         <point_size>10</point_size>
         <visible>true</visible>
       </trace>
-    </traces>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED</name>
-    <pv_name>$(P)SA:BufFul</pv_name>
-    <x>870</x>
-    <y>40</y>
-    <width>30</width>
-    <height>15</height>
-    <square>true</square>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>1</name>
-    <macros>
-      <N>01</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>55</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>2</name>
-    <macros>
-      <N>02</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>95</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>3</name>
-    <macros>
-      <N>03</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>135</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>4</name>
-    <macros>
-      <N>04</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>175</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>5</name>
-    <macros>
-      <N>05</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>215</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>6</name>
-    <macros>
-      <N>06</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>255</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>7</name>
-    <macros>
-      <N>07</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>295</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>8</name>
-    <macros>
-      <N>08</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>335</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>9</name>
-    <macros>
-      <N>09</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>375</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>10</name>
-    <macros>
-      <N>10</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>415</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>11</name>
-    <macros>
-      <N>11</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>455</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>12</name>
-    <macros>
-      <N>12</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>495</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>13</name>
-    <macros>
-      <N>13</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>535</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>14</name>
-    <macros>
-      <N>14</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>575</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>15</name>
-    <macros>
-      <N>15</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>615</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>16</name>
-    <macros>
-      <N>16</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>655</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>17</name>
-    <macros>
-      <N>17</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>695</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>18</name>
-    <macros>
-      <N>18</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>735</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>19</name>
-    <macros>
-      <N>19</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>775</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>20</name>
-    <macros>
-      <N>20</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>815</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>21</name>
-    <macros>
-      <N>21</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>855</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>22</name>
-    <macros>
-      <N>22</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>895</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>23</name>
-    <macros>
-      <N>23</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>935</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>24</name>
-    <macros>
-      <N>24</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>975</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>25</name>
-    <macros>
-      <N>25</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1015</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>26</name>
-    <macros>
-      <N>26</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1055</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>27</name>
-    <macros>
-      <N>27</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1095</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>28</name>
-    <macros>
-      <N>28</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1135</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>29_2</name>
-    <macros>
-      <N>29</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1175</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>30_2</name>
-    <macros>
-      <N>30</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1215</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>31_2</name>
-    <macros>
-      <N>31</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1255</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label</name>
-    <text>Min</text>
-    <x>1125</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_1</name>
-    <text>Mean</text>
-    <x>1205</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_2</name>
-    <text>Std</text>
-    <x>1275</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_3</name>
-    <text>Max</text>
-    <x>1345</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_4</name>
-    <text>Cnt</text>
-    <x>1415</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>Active</name>
-    <file>_chan_stats.bob</file>
-    <x>300</x>
-    <y>310</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="xyplot" version="3.0.0">
-    <name>X/Y Plot_2</name>
-    <x>320</x>
-    <y>355</y>
-    <width>593</width>
-    <height>330</height>
-    <show_toolbar>true</show_toolbar>
-    <x_axis>
-      <title>X</title>
-      <autoscale>true</autoscale>
-      <log_scale>true</log_scale>
-      <minimum>30.0</minimum>
-      <maximum>500.0</maximum>
-      <show_grid>true</show_grid>
-      <title_font>
-        <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-        </font>
-      </title_font>
-      <scale_font>
-        <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-        </font>
-      </scale_font>
-      <visible>true</visible>
-    </x_axis>
-    <y_axes>
-      <y_axis>
-        <title>Y</title>
-        <autoscale>true</autoscale>
-        <log_scale>true</log_scale>
-        <minimum>0.0</minimum>
-        <maximum>100.0</maximum>
-        <show_grid>true</show_grid>
-        <title_font>
-          <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
-          </font>
-        </title_font>
-        <scale_font>
-          <font name="Default" family="Liberation Sans" style="REGULAR" size="14.0">
-          </font>
-        </scale_font>
-        <on_right>false</on_right>
-        <visible>true</visible>
-        <color>
-          <color name="Text" red="0" green="0" blue="0">
-          </color>
-        </color>
-      </y_axis>
-    </y_axes>
-    <traces>
       <trace>
-        <name>$(traces[0].y_pv)</name>
-        <x_pv>$(P)SA:Ch$(N):FFT:Freq-I</x_pv>
-        <y_pv>$(P)SA:Ch$(N):FFT:Out-I</y_pv>
+        <name>$(traces[1].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
         <err_pv></err_pv>
         <axis>0</axis>
         <trace_type>1</trace_type>
         <color>
-          <color red="0" green="0" blue="255">
+          <color red="255" green="0" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[2].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="255" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[3].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="170" green="0" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[4].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="255" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[5].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="234" blue="255">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[6].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="255" green="127" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[7].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="191" green="255" blue="0">
+          </color>
+        </color>
+        <line_width>1</line_width>
+        <line_style>0</line_style>
+        <point_type>0</point_type>
+        <point_size>10</point_size>
+        <visible>true</visible>
+      </trace>
+      <trace>
+        <name>$(traces[8].y_pv)</name>
+        <x_pv></x_pv>
+        <y_pv></y_pv>
+        <err_pv></err_pv>
+        <axis>0</axis>
+        <trace_type>1</trace_type>
+        <color>
+          <color red="0" green="149" blue="255">
           </color>
         </color>
         <line_width>1</line_width>
@@ -572,22 +210,26 @@
       </trace>
     </traces>
   </widget>
-  <widget type="choice" version="2.0.0">
-    <name>Text Entry_7</name>
-    <pv_name>$(P)SA:Ch$(N):FFT:Run-Sel</pv_name>
-    <x>427</x>
-    <y>695</y>
-    <width>130</width>
-    <height>25</height>
-    <background_color>
-      <color name="Write_Background" red="128" green="255" blue="255">
-      </color>
-    </background_color>
-    <horizontal_alignment>0</horizontal_alignment>
-    <items>
-      <item>Item 1</item>
-      <item>Item 2</item>
-    </items>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <pv_name>$(P)SA:BufFul</pv_name>
+    <x>220</x>
+    <y>20</y>
+    <width>30</width>
+    <height>15</height>
+    <square>true</square>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Active</name>
+    <macros>
+      <N>05</N>
+    </macros>
+    <file>../_chan_stats.bob</file>
+    <x>900</x>
+    <y>830</y>
+    <width>645</width>
+    <height>35</height>
+    <resize>2</resize>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
@@ -601,95 +243,11 @@
       </font>
     </font>
   </widget>
-  <widget type="embedded" version="2.0.0">
-    <name>32</name>
-    <macros>
-      <N>32</N>
-    </macros>
-    <file>_chan_stats.bob</file>
-    <x>945</x>
-    <y>1295</y>
-    <width>645</width>
-    <height>35</height>
-    <resize>2</resize>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_6</name>
-    <text>Coupling</text>
-    <x>1025</x>
-    <y>20</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_7</name>
-    <text>FFT Enable</text>
-    <x>320</x>
-    <y>695</y>
-    <width>97</width>
-    <height>25</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_1</name>
-    <pv_name>$(P)SA:Ch$(N):ASLO</pv_name>
-    <x>370</x>
-    <y>980</y>
-    <width>117</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_5</name>
-    <pv_name>$(P)SA:Ch$(N):ESLO</pv_name>
-    <x>500</x>
-    <y>980</y>
-    <width>110</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update</name>
-    <pv_name>$(P)SA:Ch$(N):SLO</pv_name>
-    <x>620</x>
-    <y>980</y>
-    <width>120</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_13</name>
-    <text>Slope</text>
-    <x>300</x>
-    <y>980</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_15</name>
-    <text>ADC -&gt; V</text>
-    <x>370</x>
-    <y>950</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_16</name>
-    <text>V -&gt; EGU</text>
-    <x>510</x>
-    <y>950</y>
-    <width>90</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_17</name>
-    <text>Combined</text>
-    <x>630</x>
-    <y>950</y>
-    <width>90</width>
-  </widget>
   <widget type="led" version="2.0.0">
     <name>LED_1</name>
     <pv_name>$(P)ACQ:LOLOstatus:$(N)</pv_name>
-    <x>900</x>
-    <y>800</y>
+    <x>800</x>
+    <y>955</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -704,8 +262,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_2</name>
     <pv_name>$(P)ACQ:LOstatus:$(N)</pv_name>
-    <x>900</x>
-    <y>770</y>
+    <x>800</x>
+    <y>925</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -720,8 +278,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_3</name>
     <pv_name>$(P)ACQ:HIstatus:$(N)</pv_name>
-    <x>900</x>
-    <y>740</y>
+    <x>800</x>
+    <y>895</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -736,8 +294,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_4</name>
     <pv_name>$(P)ACQ:HIHIstatus:$(N)</pv_name>
-    <x>900</x>
-    <y>710</y>
+    <x>800</x>
+    <y>865</y>
     <width>30</width>
     <off_color>
       <color name="OK" red="0" green="255" blue="0">
@@ -749,87 +307,82 @@
     </on_color>
     <square>true</square>
   </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_3</name>
-    <pv_name>$(P)SA:Ch$(N):AOFF</pv_name>
-    <x>370</x>
-    <y>1016</y>
-    <width>117</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_4</name>
-    <pv_name>$(P)SA:Ch$(N):EOFF</pv_name>
-    <x>500</x>
-    <y>1016</y>
-    <width>110</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_2</name>
-    <pv_name>$(P)SA:Ch$(N):OFF</pv_name>
-    <x>620</x>
-    <y>1016</y>
-    <width>120</width>
-    <height>30</height>
-    <format>3</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_14</name>
-    <text>Offset</text>
-    <x>300</x>
-    <y>1016</y>
-    <width>60</width>
-    <height>30</height>
-  </widget>
-  <widget type="textentry" version="3.0.0">
     <name>Text Entry_6</name>
     <pv_name>$(P)ACQ:HIHIlim:$(N)</pv_name>
-    <x>780</x>
-    <y>710</y>
+    <x>680</x>
+    <y>865</y>
     <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_8</name>
     <pv_name>$(P)ACQ:HIlim:$(N)</pv_name>
-    <x>780</x>
-    <y>740</y>
+    <x>680</x>
+    <y>895</y>
     <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_9</name>
     <pv_name>$(P)ACQ:LOlim:$(N)</pv_name>
-    <x>780</x>
-    <y>770</y>
+    <x>680</x>
+    <y>925</y>
     <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_10</name>
     <pv_name>$(P)ACQ:LOLOlim:$(N)</pv_name>
-    <x>780</x>
-    <y>800</y>
+    <x>680</x>
+    <y>955</y>
     <width>110</width>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_11</name>
     <pv_name>$(P)SA:Ch$(N):NAME.VAL$</pv_name>
-    <x>365</x>
-    <y>770</y>
+    <x>265</x>
+    <y>925</y>
     <width>310</width>
     <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_12</name>
     <pv_name>$(P)SA:Ch$(N):EGU</pv_name>
-    <x>487</x>
-    <y>730</y>
+    <x>387</x>
+    <y>885</y>
     <width>110</width>
     <height>30</height>
     <format>3</format>
@@ -837,8 +390,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_19</name>
     <text>EGU</text>
-    <x>427</x>
-    <y>730</y>
+    <x>327</x>
+    <y>885</y>
     <width>60</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -847,8 +400,8 @@
   <widget type="label" version="2.0.0">
     <name>Label_20</name>
     <text>Name</text>
-    <x>170</x>
-    <y>710</y>
+    <x>190</x>
+    <y>925</y>
     <width>70</width>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
@@ -856,44 +409,52 @@
   <widget type="label" version="2.0.0">
     <name>Label_21</name>
     <text>HIHI</text>
-    <x>690</x>
-    <y>710</y>
+    <x>590</x>
+    <y>865</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_22</name>
     <text>HI</text>
-    <x>690</x>
-    <y>740</y>
+    <x>590</x>
+    <y>895</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_23</name>
     <text>LO</text>
-    <x>690</x>
-    <y>770</y>
+    <x>590</x>
+    <y>925</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_24</name>
     <text>LOLO</text>
-    <x>690</x>
-    <y>800</y>
+    <x>590</x>
+    <y>955</y>
     <width>90</width>
   </widget>
-  <widget type="bool_button" version="2.0.0">
+  <widget type="led" version="2.0.0">
     <name>Boolean Button</name>
     <pv_name>$(P)SA:Ch$(N):USE</pv_name>
-    <x>365</x>
-    <y>730</y>
+    <bit>0</bit>
+    <x>250</x>
+    <y>860</y>
     <width>51</width>
+    <height>30</height>
+    <off_label>Off</off_label>
+    <on_label>On</on_label>
+    <on_color>
+      <color red="60" green="255" blue="60">
+      </color>
+    </on_color>
     <labels_from_pv>true</labels_from_pv>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
     <pv_name>$(P)SA:Ch$(N):MAX</pv_name>
-    <x>780</x>
-    <y>685</y>
+    <x>680</x>
+    <y>840</y>
     <width>110</width>
     <height>21</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -901,8 +462,8 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P)SA:Ch$(N):MIN</pv_name>
-    <x>780</x>
-    <y>830</y>
+    <x>680</x>
+    <y>985</y>
     <width>110</width>
     <height>21</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -910,38 +471,22 @@
   <widget type="label" version="2.0.0">
     <name>Label_25</name>
     <text>Max. in EGU</text>
-    <x>690</x>
-    <y>685</y>
+    <x>590</x>
+    <y>840</y>
     <width>90</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_26</name>
     <text>Min in EGU</text>
-    <x>690</x>
-    <y>830</y>
+    <x>590</x>
+    <y>985</y>
     <width>90</width>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_5</name>
-    <pv_name>$(P)SA:Ch$(N):LASTCAL</pv_name>
-    <x>417</x>
-    <y>1065</y>
-    <width>260</width>
-    <format>3</format>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_18</name>
-    <text>Last OK Calib.</text>
-    <x>300</x>
-    <y>1065</y>
-    <width>107</width>
-    <height>30</height>
   </widget>
   <widget type="action_button" version="3.0.0">
     <name>Sel Chas 1</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:01:</P>
         </macros>
@@ -952,7 +497,7 @@
     <text>Chas 1</text>
     <x>10</x>
     <y>90</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -960,7 +505,7 @@
     <name>Sel Chas 2</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:02:</P>
         </macros>
@@ -971,7 +516,7 @@
     <text>Chas 2</text>
     <x>10</x>
     <y>110</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -979,7 +524,7 @@
     <name>Sel Chas 3</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:03:</P>
         </macros>
@@ -990,7 +535,7 @@
     <text>Chas 3</text>
     <x>10</x>
     <y>130</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -998,7 +543,7 @@
     <name>Sel Chas 4</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:04:</P>
         </macros>
@@ -1009,7 +554,7 @@
     <text>Chas 4</text>
     <x>10</x>
     <y>150</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1017,7 +562,7 @@
     <name>Sel Chas 5</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:05:</P>
         </macros>
@@ -1028,7 +573,7 @@
     <text>Chas 5</text>
     <x>10</x>
     <y>170</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1036,7 +581,7 @@
     <name>Sel Chas 6</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:06:</P>
         </macros>
@@ -1047,7 +592,7 @@
     <text>Chas 6</text>
     <x>10</x>
     <y>190</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1055,7 +600,7 @@
     <name>Sel Chas 7</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:07:</P>
         </macros>
@@ -1066,7 +611,7 @@
     <text>Chas 7</text>
     <x>10</x>
     <y>210</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1074,7 +619,7 @@
     <name>Sel Chas 8</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:08:</P>
         </macros>
@@ -1085,7 +630,7 @@
     <text>Chas 8</text>
     <x>10</x>
     <y>230</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1093,7 +638,7 @@
     <name>Sel Chas 9</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:09:</P>
         </macros>
@@ -1104,7 +649,7 @@
     <text>Chas 9</text>
     <x>10</x>
     <y>250</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1112,7 +657,7 @@
     <name>Sel Chas 10</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:10:</P>
         </macros>
@@ -1123,7 +668,7 @@
     <text>Chas 10</text>
     <x>10</x>
     <y>270</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1131,7 +676,7 @@
     <name>Sel Chas 11</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:11:</P>
         </macros>
@@ -1142,7 +687,7 @@
     <text>Chas 11</text>
     <x>10</x>
     <y>290</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1150,7 +695,7 @@
     <name>Sel Chas 12</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:12:</P>
         </macros>
@@ -1161,7 +706,7 @@
     <text>Chas 12</text>
     <x>10</x>
     <y>310</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1169,7 +714,7 @@
     <name>Sel Chas 13</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:13:</P>
         </macros>
@@ -1180,7 +725,7 @@
     <text>Chas 13</text>
     <x>10</x>
     <y>330</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1188,7 +733,7 @@
     <name>Sel Chas 14</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:14:</P>
         </macros>
@@ -1199,7 +744,7 @@
     <text>Chas 14</text>
     <x>10</x>
     <y>350</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1207,7 +752,7 @@
     <name>Sel Chas 15</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:15:</P>
         </macros>
@@ -1218,7 +763,7 @@
     <text>Chas 15</text>
     <x>10</x>
     <y>370</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1226,7 +771,7 @@
     <name>Sel Chas 16</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:16:</P>
         </macros>
@@ -1237,7 +782,7 @@
     <text>Chas 16</text>
     <x>10</x>
     <y>390</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1245,7 +790,7 @@
     <name>Sel Chas 17</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:17:</P>
         </macros>
@@ -1256,7 +801,7 @@
     <text>Chas 17</text>
     <x>10</x>
     <y>410</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1264,7 +809,7 @@
     <name>Sel Chas 18</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:18:</P>
         </macros>
@@ -1275,7 +820,7 @@
     <text>Chas 18</text>
     <x>10</x>
     <y>430</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1283,7 +828,7 @@
     <name>Sel Chas 19</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:19:</P>
         </macros>
@@ -1294,7 +839,7 @@
     <text>Chas 19</text>
     <x>10</x>
     <y>450</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1302,7 +847,7 @@
     <name>Sel Chas 20</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:20:</P>
         </macros>
@@ -1313,7 +858,7 @@
     <text>Chas 20</text>
     <x>10</x>
     <y>470</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1321,7 +866,7 @@
     <name>Sel Chas 21</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:21:</P>
         </macros>
@@ -1332,7 +877,7 @@
     <text>Chas 21</text>
     <x>10</x>
     <y>490</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1340,7 +885,7 @@
     <name>Sel Chas 22</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:22:</P>
         </macros>
@@ -1351,7 +896,7 @@
     <text>Chas 22</text>
     <x>10</x>
     <y>510</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1359,7 +904,7 @@
     <name>Sel Chas 23</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:23:</P>
         </macros>
@@ -1370,7 +915,7 @@
     <text>Chas 23</text>
     <x>10</x>
     <y>530</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1378,7 +923,7 @@
     <name>Sel Chas 24</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:24:</P>
         </macros>
@@ -1389,7 +934,7 @@
     <text>Chas 24</text>
     <x>10</x>
     <y>550</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1397,7 +942,7 @@
     <name>Sel Chas 25</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:25:</P>
         </macros>
@@ -1408,7 +953,7 @@
     <text>Chas 25</text>
     <x>10</x>
     <y>570</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1416,7 +961,7 @@
     <name>Sel Chas 26</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:26:</P>
         </macros>
@@ -1427,7 +972,7 @@
     <text>Chas 26</text>
     <x>10</x>
     <y>590</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1435,7 +980,7 @@
     <name>Sel Chas 27</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:27:</P>
         </macros>
@@ -1446,7 +991,7 @@
     <text>Chas 27</text>
     <x>10</x>
     <y>610</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1454,7 +999,7 @@
     <name>Sel Chas 28</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:28:</P>
         </macros>
@@ -1465,7 +1010,7 @@
     <text>Chas 28</text>
     <x>10</x>
     <y>630</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1473,7 +1018,7 @@
     <name>Sel Chas 29</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:29:</P>
         </macros>
@@ -1484,7 +1029,7 @@
     <text>Chas 29</text>
     <x>10</x>
     <y>650</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1492,7 +1037,7 @@
     <name>Sel Chas 30</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:30:</P>
         </macros>
@@ -1503,7 +1048,7 @@
     <text>Chas 30</text>
     <x>10</x>
     <y>670</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1511,7 +1056,7 @@
     <name>Sel Chas 31</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:31:</P>
         </macros>
@@ -1522,7 +1067,7 @@
     <text>Chas 31</text>
     <x>10</x>
     <y>690</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1530,7 +1075,7 @@
     <name>Sel Chas 32</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <P>FDAS:32:</P>
         </macros>
@@ -1541,7 +1086,7 @@
     <text>Chas 32</text>
     <x>10</x>
     <y>710</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1557,7 +1102,7 @@
     <name>Sel Chan 1</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>01</N>
         </macros>
@@ -1566,9 +1111,9 @@
       </action>
     </actions>
     <text>Chan 1</text>
-    <x>80</x>
+    <x>90</x>
     <y>90</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1576,7 +1121,7 @@
     <name>Sel Chan 2</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>02</N>
         </macros>
@@ -1585,9 +1130,9 @@
       </action>
     </actions>
     <text>Chan 2</text>
-    <x>80</x>
+    <x>90</x>
     <y>110</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1595,7 +1140,7 @@
     <name>Sel Chan 3</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>03</N>
         </macros>
@@ -1604,9 +1149,9 @@
       </action>
     </actions>
     <text>Chan 3</text>
-    <x>80</x>
+    <x>90</x>
     <y>130</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1614,7 +1159,7 @@
     <name>Sel Chan 4</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>04</N>
         </macros>
@@ -1623,9 +1168,9 @@
       </action>
     </actions>
     <text>Chan 4</text>
-    <x>80</x>
+    <x>90</x>
     <y>150</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1633,7 +1178,7 @@
     <name>Sel Chan 5</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>05</N>
         </macros>
@@ -1642,9 +1187,9 @@
       </action>
     </actions>
     <text>Chan 5</text>
-    <x>80</x>
+    <x>90</x>
     <y>170</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1652,7 +1197,7 @@
     <name>Sel Chan 6</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>06</N>
         </macros>
@@ -1661,9 +1206,9 @@
       </action>
     </actions>
     <text>Chan 6</text>
-    <x>80</x>
+    <x>90</x>
     <y>190</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1671,7 +1216,7 @@
     <name>Sel Chan 7</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>07</N>
         </macros>
@@ -1680,9 +1225,9 @@
       </action>
     </actions>
     <text>Chan 7</text>
-    <x>80</x>
+    <x>90</x>
     <y>210</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1690,7 +1235,7 @@
     <name>Sel Chan 8</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>08</N>
         </macros>
@@ -1699,9 +1244,9 @@
       </action>
     </actions>
     <text>Chan 8</text>
-    <x>80</x>
+    <x>90</x>
     <y>230</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1709,7 +1254,7 @@
     <name>Sel Chan 9</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>09</N>
         </macros>
@@ -1718,9 +1263,9 @@
       </action>
     </actions>
     <text>Chan 9</text>
-    <x>80</x>
+    <x>90</x>
     <y>250</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1728,7 +1273,7 @@
     <name>Sel Chan 10</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>10</N>
         </macros>
@@ -1737,9 +1282,9 @@
       </action>
     </actions>
     <text>Chan 10</text>
-    <x>80</x>
+    <x>90</x>
     <y>270</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1747,7 +1292,7 @@
     <name>Sel Chan 11</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>11</N>
         </macros>
@@ -1756,9 +1301,9 @@
       </action>
     </actions>
     <text>Chan 11</text>
-    <x>80</x>
+    <x>90</x>
     <y>290</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1766,7 +1311,7 @@
     <name>Sel Chan 12</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>12</N>
         </macros>
@@ -1775,9 +1320,9 @@
       </action>
     </actions>
     <text>Chan 12</text>
-    <x>80</x>
+    <x>90</x>
     <y>310</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1785,7 +1330,7 @@
     <name>Sel Chan 13</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>13</N>
         </macros>
@@ -1794,9 +1339,9 @@
       </action>
     </actions>
     <text>Chan 13</text>
-    <x>80</x>
+    <x>90</x>
     <y>330</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1804,7 +1349,7 @@
     <name>Sel Chan 14</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>14</N>
         </macros>
@@ -1813,9 +1358,9 @@
       </action>
     </actions>
     <text>Chan 14</text>
-    <x>80</x>
+    <x>90</x>
     <y>350</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1823,7 +1368,7 @@
     <name>Sel Chan 15</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>15</N>
         </macros>
@@ -1832,9 +1377,9 @@
       </action>
     </actions>
     <text>Chan 15</text>
-    <x>80</x>
+    <x>90</x>
     <y>370</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1842,7 +1387,7 @@
     <name>Sel Chan 16</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>16</N>
         </macros>
@@ -1851,9 +1396,9 @@
       </action>
     </actions>
     <text>Chan 16</text>
-    <x>80</x>
+    <x>90</x>
     <y>390</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1861,7 +1406,7 @@
     <name>Sel Chan 17</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>17</N>
         </macros>
@@ -1870,9 +1415,9 @@
       </action>
     </actions>
     <text>Chan 17</text>
-    <x>80</x>
+    <x>90</x>
     <y>410</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1880,7 +1425,7 @@
     <name>Sel Chan 18</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>18</N>
         </macros>
@@ -1889,9 +1434,9 @@
       </action>
     </actions>
     <text>Chan 18</text>
-    <x>80</x>
+    <x>90</x>
     <y>430</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1899,7 +1444,7 @@
     <name>Sel Chan 19</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>19</N>
         </macros>
@@ -1908,9 +1453,9 @@
       </action>
     </actions>
     <text>Chan 19</text>
-    <x>80</x>
+    <x>90</x>
     <y>450</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1918,7 +1463,7 @@
     <name>Sel Chan 20</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>20</N>
         </macros>
@@ -1927,9 +1472,9 @@
       </action>
     </actions>
     <text>Chan 20</text>
-    <x>80</x>
+    <x>90</x>
     <y>470</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1937,7 +1482,7 @@
     <name>Sel Chan 21</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>21</N>
         </macros>
@@ -1946,9 +1491,9 @@
       </action>
     </actions>
     <text>Chan 21</text>
-    <x>80</x>
+    <x>90</x>
     <y>490</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1956,7 +1501,7 @@
     <name>Sel Chan 22</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>22</N>
         </macros>
@@ -1965,9 +1510,9 @@
       </action>
     </actions>
     <text>Chan 22</text>
-    <x>80</x>
+    <x>90</x>
     <y>510</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1975,7 +1520,7 @@
     <name>Sel Chan 23</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>23</N>
         </macros>
@@ -1984,9 +1529,9 @@
       </action>
     </actions>
     <text>Chan 23</text>
-    <x>80</x>
+    <x>90</x>
     <y>530</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -1994,7 +1539,7 @@
     <name>Sel Chan 24</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>24</N>
         </macros>
@@ -2003,9 +1548,9 @@
       </action>
     </actions>
     <text>Chan 24</text>
-    <x>80</x>
+    <x>90</x>
     <y>550</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2013,7 +1558,7 @@
     <name>Sel Chan 25</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>25</N>
         </macros>
@@ -2022,9 +1567,9 @@
       </action>
     </actions>
     <text>Chan 25</text>
-    <x>80</x>
+    <x>90</x>
     <y>570</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2032,7 +1577,7 @@
     <name>Sel Chan 26</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>26</N>
         </macros>
@@ -2041,9 +1586,9 @@
       </action>
     </actions>
     <text>Chan 26</text>
-    <x>80</x>
+    <x>90</x>
     <y>590</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2051,7 +1596,7 @@
     <name>Sel Chan 27</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>27</N>
         </macros>
@@ -2060,9 +1605,9 @@
       </action>
     </actions>
     <text>Chan 27</text>
-    <x>80</x>
+    <x>90</x>
     <y>610</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2070,7 +1615,7 @@
     <name>Sel Chan 28</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>28</N>
         </macros>
@@ -2079,9 +1624,9 @@
       </action>
     </actions>
     <text>Chan 28</text>
-    <x>80</x>
+    <x>90</x>
     <y>630</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2089,7 +1634,7 @@
     <name>Sel Chan 29</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>29</N>
         </macros>
@@ -2098,9 +1643,9 @@
       </action>
     </actions>
     <text>Chan 29</text>
-    <x>80</x>
+    <x>90</x>
     <y>650</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2108,7 +1653,7 @@
     <name>Sel Chan 30</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>30</N>
         </macros>
@@ -2117,9 +1662,9 @@
       </action>
     </actions>
     <text>Chan 30</text>
-    <x>80</x>
+    <x>90</x>
     <y>670</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2127,7 +1672,7 @@
     <name>Sel Chan 31</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>31</N>
         </macros>
@@ -2136,9 +1681,9 @@
       </action>
     </actions>
     <text>Chan 31</text>
-    <x>80</x>
+    <x>90</x>
     <y>690</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
@@ -2146,7 +1691,7 @@
     <name>Sel Chan 32</name>
     <actions>
       <action type="open_display">
-        <file>scope.bob</file>
+        <file>../scope.bob</file>
         <macros>
           <N>32</N>
         </macros>
@@ -2155,36 +1700,42 @@
       </action>
     </actions>
     <text>Chan 32</text>
-    <x>80</x>
+    <x>90</x>
     <y>710</y>
-    <width>60</width>
+    <width>70</width>
     <height>20</height>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_27</name>
     <text>In Use</text>
-    <x>160</x>
-    <y>670</y>
+    <x>150</x>
+    <y>865</y>
     <width>80</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_13</name>
     <pv_name>$(P)SA:Ch$(N):DESC.VAL$</pv_name>
-    <x>365</x>
-    <y>810</y>
+    <x>265</x>
+    <y>965</y>
     <width>310</width>
     <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_28</name>
     <text>Desc.</text>
-    <x>180</x>
-    <y>810</y>
+    <x>190</x>
+    <y>965</y>
     <width>70</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
@@ -2193,318 +1744,45 @@
   <widget type="label" version="2.0.0">
     <name>Label_29</name>
     <text>Line 5</text>
-    <x>180</x>
-    <y>850</y>
+    <x>190</x>
+    <y>1005</y>
     <width>70</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
   </widget>
-  <widget type="textentry" version="3.0.0">
+  <widget type="textupdate" version="2.0.0">
     <name>Text Entry_14</name>
     <pv_name>$(P)SA:Ch$(N):DESC5.VAL$</pv_name>
-    <x>365</x>
-    <y>850</y>
+    <x>265</x>
+    <y>1005</y>
     <width>310</width>
     <height>30</height>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
     <format>6</format>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_30</name>
     <text>Resp. Node</text>
-    <x>230</x>
-    <y>895</y>
+    <x>120</x>
+    <y>890</y>
     <width>130</width>
-    <height>25</height>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="textentry" version="3.0.0">
-    <name>Text Entry_15</name>
-    <pv_name>$(P)SA:Ch$(N):RESPNODE</pv_name>
-    <x>365</x>
-    <y>895</y>
-    <width>75</width>
-    <height>30</height>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box</name>
-    <pv_name>$(P)SA:Ch$(N):RESPDIR</pv_name>
-    <x>450</x>
-    <y>895</y>
-    <width>160</width>
-  </widget>
-  <widget type="combo" version="2.0.0">
-    <name>Combo Box_1</name>
-    <pv_name>$(P)SA:Ch$(N):SDTYP</pv_name>
-    <x>690</x>
-    <y>895</y>
-    <width>110</width>
-  </widget>
-  <widget type="label" version="2.0.0">
-    <name>Label_31</name>
-    <text>Type</text>
-    <x>620</x>
-    <y>895</y>
-    <width>55</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
   </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_8</name>
-    <pv_name>$(P)SA:Ch01:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>90</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_9</name>
-    <pv_name>$(P)SA:Ch02:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>110</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_10</name>
-    <pv_name>$(P)SA:Ch03:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>130</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_11</name>
-    <pv_name>$(P)SA:Ch04:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>150</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_12</name>
-    <pv_name>$(P)SA:Ch05:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>170</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_13</name>
-    <pv_name>$(P)SA:Ch06:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>190</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_14</name>
-    <pv_name>$(P)SA:Ch07:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>210</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_15</name>
-    <pv_name>$(P)SA:Ch08:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>230</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_16</name>
-    <pv_name>$(P)SA:Ch09:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>250</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_17</name>
-    <pv_name>$(P)SA:Ch10:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>270</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_18</name>
-    <pv_name>$(P)SA:Ch11:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>290</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_19</name>
-    <pv_name>$(P)SA:Ch12:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>310</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_20</name>
-    <pv_name>$(P)SA:Ch13:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>330</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_21</name>
-    <pv_name>$(P)SA:Ch14:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>350</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_22</name>
-    <pv_name>$(P)SA:Ch15:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>370</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_23</name>
-    <pv_name>$(P)SA:Ch16:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>390</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_24</name>
-    <pv_name>$(P)SA:Ch17:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>410</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_25</name>
-    <pv_name>$(P)SA:Ch18:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>430</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_26</name>
-    <pv_name>$(P)SA:Ch19:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>450</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_27</name>
-    <pv_name>$(P)SA:Ch20:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>470</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_28</name>
-    <pv_name>$(P)SA:Ch21:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>490</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_29</name>
-    <pv_name>$(P)SA:Ch22:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>510</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_30</name>
-    <pv_name>$(P)SA:Ch23:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>530</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_31</name>
-    <pv_name>$(P)SA:Ch24:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>550</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_32</name>
-    <pv_name>$(P)SA:Ch25:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>570</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_33</name>
-    <pv_name>$(P)SA:Ch26:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>590</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_34</name>
-    <pv_name>$(P)SA:Ch27:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>610</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_35</name>
-    <pv_name>$(P)SA:Ch28:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>630</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_36</name>
-    <pv_name>$(P)SA:Ch29:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>650</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_37</name>
-    <pv_name>$(P)SA:Ch30:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>670</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_38</name>
-    <pv_name>$(P)SA:Ch31:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>690</y>
-    <width>160</width>
-    <format>6</format>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_39</name>
-    <pv_name>$(P)SA:Ch32:NAME.VAL$</pv_name>
-    <x>150</x>
-    <y>710</y>
-    <width>160</width>
-    <format>6</format>
+  <widget type="embedded" version="2.0.0">
+    <name>Active_1</name>
+    <file>../_chan_stats.bob</file>
+    <x>910</x>
+    <y>865</y>
+    <width>645</width>
+    <height>35</height>
+    <resize>2</resize>
   </widget>
 </display>

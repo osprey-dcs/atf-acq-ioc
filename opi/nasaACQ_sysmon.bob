@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-03 18:45:05 by dev-->
+<!--Saved on 2024-05-22 16:16:11 by atf-->
 <display version="2.0.0">
   <name>Mon $(N)</name>
   <x>9</x>
@@ -1266,6 +1266,14 @@
     <x>600</x>
     <y>362</y>
     <width>60</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
@@ -1275,6 +1283,14 @@
     <x>670</x>
     <y>362</y>
     <width>60</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
@@ -1284,6 +1300,14 @@
     <x>740</x>
     <y>362</y>
     <width>60</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
@@ -1388,6 +1412,14 @@
     <x>1020</x>
     <y>362</y>
     <width>60</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
@@ -1397,6 +1429,14 @@
     <x>710</x>
     <y>286</y>
     <width>60</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
   </widget>
@@ -1406,5 +1446,87 @@
     <x>810</x>
     <y>337</y>
     <width>60</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_72</name>
+    <pv_name>$(P)$(R)DRDY:err</pv_name>
+    <x>780</x>
+    <y>286</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_17</name>
+    <pv_name>$(P)$(R)DRDY:ok</pv_name>
+    <x>890</x>
+    <y>286</y>
+    <width>60</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Device summary</text>
+    <x>363</x>
+    <y>582</y>
+    <width>197</width>
+    <height>22</height>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_18</name>
+    <pv_name>$(P)$(R)STS</pv_name>
+    <x>483</x>
+    <y>634</y>
+    <width>80</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_19</name>
+    <pv_name>$(P)$(R)USE</pv_name>
+    <x>483</x>
+    <y>609</y>
+    <width>80</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_20</name>
+    <pv_name>$(P)$(R)RDY</pv_name>
+    <x>483</x>
+    <y>659</y>
+    <width>80</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Chans in use?</text>
+    <x>363</x>
+    <y>609</y>
+    <width>115</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Status ok?</text>
+    <x>363</x>
+    <y>634</y>
+    <width>115</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Ready to record?</text>
+    <x>363</x>
+    <y>659</y>
+    <width>115</width>
   </widget>
 </display>

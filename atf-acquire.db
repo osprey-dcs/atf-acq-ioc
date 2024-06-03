@@ -1,0 +1,3 @@
+record(lso, "$(P)SA:LASTRUN") {
+    field(SIZV, "128")
+}

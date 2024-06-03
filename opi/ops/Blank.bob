@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-05-22 10:13:54 by atf-->
+<display version="2.0.0">
+  <name>ACQ $(P)Ch$(N)</name>
+  <macros>
+    <EVG>FDAS:01:</EVG>
+  </macros>
+  <width>1918</width>
+  <height>250</height>
+  <background_color>
+    <color name="Header_ForeGround" red="255" green="255" blue="255">
+    </color>
+  </background_color>
+  <widget type="picture" version="2.0.0">
+    <name>Picture</name>
+    <file>../../Pictures/Wallpapers/Osprey-Wallpaper.png</file>
+    <width>1350</width>
+    <height>790</height>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Header</name>
+    <file>_acq_header.bob</file>
+    <width>1918</width>
+    <height>20</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_2</name>
+    <file>compact chart.bob</file>
+    <y>20</y>
+    <width>340</width>
+    <height>230</height>
+    <resize>2</resize>
+    <transparent>true</transparent>
+  </widget>
+</display>

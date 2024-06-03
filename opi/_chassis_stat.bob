@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-07 13:06:36 by atf-->
+<!--Saved on 2024-05-22 16:37:34 by atf-->
 <display version="2.0.0">
   <name>Stat $(N)</name>
-  <width>1195</width>
+  <width>1510</width>
   <height>30</height>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_3</name>
@@ -10,13 +10,6 @@
     <x>50</x>
     <y>5</y>
     <width>80</width>
-  </widget>
-  <widget type="led" version="2.0.0">
-    <name>LED</name>
-    <pv_name>$(P)$(N):SA:BufFul</pv_name>
-    <x>220</x>
-    <y>5</y>
-    <square>true</square>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_8</name>
@@ -31,9 +24,9 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_14</name>
     <pv_name>$(P)$(N):NDrp-I</pv_name>
-    <x>340</x>
+    <x>310</x>
     <y>5</y>
-    <width>70</width>
+    <width>50</width>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
@@ -41,7 +34,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_15</name>
     <pv_name>$(P)$(N):RXRate-I</pv_name>
-    <x>250</x>
+    <x>220</x>
     <y>5</y>
     <width>80</width>
     <precision>2</precision>
@@ -52,7 +45,7 @@
   <widget type="led" version="2.0.0">
     <name>LED_7</name>
     <pv_name>$(P)$(N):ACQ:ppslck</pv_name>
-    <x>420</x>
+    <x>500</x>
     <y>5</y>
     <width>60</width>
     <off_color>
@@ -65,7 +58,7 @@
   <widget type="led" version="2.0.0">
     <name>LED_8</name>
     <pv_name>$(P)$(N):ACQ:clk</pv_name>
-    <x>490</x>
+    <x>570</x>
     <y>5</y>
     <width>60</width>
     <off_color>
@@ -82,7 +75,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>LED_12</name>
     <pv_name>$(P)$(N):ACQ:ppsdiff</pv_name>
-    <x>560</x>
+    <x>640</x>
     <y>5</y>
     <width>90</width>
     <horizontal_alignment>2</horizontal_alignment>
@@ -90,7 +83,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_72</name>
     <pv_name>$(P)$(N):PPS:status</pv_name>
-    <x>660</x>
+    <x>740</x>
     <y>5</y>
     <format>4</format>
     <horizontal_alignment>2</horizontal_alignment>
@@ -123,17 +116,7 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_68</name>
     <pv_name>$(P)$(N):ACQ:clkPLL</pv_name>
-    <x>780</x>
-    <y>5</y>
-    <format>4</format>
-    <horizontal_alignment>2</horizontal_alignment>
-    <vertical_alignment>1</vertical_alignment>
-    <wrap_words>false</wrap_words>
-  </widget>
-  <widget type="textupdate" version="2.0.0">
-    <name>Text Update_69</name>
-    <pv_name>$(P)$(N):DRDY:status</pv_name>
-    <x>890</x>
+    <x>860</x>
     <y>5</y>
     <format>4</format>
     <horizontal_alignment>2</horizontal_alignment>
@@ -143,11 +126,118 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_70</name>
     <pv_name>$(P)$(N):ADC:aligns</pv_name>
-    <x>1000</x>
+    <x>1210</x>
     <y>5</y>
+    <width>50</width>
     <format>1</format>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
     <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_71</name>
+    <pv_name>$(P)$(N):DRDY:err</pv_name>
+    <x>1120</x>
+    <y>5</y>
+    <width>77</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_9</name>
+    <pv_name>$(P)$(N):DRDY:align</pv_name>
+    <x>970</x>
+    <y>5</y>
+    <width>60</width>
+    <off_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_10</name>
+    <pv_name>$(P)$(N):DRDY:ok</pv_name>
+    <x>1040</x>
+    <y>5</y>
+    <width>70</width>
+    <off_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_16</name>
+    <pv_name>$(P)$(N):DrpRate-I</pv_name>
+    <x>370</x>
+    <y>5</y>
+    <width>50</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_14</name>
+    <pv_name>$(P)$(N):ACQ:running</pv_name>
+    <x>430</x>
+    <y>5</y>
+    <width>60</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_11</name>
+    <pv_name>$(P)$(N):STS</pv_name>
+    <x>1280</x>
+    <y>5</y>
+    <width>70</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_13</name>
+    <pv_name>$(P)$(N):USE</pv_name>
+    <x>1360</x>
+    <y>5</y>
+    <width>70</width>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>$(P)$(N):RDY</pv_name>
+    <x>1435</x>
+    <y>5</y>
+    <width>70</width>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
   </widget>
 </display>

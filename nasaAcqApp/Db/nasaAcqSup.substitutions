@@ -15,38 +15,38 @@ file "perBuildDate.template"
 }
 
 file "perSysmonAI.template" {
-  pattern { P,   R,      PORT,                         NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  LOLO,   LOW,  HIGH,  HIHI, DESC }
-  { \$(P),"",\$(PORT),  "FPGA:Temperature",   8,   "deg C",   0.0076885223, -273.15,    1,     0,     0,    70,    75, "FPGA temperature" }
-  { \$(P),"",\$(PORT),       "FPGA:VccINT",  12,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
-  { \$(P),"",\$(PORT),       "FPGA:VccAUX",  16,       "V",   4.577637e-05,       0,    3, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
-  { \$(P),"",\$(PORT),        "FPGA:VBRAM",  20,       "V",   4.577637e-05,       0,    3,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
-  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12I",  24,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   0.9,   1.0, "INA219 U17 current" }
-  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12V",  28,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
-  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12I",  32,       "A",     121.951e-6,       0,    2,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
-  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12V",  36,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
-  { \$(P),"",\$(PORT),       "MARBLE:P12I",  40,       "A",    -365.854e-6,       0,    2,  0.45,   0.5,   2.8,   3.0, "INA219 U57 current" }
-  { \$(P),"",\$(PORT),       "MARBLE:P12V",  44,       "V",         4.0e-3,       0,    2,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
-  { \$(P),"",\$(PORT), "QSFP1:Temperature",  48,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 1 temperature" }
-  { \$(P),"",\$(PORT),         "QSFP1:Vcc",  52,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 1 Vcc" }
-  { \$(P),"",\$(PORT),    "QSFP1:RxPower1",  56,      "uW",            0.1,       0,    1,    30,    50, 10000, 10000, "QSFP 1 channel 1 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP1:RxPower2",  60,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 2 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP1:RxPower3",  64,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 3 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP1:RxPower4",  68,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 1 channel 4 receiver power" }
-  { \$(P),"",\$(PORT), "QSFP2:Temperature",  72,   "deg C",     0.00390625,       0,    1      0,     0,    70,    75, "QSFP 2 temperature" }
-  { \$(P),"",\$(PORT),         "QSFP2:Vcc",  76,       "V",         1.0e-4,       0,    2, 3.145, 3.201, 3.399, 3.465, "QSFP 2 Vcc" }
-  { \$(P),"",\$(PORT),    "QSFP2:RxPower1",  80,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 1 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP2:RxPower2",  84,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP2:RxPower3",  88,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
-  { \$(P),"",\$(PORT),    "QSFP2:RxPower4",  92,      "uW",            0.1,       0,    1,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
-  { \$(P),"",\$(PORT),       "Quartz:N15V",  96,       "V",-5.765477231e-3,       0,    3,-15.75,-15.30,-14.70,-14.25, "Quartz -15V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:P15V", 100,       "V", 5.531712581e-3,       0,    3, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  4.75,  4.90,  5.15,  5.25, "Quartz 5V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
-  { \$(P),"",\$(PORT),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
-  { \$(P),"",\$(PORT),       "Quartz:2P5V2",120,       "V", 9.303042763e-4,       0,    3, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
-  { \$(P),"",\$(PORT),       "Quartz:P12I", 124,       "A", 3.565738076e-3,       0,    3,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
-  { \$(P),"",\$(PORT),   "Quartz:Temp",     128,   "deg C",            1.6,  -273.0,    1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
+  pattern { P,   R,      PORT,        NAME, IDX,       EGU,           ESLO,    EOFF, PREC,  ADEL, LOLO,   LOW,  HIGH,  HIHI, DESC }
+  { \$(P),"",\$(PORT),  "FPGA:Temperature",   8,   "deg C",   0.0076885223, -273.15,    1,     0,     0,     0,    70,    75, "FPGA temperature" }
+  { \$(P),"",\$(PORT),       "FPGA:VccINT",  12,       "V",   4.577637e-05,       0,    3,  0.05,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
+  { \$(P),"",\$(PORT),       "FPGA:VccAUX",  16,       "V",   4.577637e-05,       0,    3,  0.05, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
+  { \$(P),"",\$(PORT),        "FPGA:VBRAM",  20,       "V",   4.577637e-05,       0,    3,  0.05,  0.95,  0.98,  1.02,  1.05, "FPGA VBRAM" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12I",  24,       "A",     121.951e-6,       0,    2,  0.05,  -1.0,  -1.0,   0.9,   1.0, "INA219 U17 current" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC1:P12V",  28,       "V",         4.0e-3,       0,    2,  0.05,  11.0,  11.2,  12.8,  13.0, "INA219 U17 voltage" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12I",  32,       "A",     121.951e-6,       0,    2,  0.05,  -1.0,  -1.0,   1.9,   2.0, "INA219 U32 current" }
+  { \$(P),"",\$(PORT),  "MARBLE:FMC2:P12V",  36,       "V",         4.0e-3,       0,    2,  0.05,  11.0,  11.2,  12.8,  13.0, "INA219 U32 voltage" }
+  { \$(P),"",\$(PORT),       "MARBLE:P12I",  40,       "A",    -365.854e-6,       0,    2,  0.05,  0.45,   0.5,   2.8,   3.0, "INA219 U57 current" }
+  { \$(P),"",\$(PORT),       "MARBLE:P12V",  44,       "V",         4.0e-3,       0,    2,  0.05,  11.0,  11.2,  12.8,  13.0, "INA219 U57 voltage" }
+  { \$(P),"",\$(PORT), "QSFP1:Temperature",  48,   "deg C",     0.00390625,       0,    1,     1,     0,     0,    70,    75, "QSFP 1 temperature" }
+  { \$(P),"",\$(PORT),         "QSFP1:Vcc",  52,       "V",         1.0e-4,       0,    2,  0.05, 3.145, 3.201, 3.399, 3.465, "QSFP 1 Vcc" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower1",  56,      "uW",            0.1,       0,    1,    30,    30,    50, 10000, 10000, "QSFP 1 channel 1 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower2",  60,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 1 channel 2 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower3",  64,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 1 channel 3 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP1:RxPower4",  68,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 1 channel 4 receiver power" }
+  { \$(P),"",\$(PORT), "QSFP2:Temperature",  72,   "deg C",     0.00390625,       0,    1,     1,     0,     0,    70,    75, "QSFP 2 temperature" }
+  { \$(P),"",\$(PORT),         "QSFP2:Vcc",  76,       "V",         1.0e-4,       0,    2,  0.05, 3.145, 3.201, 3.399, 3.465, "QSFP 2 Vcc" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower1",  80,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 2 channel 1 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower2",  84,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 2 channel 2 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower3",  88,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 2 channel 3 receiver power" }
+  { \$(P),"",\$(PORT),    "QSFP2:RxPower4",  92,      "uW",            0.1,       0,    1,    30,     0,     0, 10000, 10000, "QSFP 2 channel 4 receiver power" }
+  { \$(P),"",\$(PORT),       "Quartz:N15V",  96,       "V",-5.765477231e-3,       0,    3,  0.05,-15.75,-15.30,-14.70,-14.25, "Quartz -15V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P15V", 100,       "V", 5.531712581e-3,       0,    3,  0.05, 14.25, 14.70, 15.30, 15.75, "Quartz 15V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P5V",  104,       "V", 1.895302220e-3,       0,    3,  0.05,  4.75,  4.90,  5.15,  5.25, "Quartz 5V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:P12V", 108,       "V"  3.437243009e-3,       0,    3,  0.05,  11.0,  11.2,  12.8,  13.0, "Quartz 12V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:3P3V", 112,       "V", 1.220703125e-3,       0,    3,  0.05, 3.069, 3.135, 3.465, 3.531, "Quartz 3.3V supply voltage" }
+  { \$(P),"",\$(PORT),       "Quartz:2P5V1",116,       "V", 9.303042763e-4,       0,    3,  0.05, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
+  { \$(P),"",\$(PORT),       "Quartz:2P5V2",120,       "V", 9.303042763e-4,       0,    3,  0.05, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
+  { \$(P),"",\$(PORT),       "Quartz:P12I", 124,       "A", 3.565738076e-3,       0,    3,  0.05,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
+  { \$(P),"",\$(PORT),   "Quartz:Temp",     128,   "deg C",            1.6,  -273.0,    1,     1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
 }
 
 file "perSysmonLI.template" {
