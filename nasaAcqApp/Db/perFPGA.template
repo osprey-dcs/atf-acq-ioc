@@ -59,7 +59,7 @@ record(longin, "$(P)$(R)DRDY:history") {
 }
 
 #
-# Downsampling factor
+# Push sampling rate to FPGA
 #
 record(longout, "$(P)$(R)ACQ:rate_") {
     field(DESC, "Set sampling rate")

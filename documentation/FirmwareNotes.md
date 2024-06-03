@@ -107,7 +107,7 @@ The AD7768 has signal processing to low pass filter the incoming data to less th
 |:----:|:----:|:----:|:----:|
 | 250 | 32 | 8 | 250 |
 | 50 | 25.6 | 6.4 | 200 |
-| 10 | 20.48 | 5.12 | 160 |
+| 25 | 25.6 | 6.4 | 160 |
 | 5 | 20.48 | 5.12 | 160 |
 | 1 | 16.384 | 0.512 | 16 |
 
@@ -117,6 +117,7 @@ The AD7768 has signal processing to low pass filter the incoming data to less th
 * The first unattenuated aliasing band is centered on 2*Fmod.
 * Fchop is Fmod/32.
 * Decimation factor is Fmod/Fsamp.
+* Decimation factors are powers of 2 between 32 and 1024, inclusive.
 
 
 
