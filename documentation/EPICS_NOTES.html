@@ -1252,8 +1252,8 @@
         following table describes the records associated with the
         machine protection operations handled locally be each
         node.&nbsp; The value&nbsp;<span style="font-style: italic;">oo</span>&nbsp;is
-        the machine protection mitigation output numbers, ranging from
-        01 to 08.</span></p>
+        the machine protection mitigation output number, ranging from 01
+        to 08.</span></p>
     <br style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-family: Helvetica; font-size: 12px; font-style: normal;
       font-variant-caps: normal; font-weight: 400; letter-spacing:
@@ -1381,12 +1381,13 @@
               serif;"><br>
             </span></td>
           <td><span style="font-family: &quot;Times New Roman&quot;,
-              Times, serif;">Bitmap specifying the local MPS hardware
-              inputs for which a 'bad'</span><span style="font-family:
-              &quot;Times New Roman&quot;, Times, serif;"><span
-                style="font-style: italic;"></span>&nbsp;value will trip
-              the specified MPS output.</span><span style="font-family:
-              &quot;Times New Roman&quot;, Times, serif;"></span></td>
+              Times, serif;">Least significant eight bits are bitmap
+              specifying the local MPS hardware inputs for which a 'bad'</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-style: italic;"></span>&nbsp;value
+              will trip the specified MPS output.</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1413,20 +1414,43 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              &quot;Times New Roman&quot;, Times, serif;">MPS:tripped:<span
-                style="font-style: italic;">oo</span></span></td>
+              &quot;Times New Roman&quot;, Times, serif;">MPS:status</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">:<span style="font-style: italic;">oo</span></span></td>
           <td style="text-align: center;"><span style="font-family:
-              &quot;Times New Roman&quot;, Times, serif;">bi</span><span
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"><br>
-            </span></td>
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"></span></td>
           <td><span style="font-family: &quot;Times New Roman&quot;,
-              Times, serif;">Set to indicate that one or more of the
-              enabled conditions above has been met.&nbsp; Cleared by
-              event system.</span><span style="font-family: &quot;Times
-              New Roman&quot;, Times, serif;"><span style="text-align:
-                center;"></span></span><br>
-          </td>
+              Times, serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Least significant bit is the
+                local node 'tripped' status.&nbsp; It is set when any of
+                the conditions above are met and cleared by an event
+                from the top-level node.&nbsp; If </span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;"><span style="font-family:
+                  &quot;Times New Roman&quot;, Times, serif;"><span
+                    style="font-family: &quot;Times New Roman&quot;,
+                    Times, serif;">any of the </span></span><span
+                  style="font-family: &quot;Times New Roman&quot;,
+                  Times, serif;"><span style="font-family: &quot;Times
+                    New Roman&quot;, Times, serif;">conditions above are
+                    met when </span></span>this clear event arrives </span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">the 'tripped' status remains
+                set and the 'first fault' values are updated.</span></span><br>
+            <span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;"><span style="font-family:
+                  &quot;Times New Roman&quot;, Times, serif;"><span
+                    style="font-family: &quot;Times New Roman&quot;,
+                    Times, serif;"></span></span>The next-to-least
+                significant bit is set when any of the conditions that
+                would cause a trip are present.</span></span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1440,9 +1464,11 @@
           <td><span style="font-family: &quot;Times New Roman&quot;,
               Times, serif;"></span><span style="font-family:
               &quot;Times New Roman&quot;, Times, serif;">The time
-              (POSIX seconds) at which&nbsp;</span><span
-              style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              (POSIX seconds) at which </span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"><span
+                style="font-family: &quot;Times New Roman&quot;, Times,
+                serif;"></span><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">'tripped' status </span>became
               set.<br>
               <span style="font-style: italic;"></span></span></td>
         </tr>
@@ -1457,8 +1483,12 @@
             </span><span style="font-family: &quot;Times New
               Roman&quot;, Times, serif;"></span></td>
           <td><span style="font-family: &quot;Times New Roman&quot;,
-              Times, serif;">The time (event system ticks) at
-              which&nbsp;MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              Times, serif;">The time (event system ticks) at which </span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;">'tripped' status</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-style: italic;"></span>&nbsp;became
               set.</span></td>
         </tr>
         <tr>
@@ -1473,10 +1503,9 @@
           <td><span style="font-family: &quot;Times New Roman&quot;,
               Times, serif;">Bitmap of channels above&nbsp;</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">ACQ:HIHIlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
-              style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
-              set.</span></td>
+              serif;">ACQ:HIHIlim:<span style="font-style: italic;">nn</span>&nbsp;when
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;">'tripped' status became set.</span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1490,10 +1519,12 @@
           <td><span style="font-family: &quot;Times New Roman&quot;,
               Times, serif;">Bitmap of channels above&nbsp;</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">ACQ:HIlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
-              style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>became
-              set.</span></td>
+              serif;">ACQ:HIlim:<span style="font-style: italic;">nn</span>&nbsp;when
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;"></span><span
+                style="font-family: &quot;Times New Roman&quot;, Times,
+                serif;">'tripped' status </span>became set.</span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1507,10 +1538,12 @@
           <td><span style="font-family: &quot;Times New Roman&quot;,
               Times, serif;">Bitmap of channels below&nbsp;</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">ACQ:LOlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
-              style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
-              set.</span></td>
+              serif;">ACQ:LOlim:<span style="font-style: italic;">nn</span>&nbsp;when
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;"></span><span
+                style="font-family: &quot;Times New Roman&quot;, Times,
+                serif;">'tripped' status</span> became set.</span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1524,10 +1557,12 @@
           <td><span style="font-family: &quot;Times New Roman&quot;,
               Times, serif;">Bitmap of channels below&nbsp;</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">ACQ:LOLOlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
-              style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
-              set.</span></td>
+              serif;">ACQ:LOLOlim:<span style="font-style: italic;">nn</span>&nbsp;when
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;"></span><span
+                style="font-family: &quot;Times New Roman&quot;, Times,
+                serif;">'tripped' status</span> became set.</span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1542,14 +1577,21 @@
               serif;"><br>
             </span></td>
           <td><span style="font-family: &quot;Times New Roman&quot;,
-              Times, serif;">Bitmap of&nbsp;</span><span
+              Times, serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Least significant eight bits
+                are </span>bitmap of&nbsp;</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;">the local MPS hardware inputs in the 'bad'
               state&nbsp;</span><span style="font-family: &quot;Times
-              New Roman&quot;, Times, serif;">when&nbsp;</span><span
+              New Roman&quot;, Times, serif;">when </span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
-              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
-              set.</span></td>
+              serif;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;"></span><span
+                style="font-family: &quot;Times New Roman&quot;, Times,
+                serif;">'tripped' status </span>became set.&nbsp; Bits
+              [23:16] are the current state of the local MPS hardware
+              inputs.<br>
+            </span></td>
         </tr>
       </tbody>
     </table>
