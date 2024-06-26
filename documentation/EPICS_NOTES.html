@@ -1250,12 +1250,13 @@
         Roman&quot;, Times, serif;">Machine Protection</span></h3>
     <p><span style="font-family: Times New Roman, Times, serif;">The
         following table describes the records associated with the
-        machine protection operations handled locally be each
+        machine protection operations handled locally by each
         node.&nbsp; The value&nbsp;<span style="font-style: italic;">oo</span>&nbsp;is
         the machine protection mitigation output number, ranging from 01
-        to 08.&nbsp; In addition to these records the event generator
-        node contains the bo record 'MPS:clear' that sends the event to
-        clear the MPS 'tripped' latches in all the nodes when processed.<br>
+        to 08.&nbsp; In addition to the records described below, the
+        event generator node contains the bo record 'MPS:clear' that
+        sends the event to clear the MPS 'tripped' latches in all the
+        nodes when processed.<br>
       </span></p>
     <br style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-family: Helvetica; font-size: 12px; font-style: normal;
@@ -1595,6 +1596,103 @@
               [23:16] are the current state of the local MPS hardware
               inputs.<br>
             </span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-size: 12px; font-style: normal;
+      font-variant-caps: normal; font-weight: 400; letter-spacing:
+      normal; orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: auto;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; margin-left: 80px;"><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span></div>
+    <h2 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-style: normal; font-variant-caps:
+      normal; letter-spacing: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; margin-left: 40px;"><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span></h2>
+    <span style="font-family: Times New Roman, Times, serif;">In
+      addition to the records above, the event fanout and event
+      generator nodes provide the following records associated with the
+      merging of MPS 'tripped' status from downstream nodes.</span><br>
+    <span style="font-family: Times New Roman, Times, serif;"></span><span
+      style="font-family: Times New Roman, Times, serif;"> </span>
+    <br style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-size: 12px; font-style: normal;
+      font-variant-caps: normal; font-weight: 400; letter-spacing:
+      normal; orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: auto;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none;">
+    <table style=" font-family: Helvetica; letter-spacing: normal;
+      text-transform: none; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none; color:
+      rgb(0, 0, 0); font-variant-caps: normal; width: 80%;"
+      cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Name</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Type</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;">Description</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:required</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the fiber links from
+              which MPS 'tripped' status will be merged.<span
+                style="font-style: italic;"></span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-style: italic;"></span><br>
+              The least significant bit is ignored since it corresponds
+              to the incoming event receiver link.<br>
+              For event fanout nodes the next-to-least significant bit
+              is also ignored since it corresponds to the incoming event
+              fanout link.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:tripped</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Least significant eight bits are map
+              indicating the combined MPS 'tripped' status from all
+              downstream nodes.<br>
+              For the event generator this is also the value written to
+              the MPS mitigation hardware outputs.</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
         </tr>
       </tbody>
     </table>
