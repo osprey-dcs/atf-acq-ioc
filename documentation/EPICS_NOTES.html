@@ -19,6 +19,7 @@
 
 
 
+
           macros.&nbsp; Typically the P macro is set to 'FDAS:' and the
           NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -583,6 +584,7 @@
 
 
 
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -839,10 +841,12 @@
 
 
 
+
         a</span><span style="font-family: Times New Roman, Times,
         serif;">nd </span><span style="font-family: Times New Roman,
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
+
 
 
 
@@ -857,6 +861,7 @@
         invalid the least significant 16 bits of </span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">calibrationStatus
+
 
 
           contain the line number where thing have gone wrong.&nbsp; The
@@ -936,6 +941,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
 
+
                 edges</span> are misaligned by more than about 8 ns, but
               all are aligned within about 24 ns.</span></td>
         </tr>
@@ -951,6 +957,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
 
+
                 edges</span> are misaligned by more than about 16 ns.</span></td>
         </tr>
         <tr>
@@ -963,6 +970,7 @@
               New Roman, Times, serif;">DRDY </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
+
 
                 edges</span> are misaligned. </span></td>
         </tr>
@@ -1036,6 +1044,7 @@
     <div style="margin-left: 40px;"> </div>
     <br>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1232,8 +1241,338 @@
     <h2 style="margin-left: 40px;"><span style="font-family: Times New
         Roman, Times, serif;"></span></h2>
     <div style="margin-left: 40px;"> </div>
-    <br>
+    <h3 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-style: normal; font-variant-caps:
+      normal; letter-spacing: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none;"><span style="font-family: &quot;Times New
+        Roman&quot;, Times, serif;">Machine Protection</span></h3>
+    <p><span style="font-family: Times New Roman, Times, serif;">The
+        following table describes the records associated with the
+        machine protection operations handled locally be each
+        node.&nbsp; The value&nbsp;<span style="font-style: italic;">oo</span>&nbsp;is
+        the machine protection mitigation output numbers, ranging from
+        01 to 08.</span></p>
+    <br style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-size: 12px; font-style: normal;
+      font-variant-caps: normal; font-weight: 400; letter-spacing:
+      normal; orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: auto;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none;">
+    <table style=" font-family: Helvetica; letter-spacing: normal;
+      text-transform: none; word-spacing: 0px;
+      -webkit-text-stroke-width: 0px; text-decoration: none; color:
+      rgb(0, 0, 0); font-variant-caps: normal; width: 80%;"
+      cellspacing="2" cellpadding="2" border="1">
+      <tbody>
+        <tr>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Name</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td style="text-align: center;"><span style="font-weight:
+              bold;"><span style="font-family: &quot;Times New
+                Roman&quot;, Times, serif;">Type</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: center;"><span
+              style="font-weight: bold;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;">Description</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:chkLOLO:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the channels for which an
+              excursion below </span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">ACQ:LOLOlim:<span
+                style="font-style: italic;">nn</span>&nbsp;will trip the
+              specified MPS output.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:chkLO:<span
+                style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the channels for which an
+              excursion </span><span style="font-family: &quot;Times
+              New Roman&quot;, Times, serif;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;">below</span>
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;">ACQ:LOlim:<span
+                style="font-style: italic;">nn</span>&nbsp;will trip the
+              specified MPS output.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:chkHI:<span
+                style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the channels for which an
+              excursion above </span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">ACQ:HIlim:<span
+                style="font-style: italic;">nn</span>&nbsp;will trip the
+              specified MPS output.</span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:chkHIHI:<span
+                style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the channels for which an
+              excursion </span><span style="font-family: &quot;Times
+              New Roman&quot;, Times, serif;"><span style="font-family:
+                &quot;Times New Roman&quot;, Times, serif;">above</span>
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;">ACQ:HIHIlim:<span
+                style="font-style: italic;">nn</span>&nbsp;will trip the
+              specified MPS output.</span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:chkInputs</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">:<span style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the local MPS hardware
+              inputs for which a 'bad'</span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"><span
+                style="font-style: italic;"></span>&nbsp;value will trip
+              the specified MPS output.</span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:goodState</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">:<span style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longout</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap specifying the logic state (1/0) for
+              which each local MPS hardware input will be considered
+              'good'.</span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"><span style="font-style:
+                italic;"></span></span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;"></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:tripped:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">bi</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Set to indicate that one or more of the
+              enabled conditions above has been met.&nbsp; Cleared by
+              event system.</span><span style="font-family: &quot;Times
+              New Roman&quot;, Times, serif;"><span style="text-align:
+                center;"></span></span><br>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstS:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;"></span><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">The time
+              (POSIX seconds) at which&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.<br>
+              <span style="font-style: italic;"></span></span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstT:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span><span style="font-family: &quot;Times New
+              Roman&quot;, Times, serif;"></span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">The time (event system ticks) at
+              which&nbsp;MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstHIHI:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap of channels above&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">ACQ:HIHIlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstHI:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap of channels above&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">ACQ:HIlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>became
+              set.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstLO:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap of channels below&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">ACQ:LOlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstLOLO:<span
+                style="font-style: italic;">oo</span></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap of channels below&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">ACQ:LOLOlim:<span style="font-style: italic;">nn</span>&nbsp;when&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">MPS:firstInputs</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">:<span style="font-style: italic;">oo</span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"></span></td>
+          <td style="text-align: center;"><span style="font-family:
+              &quot;Times New Roman&quot;, Times, serif;">longin</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><br>
+            </span></td>
+          <td><span style="font-family: &quot;Times New Roman&quot;,
+              Times, serif;">Bitmap of&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">the local MPS hardware inputs in the 'bad'
+              state&nbsp;</span><span style="font-family: &quot;Times
+              New Roman&quot;, Times, serif;">when&nbsp;</span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;">MPS:tripped:<span style="font-style: italic;">oo</span>&nbsp;became
+              set.</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-size: 12px; font-style: normal;
+      font-variant-caps: normal; font-weight: 400; letter-spacing:
+      normal; orphans: auto; text-align: start; text-indent: 0px;
+      text-transform: none; white-space: normal; widows: auto;
+      word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; margin-left: 80px;"><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span></div>
+    <h2 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
+      font-family: Helvetica; font-style: normal; font-variant-caps:
+      normal; letter-spacing: normal; orphans: auto; text-align: start;
+      text-indent: 0px; text-transform: none; white-space: normal;
+      widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+      text-decoration: none; margin-left: 40px;"><span
+        style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span></h2>
+    <br class="Apple-interchange-newline">
+    <meta charset="UTF-8">
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
 
 
 
@@ -1303,6 +1642,7 @@
 
 
 
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1316,6 +1656,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
 
 
 

@@ -18,7 +18,7 @@ case "$BOB" in
     *) usage ;;
 esac
 
-export P="FDAS:"
+export P="NASA_ACQ:"
 
 export arch="$EPICS_HOST_ARCH"
 /Applications/CSS_Phoebus.app/phoebus-4.7.3-SNAPSHOT/phoebus.sh -resource "file://$PWD/$BOB?app=display_runtime"
