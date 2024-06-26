@@ -25,8 +25,8 @@ The FPGA prompts for confirmation and then rereads and applies the calibration s
     Bit 7    — Don't exercise input coupling (AC/DC) relays on startup.
     Bit 8    — Show ADC calibration operations.
     Bit 9    — Show some status information about the bootstrap flash memory.
-    Bit 11   — Dump the contents of all MPS registers.
     Bit 10   — Scan the Marble I2C buses and show the devices attached to each.
+    Bit 11   — Dump the contents of all MPS registers.
     Bit 12   – Show all AD7768 register writes as they occur.
     Bit 13   — Dump the register contents (there are a lot) of the AD7768 ADC chips.
     Bit 15   — Provide fake AD7768 data at MCLK/128 samles/second.  Effective only at startup.
