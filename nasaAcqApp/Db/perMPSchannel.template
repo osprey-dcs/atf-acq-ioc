@@ -1,0 +1,46 @@
+# initialize :XX array registers Con connect PHAS=-1
+record(longin, "$(P)$(R)M:$(N)_") {
+    field(DTYP, "FEED On Connect")
+    field(INP , "@name=$(PORT)")
+    field(SCAN, "I/O Intr")
+    field(PHAS, "-1") # prepare for Flush in perFPGA.template
+    field(FLNK, "$(P)$(R)M:$(N)F_")
+}
+record(fanout, "$(P)$(R)M:$(N)F_") {
+    field(LNK1, "$(P)$(R)MPS:chkLOLO:$(N)")
+    field(LNK2, "$(P)$(R)MPS:chkLO:$(N)")
+    field(LNK3, "$(P)$(R)MPS:chkHI:$(N)")
+    field(LNK4, "$(P)$(R)MPS:chkHIHI:$(N)")
+    field(LNK5, "$(P)$(R)MPS:chkInputs:$(N)")
+    field(LNK6, "$(P)$(R)MPS:goodState:$(N)")
+}
+record(longout, "$(P)$(R)MPS:chkLOLO:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkLOLO:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:chkLO:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkLO:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:chkHI:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkHI:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:chkHIHI:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkHIHI:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:chkInputs:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkDiscrete:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:goodState:$(N)") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:discreteGood:XX offset=$(IDX))
+    info(autosaveFields_pass0, "VAL")
+}
