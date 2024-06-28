@@ -1253,10 +1253,7 @@
         machine protection operations handled locally by each
         node.&nbsp; The value&nbsp;<span style="font-style: italic;">oo</span>&nbsp;is
         the machine protection mitigation output number, ranging from 01
-        to 08.&nbsp; In addition to the records described below, the
-        event generator node contains the bo record 'MPS:clear' that
-        sends the event to clear the MPS 'tripped' latches in all the
-        nodes when processed.<br>
+        to 08.<br>
       </span></p>
     <br style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
       font-family: Helvetica; font-size: 12px; font-style: normal;
@@ -1617,7 +1614,7 @@
         style="font-family: &quot;Times New Roman&quot;, Times, serif;"></span></h2>
     <span style="font-family: Times New Roman, Times, serif;">In
       addition to the records above, the event fanout and event
-      generator nodes provide the following records associated with the
+      generator nodes provide the following records to control the
       merging of MPS 'tripped' status from downstream nodes.</span><br>
     <span style="font-family: Times New Roman, Times, serif;"></span><span
       style="font-family: Times New Roman, Times, serif;"> </span>
@@ -1794,10 +1791,21 @@
             </span></td>
         </tr>
         <tr>
-          <td style="vertical-align: middle; text-align: center;"><span
-              style="font-family: Times New Roman, Times, serif;">FPGA:reboot</span></td>
-          <td style="vertical-align: middle; text-align: center;"><span
-              style="font-family: Times New Roman, Times, serif;">longout</span><span
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MPS:clear</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">bo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: top;"><span style="font-family:
+              Times New Roman, Times, serif;"> Sends event to clear MPS
+              'tripped' latches in all the nodes when processed.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">FPGA:reboot</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
