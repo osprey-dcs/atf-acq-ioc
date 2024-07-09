@@ -51,16 +51,16 @@ file "perSysmonAI.template" {
 
 file "perSysmonLI.template" {
   pattern { P, R, PORT,          NAME,   EGU, LOLO, LOW, HIGH, HIHI,     LLSV,      LSV,      HSV,     HHSV, DESC }
-  { \$(P),"",\$(PORT),"FPGA:powerUp_",    "",    0,   2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
-  { \$(P),"",\$(PORT),  "FPGA:uptime",   "s",    0,   0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
-  { \$(P),"",\$(PORT),   "ACQ:status",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
-  { \$(P),"",\$(PORT),   "ACQ:active",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
-  { \$(P),"",\$(PORT),"ACQ:DCcoupled",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
-  { \$(P),"",\$(PORT),   "ACQ:clkPLL",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
-  { \$(P),"",\$(PORT),   "PPS:status",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
-  { \$(P),"",\$(PORT),  "DRDY:status",    "",   -1,   0,    0,    MAJOR, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:'Misaligned', 20 LSB:PPS->DRDY ticks" }
-  { \$(P),"",\$(PORT) ,  "ADC:aligns",    "",    0,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Count of ADC alignment requests" }
-  { \$(P),"",\$(PORT),   "MGT:status",    "",   -1,   0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:EVR time good', 8 LSB:Rx link up" }
+  { \$(P),"",\$(PORT),"FPGA:powerUp_",    "",    0,0,   2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
+  { \$(P),"",\$(PORT),  "FPGA:uptime",   "s",    0,   0,0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
+  { \$(P),"",\$(PORT),   "ACQ:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
+  { \$(P),"",\$(PORT),   "ACQ:active",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
+  { \$(P),"",\$(PORT),"ACQ:DCcoupled",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
+  { \$(P),"",\$(PORT),   "ACQ:clkPLL",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
+  { \$(P),"",\$(PORT),   "PPS:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
+  { \$(P),"",\$(PORT),  "DRDY:status",    "",   -1,   0,    0,0,    MAJOR, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:'Misaligned', 20 LSB:PPS->DRDY ticks" }
+  { \$(P),"",\$(PORT) ,  "ADC:aligns",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Count of ADC alignment requests" }
+  { \$(P),"",\$(PORT),   "MGT:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:EVR time good', 8 LSB:Rx link up" }
 }
 
 file "perChannel.template" {
