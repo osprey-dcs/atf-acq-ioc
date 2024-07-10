@@ -4,6 +4,18 @@ record("*", "$(P)GLD:IPADDR") {
     info(autosaveFields_pass0, "") # inhibit autosave.  IP managed only through iocsh
 }
 
+# XADC temperature as reported through golden image
+# same as: FPGA:Temperature reported through application image
+record(ai, "$(P)GLD:Temperature") {
+    field(SCAN, "2 second")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(P)GLD reg=xadc_internal_temperature")
+    field(LINR, "LINEAR")
+    field(ESLO, "0.0076885223")
+    field(EOFF, "-273.15")
+    field(EGU,  "deg C")
+}
+
 # monitor $(P)STATUS from feed_base.template
 # on * -> 4, attempt auto-boot if requested
 
