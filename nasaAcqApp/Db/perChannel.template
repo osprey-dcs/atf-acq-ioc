@@ -1,68 +1,192 @@
 
+# Limiting of limits.  aka. preventing out of range bounds.
+# When a limit is out of range [MIN, MAX], set a high limit to
+# the lowest value, and a low limit to the highest value.
+# So an out of range limits will always be in violation.
+#
+# push updated limits whenever change directly,
+# or when scaling factors are changed.
+
 # reflect ADC -> EGU scaling factors to limits
 record(dfanout, "$(P)ACQ:limSLO:$(N)_") {
     field(DOL, "$(P)SA:Ch$(N):SLO CP MS")
     field(OMSL, "closed_loop")
-    field(OUTA, "$(P)ACQ:LOLOlim:$(N).ASLO PP MS")
-    field(OUTB, "$(P)ACQ:LOlim:$(N).ASLO PP MS")
-    field(OUTC, "$(P)ACQ:HIlim:$(N).ASLO PP MS")
-    field(OUTD, "$(P)ACQ:HIHIlim:$(N).ASLO PP MS")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).ASLO PP NMS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).ASLO PP NMS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).ASLO PP NMS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).ASLO PP NMS")
+    field(OUTE, "$(P)ACQ:LOLOlim:$(N):RBV.ASLO NPP NMS")
+    field(OUTF, "$(P)ACQ:LOlim:$(N):RBV.ASLO NPP NMS")
+    field(OUTG, "$(P)ACQ:HIlim:$(N):RBV.ASLO NPP NMS")
+    field(OUTH, "$(P)ACQ:HIHIlim:$(N):RBV.ASLO NPP NMS")
 }
 record(dfanout, "$(P)ACQ:limOFF:$(N)_") {
     field(DOL, "$(P)SA:Ch$(N):OFF CP MS")
     field(OMSL, "closed_loop")
-    field(OUTA, "$(P)ACQ:LOLOlim:$(N).AOFF PP MS")
-    field(OUTB, "$(P)ACQ:LOlim:$(N).AOFF PP MS")
-    field(OUTC, "$(P)ACQ:HIlim:$(N).AOFF PP MS")
-    field(OUTD, "$(P)ACQ:HIHIlim:$(N).AOFF PP MS")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).AOFF PP NMS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).AOFF PP NMS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).AOFF PP NMS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).AOFF PP NMS")
+    field(OUTE, "$(P)ACQ:LOLOlim:$(N):RBV.AOFF NPP NMS")
+    field(OUTF, "$(P)ACQ:LOlim:$(N):RBV.AOFF NPP NMS")
+    field(OUTG, "$(P)ACQ:HIlim:$(N):RBV.AOFF NPP NMS")
+    field(OUTH, "$(P)ACQ:HIHIlim:$(N):RBV.AOFF NPP NMS")
 }
+# reflect MAX to HIHI and IVOV (low limits only)
 record(dfanout, "$(P)ACQ:limMAX:$(N)_") {
     field(DOL, "$(P)SA:Ch$(N):MAX CP MS")
     field(OMSL, "closed_loop")
-    field(OUTA, "$(P)ACQ:LOLOlim:$(N).DRVH PP MS")
-    field(OUTB, "$(P)ACQ:LOlim:$(N).DRVH PP MS")
-    field(OUTC, "$(P)ACQ:HIlim:$(N).DRVH PP MS")
-    field(OUTD, "$(P)ACQ:HIHIlim:$(N).DRVH PP MS")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).HOPR NPP NMS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).HOPR NPP NMS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).HOPR NPP NMS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).HOPR NPP NMS")
 }
+# reflect MIN to LOLO and IVOV (high limits only)
 record(dfanout, "$(P)ACQ:limMIN:$(N)_") {
     field(DOL, "$(P)SA:Ch$(N):MIN CP MS")
     field(OMSL, "closed_loop")
-    field(OUTA, "$(P)ACQ:LOLOlim:$(N).DRVL PP MS")
-    field(OUTB, "$(P)ACQ:LOlim:$(N).DRVL PP MS")
-    field(OUTC, "$(P)ACQ:HIlim:$(N).DRVL PP MS")
-    field(OUTD, "$(P)ACQ:HIHIlim:$(N).DRVL PP MS")
+    field(OUTA, "$(P)ACQ:LOLOlim:$(N).LOPR NPP NMS")
+    field(OUTB, "$(P)ACQ:LOlim:$(N).LOPR NPP NMS")
+    field(OUTC, "$(P)ACQ:HIlim:$(N).LOPR NPP NMS")
+    field(OUTD, "$(P)ACQ:HIHIlim:$(N).LOPR NPP NMS")
 }
 
+# limit bounds
+
 record(ao, "$(P)ACQ:LOLOlim:$(N)") {
+    field(DTYP, "Raw Soft Channel")
+    field(OUT , "$(P)ACQ:LOLOlim:$(N)_ PP")
+    field(EGU , "EGU")
+    field(PREC, "6")
+    # ASLO, AOFF written above
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)ACQ:LOLOlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(HIHI, "8388607")  # 0x7fffff
+    field(LOLO, "-8388608") # 0x800000
+    field(IVOV, "8388607")
+    field(HHSV, "INVALID")
+    field(LLSV, "INVALID")
+    field(IVOA, "Set output to IVOV")
+}
+
+record(ao, "$(P)ACQ:LOlim:$(N)") {
+    field(DTYP, "Raw Soft Channel")
+    field(OUT , "$(P)ACQ:LOlim:$(N)_ PP")
     field(EGU , "EGU")
     field(PREC, "6")
-    # DRVL, DRVH written from quartzAcqChan.template
-    info(autosaveFields_pass0, "RVAL")
+    # ASLO, AOFF written above
+    info(autosaveFields_pass0, "VAL")
 }
-record(ao, "$(P)ACQ:LOlim:$(N)") {
+record(longout, "$(P)ACQ:LOlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:LOlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(HIHI, "8388607")  # 0x7fffff
+    field(LOLO, "-8388608") # 0x800000
+    field(IVOV, "8388607")
+    field(HHSV, "INVALID")
+    field(LLSV, "INVALID")
+    field(IVOA, "Set output to IVOV")
+}
+
+record(ao, "$(P)ACQ:HIlim:$(N)") {
+    field(DTYP, "Raw Soft Channel")
+    field(OUT , "$(P)ACQ:HIlim:$(N)_ PP")
     field(EGU , "EGU")
     field(PREC, "6")
-    # DRVL, DRVH written from quartzAcqChan.template
-    info(autosaveFields_pass0, "RVAL")
+    # ASLO, AOFF written above
+    info(autosaveFields_pass0, "VAL")
 }
-record(ao, "$(P)ACQ:HIlim:$(N)") {
+record(longout, "$(P)ACQ:HIlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:HIlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(HIHI, "8388607")  # 0x7fffff
+    field(LOLO, "-8388608") # 0x800000
+    field(IVOV, "-8388608")
+    field(HHSV, "INVALID")
+    field(LLSV, "INVALID")
+    field(IVOA, "Set output to IVOV")
+}
+
+record(ao, "$(P)ACQ:HIHIlim:$(N)") {
+    field(DTYP, "Raw Soft Channel")
+    field(OUT , "$(P)ACQ:HIHIlim:$(N)_ PP")
     field(EGU , "EGU")
     field(PREC, "6")
-    info(autosaveFields_pass0, "RVAL")
+    # ASLO, AOFF written above
+    info(autosaveFields_pass0, "VAL")
 }
-record(ao, "$(P)ACQ:HIHIlim:$(N)") {
+record(longout, "$(P)ACQ:HIHIlim:$(N)_") {
     field(DTYP, "FEED Register Write")
     field(OUT , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX)")
+    field(EGU , "ADC")
+    field(HIHI, "8388607")  # 0x7fffff
+    field(LOLO, "-8388608") # 0x800000
+    field(IVOV, "-8388608")
+    field(HHSV, "INVALID")
+    field(LLSV, "INVALID")
+    field(IVOA, "Set output to IVOV")
+}
+
+record(longin, "$(P)ACQ:LOLOlim:$(N):RBV_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOLOlimXX offset=$(IDX) rbv=true")
+    field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)ACQ:LOLOlim:$(N):RBV")
+}
+record(ai, "$(P)ACQ:LOLOlim:$(N):RBV") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:LOLOlim:$(N):RBV_ NPP MSS")
     field(EGU , "EGU")
     field(PREC, "6")
-    info(autosaveFields_pass0, "RVAL")
 }
+
+record(longin, "$(P)ACQ:LOlim:$(N):RBV_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOlimXX offset=$(IDX) rbv=true")
+    field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)ACQ:LOlim:$(N):RBV")
+}
+record(ai, "$(P)ACQ:LOlim:$(N):RBV") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:LOlim:$(N):RBV_ NPP MSS")
+    field(EGU , "EGU")
+    field(PREC, "6")
+}
+
+record(longin, "$(P)ACQ:HIlim:$(N):RBV_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIlimXX offset=$(IDX) rbv=true")
+    field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)ACQ:HIlim:$(N):RBV")
+}
+record(ai, "$(P)ACQ:HIlim:$(N):RBV") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:HIlim:$(N):RBV_ NPP MSS")
+    field(EGU , "EGU")
+    field(PREC, "6")
+    field(FLNK, "$(P)ACQ:HIHIlim:$(N):RBV_")
+}
+
+record(longin, "$(P)ACQ:HIHIlim:$(N):RBV_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIHIlimXX offset=$(IDX) rbv=true")
+    field(SCAN, "I/O Intr")
+    field(FLNK, "$(P)ACQ:HIHIlim:$(N):RBV")
+}
+record(ai, "$(P)ACQ:HIHIlim:$(N):RBV") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:HIHIlim:$(N):RBV_ NPP MSS")
+    field(EGU , "EGU")
+    field(PREC, "6")
+}
+
+# limit violation status
 
 record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -77,8 +201,10 @@ record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
 record(calc, "$(P)ACQ:LOLOstatus:$(N)_") {
     field(INPA, "$(P)ACQ:LOLOstatus:$(N) MS")
     field(INPB, "$(P)ACQ:LOLOstatus:$(N).SEVR")
-    field(INPC, "$(P)SA:Ch$(N):USE CP")
-    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
+    field(INPC, "$(P)ACQ:LOLOlim:$(N).RVAL")
+    field(INPD, "$(P)ACQ:LOLOlim:$(N):RBV_")
+    field(INPE, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B||(C!=D))&&E") # (out of bounds, invalid boud, or invalid state) and in use
 }
 record(bi, "$(P)ACQ:LOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -93,8 +219,10 @@ record(bi, "$(P)ACQ:LOstatus:$(N)") {
 record(calc, "$(P)ACQ:LOstatus:$(N)_") {
     field(INPA, "$(P)ACQ:LOstatus:$(N) MS")
     field(INPB, "$(P)ACQ:LOstatus:$(N).SEVR")
-    field(INPC, "$(P)SA:Ch$(N):USE CP")
-    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
+    field(INPC, "$(P)ACQ:LOlim:$(N).RVAL")
+    field(INPD, "$(P)ACQ:LOlim:$(N):RBV_")
+    field(INPE, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B||(C!=D))&&E") # (out of bounds, invalid boud, or invalid state) and in use
 }
 record(bi, "$(P)ACQ:HIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -109,8 +237,10 @@ record(bi, "$(P)ACQ:HIstatus:$(N)") {
 record(calc, "$(P)ACQ:HIstatus:$(N)_") {
     field(INPA, "$(P)ACQ:HIstatus:$(N) MS")
     field(INPB, "$(P)ACQ:HIstatus:$(N).SEVR")
-    field(INPC, "$(P)SA:Ch$(N):USE CP")
-    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
+    field(INPC, "$(P)ACQ:HIlim:$(N).RVAL")
+    field(INPD, "$(P)ACQ:HIlim:$(N):RBV_")
+    field(INPE, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B||(C!=D))&&E") # (out of bounds, invalid boud, or invalid state) and in use
 }
 record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
@@ -125,8 +255,10 @@ record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
 record(calc, "$(P)ACQ:HIHIstatus:$(N)_") {
     field(INPA, "$(P)ACQ:HIHIstatus:$(N) MS")
     field(INPB, "$(P)ACQ:HIHIstatus:$(N).SEVR")
-    field(INPC, "$(P)SA:Ch$(N):USE CP")
-    field(CALC, "(A||B)&&C") # (out of bounds, invalid) and in use
+    field(INPC, "$(P)ACQ:HIHIlim:$(N).RVAL")
+    field(INPD, "$(P)ACQ:HIHIlim:$(N):RBV_")
+    field(INPE, "$(P)SA:Ch$(N):USE CP")
+    field(CALC, "(A||B||(C!=D))&&E") # (out of bounds, invalid boud, or invalid state) and in use
 }
 
 
