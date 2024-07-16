@@ -29,6 +29,7 @@ The FPGA prompts for confirmation and then rereads and applies the calibration s
     Bit 11   — Dump the contents of all MPS registers.
     Bit 12   – Show all AD7768 register writes as they occur.
     Bit 13   — Dump the register contents (there are a lot) of the AD7768 ADC chips.
+    Bit 14   - Report progress of AD7768 synchronization state machine.
     Bit 15   — Provide fake AD7768 data at MCLK/128 samles/second.  Effective only at startup.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
@@ -122,5 +123,10 @@ The AD7768 has signal processing to low pass filter the incoming data to less th
 
 
 
+# Optical Fiber Port Assignments
 
+The first fiber pair (QSFP-1, Fiber pair 1) on all nodes is the node event receiver input and machine protection status output.  For leaf nodes, this is the only fiber connection.
 
+For nodes acting as event fanouts, the second fiber pair (QSFP-2, Fiber pair 2) is the event fanout input and machine protection status output.  The third fiber pair (QSFP-2, Fiber pair 3) is, by conventions, the loopback connection to the node event receiver.  The remaining fiber pairs (QSFP-1, Fiber pair 4, and QSFP-2) are the outgoing event links and incoming machine protection status links.
+
+For the node acting as the event generator, all but the first fiber pair (i.e. QSFP-1, Fiber pairs 2 through 4, and QSFP-2) are outgoing event links and incoming machine protection status links.  Thus a fully-expanded system would consist of one event generator node, seven event fanout nodes and 34 leaf nodes for a total of 42 nodes and 1344 analog inputs.
