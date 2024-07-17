@@ -41,6 +41,18 @@ record(longout, "$(P)ACQ:rateLO_") {
 # system wide reference DRDY:pps for comparison and alarming
 alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
 
+# Latency between hardware PPS marker and EVR PPS event
+record(ai, "$(P)PPS:latency") {
+    field(DESC, "$(DESC)")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=PPS:latency")
+    field(SCAN, "2 second")
+    field(TSE,  "-2")
+    field(EGU,  "ns")
+    field(LINR, "LINEAR")
+    field(ESLO, "10")
+}
+
 # system wide, used by acquisition sequencer
 record(lso, "$(P)SA:DESC") {
     field(SIZV, "128")
