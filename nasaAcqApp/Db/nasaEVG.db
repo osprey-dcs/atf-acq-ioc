@@ -43,7 +43,7 @@ alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
 
 # Latency between hardware PPS marker and EVR PPS event
 record(ai, "$(P)PPS:latency") {
-    field(DESC, "$(DESC)")
+    field(DESC, "$(DESC=)")
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=PPS:latency")
     field(SCAN, "2 second")
