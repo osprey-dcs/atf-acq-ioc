@@ -592,13 +592,15 @@ record(bo, "$(P)SA:AutClr_") {
 }
 
 # exists only to post groups
-record(longout, "$(P)SA:GP_") {
+record(calc, "$(P)SA:GP_") {
+    field(CALC, "(VAL+1)%10")
     field(MDEL, "-1")
     field(FLNK, "$(P)SA:BufClr")
     info(Q:group, {
         "$(P)SA:V": {
             # TODO: unnecessarily re-sends timebase (potential 1/33 savings)
-            "": {+type:"meta", "+channel":"VAL", "+trigger":"*"}
+            "": {+type:"meta", "+channel":"VAL"},
+            "dummy": {+type:"plain", "+channel":"VAL", "+trigger":"*"}
         }
     })
 }
