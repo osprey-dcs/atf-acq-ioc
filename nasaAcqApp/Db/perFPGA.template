@@ -58,6 +58,14 @@ record(longin, "$(P)$(R)DRDY:history") {
     field(INP,  "@name=$(PORT) reg=DRDY:history")
 }
 
+record(aai, "$(P)$(R)Quartz:ADC:headers") {
+    field(DESC, "Quartz AD7768 headers")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=ADC:headers")
+    field(FTVL, "UCHAR")
+    field(NELM, "32")
+}
+
 #
 # Push sampling rate to FPGA
 #
