@@ -552,6 +552,11 @@ record(aSub, "$(P)SA:T_") {
 record(aai, "$(P)SA:T") {
     field(FTVL, "DOUBLE")
     field(NELM, "$(NELM)")
+    info(Q:group, {
+        "$(P)SA:V": {
+            "value.T": {+type:"plain", "+channel":"VAL", "+trigger":"value.T"}
+        }
+    })
 }
 
 # begin "short" readout chain
@@ -583,7 +588,21 @@ record(calcout, "$(P)SA:BufFul_") {
 record(bo, "$(P)SA:AutClr_") {
     field(SDIS, "$(P)SA:AutClr")
     field(DISV, "0")
+    field(FLNK, "$(P)SA:GP_")
+}
+
+# exists only to post groups
+record(calc, "$(P)SA:GP_") {
+    field(CALC, "(VAL+1)%10")
+    field(MDEL, "-1")
     field(FLNK, "$(P)SA:BufClr")
+    info(Q:group, {
+        "$(P)SA:V": {
+            # TODO: unnecessarily re-sends timebase (potential 1/33 savings)
+            "": {+type:"meta", "+channel":"VAL"},
+            "dummy": {+type:"plain", "+channel":"VAL", "+trigger":"*"}
+        }
+    })
 }
 
 # HACK: an "input" with side-effects.  Clears and reports previous size

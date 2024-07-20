@@ -223,6 +223,11 @@ record(aai, "$(P)SA:Ch$(N)_") {
     field(NELM, "$(NELM)")
     field(TSEL, "$(TSEL=0)")
     field(FLNK, "$(P)SA:Ch$(N):S_")
+    info(Q:group, {
+        "$(P)SA:V": {
+            "value.Ch$(N)": {+type:"plain", "+channel":"VAL"}
+        }
+    })
 }
 
 record(aSub, "$(P)SA:Ch$(N):S_") {

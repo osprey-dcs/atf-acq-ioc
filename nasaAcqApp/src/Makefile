@@ -44,9 +44,19 @@ nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
 nasaAcq_SRCS_DEFAULT += nasaAcqMain.cpp
 nasaAcq_SRCS_vxWorks += -nil-
 
-ifdef RECSYNC
+ifneq (,$(CAPUTLOG))
+nasaAcq_DBD += caPutLog.dbd
+nasaAcq_LIBS += caPutLog
+endif
+
+ifneq (,$(RECSYNC))
 nasaAcq_DBD += reccaster.dbd
 nasaAcq_LIBS += reccaster
+endif
+
+ifdef LINSTAT_0_0_0
+nasaAcq_DBD += linStat.dbd
+nasaAcq_LIBS += linStat
 endif
 
 # Link QSRV
