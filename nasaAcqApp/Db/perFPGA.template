@@ -67,6 +67,25 @@ record(aai, "$(P)$(R)Quartz:ADC:headers") {
 }
 
 #
+# DCLK/DRDY waveform recorder
+#
+record(bi, "$(P)$(R)ADC:WFR:status") {
+    field(DESC, "DCLK/DRDY waveform recorder status")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=ADC:WFR:busy")
+    field(ZNAM, "Idle")
+    field(ONAM, "Busy")
+    field(SCAN, "10 second")
+}
+record(bo, "$(P)$(R)ADC:WFR:start") {
+    field(DESC, "DCLK/DRDY recorder start/trigger")
+    field(DTYP, "FEED Register Flush")
+    field(OUT,  "@name=$(PORT) reg=ADC:WFR:start")
+    field(ZNAM, "Start/trigger")
+    field(ONAM, "Start/trigger")
+}
+
+#
 # Push sampling rate to FPGA
 #
 record(longout, "$(P)$(R)ACQ:rate_") {
