@@ -31,9 +31,14 @@ The FPGA prompts for confirmation and then rereads and applies the calibration s
     Bit 13   — Dump the register contents (there are a lot) of the AD7768 ADC chips.
     Bit 14   - Report progress of AD7768 synchronization state machine.
     Bit 15   — Provide fake AD7768 data at MCLK/128 samles/second.  Effective only at startup.
+    Bit 16   – Show MGT status registers.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
     Bit 19   – Add severe jitter to the secondary PPS reference (PMOD-GPS).
+    Bit 20   — Run RAM test on all ad7768 ADCs.  Normal ADC operation is inhibited while the test runs.
+    Bit 21   — Induce a DRDY misalignment on clock rate changes.
+               (Write channel mode registers individually rather than broadcasting)
+
 
 If the optional -s argument is present the value of the debugging flags set at FPGA startup will be set or shown. 
 
@@ -95,6 +100,7 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 | QSFP2_EEPROM.bin| 	Second QSFP module values (SFF-8636, read only). |
 | FMC1_EEPROM.bin |	IPMI EEPROM of first FMC mezzanine card. |
 | FMC2_EEPROM.bin |	IPMI EEPROM of second FMC mezzanine card. |
+| AD7768_DRDY.bin |	Samples of MCLK, DCLK and DRDY from all AD7768 analog to digital converters (read-only). |
 
 The Calibration.csv file must contain at least 33 lines.  The first column of the first line must contain with the time at which the calibration values were measured specified as the number of seconds since January 1, 1970 (POSIX seconds).  The remaining lines must contain two comma-separated numbers specifying the ADC calibration values for each of the 32 channels.  The first value on each line is the offset, in units of ADC counts, to be subtracted from each ADC reading.  The second value on each line is the gain adustment, in units of parts-per-million, to be applied to the ADC reading.  The offset is subtracted before the gain is adjusted.  The offset is limited to ±1000000 counts and the gain adjustment is limited to ±50000 parts per million.  Values outside these ranges are clipped to the appropriate range.  Values in columns after the first on the first row and second on the following 32 rows are ignored as are all values in rows greater than 33.
 
