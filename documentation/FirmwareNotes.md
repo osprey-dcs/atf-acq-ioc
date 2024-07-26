@@ -1,6 +1,9 @@
 # Console Commands
 
-The processor in the FPGA provides a simple command interpreter.  The console interpreter can be accessed through port C of the USB/Serial adapter (serial settings 115200-8N1) or through a UDP port and the console.py script.  Typing a character to the USB/Serial port disables the UDP connection.
+The processor in the FPGA provides a simple command interpreter.
+The console interpreter can be accessed through port C of the USB/Serial adapter
+(serial settings 115200-8N1) or through a UDP port and the `scripts/console.py` script.
+Typing a character to the USB/Serial port disables the UDP connection.
 
 Only enough of a command name to make it unique needs to be entered.  Since the first character of all commands is different this means that only a single character need be entered.  The only editing available is the backspace or delete key which erases the character to the left of the cursor.  Typing a carriage return or newline character executes the command.
 
