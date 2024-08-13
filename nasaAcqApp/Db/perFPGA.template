@@ -57,7 +57,11 @@ record(longin, "$(P)$(R)DRDY:history") {
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=DRDY:history")
 }
-
+record(longin, "$(P)$(R)Quartz:ADC:hdrSummary") {
+    field(DESC, "Quartz AD7768 header summary")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=ADC:headerSummary")
+}
 record(aai, "$(P)$(R)Quartz:ADC:headers") {
     field(DESC, "Quartz AD7768 headers")
     field(DTYP, "FEED Register Read")
