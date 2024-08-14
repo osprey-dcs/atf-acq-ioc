@@ -920,8 +920,34 @@
           this order does not match that of the channels in the AD7768
           chips.&nbsp; The SCAN field is 'Passive' so the values are
           updated only when a client explicitly requests record
-          processing.<br>
-        </span></span></p>
+          processing.</span></span></p>
+    <p><span style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;"><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;"><span
+                  style="font-family: Times New Roman, Times, serif;">The
+                  per-node longin record Quartz:ADC:statuses</span></span>
+              contains the </span></span></span></span><span
+        style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;"><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;"><span
+                  style="font-family: Times New Roman, Times, serif;"><span
+                    style="font-family: Times New Roman, Times, serif;"><span
+                      style="font-family: Times New Roman, Times,
+                      serif;">Quartz AD7768 analog to digital converter
+                    </span></span></span></span>status register
+              values.&nbsp; Each byte of the 32-bit word is the value of
+              register 0x09 for one AD7768.&nbsp; The most-significant
+              byte corresponds to ADC 0 and the least-significant byte
+              to ADC 3.&nbsp; The CHIP_ERROR status is bit 3 (0x08) of
+              each byte.&nbsp; Try to process the record sparingly, if
+              at all, during acquisition since it increases the
+              noise.&nbsp; The SCAN field is 'Passive' so the values are
+              updated only when a client explicitly requests record
+              processing.</span></span> </span></span></p>
     <p><span style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">The
           history of the Quartz analog to digital converter DRDY lines
