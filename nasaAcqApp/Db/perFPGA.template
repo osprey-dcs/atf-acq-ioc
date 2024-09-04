@@ -69,6 +69,11 @@ record(aai, "$(P)$(R)Quartz:ADC:headers") {
     field(FTVL, "UCHAR")
     field(NELM, "32")
 }
+record(longin, "$(P)$(R)ACQ:seqno") {
+    field(DESC, "Packet builder sequence number")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=ACQ:seqno")
+}
 
 #
 # DCLK/DRDY waveform recorder
