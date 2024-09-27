@@ -856,6 +856,10 @@
         fill their acquisition buffers.&nbsp; When acquisition is
         disabled acquisition activity continues until the
         currently-active packet has been filled and transmitted.</span></p>
+    <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+        Status<br>
+      </span></h2>
+    <h2><span style="font-family: Times New Roman, Times, serif;"></span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">The
         time at which the firmware and software were built is contained
         in the per-node stringin records </span><span
@@ -907,6 +911,14 @@
           number of the Quartz FMC card is contained in the per-node
           longin record Quartz:serno.<br>
         </span></span></p>
+    <p><span style="font-family: Times New Roman, Times, serif;"><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;"><span
+              style="font-family: Times New Roman, Times, serif;">The
+              per-node longin record ACQ:seqno contains the
+              least-significant 32 bits of the most recent high-speed
+              data packet sequence number.<br>
+            </span></span></span></span></p>
     <p><span style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;"><span
             style="font-family: Times New Roman, Times, serif;"><span
@@ -1293,15 +1305,14 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ADC:reset </span></td>
+              Times New Roman, Times, serif;">Quartz:ADC:reset </span></td>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">longout</span><span
+              Times New Roman, Times, serif;">bo</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
           <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Writing 40 will reset the Quartz
-              high speed ADCs.&nbsp; Writing any other value will have
-              no effect.<br>
+              New Roman, Times, serif;">Reset/Enable (1/0) the AD7768
+              ADC chips.<br>
             </span></td>
         </tr>
         <tr>
