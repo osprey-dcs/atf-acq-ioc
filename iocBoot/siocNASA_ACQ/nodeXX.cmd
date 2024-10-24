@@ -36,7 +36,7 @@ var PSCUDPMaxLenMB 23000
 createPSCUDPFast("NASA_CTRL_EVG_FS", "$(NASA_ACQ_BASE_IP)", 54399, 0)
 dbLoadRecords("../../db/nasaAcqSup.db", "P=$(P),EVG=$(EVG),NODE=,PORT=$(P)APP,IPADDR=$(NASA_ACQ_BASE_IP)")
 dbLoadRecords("../../db/pscudpfast.db", "P=$(P),NAME=NASA_CTRL_EVG_FS")
-dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP),NELM=10000")
+dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),PORT=$(P)APP,NAME=NASA_CTRL_EVG_FS,IPADDR=$(NASA_ACQ_BASE_IP),NELM=10000")
 
 dbLoadRecords("../../db/save_restoreStatus.db", "P=$(P)AS:")
 save_restoreSet_status_prefix("$(P)AS:")
