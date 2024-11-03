@@ -14,7 +14,22 @@ nasaAcq_registerRecordDeviceDriver pdbbase
 ###############################################################################
 # Set up connections
 var PSCDebug 0
+
+# target buffering period
+var PSCUDPBufferPeriod 1.0
+
+# OS socket buffer size.
+#  sudo sysctl net.core.rmem_max=25000000
+var(PSCUDPSetSockBuf, 25000000)
+
+# ethernet MTU (excludes IP/UDP overhead, so larger than strictly necessary)
 var PSCUDPMaxPacketSize 1500
+
+# 250e3 samp per sec per channel / 14 samples per packet per channel = 17857
+# round up...
+var PSCUDPMaxPacketRate 18000
+
+# max. .dat file size before rotating
 var PSCUDPMaxLenMB 23000
 
 # Configure a single acquisition node
