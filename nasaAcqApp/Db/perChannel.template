@@ -281,3 +281,24 @@ record(bo, "$(P)$(R)ACQ:coupling:$(N)") {
     field(RVAL, "1") # initially DC
     info(autosaveFields_pass0, "RVAL")
 }
+
+record(longin, "$(P)$(R)CALIB:offset:$(N)") {
+    field(DESC, "Channel $(N) calibration offset")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=CALIB:offset:XX offset=$(IDX)")
+    field(EGU,  "ADC counts")
+    field(PINI, "YES")
+}
+# Relationship between parts-per-million and ADC gain counts
+#      PPM     Gain Counts
+#    ------- = -----------
+#    1000000   (2^24) / 12
+record(ai, "$(P)$(R)CALIB:gain:$(N)") {
+    field(DESC, "Channel $(N) calibration gain")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=CALIB:gain:XX offset=$(IDX)")
+    field(LINR, "SLOPE")
+    field(ESLO, "0.7152557373046875")
+    field(EGU,  "PPM")
+    field(PINI, "YES")
+}

@@ -2,7 +2,7 @@
 
 ###############################################################################
 # Set up environment
-epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.12")
+epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.8")
 epicsEnvSet(NODE, "01")
 epicsEnvSet(P, "FDAS:$(NODE):")
 epicsEnvSet(EVG, "FDAS:") # this is the EVG node

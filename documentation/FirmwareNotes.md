@@ -12,6 +12,8 @@ The commands and their arguments are:
 **boot [-a]**  
 The FPGA prompts for confirmation and then restarts as if powered up.  The optional argument specifies that the alternate bootable image is to be tried first.
 
+**calib**  
+The FPGA prompts for confirmation and then rereads and applies the calibration settings in Calibraion.csv.
 
 **debug [-s] [n]**  
     The debugging flags are set to the specified value, if one is given.  If no value is given the current value of the debugging flags is printed.  The bits are:
@@ -95,6 +97,7 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 | BOOT.bin  |	Primary bootstrap image. |
 | BOOT_A.bin 	| Secondary (alternate) bootstrap image.
 | SYSPARAM.dat |	System parameter values (Startup debug flags, NTP server settings). |
+| Calibration.csv | Comma-separated-values file of ADC calibration values. |
 | FullFlash.bin| 	Complete flash memory contents (16 MiB). |
 | QSFP1_EEPROM.bin |	First QSFP module values (SFF-8636, read only). |
 | QSFP2_EEPROM.bin| 	Second QSFP module values (SFF-8636, read only). |
@@ -102,6 +105,7 @@ In addition to the primary and secondary bootstrap images the TFTP server provid
 | FMC2_EEPROM.bin |	IPMI EEPROM of second FMC mezzanine card. |
 | AD7768_DRDY.bin |	Samples of MCLK, DCLK and DRDY from all AD7768 analog to digital converters (read-only). |
 
+The Calibration.csv file must contain at least 33 lines.  The first column of the first line must contain with the time at which the calibration values were measured specified as the number of seconds since January 1, 1970 (POSIX seconds).  The remaining lines must contain two comma-separated numbers specifying the ADC calibration values for each of the 32 channels.  The first value on each line is the offset, in units of ADC counts, to be subtracted from each ADC reading.  The second value on each line is the gain adustment, in units of parts-per-million, to be applied to the ADC reading.  The offset is subtracted before the gain is adjusted.  The offset is limited to ±1000000 counts and the gain adjustment is limited to ±50000 parts per million.  Values outside these ranges are clipped to the appropriate range.  Values in columns after the first on the first row and second on the following 32 rows are ignored as are all values in rows greater than 33.
 
 # Network Configuration
 
