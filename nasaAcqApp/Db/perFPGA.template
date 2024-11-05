@@ -178,6 +178,9 @@ record(aao, "$(P)CAL:offset") {
     field(EGU,  "ADC counts")
     field(NELM, "32")
     field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
 }
 record(aai, "$(P)CAL:offsetRbk") {
     field(DESC, "Get calibration offsets")
@@ -195,6 +198,9 @@ record(aao, "$(P)CAL:gain") {
     field(EGU,  "PPM")
     field(NELM, "32")
     field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
 }
 record(aai, "$(P)CAL:gainRbk") {
     field(DESC, "Get calibration gains")
@@ -209,6 +215,9 @@ record(longout, "$(P)CAL:date") {
     field(DESC, "Set calibration date")
     field(DTYP, "FEED Register Write")
     field(OUT,  "@name=$(PORT) reg=calibrationDate")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
 }
 record(longin, "$(P)CAL:dateRbk") {
     field(DESC, "Get calibration date")
@@ -222,4 +231,7 @@ record(bo, "$(P)CAL:write") {
     field(OUT,  "@name=$(PORT) reg=calibrationWrite")
     field(ZNAM, "Write")
     field(ONAM, "Write")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
 }
