@@ -148,3 +148,90 @@ record(longout, "$(P)$(R)PLL:VCXO_DAC") {
     field(DRVL, "-32768")
     field(DRVH, "32767")
 }
+
+#
+# Calibration
+#
+record(mbbi, "$(P)CAL:status") {
+    field(DESC, "Calibration status")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationStatus")
+    field(PINI, "YES")
+    field(ZRVL, "0")
+    field(ZRST, "Valid")
+    field(ONVL, "1")
+    field(ONST, "Unread")
+    field(TWVL, "2")
+    field(TWST, "Read Fault")
+    field(THVL, "3")
+    field(THST, "Bad Header")
+    field(FRVL, "4")
+    field(FRST, "Bad Checksum")
+    field(FVVL, "5")
+    field(FVST, "Write Fault")
+    field(VAL,  "0")
+}
+record(aao, "$(P)CAL:offset") {
+    field(DESC, "Set calibration offsets")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationOffset")
+    field(EGU,  "ADC counts")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(aai, "$(P)CAL:offsetRbk") {
+    field(DESC, "Get calibration offsets")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationOffset")
+    field(EGU,  "ADC counts")
+    field(PINI, "YES")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+}
+record(aao, "$(P)CAL:gain") {
+    field(DESC, "Set calibration gains")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationGain")
+    field(EGU,  "PPM")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(aai, "$(P)CAL:gainRbk") {
+    field(DESC, "Get calibration gains")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationGain")
+    field(EGU,  "PPM")
+    field(PINI, "YES")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+}
+record(longout, "$(P)CAL:date") {
+    field(DESC, "Set calibration date")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationDate")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(longin, "$(P)CAL:dateRbk") {
+    field(DESC, "Get calibration date")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationDate")
+    field(PINI, "YES")
+}
+record(bo, "$(P)CAL:write") {
+    field(DESC, "Write calibration to EEPROM")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationWrite")
+    field(ZNAM, "Write")
+    field(ONAM, "Write")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}

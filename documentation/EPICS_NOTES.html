@@ -24,6 +24,8 @@
 
 
 
+
+
           macros.&nbsp; Typically the P macro is set to 'FDAS:' and the
           NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -593,6 +595,8 @@
 
 
 
+
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -857,6 +861,8 @@
         disabled acquisition activity continues until the
         currently-active packet has been filled and transmitted.</span></p>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
+
         Status<br>
       </span></h2>
     <h2><span style="font-family: Times New Roman, Times, serif;"></span></h2>
@@ -864,6 +870,8 @@
         time at which the firmware and software were built is contained
         in the per-node stringin records </span><span
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
+
+
 
 
 
@@ -888,24 +896,10 @@
 
 
 
+
+
         respectively.<br>
       </span></p>
-    <p><span style="font-family: Times New Roman, Times, serif;">The
-        time at which the calibration factors were measured is contained
-        in the per-node stringin record calibrationDate.&nbsp; The
-        status of the calibration file parsing and application is
-        contained in the longin record calibrationStatus.&nbsp; A value
-        of 0 indicates that the contents of Calibration.csv are
-        correct.&nbsp; If that file is invalid the least significant 16
-        bits of </span><span style="font-family: Times New Roman,
-        Times, serif;"><span style="font-family: Times New Roman, Times,
-          serif;">calibrationStatus contain the line number where thing
-          have gone wrong.&nbsp; The most significant 16 bits contain an
-          error code.&nbsp; Some of the possible error codes are 3
-          (Calibration.csv does not exist), 5 (end-of-file was reached
-          before all calibration values were read),&nbsp; 6 (syntax
-          error), 7 (invalid character), and 8 (bad number).<br>
-        </span></span></p>
     <p><span style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">The serial
           number of the Quartz FMC card is contained in the per-node
@@ -939,6 +933,8 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">The
+
+
                   per-node longin record Quartz:ADC:statuses</span></span>
               contains the </span></span></span></span><span
         style="font-family: Times New Roman, Times, serif;"><span
@@ -1030,6 +1026,8 @@
 
 
 
+
+
                 edges</span> are misaligned by more than about 8 ns, but
               all are aligned within about 24 ns.</span></td>
         </tr>
@@ -1044,6 +1042,8 @@
               New Roman, Times, serif;">One or more DRDY </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
+
+
 
 
 
@@ -1068,78 +1068,69 @@
 
 
 
+
+
                 edges</span> are misaligned. </span></td>
         </tr>
       </tbody>
     </table>
     <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
       </span></h2>
-    <p><span style="font-family: Times New Roman, Times, serif;">The
-        value <span style="font-style: italic;">nn</span> in the
-        following table is the channel number, ranging from 01 to
-        32.&nbsp; The calibration values are stored in a
-        comma-separated-values file in the node flash memory.<br>
+    <p><span style="font-family: Times New Roman, Times, serif;">Calibration
+
+        values are read or written using 32-element, FTVL=LONG, aai/aao
+        records.&nbsp; Values are applied to the ADC chips immediately
+        but are not stored in non-volatile memory until the CAL:write
+        record mentioned below is processed.<br>
       </span></p>
-    <div style="margin-left: 40px;"> </div>
-    <table style=" text-align: left; width: 80%;" cellspacing="2"
-      cellpadding="2" border="1">
-      <tbody>
-        <tr>
-          <td style="text-align: center;"><span style="font-weight:
-              bold;"><span style="font-family: Times New Roman, Times,
-                serif;">Name</span></span><span style="font-family:
-              Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: center;"><span style="font-weight:
-              bold;"><span style="font-family: Times New Roman, Times,
-                serif;">Type</span></span><span style="font-family:
-              Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="vertical-align: middle; text-align: center;"><span
-              style="font-weight: bold;"><span style="font-family: Times
-                New Roman, Times, serif;">Description</span></span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">CALIB:offset:<span
-                style="font-style: italic;">nn</span></span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">longin</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">&nbsp;Channel <span
-                style="font-style: italic;">nn</span> calibration offset
-              in units of ADC counts.</span><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">CALIB:gain:<span
-                style="font-style: italic;">nn</span></span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">ai</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">&nbsp;Channel <span
-                style="font-style: italic;">nn</span> calibration gain
-              adjustment in units of parts per million.</span> </td>
-        </tr>
-      </tbody>
-    </table>
-    <div style="margin-left: 40px;"> </div>
-    <div style="margin-left: 80px;"> <span style="font-family: Times
-        New Roman, Times, serif;"><span style="font-family: Times New
-          Roman, Times, serif;"></span></span><span style="font-family:
-        Times New Roman, Times, serif;"></span> </div>
-    <div style="margin-left: 40px;"> </div>
-    <br>
+    <ul>
+      <li><span style="font-family: Times New Roman, Times, serif;">CAL:offset/CAL:offsetRbk
+
+          – per-channel </span><span style="font-family: Times New
+          Roman, Times, serif;"><span style="font-family: Times New
+            Roman, Times, serif;">calibration offsets in units of ADC
+            counts.&nbsp; Range is ±1000000.<br>
+          </span></span></li>
+      <li><span style="font-family: Times New Roman, Times, serif;">CAL:gain/CAL:gainRbk
+
+          – per-channel </span><span style="font-family: Times New
+          Roman, Times, serif;"><span style="font-family: Times New
+            Roman, Times, serif;">calibration</span></span><span
+          style="font-family: Times New Roman, Times, serif;"><span
+            style="font-family: Times New Roman, Times, serif;"> gain
+            adjustments in units of parts per million.&nbsp; Range is
+            ±50000.</span></span></li>
+    </ul>
+    <p><span style="font-family: Times New Roman, Times, serif;">There
+        are four other scalar records associated with the calibration</span><br>
+    </p>
+    <ul>
+      <li><span style=" font-family: Times New Roman, Times, serif;"><span
+            style=" font-family: Times New Roman, Times, serif;">CAL:date/CAL:dateRbk
+
+            –&nbsp; the time associated with the calibration values, in
+            POSIX seconds, treated as an unsigned 32-bit value.</span></span></li>
+      <li><span style=" font-family: Times New Roman, Times, serif;"><span
+            style=" font-family: Times New Roman, Times, serif;">CAL:status
+
+            – MBBI record indicating the status of the non-volatile
+            memory calibration value read/write operations.</span></span></li>
+      <li><span style=" font-family: Times New Roman, Times, serif;"><span
+            style=" font-family: Times New Roman, Times, serif;">CAL:write
+
+            – BO record that writes the calibration values (offset,
+            gain, date) to non-volatile memory when processed.</span></span></li>
+    </ul>
+    <p><span style="font-family: Times New Roman, Times, serif;">On IOC
+        startup the output records are disabled (the DISA and DISV
+        fields have the same value) to reduce the chance of accidentally
+        changing the calibration values.</span><br>
+    </p>
+    <ul>
+    </ul>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
+
 
 
 
@@ -1355,6 +1346,8 @@
 
 
 
+
+
         the machine protection mitigation output number, ranging from 01
         to 08.<br>
       </span></p>
@@ -1470,6 +1463,8 @@
             </span></td>
           <td><span style="font-family: Times New Roman, Times, serif;">Bitmap
 
+
+
               specifying the channels for which an excursion </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: &quot;Times New Roman&quot;, Times,
@@ -1503,6 +1498,8 @@
               specifying the local MPS hardware inputs for which a 'bad'</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"><span style="font-style: italic;"></span>&nbsp;value
+
+
 
 
 
@@ -1591,6 +1588,8 @@
                 style="font-family: &quot;Times New Roman&quot;, Times,
                 serif;"></span><span style="font-family: &quot;Times New
                 Roman&quot;, Times, serif;">'tripped' status </span>became
+
+
 
 
 
@@ -1821,6 +1820,8 @@
             </span></td>
           <td><span style="font-family: Times New Roman, Times, serif;">Least
 
+
+
               significant eight bits are map indicating the combined MPS
               'tripped' status from all downstream nodes.</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
@@ -1858,6 +1859,8 @@
     <br class="Apple-interchange-newline">
     <meta charset="UTF-8">
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
+
 
 
         Records<br>
@@ -1929,6 +1932,8 @@
 
 
 
+
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1953,6 +1958,8 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
+
 
 
 
