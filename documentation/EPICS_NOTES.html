@@ -26,6 +26,7 @@
 
 
 
+
           macros.&nbsp; Typically the P macro is set to 'FDAS:' and the
           NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -597,6 +598,7 @@
 
 
 
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -863,6 +865,7 @@
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
 
 
+
         Status<br>
       </span></h2>
     <h2><span style="font-family: Times New Roman, Times, serif;"></span></h2>
@@ -882,10 +885,12 @@
 
 
 
+
         a</span><span style="font-family: Times New Roman, Times,
         serif;">nd </span><span style="font-family: Times New Roman,
         Times, serif;"><br>
       </span><span style="font-family: Times New Roman, Times, serif;">softwareBuildDate,
+
 
 
 
@@ -935,6 +940,7 @@
                   style="font-family: Times New Roman, Times, serif;">The
 
 
+
                   per-node longin record Quartz:ADC:statuses</span></span>
               contains the </span></span></span></span><span
         style="font-family: Times New Roman, Times, serif;"><span
@@ -970,7 +976,9 @@
           associated with some possible values where '<span
             style="font-style: italic;">x</span>' indicates a "don't
           care" value and '<span style="font-style: italic;">y</span>'
-          indicates a value other then 'F':<br>
+          indicates a value other then 'F'.&nbsp; The most significant
+          three bits of this record reflect the current state of the
+          state machine which acquires the history.<br>
         </span></span></p>
     <table style=" text-align: left; width: 80%;" cellspacing="2"
       cellpadding="2" border="1">
@@ -1028,6 +1036,7 @@
 
 
 
+
                 edges</span> are misaligned by more than about 8 ns, but
               all are aligned within about 24 ns.</span></td>
         </tr>
@@ -1042,6 +1051,7 @@
               New Roman, Times, serif;">One or more DRDY </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
+
 
 
 
@@ -1070,6 +1080,7 @@
 
 
 
+
                 edges</span> are misaligned. </span></td>
         </tr>
       </tbody>
@@ -1077,6 +1088,7 @@
     <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
       </span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Calibration
+
 
         values are read or written using 32-element, FTVL=LONG, aai/aao
         records.&nbsp; Values are applied to the ADC chips immediately
@@ -1086,12 +1098,14 @@
     <ul>
       <li><span style="font-family: Times New Roman, Times, serif;">CAL:offset/CAL:offsetRbk
 
+
           – per-channel </span><span style="font-family: Times New
           Roman, Times, serif;"><span style="font-family: Times New
             Roman, Times, serif;">calibration offsets in units of ADC
             counts.&nbsp; Range is ±1000000.<br>
           </span></span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">CAL:gain/CAL:gainRbk
+
 
           – per-channel </span><span style="font-family: Times New
           Roman, Times, serif;"><span style="font-family: Times New
@@ -1108,15 +1122,18 @@
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
             style=" font-family: Times New Roman, Times, serif;">CAL:date/CAL:dateRbk
 
+
             –&nbsp; the time associated with the calibration values, in
             POSIX seconds, treated as an unsigned 32-bit value.</span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
             style=" font-family: Times New Roman, Times, serif;">CAL:status
 
+
             – MBBI record indicating the status of the non-volatile
             memory calibration value read/write operations.</span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
             style=" font-family: Times New Roman, Times, serif;">CAL:write
+
 
             – BO record that writes the calibration values (offset,
             gain, date) to non-volatile memory when processed.</span></span></li>
@@ -1129,6 +1146,7 @@
     <ul>
     </ul>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1348,6 +1366,7 @@
 
 
 
+
         the machine protection mitigation output number, ranging from 01
         to 08.<br>
       </span></p>
@@ -1465,6 +1484,7 @@
 
 
 
+
               specifying the channels for which an excursion </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: &quot;Times New Roman&quot;, Times,
@@ -1498,6 +1518,7 @@
               specifying the local MPS hardware inputs for which a 'bad'</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"><span style="font-style: italic;"></span>&nbsp;value
+
 
 
 
@@ -1588,6 +1609,7 @@
                 style="font-family: &quot;Times New Roman&quot;, Times,
                 serif;"></span><span style="font-family: &quot;Times New
                 Roman&quot;, Times, serif;">'tripped' status </span>became
+
 
 
 
@@ -1822,6 +1844,7 @@
 
 
 
+
               significant eight bits are map indicating the combined MPS
               'tripped' status from all downstream nodes.</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
@@ -1859,6 +1882,7 @@
     <br class="Apple-interchange-newline">
     <meta charset="UTF-8">
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
 
 
 
@@ -1934,6 +1958,7 @@
 
 
 
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
@@ -1958,6 +1983,7 @@
             </span></td>
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: Times New Roman, Times, serif;">Writing
+
 
 
 
