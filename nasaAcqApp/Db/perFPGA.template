@@ -19,6 +19,7 @@ record(fanout, "$(P)$(R)C:F_") {
     field(LNK6, "$(P)$(R)ACQ:HIlimXX_")
     field(LNK7, "$(P)$(R)ACQ:HIHIlimXX_")
     field(LNK8, "$(P)$(R)Quartz:serno")
+    field(LNK9, "$(P)$(R)Quartz:partno")
 }
 # flush out array registers previously initialized in perChannel.template during PHAS=-1
 record(bo, "$(P)$(R)ACQ:enable:XX_") {
@@ -50,13 +51,11 @@ record(longin, "$(P)$(R)Quartz:serno") {
     field(DESC, "Quartz IPMI serial number")
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=FMC1:SerialNumber")
-    field(PINI, "YES")
 }
 record(longin, "$(P)$(R)Quartz:partno") {
     field(DESC, "Quartz IPMI part number")
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=FMC1:PartNumber")
-    field(PINI, "YES")
 }
 
 record(longin, "$(P)$(R)DRDY:history") {
