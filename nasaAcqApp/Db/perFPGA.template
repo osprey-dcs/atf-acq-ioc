@@ -56,6 +56,8 @@ record(longin, "$(P)$(R)Quartz:partno") {
     field(DESC, "Quartz IPMI part number")
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=FMC1:PartNumber")
+    field(LOLO, "100")
+    field(LLSV, "MAJOR")
 }
 
 record(longin, "$(P)$(R)DRDY:history") {
