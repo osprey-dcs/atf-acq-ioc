@@ -5,9 +5,12 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
 
+USR_CPPFLAGS += -DUSE_TYPED_RSET
+
 LIBRARY += nasaSup
 nasaSup_SRCS += goldenBoot.c
 nasaSup_SRCS += copyTime.c
+nasaSup_LIBS += $(EPICS_BASE_IOC_LIBS)
 DBD += nasaSup.dbd
 
 #=============================
