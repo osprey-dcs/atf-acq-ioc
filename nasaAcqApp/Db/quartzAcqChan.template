@@ -1,4 +1,12 @@
 
+record(longin, "$(P)SA:Ch$(N):ASLO_") {
+    field(DTYP, "FEED On Connect")
+    field(INP , "@name=$(PORT)")
+    field(SCAN, "I/O Intr")
+    field(PHAS, "2") # for repeatability, arbitrarily later than perChannel.template
+    field(FLNK, "$(P)SA:Ch$(N):ASLO")
+}
+
 # ASLO and AOFF are ADC count -> Volt calibration specific to a digitizer
 record(ao, "$(P)SA:Ch$(N):ASLO") {
     # with Quartz 1.2 this will be roughly 1.62e-06 V/ADC
@@ -6,12 +14,14 @@ record(ao, "$(P)SA:Ch$(N):ASLO") {
     field(VAL, "1.0")
     field(PREC, "6")
     field(EGU , "V/ADC")
+    field(FLNK, "$(P)SA:Ch$(N):SLO")
     info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):AOFF") {
     field(VAL, "0.0")
     field(PREC, "6")
     field(EGU , "V")
+    field(FLNK, "$(P)SA:Ch$(N):SLO")
     info(autosaveFields_pass0, "VAL")
 }
 # ESLO and EOFF are V -> EGU scaling specific to currently connected signal
@@ -19,12 +29,14 @@ record(ao, "$(P)SA:Ch$(N):ESLO") {
     field(VAL, "1.0")
     field(PREC, "6")
     field(EGU , "EGU/V")
+    field(FLNK, "$(P)SA:Ch$(N):SLO")
     info(autosaveFields_pass0, "VAL")
 }
 record(ao, "$(P)SA:Ch$(N):EOFF") {
     field(VAL, "0.0")
     field(PREC, "6")
     field(EGU , "EGU")
+    field(FLNK, "$(P)SA:Ch$(N):SLO")
     info(autosaveFields_pass0, "VAL")
 }
 record(bo, "$(P)SA:Ch$(N):USE") {
@@ -130,11 +142,6 @@ record(mbbo, "$(P)SA:Ch$(N):SDTYP") {
     field(UNSV, "INVALID")
 }
 
-record(lso, "$(P)SA:Ch$(N):DESC5") {
-    field(DESC, "Extra signal label")
-    field(SIZV, "128")
-    info(autosaveFields_pass0, "VAL")
-}
 record(stringout, "$(P)SA:Ch$(N):EGU") {
     field(DESC, "Current signal units")
     info(autosaveFields_pass0, "VAL")
@@ -171,6 +178,8 @@ record(stringin, "$(P)SA:Ch$(N):LASTCAL") {
     field(TSEL, "$(P)SA:Ch$(N):LASTCAL_.TIME")
 }
 
+# Process on change to ASLO, AOFF, ESLO, EOFF
+#
 # V = ASLO*ADC + AOFF
 # EU= ESLO*V   + EOFF
 #
@@ -179,37 +188,41 @@ record(stringin, "$(P)SA:Ch$(N):LASTCAL") {
 record(calcout, "$(P)SA:Ch$(N):SLO") {
     field(PREC, "6")
     field(EGU , "EGU/ADC")
-    field(INPA, "$(P)SA:Ch$(N):ASLO CP MS")
-    field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
+    field(INPA, "$(P)SA:Ch$(N):ASLO MS")
+    field(INPB, "$(P)SA:Ch$(N):ESLO MS")
     field(CALC, "A*B")
     field(OUT , "$(P)SA:Ch$(N):S_.B PP MS")
+    field(FLNK, "$(P)SA:Ch$(N):OFF")
 }
 record(calcout, "$(P)SA:Ch$(N):OFF") {
     field(PREC, "6")
     field(EGU , "EGU")
-    field(INPA, "$(P)SA:Ch$(N):AOFF CP MS")
-    field(INPB, "$(P)SA:Ch$(N):ESLO CP MS")
-    field(INPC, "$(P)SA:Ch$(N):EOFF CP MS")
+    field(INPA, "$(P)SA:Ch$(N):AOFF MS")
+    field(INPB, "$(P)SA:Ch$(N):ESLO MS")
+    field(INPC, "$(P)SA:Ch$(N):EOFF MS")
     field(CALC, "A*B + C")
     field(OUT , "$(P)SA:Ch$(N):S_.C PP MS")
+    field(FLNK, "$(P)SA:Ch$(N):MAX")
 }
 
 # project ADC range into EGU
 record(calc, "$(P)SA:Ch$(N):MAX") {
-    field(INPA, "$(P)SA:Ch$(N):ESLO CP MS")
-    field(INPB, "$(P)SA:Ch$(N):EOFF CP MS")
+    field(INPA, "$(P)SA:Ch$(N):ESLO MS")
+    field(INPB, "$(P)SA:Ch$(N):EOFF MS")
     field(INPC, "10")
     field(CALC, "A*C+B")
     field(EGU , "EGU")
     field(PREC, "6")
+    field(FLNK, "$(P)SA:Ch$(N):MIN")
 }
 record(calc, "$(P)SA:Ch$(N):MIN") {
-    field(INPA, "$(P)SA:Ch$(N):ESLO CP MS")
-    field(INPB, "$(P)SA:Ch$(N):EOFF CP MS")
+    field(INPA, "$(P)SA:Ch$(N):ESLO MS")
+    field(INPB, "$(P)SA:Ch$(N):EOFF MS")
     field(INPC, "-10")
     field(CALC, "A*C+B")
     field(EGU , "EGU")
     field(PREC, "6")
+    field(FLNK, "$(P)ACQ:limSLO:$(N)_")
 }
 
 # /-- from quartzAcq (Chan0) or previous channel

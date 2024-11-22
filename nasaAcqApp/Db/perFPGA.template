@@ -19,6 +19,7 @@ record(fanout, "$(P)$(R)C:F_") {
     field(LNK6, "$(P)$(R)ACQ:HIlimXX_")
     field(LNK7, "$(P)$(R)ACQ:HIHIlimXX_")
     field(LNK8, "$(P)$(R)Quartz:serno")
+    field(LNK9, "$(P)$(R)Quartz:partno")
 }
 # flush out array registers previously initialized in perChannel.template during PHAS=-1
 record(bo, "$(P)$(R)ACQ:enable:XX_") {
@@ -51,6 +52,13 @@ record(longin, "$(P)$(R)Quartz:serno") {
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=FMC1:SerialNumber")
 }
+record(longin, "$(P)$(R)Quartz:partno") {
+    field(DESC, "Quartz IPMI part number")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=FMC1:PartNumber")
+    field(LOLO, "100")
+    field(LLSV, "MAJOR")
+}
 
 record(longin, "$(P)$(R)DRDY:history") {
     field(DESC, "DRDY mini-logic analyzer")
@@ -68,6 +76,11 @@ record(aai, "$(P)$(R)Quartz:ADC:headers") {
     field(INP,  "@name=$(PORT) reg=ADC:headers")
     field(FTVL, "UCHAR")
     field(NELM, "32")
+}
+record(longin, "$(P)$(R)ACQ:seqno") {
+    field(DESC, "Packet builder sequence number")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=ACQ:seqno")
 }
 
 #
@@ -123,16 +136,12 @@ record(longout, "$(P)$(R)FPGA:reboot_") {
 #
 # Reset ADCs
 #
-record(bo, "$(P)$(R)ADC:reset") {
-    field(ZNAM, "Reset")
-    field(ONAM, "Reset")
-    field(FLNK, "$(P)$(R)ADC:reset_")
-}
-record(longout, "$(P)$(R)ADC:reset_") {
-    field(DESC, "Write 40 to reset ADCs")
+record(bo, "$(P)$(R)Quartz:ADC:reset") {
+    field(DESC, "Reset AD7768 ADCs")
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=ADC:reset")
-    field(VAL , "40")
+    field(OUT,  "@name=$(PORT) reg=AD7768:reset")
+    field(ZNAM, "Operate")
+    field(ONAM, "Reset")
 }
 
 #
@@ -146,4 +155,91 @@ record(longout, "$(P)$(R)PLL:VCXO_DAC") {
     field(HOPR, "32767")
     field(DRVL, "-32768")
     field(DRVH, "32767")
+}
+
+#
+# Calibration
+#
+record(mbbi, "$(P)CAL:status") {
+    field(DESC, "Calibration status")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationStatus")
+    field(PINI, "YES")
+    field(ZRVL, "0")
+    field(ZRST, "Valid")
+    field(ONVL, "1")
+    field(ONST, "Unread")
+    field(TWVL, "2")
+    field(TWST, "Read Fault")
+    field(THVL, "3")
+    field(THST, "Bad Header")
+    field(FRVL, "4")
+    field(FRST, "Bad Checksum")
+    field(FVVL, "5")
+    field(FVST, "Write Fault")
+    field(VAL,  "0")
+}
+record(aao, "$(P)CAL:offset") {
+    field(DESC, "Set calibration offsets")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationOffset")
+    field(EGU,  "ADC counts")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(aai, "$(P)CAL:offsetRbk") {
+    field(DESC, "Get calibration offsets")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationOffset")
+    field(EGU,  "ADC counts")
+    field(PINI, "YES")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+}
+record(aao, "$(P)CAL:gain") {
+    field(DESC, "Set calibration gains")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationGain")
+    field(EGU,  "PPM")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(aai, "$(P)CAL:gainRbk") {
+    field(DESC, "Get calibration gains")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationGain")
+    field(EGU,  "PPM")
+    field(PINI, "YES")
+    field(NELM, "32")
+    field(FTVL, "LONG")
+}
+record(longout, "$(P)CAL:date") {
+    field(DESC, "Set calibration date")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationDate")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
+}
+record(longin, "$(P)CAL:dateRbk") {
+    field(DESC, "Get calibration date")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=calibrationDate")
+    field(PINI, "YES")
+}
+record(bo, "$(P)CAL:write") {
+    field(DESC, "Write calibration to EEPROM")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=calibrationWrite")
+    field(ZNAM, "Write")
+    field(ONAM, "Write")
+    field(PINI, "NO")
+    field(DISV, "1")
+    field(DISA, "1")
 }
