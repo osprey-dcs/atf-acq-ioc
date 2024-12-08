@@ -51,7 +51,9 @@ if not address:
 UDP_PORT = 55002
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-sock.sendto(bytearray(b'\x01'), (address, UDP_PORT))
+sock.bind(('', 0))
+sock.connect((address, UDP_PORT))
+sock.send(bytearray(b'\x01'))
 saveTTY = None
 
 def readFromFPGA():
@@ -79,7 +81,7 @@ try:
         c = sys.stdin.read(1)
         if c == '\003':
             break;
-        sock.sendto(bytes(c,'ascii'), (address, UDP_PORT))
+        sock.send(bytes(c,'ascii'))
 finally:
     if (saveTTY):
         termios.tcsetattr(sys.stdin.fileno(), termios.TCSADRAIN, saveTTY)
