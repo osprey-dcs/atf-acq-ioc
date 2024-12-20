@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-22 16:42:05 by atf-->
+<!--Saved on 2024-12-20 15:51:47 by atf-->
 <display version="2.0.0">
   <name>Stat</name>
   <widget type="label" version="2.0.0">
@@ -575,5 +575,668 @@
     <height>52</height>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>2</vertical_alignment>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>1560</x>
+    <y>70</y>
+    <width>50</width>
+    <height>40</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="50.0" y="0.0">
+      </point>
+      <point x="50.0" y="40.0">
+      </point>
+      <point x="0.0" y="40.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_2</name>
+    <x>1590</x>
+    <y>70</y>
+    <width>20</width>
+    <height>70</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="70.0">
+      </point>
+      <point x="0.0" y="70.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_3</name>
+    <x>1570</x>
+    <y>70</y>
+    <width>40</width>
+    <height>130</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="130.0">
+      </point>
+      <point x="0.0" y="130.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_4</name>
+    <x>1570</x>
+    <y>70</y>
+    <width>40</width>
+    <height>310</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="310.00000000000006">
+      </point>
+      <point x="0.0" y="310.00000000000006">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_5</name>
+    <x>1570</x>
+    <y>70</y>
+    <width>40</width>
+    <height>610</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="610.0">
+      </point>
+      <point x="0.0" y="610.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_6</name>
+    <x>1570</x>
+    <y>70</y>
+    <width>40</width>
+    <height>790</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="790.0">
+      </point>
+      <point x="0.0" y="790.0">
+      </point>
+    </points>
+    <line_color>
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </line_color>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_8</name>
+    <x>1540</x>
+    <y>70</y>
+    <width>10</width>
+    <height>40</height>
+    <points>
+      <point x="0.0" y="40.0">
+      </point>
+      <point x="10.0" y="40.0">
+      </point>
+      <point x="10.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_9</name>
+    <x>1540</x>
+    <y>140</y>
+    <width>40</width>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="20.0">
+      </point>
+      <point x="0.0" y="20.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_10</name>
+    <x>1540</x>
+    <y>140</y>
+    <width>40</width>
+    <height>410</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="410.0">
+      </point>
+      <point x="0.0" y="410.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_11</name>
+    <x>1540</x>
+    <y>140</y>
+    <width>40</width>
+    <height>450</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="450.0">
+      </point>
+      <point x="0.0" y="450.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_12</name>
+    <x>1540</x>
+    <y>140</y>
+    <width>40</width>
+    <height>480</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="0.0">
+      </point>
+      <point x="40.0" y="480.0">
+      </point>
+      <point x="0.0" y="480.0">
+      </point>
+    </points>
+    <arrows>3</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_13</name>
+    <x>1540</x>
+    <y>130</y>
+    <width>40</width>
+    <height>520</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="40.0" y="10.0">
+      </point>
+      <point x="40.0" y="520.0">
+      </point>
+      <point x="0.0" y="520.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_14</name>
+    <x>1540</x>
+    <y>200</y>
+    <width>20</width>
+    <height>30</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="30.0">
+      </point>
+      <point x="0.0" y="30.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_16</name>
+    <x>1540</x>
+    <y>200</y>
+    <width>20</width>
+    <height>60</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="60.0">
+      </point>
+      <point x="0.0" y="60.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_17</name>
+    <x>1540</x>
+    <y>200</y>
+    <width>20</width>
+    <height>90</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="90.0">
+      </point>
+      <point x="0.0" y="90.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_18</name>
+    <x>1540</x>
+    <y>200</y>
+    <width>20</width>
+    <height>120</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="120.0">
+      </point>
+      <point x="0.0" y="120.0">
+      </point>
+    </points>
+    <arrows>3</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_19</name>
+    <x>1540</x>
+    <y>190</y>
+    <width>20</width>
+    <height>160</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="10.0">
+      </point>
+      <point x="20.0" y="160.0">
+      </point>
+      <point x="0.0" y="160.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_20</name>
+    <x>1540</x>
+    <y>380</y>
+    <width>20</width>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="20.0">
+      </point>
+      <point x="0.0" y="20.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_21</name>
+    <x>1540</x>
+    <y>380</y>
+    <width>20</width>
+    <height>50</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="50.0">
+      </point>
+      <point x="0.0" y="50.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_22</name>
+    <x>1540</x>
+    <y>380</y>
+    <width>20</width>
+    <height>80</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="80.0">
+      </point>
+      <point x="0.0" y="80.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_23</name>
+    <x>1540</x>
+    <y>380</y>
+    <width>20</width>
+    <height>120</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="120.0">
+      </point>
+      <point x="0.0" y="120.0">
+      </point>
+    </points>
+    <arrows>3</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_24</name>
+    <x>1540</x>
+    <y>370</y>
+    <width>20</width>
+    <height>160</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="10.0">
+      </point>
+      <point x="20.0" y="160.0">
+      </point>
+      <point x="0.0" y="160.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Timing Dist.
+Level</text>
+    <x>1540</x>
+    <y>5</y>
+    <height>45</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_18</name>
+    <text>1</text>
+    <x>1600</x>
+    <y>37</y>
+    <width>10</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>2</text>
+    <x>1540</x>
+    <y>37</y>
+    <width>10</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_25</name>
+    <x>1540</x>
+    <y>680</y>
+    <width>20</width>
+    <height>30</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="30.0">
+      </point>
+      <point x="0.0" y="30.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_26</name>
+    <x>1540</x>
+    <y>680</y>
+    <width>20</width>
+    <height>60</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="60.0">
+      </point>
+      <point x="0.0" y="60.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_27</name>
+    <x>1540</x>
+    <y>680</y>
+    <width>20</width>
+    <height>90</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="90.0">
+      </point>
+      <point x="0.0" y="90.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_28</name>
+    <x>1540</x>
+    <y>680</y>
+    <width>20</width>
+    <height>120</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="119.99999999999999">
+      </point>
+      <point x="0.0" y="119.99999999999999">
+      </point>
+    </points>
+    <arrows>3</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_29</name>
+    <x>1540</x>
+    <y>670</y>
+    <width>20</width>
+    <height>160</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="10.0">
+      </point>
+      <point x="20.0" y="160.0">
+      </point>
+      <point x="0.0" y="160.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_30</name>
+    <x>1540</x>
+    <y>860</y>
+    <width>20</width>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="20.0">
+      </point>
+      <point x="0.0" y="20.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_31</name>
+    <x>1540</x>
+    <y>860</y>
+    <width>20</width>
+    <height>50</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="50.0">
+      </point>
+      <point x="0.0" y="50.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_32</name>
+    <x>1540</x>
+    <y>860</y>
+    <width>20</width>
+    <height>80</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="80.0">
+      </point>
+      <point x="0.0" y="80.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_33</name>
+    <x>1540</x>
+    <y>860</y>
+    <width>20</width>
+    <height>120</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="0.0">
+      </point>
+      <point x="20.0" y="120.0">
+      </point>
+      <point x="0.0" y="120.0">
+      </point>
+    </points>
+    <arrows>3</arrows>
+    <arrow_length>5</arrow_length>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_34</name>
+    <x>1540</x>
+    <y>850</y>
+    <width>20</width>
+    <height>160</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="20.0" y="10.0">
+      </point>
+      <point x="20.0" y="160.0">
+      </point>
+      <point x="0.0" y="160.0">
+      </point>
+    </points>
+    <arrows>2</arrows>
+    <arrow_length>5</arrow_length>
   </widget>
 </display>
