@@ -73,6 +73,7 @@ record(longout, "$(P)SA:Ch$(N):RESPNODE") {
 # export to UFF58b Record 6, Field 7
 record(mbbo, "$(P)SA:Ch$(N):RESPDIR") {
     field(DTYP, "Raw Soft Channel")
+    field(PINI, "YES")
     field(DESC, "Response Direction")
     field(ZRST, "Scalar")
     field(ONST, "+X Translation")
