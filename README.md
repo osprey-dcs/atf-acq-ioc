@@ -75,3 +75,9 @@ and [`nodeXX.cmd`](iocBoot/siocNASA_ACQ/nodeXX.cmd) for an example.
 
 Virtual control panel display files for [Phoebus](http://phoebus.org/)
 are provided under `opi/`.
+
+## systemd
+
+[`ioc-adc@.service`](ioc-adc@.service) is an example systemd unit
+file which runs Quartz IOCs using
+[procServ](https://github.com/ralphlange/procServ).

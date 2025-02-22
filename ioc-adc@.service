@@ -1,0 +1,24 @@
+[Unit]
+Description=IOC for ADC %i
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/epics/usr/bin/procServ \
+  --foreground --logfile - --name ioc-adc%i \
+  --chdir /opt/atf-acq-ioc/iocBoot/siocNASA_ACQ \
+  --info-file %t/ioc-adc%i/info \
+  --port 0 \
+  --port unix:%t/ioc-adc%i/control \
+  ./node%i.cmd
+
+RuntimeDirectory=ioc-adc%i
+StandardOutput=syslog
+StandardError=inherit
+SyslogIdentifier=ioc-adc%i
+User=atf
+Group=atf
+
+[Install]
+WantedBy=multi-user.target
