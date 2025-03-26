@@ -30,7 +30,7 @@ var PSCUDPMaxPacketSize 1500
 var PSCUDPMaxPacketRate 18000
 
 # max. .dat file size before rotating
-var PSCUDPMaxLenMB 23000
+var PSCUDPMaxLenMB 230000
 
 # Configure a single acquisition node
 createPSCUDPFast("NASA_CTRL_EVG_FS", "$(NASA_ACQ_BASE_IP)", 54399, 0)
