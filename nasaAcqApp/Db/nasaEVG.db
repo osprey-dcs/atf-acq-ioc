@@ -38,6 +38,19 @@ record(longout, "$(P)ACQ:rateLO_") {
     field(MDEL, "-1")
 }
 
+# system wide display buffer period
+record(ao, "$(P)SA:BufT") {
+    field(DESC, "acq. period")
+    field(EGU , "ms")
+    field(VAL , "1000.0")
+    field(LOPR, "100")
+    field(DRVL, "100")
+    field(DRVH, "10000")
+    field(HOPR, "10000")
+    field(PINI, "YES")
+    info(autosaveFields_pass0, "VAL")
+}
+
 # system wide reference DRDY:pps for comparison and alarming
 alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
 

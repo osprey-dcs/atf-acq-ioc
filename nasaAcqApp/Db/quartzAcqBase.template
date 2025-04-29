@@ -497,6 +497,29 @@ record(bi, "$(P)RDY") {
 
 # setup and control
 
+record(ao, "$(P)SA:BufT") {
+    field(DOL , "$(EVG)SA:BufT CPP MS")
+    field(OMSL, "closed_loop")
+    field(DESC, "acq. period")
+    field(EGU , "ms")
+    field(VAL , "1000.0")
+    field(LOPR, "100")
+    field(DRVL, "100")
+    field(DRVH, "10000")
+    field(HOPR, "10000")
+    field(PINI, "YES")
+    field(FLNK, "$(P)SA:BufT_")
+    info(autosaveFields_pass0, "VAL")
+}
+
+record(calcout, "$(P)SA:BufT_") {
+    field(INPA, "$(P)SA:BufT NPP") # time in millisecond
+    field(INPB, "$(EVG)ACQ:rate.RVAL CP") # samples per second
+    field(INPC, "14") # number of samples per channel per packet
+    field(CALC, "MAX(1, CEIL(B*A/1000/14))")
+    field(OUT , "$(P)SA:BufLim PP")
+}
+
 record(bo, "$(P)SA:BufLimAuto") {
     field(DTYP, "PSCUDPFast shortLimitAutoExpand")
     field(OUT , "@$(NAME)")
@@ -504,14 +527,15 @@ record(bo, "$(P)SA:BufLimAuto") {
     field(PINI, "YES")
     field(ZNAM, "Manual")
     field(ONAM, "Auto")
-    info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)SA:BufLim") {
     field(DTYP, "PSCUDPFast shortLimit")
     field(OUT , "@$(NAME)")
     field(VAL , "10000")
+    field(DRVL, "1")
+    field(DRVH, "10000")
+    field(EGU , "pkt") # 14 samples per channel per packet
     field(PINI, "YES")
-    info(autosaveFields_pass0, "VAL")
 }
 
 record(ao, "$(P)SA:WinSt") {
