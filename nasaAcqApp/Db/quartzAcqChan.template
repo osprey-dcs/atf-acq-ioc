@@ -73,6 +73,7 @@ record(longout, "$(P)SA:Ch$(N):RESPNODE") {
 # export to UFF58b Record 6, Field 7
 record(mbbo, "$(P)SA:Ch$(N):RESPDIR") {
     field(DTYP, "Raw Soft Channel")
+    field(PINI, "YES")
     field(DESC, "Response Direction")
     field(ZRST, "Scalar")
     field(ONST, "+X Translation")
@@ -101,8 +102,11 @@ record(mbbo, "$(P)SA:Ch$(N):RESPDIR") {
     field(ELVL, "-5")
     field(TVVL, "-6")
     field(UNSV, "INVALID")
+    field(OUT , "$(P)SA:Ch$(N):RESPDIR_RVAL PP MSS")
     info(autosaveFields_pass0, "VAL")
 }
+# a signed copy of .RVAL
+record(longin, "$(P)SA:Ch$(N):RESPDIR_RVAL") {}
 # export to UFF58b Record 8, Field 1
 record(mbbo, "$(P)SA:Ch$(N):SDTYP") {
     field(DTYP, "Raw Soft Channel")

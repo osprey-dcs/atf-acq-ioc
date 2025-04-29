@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-22 16:16:11 by atf-->
+<!--Saved on 2024-12-16 11:59:11 by atf-->
 <display version="2.0.0">
   <name>Mon $(N)</name>
   <x>9</x>
@@ -843,7 +843,7 @@
   <widget type="group" version="3.0.0">
     <name>Group</name>
     <x>363</x>
-    <y>172</y>
+    <y>165</y>
     <width>220</width>
     <height>45</height>
     <style>3</style>
@@ -1528,5 +1528,23 @@
     <x>363</x>
     <y>659</y>
     <width>115</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_59</name>
+    <pv_name>$(P)$(R)Quartz:serno</pv_name>
+    <x>433</x>
+    <y>210</y>
+    <width>150</width>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_57</name>
+    <text>S/N:</text>
+    <x>363</x>
+    <y>210</y>
+    <width>65</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>
