@@ -618,6 +618,14 @@ record(calcout, "$(P)SA:BufFul_") {
 # |
 # V
 
+record(calcout, "$(P)SA:HldOff_") {
+    # arbitrarily slow down readout slow down to limit CPU usage
+    # as a safeguard when BufLim is set to a small value while
+    # at a high sample rate
+    field(ODLY, "0.01")
+    field(FLNK, "$(P)SA:AutClr_")
+}
+
 record(bo, "$(P)SA:AutClr_") {
     field(SDIS, "$(P)SA:AutClr")
     field(DISV, "0")

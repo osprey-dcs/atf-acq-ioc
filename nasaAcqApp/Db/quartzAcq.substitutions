@@ -78,5 +78,5 @@ file "quartzAcqChan.template" {
 {N=29,  OFF=124,  P="\$(P)", NAME="\$(NAME)", PORT="\$(PORT)",NELM="\$(NELM)", FLNK="$(P)SA:Ch30_"}
 {N=30,  OFF=127,  P="\$(P)", NAME="\$(NAME)", PORT="\$(PORT)",NELM="\$(NELM)", FLNK="$(P)SA:Ch31_"}
 {N=31,  OFF=130,  P="\$(P)", NAME="\$(NAME)", PORT="\$(PORT)",NELM="\$(NELM)", FLNK="$(P)SA:Ch32_"}
-{N=32,  OFF=133,  P="\$(P)", NAME="\$(NAME)", PORT="\$(PORT)",NELM="\$(NELM)", FLNK="$(P)SA:AutClr_"}
+{N=32,  OFF=133,  P="\$(P)", NAME="\$(NAME)", PORT="\$(PORT)",NELM="\$(NELM)", FLNK="$(P)SA:HldOff_"}
 }
