@@ -497,10 +497,19 @@ record(bi, "$(P)RDY") {
 
 # setup and control
 
+record(bo, "$(P)SA:BufLimAuto") {
+    field(DTYP, "PSCUDPFast shortLimitAutoExpand")
+    field(OUT , "@$(NAME)")
+    field(VAL , "0") # select manual
+    field(PINI, "YES")
+    field(ZNAM, "Manual")
+    field(ONAM, "Auto")
+    info(autosaveFields_pass0, "VAL")
+}
 record(longout, "$(P)SA:BufLim") {
     field(DTYP, "PSCUDPFast shortLimit")
     field(OUT , "@$(NAME)")
-    field(VAL , "1") # will automatically grow to fill channel aai NELM
+    field(VAL , "10000")
     field(PINI, "YES")
     info(autosaveFields_pass0, "VAL")
 }
