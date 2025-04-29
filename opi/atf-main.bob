@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-28 16:05:26 by atf-->
+<!--Saved on 2025-04-28 18:47:51 by dev-->
 <display version="2.0.0">
   <name>Main</name>
   <macros>
@@ -29,9 +29,9 @@
     <name>Action Button</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>chassis_boot.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>FPGA Boot Control</text>
@@ -45,9 +45,9 @@
     <name>Action Button_1</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>chassis_stat.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>ADC Status</text>
@@ -81,9 +81,9 @@
     <name>Action Button_16</name>
     <actions>
       <action type="write_pv">
+        <description>WritePV</description>
         <pv_name>$(EVG)ACQ:enable</pv_name>
         <value>0</value>
-        <description>WritePV</description>
       </action>
     </actions>
     <text>Disable</text>
@@ -101,9 +101,9 @@
     <name>Action Button_17</name>
     <actions>
       <action type="write_pv">
+        <description>WritePV</description>
         <pv_name>$(EVG)ACQ:enable</pv_name>
         <value>1</value>
-        <description>WritePV</description>
       </action>
     </actions>
     <text>Enable</text>
@@ -142,14 +142,14 @@
     <name>Action Button_18</name>
     <actions>
       <action type="open_display">
+        <description>Control</description>
         <file>chassis_acq_sts.bob</file>
         <target>tab</target>
-        <description>Control</description>
       </action>
       <action type="open_display">
+        <description>Expert</description>
         <file>chassis_acq.bob</file>
         <target>tab</target>
-        <description>Expert</description>
       </action>
     </actions>
     <text>Acq. Recording</text>
@@ -163,22 +163,22 @@
     <name>Action Button_19</name>
     <actions>
       <action type="open_display">
+        <description>Calibration</description>
         <file>sys_scale.bob</file>
         <macros>
           <DESC>ADC -&gt; V Calibration</DESC>
           <S>A</S>
         </macros>
         <target>tab</target>
-        <description>Calibration</description>
       </action>
       <action type="open_display">
+        <description>Scaling</description>
         <file>sys_scale.bob</file>
         <macros>
           <DESC>V -&gt; EGU Scaling</DESC>
           <S>E</S>
         </macros>
         <target>tab</target>
-        <description>Scaling</description>
       </action>
     </actions>
     <text>Scaling/Calib.</text>
@@ -192,13 +192,13 @@
     <name>Action Button_20</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>scope.bob</file>
         <macros>
           <P>$(SYS)01:</P>
           <N>01</N>
         </macros>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>Chassis Scope</text>
@@ -220,9 +220,9 @@
     <name>Action Button_2</name>
     <actions>
       <action type="write_pv">
+        <description>Global Align</description>
         <pv_name>$(pv_name)</pv_name>
         <value>0</value>
-        <description>Global Align</description>
       </action>
     </actions>
     <pv_name>$(EVG)ACQ:rate.PROC</pv_name>
@@ -255,9 +255,9 @@
     <name>Action Button_21</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>cccr-upload.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>CCCR Upload</text>
@@ -271,9 +271,9 @@
     <name>Action Button_22</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>ops/ops-main.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>Operations</text>
@@ -287,9 +287,9 @@
     <name>Action Button_3</name>
     <actions>
       <action type="open_display">
+        <description>Open Display</description>
         <file>chassis_sfp.bob</file>
         <target>tab</target>
-        <description>Open Display</description>
       </action>
     </actions>
     <text>Fiber RX</text>
@@ -298,5 +298,22 @@
     <width>140</width>
     <height>40</height>
     <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>Scope Display Period</text>
+    <x>483</x>
+    <y>240</y>
+    <width>157</width>
+    <height>25</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(EVG)SA:BufT</pv_name>
+    <x>500</x>
+    <y>265</y>
+    <width>126</width>
+    <height>30</height>
   </widget>
 </display>
