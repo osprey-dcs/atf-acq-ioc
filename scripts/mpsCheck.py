@@ -143,7 +143,7 @@ try:
 
     ###########################################################################
     # Ensure that trip clear has the desired effect
-    clearPV.put(1)
+    clearPV.put(1, wait=True)
     checkStatus(0, 0)
 
 finally:
