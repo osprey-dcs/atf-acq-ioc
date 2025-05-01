@@ -12,21 +12,7 @@
 #include <dbAccess.h>
 #include <recGbl.h>
 #include <aiRecord.h>
-#include <epicsVersion.h>
 #include <epicsExport.h>
-
-#ifndef VERSION_INT
-#  define VERSION_INT(V,R,M,P) ( ((V)<<24) | ((R)<<16) | ((M)<<8) | (P))
-#endif
-
-#ifndef EPICS_VERSION_INT
-#  define EPICS_VERSION_INT VERSION_INT(EPICS_VERSION, EPICS_REVISION, EPICS_MODIFICATION, EPICS_PATCH_LEVEL)
-#endif
-
-// Runtime requires at least 7.0.8 for bi "Raw Soft Channel" support for MASK
-#if EPICS_VERSION_INT < VERSION_INT(7, 0, 8, 1)
-#  error Driver requires epics-base >= 7.0.8.1
-#endif
 
 static
 void val2time(aiRecord *prec)

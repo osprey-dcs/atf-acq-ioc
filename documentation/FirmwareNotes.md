@@ -31,15 +31,14 @@ The FPGA prompts for confirmation and then restarts as if powered up.  The optio
     Bit 12   – Show all AD7768 register writes as they occur.
     Bit 13   — Dump the register contents (there are a lot) of the AD7768 ADC chips.
     Bit 14   - Report progress of AD7768 synchronization state machine.
-    Bit 15   — Provide fake AD7768 data at MCLK/128 samles/second.  Effective only at startup.
+    Bit 15   — Provide fake AD7768 data at MCLK/128 samples/second.  Effective only at startup.
     Bit 16   – Show MGT status registers.
     Bit 17   — Show the MGT clock multiplexer registers.
     Bit 18   — Start an AD7768 alignment operation.
     Bit 19   – Add severe jitter to the secondary PPS reference (PMOD-GPS).
     Bit 20   — Run RAM test on all ad7768 ADCs.  Normal ADC operation is inhibited while the test runs.
-    Bit 21   — Induce a DRDY misalignment on clock rate changes.
-               (Write channel mode registers individually rather than broadcasting)
-
+    Bit 21   — Induce a DRDY misalignment on clock rate changes
+               (Write channel mode registers individually rather than broadcasting).
 
 If the optional -s argument is present the value of the debugging flags set at FPGA startup will be set or shown. 
 
@@ -130,8 +129,8 @@ The AD7768 has signal processing to low pass filter the incoming data to less th
 
 # Optical Fiber Port Assignments
 
-The first fiber pair (QSFP-1, Fiber pair 1) on all nodes is the node event receiver input and machine protection status output.  For leaf nodes, this is the only fiber connection.
+The first fiber pair (QSFP-1, fiber pair 1) on all nodes is the node event receiver input and machine protection status output.  For leaf nodes, this is the only fiber connection.
 
-For nodes acting as event fanouts, the second fiber pair (QSFP-2, Fiber pair 2) is the event fanout input and machine protection status output.  The third fiber pair (QSFP-2, Fiber pair 3) is, by conventions, the loopback connection to the node event receiver.  The remaining fiber pairs (QSFP-1, Fiber pair 4, and QSFP-2) are the outgoing event links and incoming machine protection status links.
+For nodes acting as event fanouts, the second fiber pair (QSFP-1, fiber pair 2) is the event fanout input and machine protection status output.  The third fiber pair (QSFP-1, fiber pair 3) is, by convention, the loopback connection to the node event receiver.  The remaining five fiber pairs (QSFP-1, fiber pair 4, and QSFP-2, all fiber pairs) are outgoing event links and incoming machine protection status links.
 
-For the node acting as the event generator, all but the first fiber pair (i.e. QSFP-1, Fiber pairs 2 through 4, and QSFP-2) are outgoing event links and incoming machine protection status links.  Thus a fully-expanded system would consist of one event generator node, seven event fanout nodes and 34 leaf nodes for a total of 42 nodes and 1344 analog inputs.
+For the node acting as the event generator, all but the first fiber pair (i.e. QSFP-1, fiber pairs 2 through 4, and QSFP-2, all fiber pairs) are outgoing event links and incoming machine protection status links.  Thus a fully-expanded system would consist of one event generator node, seven event fanout nodes and 34 leaf nodes for a total of 42 nodes and 1344 analog inputs.
