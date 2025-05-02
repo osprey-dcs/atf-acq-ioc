@@ -39,7 +39,7 @@ record(longout, "$(P)ACQ:rateLO_") {
 }
 
 #
-# MPS central node record
+# MPS central node records
 #
 record(bo, "$(P)MPS:clear") {
     field(DESC, "Clear MPS trips when processed")
@@ -47,6 +47,16 @@ record(bo, "$(P)MPS:clear") {
     field(OUT,  "@name=$(PORT) reg=MPS:clear")
     field(ZNAM, "Clear")
     field(ONAM, "Clear")
+}
+
+record(longout, "$(P)MPS:forceTrip") {
+    field(DESC, "Force MPS ouputs to tripped state")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:forceTrip")
+    field(LOPR, "0")
+    field(DRVL, "0")
+    field(HOPR, "15")
+    field(DRVH, "15")
 }
 
 #

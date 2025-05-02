@@ -31,6 +31,7 @@
 
 
 
+
           macros.&nbsp; Typically the P macro is set to 'FDAS:' and the
           NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -607,6 +608,7 @@
 
 
 
+
               pulse per second reference.<br>
               The most significant bits contain status information:<br>
             </span>
@@ -904,6 +906,7 @@
 
 
 
+
         Status<br>
       </span></h2>
     <h2><span style="font-family: Times New Roman, Times, serif;"></span></h2>
@@ -911,6 +914,7 @@
         time at which the firmware and software were built is contained
         in the per-node stringin records </span><span
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
+
 
 
 
@@ -949,6 +953,7 @@
 
 
 
+
         respectively.<br>
       </span></p>
     <p><span style="font-family: Times New Roman, Times, serif;"><span
@@ -964,10 +969,12 @@
 
 
 
+
               of 0 indicates that the IPMI EEPROM on the Quartz card is
               invalid in some way.&nbsp; A </span></span></span></span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">Quartz:partno
+
 
 
 
@@ -1003,6 +1010,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">The
+
 
 
 
@@ -1110,6 +1118,7 @@
 
 
 
+
                 edges</span> are misaligned by more than about 8 ns, but
               all are aligned within about 24 ns.</span></td>
         </tr>
@@ -1124,6 +1133,7 @@
               New Roman, Times, serif;">One or more DRDY </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
+
 
 
 
@@ -1162,6 +1172,7 @@
 
 
 
+
                 edges</span> are misaligned. </span></td>
         </tr>
       </tbody>
@@ -1169,6 +1180,7 @@
     <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
       </span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Calibration
+
 
 
 
@@ -1189,12 +1201,14 @@
 
 
 
+
           – per-channel </span><span style="font-family: Times New
           Roman, Times, serif;"><span style="font-family: Times New
             Roman, Times, serif;">calibration offsets in units of ADC
             counts.&nbsp; Range is ±1000000.<br>
           </span></span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">CAL:gain/CAL:gainRbk
+
 
 
 
@@ -1221,6 +1235,7 @@
 
 
 
+
             –&nbsp; the time associated with the calibration values, in
             POSIX seconds, treated as an unsigned 32-bit value.</span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
@@ -1231,10 +1246,12 @@
 
 
 
+
             – MBBI record indicating the status of the calibration
             read/write operations.</span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
             style=" font-family: Times New Roman, Times, serif;">CAL:write
+
 
 
 
@@ -1252,6 +1269,7 @@
     <ul>
     </ul>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1481,6 +1499,7 @@
 
 
 
+
         the machine protection mitigation output number, ranging from 01
         to 04.<br>
       </span></p>
@@ -1619,6 +1638,7 @@
 
 
 
+
               specifying the channels for which an excursion </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: &quot;Times New Roman&quot;, Times,
@@ -1652,6 +1672,7 @@
               specifying the local MPS hardware inputs for which a 'bad'</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"><span style="font-style: italic;"></span>&nbsp;value
+
 
 
 
@@ -1757,6 +1778,7 @@
                 style="font-family: &quot;Times New Roman&quot;, Times,
                 serif;"></span><span style="font-family: &quot;Times New
                 Roman&quot;, Times, serif;">'tripped' status </span>became
+
 
 
 
@@ -1998,19 +2020,26 @@
 
 
 
+
               significant bits are map indicating the combined MPS
               'tripped' status from all downstream nodes.</span><span
+              style="font-family: Times New Roman, Times, serif;"></span><span
               style="font-family: Times New Roman, Times, serif;"><br>
-            </span><span style="font-family: Times New Roman, Times,
-              serif;"> For the event generator this is also the value
-              written to the MPS mitigation hardware outputs.</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
+              For the event generator the value of </span><span
+              style="font-family: Times New Roman, Times, serif;"><span
+                style="font-family: Times New Roman, Times, serif;"></span><span
+                style="font-family: Times New Roman, Times, serif;"><span
+                  style="font-family: Times New Roman, Times, serif;">MPS:forceTrip
+                  is also combined and the value of MPS:tripped</span></span>
+              is the value written to the MPS mitigation hardware
+              outputs.</span><span style="font-family: Times New Roman,
+              Times, serif;"><br>
             </span><span style="font-family: Times New Roman, Times,
               serif;"> </span><span style="font-family: Times New
               Roman, Times, serif;"><span style="font-family:
                 &quot;Times New Roman&quot;, Times, serif;">If a
                 required fiber link is not receiving a valid stream all
-                the status bits in this record will be set.</span></span><span
+                the bits in this record will be set.</span></span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"></span></td>
         </tr>
@@ -2035,6 +2064,7 @@
     <br class="Apple-interchange-newline">
     <meta charset="UTF-8">
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
 
 
 
@@ -2120,20 +2150,26 @@
 
 
 
+
                   that adding or changing a sampling rate requires
                   changes to the FPGA code as well as to this record.</span></span>
             </span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">MPS:clear</span></td>
+              Times New Roman, Times, serif;">EVG:useFakePPS</span></td>
           <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">bo</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: top;"><span style="font-family:
-              Times New Roman, Times, serif;"> Sends event to clear MPS
-              'tripped' latches in all nodes when processed.</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">The event generator node will
+              use a locally-generated pulse-per-second marker when this
+              record is set and neither of the hardware pulse-per-second
+              sources is present.&nbsp; Note that this will not be
+              synchronized to any time reference and will likely cause
+              time stamps to drift significantly.<br>
+            </span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -2142,25 +2178,9 @@
               Times New Roman, Times, serif;">longout</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Writing
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              100 causes the acquisition nodes to reboot themselves</span><span
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Writing 100 causes the
+              acquisition nodes to reboot themselves</span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
                 font-size: medium; font-style: normal;
@@ -2176,20 +2196,43 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MPS:clear</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">bo</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;"> Sends event to clear MPS
+              'tripped' latches in all nodes when processed.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MPS:forceTrip</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Bitmap of MPS outputs to force
+              into the 'tripped' state.</span><span style="font-family:
+              Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">PPS:latency</span></td>
           <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">ai</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
-          <td style="vertical-align: middle; text-align: left;"><span
-              style="font-family: Times New Roman, Times, serif;">Time,
-              in ns, between the hardware pulse-per-second marker and
-              the arrival of the pulse-per-second event at the event
-              receiver.&nbsp; This is a measurement of the latency in
-              the event system fiber links and multi-gigabit
-              transceivers.&nbsp; A negative value indicates that the
-              measurement counter overflowed before a pulse-per-second
-              event was received.<br>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Time, in ns, between the
+              hardware pulse-per-second marker and the arrival of the
+              pulse-per-second event at the event receiver.&nbsp; This
+              is a measurement of the latency in the event system fiber
+              links and multi-gigabit transceivers.&nbsp; A negative
+              value indicates that the measurement counter overflowed
+              before a pulse-per-second event was received.<br>
             </span></td>
         </tr>
       </tbody>
