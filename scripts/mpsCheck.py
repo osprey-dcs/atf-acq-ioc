@@ -8,7 +8,7 @@ import time
 # FIXME -- should allow testing of MPS outputs other than first
 parser = argparse.ArgumentParser(description='Test MPS', \
          formatter_class=argparse.ArgumentDefaultsHelpFormatter, \
-         epilog="""It is assumed that the 'MPS:required records on EVG and EVG
+         epilog="""It is assumed that the 'MPS:required' records on EVG and EVG
                    nodes are correct.  If not you'll likely get warnings about
                    the hardware output being asserted or not asserted.  It is
                    also assumed that the analog channels are not faulted.""")
