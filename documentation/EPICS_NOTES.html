@@ -1505,7 +1505,7 @@
       </span></p>
     <p><span style="font-family: Times New Roman, Times, serif;">Digital
         inputs and outputs are optically isolated.&nbsp; An open or
-        undriven input appears as a logic 0.&nbsp; The transistor of the
+        undriven input appears as a logic 0.&nbsp; The transistor of an
         output opto-isolator is OFF when the output is in the 'tripped'
         state.&nbsp; On power-up all outputs are in the 'tripped'
         state.&nbsp; On the event generator node the outputs are driven
@@ -1559,10 +1559,10 @@
           <td style="vertical-align: middle; text-align: left;"><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;">Bitmap specifying the local MPS hardware inputs to
-              invert for testing purposes.<span style="font-style:
-                italic;"></span></span><span style="font-family:
-              &quot;Times New Roman&quot;, Times, serif;"><span
-                style="font-style: italic;"></span></span></td>
+              invert.&nbsp; Intended primarily for MPS firmware/hardware
+              validation.<span style="font-style: italic;"></span></span><span
+              style="font-family: &quot;Times New Roman&quot;, Times,
+              serif;"><span style="font-style: italic;"></span></span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
@@ -1935,6 +1935,19 @@
               &quot;Times New Roman&quot;, Times, serif;"><br>
             </span></td>
         </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">MPS:forceTrip</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">longout</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+          <td style="vertical-align: middle; text-align: left;"><span
+              style="font-family: Times New Roman, Times, serif;">Bitmap
+              of MPS outputs to force into the 'tripped' state.</span><span
+              style="font-family: Times New Roman, Times, serif;"><br>
+            </span></td>
+        </tr>
       </tbody>
     </table>
     <div style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0);
@@ -2216,19 +2229,6 @@
           <td style="text-align: left;"><span style="font-family: Times
               New Roman, Times, serif;"> Sends event to clear MPS
               'tripped' latches in all nodes when processed.</span></td>
-        </tr>
-        <tr>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">MPS:forceTrip</span></td>
-          <td style="text-align: center;"><span style="font-family:
-              Times New Roman, Times, serif;">longout</span><span
-              style="font-family: Times New Roman, Times, serif;"><br>
-            </span></td>
-          <td style="text-align: left;"><span style="font-family: Times
-              New Roman, Times, serif;">Bitmap of MPS outputs to force
-              into the 'tripped' state.</span><span style="font-family:
-              Times New Roman, Times, serif;"><br>
-            </span></td>
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
