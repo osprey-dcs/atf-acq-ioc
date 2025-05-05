@@ -10,8 +10,9 @@ parser = argparse.ArgumentParser(description='Test MPS', \
          formatter_class=argparse.ArgumentDefaultsHelpFormatter, \
          epilog="""It is assumed that the 'MPS:required' records on EVG and EVG
                    nodes are correct.  If not you'll likely get warnings about
-                   the hardware output being asserted or not asserted.  It is
-                   also assumed that the analog channels are not faulted.""")
+                   the hardware output being asserted or not asserted
+                   incorrectly.  It is also assumed that the analog channels
+                   are not faulted.""")
 parser.add_argument('-n', '--node', default=1, help='Node number')
 parser.add_argument('-o', '--output', default=1, choices=range(1,5), help='MPS output number')
 parser.add_argument('-p', '--prefix', default='FDAS:', help='PV name prefix')
