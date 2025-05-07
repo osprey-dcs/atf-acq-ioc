@@ -20,6 +20,7 @@ args = parser.parse_args()
 nodeStr = '%02d:' % args.node
 outputStr = '%02d' % args.output
 outputBit = 1 << (args.output - 1)
+exitStatus = 0
 
 #
 # Open connection to event generator (MPS central node)
@@ -50,7 +51,7 @@ def checkStatus(expectStatus, \
                expectFirstInputs=None, \
                expectFirstSeconds=None, \
                expectFirstTicks=None):
-    time.sleep(0.2)
+    time.sleep(0.25)
     failed = False
     trippedPV_PROC.put(1, wait=True)
     tripped = (trippedPV.get() & outputBit) != 0
@@ -157,6 +158,11 @@ try:
         clearPV.put(1, wait=True)
         checkStatus(0)
 
+except BaseException as e:
+    print({e})
+    exitStatus = 1
 finally:
     for l in  restoreList:
         l[0].put(l[1])
+print("PASS" if exitStatus == 0 else "FAIL")
+sys.exit(exitStatus)
