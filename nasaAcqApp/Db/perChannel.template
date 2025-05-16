@@ -191,7 +191,7 @@ record(ai, "$(P)ACQ:HIHIlim:$(N):RBV") {
 record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:LOLOstatus")
-    field(SCAN, ".1 second")
+    field(SCAN, "I/O Intr")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -209,7 +209,7 @@ record(calc, "$(P)ACQ:LOLOstatus:$(N)_") {
 record(bi, "$(P)ACQ:LOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:LOstatus")
-    field(SCAN, ".1 second")
+    field(SCAN, "I/O Intr")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -227,7 +227,7 @@ record(calc, "$(P)ACQ:LOstatus:$(N)_") {
 record(bi, "$(P)ACQ:HIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:HIstatus")
-    field(SCAN, ".1 second")
+    field(SCAN, "I/O Intr")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -245,7 +245,7 @@ record(calc, "$(P)ACQ:HIstatus:$(N)_") {
 record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:HIHIstatus")
-    field(SCAN, ".1 second")
+    field(SCAN, "I/O Intr")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")

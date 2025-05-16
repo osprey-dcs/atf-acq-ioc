@@ -47,12 +47,32 @@ record(longout, "$(P)$(R)MPS:goodState:$(N)") {
 record(longin, "$(P)$(R)MPS:status:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=MPS:status:$(N)")
-    field(SCAN, "2 second")
+    field(SCAN, "1 second")
+    field(FLNK, "$(P)$(R)MPS:status:$(N):trp")
 }
-# FIXME -- maybe there's an easier way to trigger first-fault info readback?
+record(bi, "$(P)$(R)MPS:status:$(N):trp") {
+    field(DESC, "Latched state")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:$(N) MS")
+    field(MASK, "0x1")
+    field(ZNAM, "Normal")
+    field(ONAM, "Trip")
+    field(OSV , "MAJOR")
+    field(FLNK, "$(P)$(R)MPS:status:$(N):cur")
+}
+record(bi, "$(P)$(R)MPS:status:$(N):cur") {
+    field(DESC, "Instant state")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:$(N) MS")
+    field(MASK, "0x2")
+    field(ZNAM, "Ok")
+    field(ONAM, "Fault")
+    field(OSV , "MAJOR")
+    field(FLNK, "$(P)$(R)MPS:chkTrip:$(N)_")
+}
 record(calcout, "$(P)$(R)MPS:chkTrip:$(N)_") {
     field(DESC, "Trigger first-fault readbacks")
-    field(INPA, "$(P)$(R)MPS:status:$(N) CP MS")
+    field(INPA, "$(P)$(R)MPS:status:$(N) MS")
     field(CALC, "A&1")
     field(OOPT, "Transition To Non-zero")
     field(OUT,  "$(P)$(R)MPS:firstRBK:$(N)_.PROC")
@@ -93,4 +113,13 @@ record(longin, "$(P)$(R)MPS:firstSeconds:$(N)") {
 record(longin, "$(P)$(R)MPS:firstTicks:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=MPS:firstFaultTicks:$(N)")
+}
+
+record(bi, "$(P)$(R)MPS:tripped:$(N)") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:tripped CP MS")
+    field(MASK, "$(MASK)")
+    field(ZNAM, "Normal/Closed")
+    field(ONAM, "Trip/Open")
+    field(OSV , "MAJOR")
 }

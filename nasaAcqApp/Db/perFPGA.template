@@ -20,6 +20,8 @@ record(fanout, "$(P)$(R)C:F_") {
     field(LNK7, "$(P)$(R)ACQ:HIHIlimXX_")
     field(LNK8, "$(P)$(R)Quartz:serno")
     field(LNK9, "$(P)$(R)Quartz:partno")
+    field(LNKA, "$(P)$(R)MPS:required")
+    field(LNKB, "$(P)$(R)MPS:invert")
 }
 # flush out array registers previously initialized in perChannel.template during PHAS=-1
 record(bo, "$(P)$(R)ACQ:enable:XX_") {
@@ -157,11 +159,59 @@ record(longout, "$(P)$(R)PLL:VCXO_DAC") {
     field(DRVH, "32767")
 }
 
+# Readout channel limit status masks
+record(longin, "$(P)ACQ:HIHIstatus_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIHIstatus")
+    field(SCAN, ".1 second")
+    field(FLNK, "$(P)ACQ:HIHIstatus")
+}
+record(mbbiDirect, "$(P)ACQ:HIHIstatus") {
+    field(INP , "$(P)ACQ:HIHIstatus_ MSS")
+    field(NOBT, "32")
+}
+record(longin, "$(P)ACQ:HIstatus_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:HIstatus")
+    field(SCAN, ".1 second")
+    field(FLNK, "$(P)ACQ:HIstatus")
+}
+record(mbbiDirect, "$(P)ACQ:HIstatus") {
+    field(INP , "$(P)ACQ:HIstatus_ MSS")
+    field(NOBT, "32")
+}
+record(longin, "$(P)ACQ:LOstatus_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOstatus")
+    field(SCAN, ".1 second")
+    field(FLNK, "$(P)ACQ:LOstatus")
+}
+record(mbbiDirect, "$(P)ACQ:LOstatus") {
+    field(INP , "$(P)ACQ:LOstatus_ MSS")
+    field(NOBT, "32")
+}
+record(longin, "$(P)ACQ:LOLOstatus_") {
+    field(DTYP, "FEED Register Read")
+    field(INP , "@name=$(PORT) reg=ACQ:LOLOstatus")
+    field(SCAN, ".1 second")
+    field(FLNK, "$(P)ACQ:LOLOstatus")
+}
+record(mbbiDirect, "$(P)ACQ:LOLOstatus") {
+    field(INP , "$(P)ACQ:LOLOstatus_ MSS")
+    field(NOBT, "32")
+}
+
 #
 # MPS control/status
 # FIXME: Should the 'tripped' record go into alarm state when non-zero?
 #
-record(longout, "$(P)$(R)MPS:required") {
+record(mbboDirect, "$(P)$(R)MPS:required") {
+    field(NOBT, "8")
+    field(OUT, "$(P)$(R)MPS:required_ PP MS")
+    field(VAL , "0xfc") # default to all required
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:required_") {
     field(DESC, "Bitmap of 'important' fiber links")
     field(DTYP, "FEED Register Write")
     field(OUT,  "@name=$(PORT) reg=MPS:required")
@@ -170,12 +220,56 @@ record(longin, "$(P)$(R)MPS:tripped") {
     field(DESC, "Bitmap of tripped outputs")
     field(DTYP, "FEED Register Read")
     field(INP,  "@name=$(PORT) reg=MPS:tripped")
-    field(SCAN, "2 second")
+    field(SCAN, "1 second")
 }
-record(longout, "$(P)$(R)MPS:invert") {
+record(mbboDirect, "$(P)$(R)MPS:invert") {
+    field(NOBT, "8")
+    field(OUT , "$(P)$(R)MPS:invert_ PP MS")
+    field(VAL , "0")
+    info(autosaveFields_pass0, "VAL")
+}
+record(longout, "$(P)$(R)MPS:invert_") {
     field(DESC, "Bitmap of inputs to invert")
     field(DTYP, "FEED Register Write")
     field(OUT,  "@name=$(PORT) reg=MPS:invert")
+}
+# Input status is reported identically by all 4 MPS:status:XX
+# so only need to read once from output 1
+record(bi, "$(P)$(R)MPS:input:01") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:01 CP MS")
+    field(SCAN, "I/O Intr")
+    field(MASK, "0x10000")
+    field(ZNAM, "Trip/Open")
+    field(ONAM, "Normal/Close")
+    field(ZSV , "MAJOR")
+    field(FLNK, "$(P)$(R)MPS:input:02")
+}
+record(bi, "$(P)$(R)MPS:input:02") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:01 MS")
+    field(MASK, "0x20000")
+    field(ZNAM, "Trip/Open")
+    field(ONAM, "Normal/Close")
+    field(ZSV , "MAJOR")
+    field(FLNK, "$(P)$(R)MPS:input:03")
+}
+record(bi, "$(P)$(R)MPS:input:03") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:01 MS")
+    field(MASK, "0x40000")
+    field(ZNAM, "Trip/Open")
+    field(ONAM, "Normal/Close")
+    field(ZSV , "MAJOR")
+    field(FLNK, "$(P)$(R)MPS:input:04")
+}
+record(bi, "$(P)$(R)MPS:input:04") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)$(R)MPS:status:01 MS")
+    field(MASK, "0x80000")
+    field(ZNAM, "Trip/Open")
+    field(ONAM, "Normal/Close")
+    field(ZSV , "MAJOR")
 }
 
 #

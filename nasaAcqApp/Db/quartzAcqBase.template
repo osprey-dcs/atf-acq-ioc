@@ -16,8 +16,8 @@ record(bi, "$(P)ACQ:tod") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)ACQ:status CP MS")
     field(MASK, "2")
-    field(ZNAM, "Invalid")
-    field(ONAM, "Valid")
+    field(ZNAM, "Valid")
+    field(ONAM, "Invalid")
     field(OSV , "MAJOR")
 }
 record(bi, "$(P)ACQ:pktoflw") {
@@ -72,6 +72,24 @@ record(bi, "$(P)ACQ:request") {
 }
 
 # breakout clkPLL word
+record(bi, "$(P)ACQ:vld") {
+    field(DESC, "PPS valid")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:clkPLL CP MS")
+    field(MASK, "0x08000000")
+    field(ZNAM, "Invalid")
+    field(ONAM, "Valid")
+    field(ZSV, "MAJOR")
+}
+record(bi, "$(P)ACQ:jit") {
+    field(DESC, "PPS valid")
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)ACQ:clkPLL CP MS")
+    field(MASK, "0x10000000")
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+    field(OSV, "MINOR")
+}
 record(bi, "$(P)ACQ:loop") {
     field(DESC, "VXCO loop")
     field(DTYP, "Raw Soft Channel")
@@ -200,6 +218,25 @@ record(calc, "$(P)PPS:jtr") {
     field(ADEL, "0")
 }
 
+# breakout MGT:status
+record(bi, "$(P)MGT:evr") {
+    field(DTYP, "Raw Soft Channel")
+    field(INP , "$(P)MGT:status CP MS")
+    field(MASK, "0x80000000")
+    field(ZNAM, "Unlock")
+    field(ONAM, "Lock")
+    field(ZSV , "MAJOR")
+}
+record(calcout, "$(P)MGT:upstm_") {
+    field(INPA, "$(P)MGT:status CP MS")
+    field(INPB, "0x0000000f")
+    field(CALC, "A&B")
+    field(OUT , "$(P)MGT:upstm PP MSS")
+}
+record(mbbiDirect, "$(P)MGT:upstm") {
+    field(DESC, "Upstream link status mask")
+    field(NOBT, "8")
+}
 
 # per-chassis summaries
 

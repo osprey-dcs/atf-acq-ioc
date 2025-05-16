@@ -62,8 +62,38 @@ record(bo, "$(P)MPS:clear") {
     field(ONAM, "Clear")
 }
 
-record(longout, "$(P)MPS:forceTrip") {
+record(bo, "$(P)MPS:forceTrip:01") {
+    field(OUT , "$(P)MPS:forceTrip.B0 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:02") {
+    field(OUT , "$(P)MPS:forceTrip.B1 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:03") {
+    field(OUT , "$(P)MPS:forceTrip.B2 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:04") {
+    field(OUT , "$(P)MPS:forceTrip.B3 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+
+record(mbboDirect, "$(P)MPS:forceTrip") {
     field(DESC, "Force MPS ouputs to tripped state")
+    field(NOBT, "4")
+    field(OUT , "$(P)MPS:forceTrip_ PP MS")
+    field(VAL , "0")
+}
+record(longout, "$(P)MPS:forceTrip_") {
     field(DTYP, "FEED Register Write")
     field(OUT,  "@name=$(PORT) reg=MPS:forceTrip")
     field(LOPR, "0")
