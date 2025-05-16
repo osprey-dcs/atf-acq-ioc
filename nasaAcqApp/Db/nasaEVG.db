@@ -51,6 +51,38 @@ record(ao, "$(P)SA:BufT") {
     info(autosaveFields_pass0, "VAL")
 }
 
+#
+# MPS central node records
+#
+record(bo, "$(P)MPS:clear") {
+    field(DESC, "Clear MPS trips when processed")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:clear")
+    field(ZNAM, "Clear")
+    field(ONAM, "Clear")
+}
+
+record(longout, "$(P)MPS:forceTrip") {
+    field(DESC, "Force MPS ouputs to tripped state")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:forceTrip")
+    field(LOPR, "0")
+    field(DRVL, "0")
+    field(HOPR, "15")
+    field(DRVH, "15")
+}
+
+#
+# Event generator fake pulse-per-second source
+#
+record(bo, "$(P)EVG:fakePPS") {
+    field(DESC, "Enable/disable fake PPS - Use with care!")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=FPGA:fakePPS")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
 # system wide reference DRDY:pps for comparison and alarming
 alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
 

@@ -1,4 +1,4 @@
-# initialize :XX array registers Con connect PHAS=-1
+# initialize :$(N)array registers Con connect PHAS=-1
 record(longin, "$(P)$(R)M:$(N)_") {
     field(DTYP, "FEED On Connect")
     field(INP , "@name=$(PORT)")
@@ -16,31 +16,81 @@ record(fanout, "$(P)$(R)M:$(N)F_") {
 }
 record(longout, "$(P)$(R)MPS:chkLOLO:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:chkLOLO:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkLOLO:$(N)")
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)MPS:chkLO:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:chkLO:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkLO:$(N)")
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)MPS:chkHI:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:chkHI:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkHI:$(N)")
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)MPS:chkHIHI:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:chkHIHI:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkHIHI:$(N)")
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)MPS:chkInputs:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:chkDiscrete:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:chkDiscrete:$(N)")
     info(autosaveFields_pass0, "VAL")
 }
 record(longout, "$(P)$(R)MPS:goodState:$(N)") {
     field(DTYP, "FEED Register Write")
-    field(OUT,  "@name=$(PORT) reg=MPS:discreteGood:XX offset=$(IDX)")
+    field(OUT,  "@name=$(PORT) reg=MPS:discreteGood:$(N)")
     info(autosaveFields_pass0, "VAL")
+}
+record(longin, "$(P)$(R)MPS:status:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:status:$(N)")
+    field(SCAN, "2 second")
+}
+# FIXME -- maybe there's an easier way to trigger first-fault info readback?
+record(calcout, "$(P)$(R)MPS:chkTrip:$(N)_") {
+    field(DESC, "Trigger first-fault readbacks")
+    field(INPA, "$(P)$(R)MPS:status:$(N) CP MS")
+    field(CALC, "A&1")
+    field(OOPT, "Transition To Non-zero")
+    field(OUT,  "$(P)$(R)MPS:firstRBK:$(N)_.PROC")
+}
+record(fanout, "$(P)$(R)MPS:firstRBK:$(N)_") {
+    field(LNK0, "$(P)$(R)MPS:firstLOLO:$(N)")
+    field(LNK1, "$(P)$(R)MPS:firstLO:$(N)")
+    field(LNK2, "$(P)$(R)MPS:firstHI:$(N)")
+    field(LNK3, "$(P)$(R)MPS:firstHIHI:$(N)")
+    field(LNK4, "$(P)$(R)MPS:firstInputs:$(N)")
+    field(LNK5, "$(P)$(R)MPS:firstSeconds:$(N)")
+    field(LNK6, "$(P)$(R)MPS:firstTicks:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstLOLO:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultLOLO:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstLO:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultLO:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstHI:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultHI:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstHIHI:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultHIHI:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstInputs:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultDiscrete:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstSeconds:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultSeconds:$(N)")
+}
+record(longin, "$(P)$(R)MPS:firstTicks:$(N)") {
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=MPS:firstFaultTicks:$(N)")
 }

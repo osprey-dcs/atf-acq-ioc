@@ -100,13 +100,9 @@ file "perChannel.template" {
 }
 
 file "perMPSchannel.template" {
-  pattern { P, R, PORT, N, IDX }
-  { \$(P),"",\$(PORT), 01,  0 }
-  { \$(P),"",\$(PORT), 02,  1 }
-  { \$(P),"",\$(PORT), 03,  2 }
-  { \$(P),"",\$(PORT), 04,  3 }
-  { \$(P),"",\$(PORT), 05,  4 }
-  { \$(P),"",\$(PORT), 06,  5 }
-  { \$(P),"",\$(PORT), 07,  6 }
-  { \$(P),"",\$(PORT), 08,  7 }
+  pattern { P, R, PORT, N }
+  { \$(P),"",\$(PORT), 01 }
+  { \$(P),"",\$(PORT), 02 }
+  { \$(P),"",\$(PORT), 03 }
+  { \$(P),"",\$(PORT), 04 }
 }
