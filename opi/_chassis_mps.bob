@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-05-16 13:00:18 by dev-->
+<display version="2.0.0">
+  <name>MPS Ch $(N)</name>
+  <width>1050</width>
+  <height>350</height>
+  <widget type="led" version="2.0.0">
+    <name>Trip</name>
+    <pv_name>$(P)MPS:status:$(N):trp</pv_name>
+    <x>130</x>
+    <y>315</y>
+    <width>100</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>Cur</name>
+    <pv_name>$(P)MPS:status:$(N):cur</pv_name>
+    <x>130</x>
+    <y>290</y>
+    <width>100</width>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <square>true</square>
+    <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Latched</text>
+    <x>70</x>
+    <y>315</y>
+    <width>50</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Live</text>
+    <x>70</x>
+    <y>290</y>
+    <width>50</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)MPS:chkLOLO:$(N)</pv_name>
+    <x>100</x>
+    <y>130</y>
+    <format>4</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>$(P)MPS:chkLO:$(N)</pv_name>
+    <x>100</x>
+    <y>100</y>
+    <format>4</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>$(P)MPS:chkHI:$(N)</pv_name>
+    <x>100</x>
+    <y>70</y>
+    <format>4</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_4</name>
+    <pv_name>$(P)MPS:chkHIHI:$(N)</pv_name>
+    <x>100</x>
+    <y>40</y>
+    <format>4</format>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Connect Channel Level Fault</text>
+    <x>280</x>
+    <y>10</y>
+    <width>250</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>HIHI</text>
+    <x>10</x>
+    <y>40</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>HI</text>
+    <x>10</x>
+    <y>70</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>LOLO</text>
+    <x>10</x>
+    <y>130</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>LO</text>
+    <x>10</x>
+    <y>100</y>
+    <width>70</width>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor</name>
+    <pv_name>$(P)MPS:chkHIHI:$(N)</pv_name>
+    <x>210</x>
+    <y>40</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_1</name>
+    <pv_name>$(P)MPS:chkHI:$(N)</pv_name>
+    <x>210</x>
+    <y>70</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_2</name>
+    <pv_name>$(P)MPS:chkLO:$(N)</pv_name>
+    <x>210</x>
+    <y>100</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_3</name>
+    <pv_name>$(P)MPS:chkLOLO:$(N)</pv_name>
+    <x>210</x>
+    <y>130</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>MPS Input Level</text>
+    <x>10</x>
+    <y>160</y>
+    <width>250</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_5</name>
+    <pv_name>$(P)MPS:chkInputs:$(N)</pv_name>
+    <x>100</x>
+    <y>190</y>
+    <format>4</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_6</name>
+    <pv_name>$(P)MPS:goodState:$(N)</pv_name>
+    <x>100</x>
+    <y>215</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Connect</text>
+    <x>20</x>
+    <y>190</y>
+    <width>70</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>Expected</text>
+    <x>20</x>
+    <y>215</y>
+    <width>70</width>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_4</name>
+    <pv_name>$(P)MPS:chkInputs:$(N)</pv_name>
+    <x>210</x>
+    <y>190</y>
+    <width>80</width>
+    <numBits>4</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_5</name>
+    <pv_name>$(P)MPS:goodState:$(N)</pv_name>
+    <x>210</x>
+    <y>215</y>
+    <width>80</width>
+    <numBits>4</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline</name>
+    <x>620</x>
+    <y>10</y>
+    <width>1</width>
+    <height>330</height>
+    <points>
+      <point x="0.0" y="330.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>First Fault / Latch on Trip Status</text>
+    <x>720</x>
+    <y>10</y>
+    <width>250</width>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_6</name>
+    <pv_name>$(P)MPS:firstHIHI:$(N)</pv_name>
+    <x>640</x>
+    <y>40</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_7</name>
+    <pv_name>$(P)MPS:firstHI:$(N)</pv_name>
+    <x>640</x>
+    <y>70</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_8</name>
+    <pv_name>$(P)MPS:firstLO:$(N)</pv_name>
+    <x>640</x>
+    <y>100</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_9</name>
+    <pv_name>$(P)MPS:firstLOLO:$(N)</pv_name>
+    <x>640</x>
+    <y>130</y>
+    <width>400</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor_10</name>
+    <pv_name>$(P)MPS:firstInputs:$(N)</pv_name>
+    <x>640</x>
+    <y>190</y>
+    <width>80</width>
+    <numBits>4</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)MPS:firstSeconds:$(N)</pv_name>
+    <x>760</x>
+    <y>270</y>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)MPS:firstTicks:$(N)</pv_name>
+    <x>760</x>
+    <y>295</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>When</text>
+    <x>680</x>
+    <y>270</y>
+    <width>60</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_12</name>
+    <text>Condition Status</text>
+    <x>70</x>
+    <y>260</y>
+    <width>170</width>
+    <height>30</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_13</name>
+    <text>1</text>
+    <x>600</x>
+    <y>10</y>
+    <width>10</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>32</text>
+    <x>210</x>
+    <y>10</y>
+    <width>20</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>1</text>
+    <x>1030</x>
+    <y>10</y>
+    <width>10</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>32</text>
+    <x>640</x>
+    <y>10</y>
+    <width>20</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_17</name>
+    <text>Condition $(N)</text>
+    <x>10</x>
+    <y>10</y>
+    <width>140</width>
+  </widget>
+</display>
