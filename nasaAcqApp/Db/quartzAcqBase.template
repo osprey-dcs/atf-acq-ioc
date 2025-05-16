@@ -598,7 +598,7 @@ record(aai, "$(P)SA:T") {
 record(bi, "$(P)SA:BufFul") {
     field(DTYP, "PSCUDPFast shortFull")
     field(INP , "@$(NAME)")
-    field(SCAN, "I/O Intr")
+    field(SCAN, ".1 second") # limit refresh rate
     field(ZNAM, "Not full")
     field(ONAM, "Full")
     field(OSV , "MINOR")
