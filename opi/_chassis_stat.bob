@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-22 16:37:34 by atf-->
+<!--Saved on 2025-05-17 17:32:52 by dev-->
 <display version="2.0.0">
   <name>Stat $(N)</name>
   <width>1510</width>
@@ -94,17 +94,20 @@
     <name>Action Button</name>
     <actions>
       <action type="open_display">
+        <description>Sysmon</description>
         <file>nasaACQ_sysmon.bob</file>
         <macros>
           <R>$(N):</R>
         </macros>
         <target>tab</target>
-        <description>Sysmon</description>
       </action>
       <action type="open_display">
-        <file>nasaACQ_faststs.bob</file>
-        <target>tab</target>
         <description>Acq.</description>
+        <file>nasaACQ_faststs.bob</file>
+        <macros>
+          <P>$(P)$(N):</P>
+        </macros>
+        <target>tab</target>
       </action>
     </actions>
     <text>$(N)</text>
