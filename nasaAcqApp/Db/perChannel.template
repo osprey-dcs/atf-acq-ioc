@@ -1,4 +1,12 @@
 
+record(longin, "$(P)ACQ:limSLO:$(N):C_") {
+    field(DTYP, "FEED On Connect")
+    field(INP , "@name=$(PORT)")
+    field(SCAN, "I/O Intr")
+    field(PHAS, "1")
+    field(FLNK, "$(P)ACQ:limSLO:$(N)_")
+}
+
 # Limiting of limits.  aka. preventing out of range bounds.
 # When a limit is out of range [MIN, MAX], set a high limit to
 # the lowest value, and a low limit to the highest value.
@@ -9,7 +17,7 @@
 
 # reflect ADC -> EGU scaling factors to limits
 record(dfanout, "$(P)ACQ:limSLO:$(N)_") {
-    field(DOL, "$(P)SA:Ch$(N):SLO CP MS")
+    field(DOL, "$(P)SA:Ch$(N):SLO MS")
     field(OMSL, "closed_loop")
     field(OUTA, "$(P)ACQ:LOLOlim:$(N).ASLO PP NMS")
     field(OUTB, "$(P)ACQ:LOlim:$(N).ASLO PP NMS")
@@ -19,9 +27,10 @@ record(dfanout, "$(P)ACQ:limSLO:$(N)_") {
     field(OUTF, "$(P)ACQ:LOlim:$(N):RBV.ASLO NPP NMS")
     field(OUTG, "$(P)ACQ:HIlim:$(N):RBV.ASLO NPP NMS")
     field(OUTH, "$(P)ACQ:HIHIlim:$(N):RBV.ASLO NPP NMS")
+    field(FLNK, "$(P)ACQ:limOFF:$(N)_")
 }
 record(dfanout, "$(P)ACQ:limOFF:$(N)_") {
-    field(DOL, "$(P)SA:Ch$(N):OFF CP MS")
+    field(DOL, "$(P)SA:Ch$(N):OFF MS")
     field(OMSL, "closed_loop")
     field(OUTA, "$(P)ACQ:LOLOlim:$(N).AOFF PP NMS")
     field(OUTB, "$(P)ACQ:LOlim:$(N).AOFF PP NMS")
@@ -31,19 +40,21 @@ record(dfanout, "$(P)ACQ:limOFF:$(N)_") {
     field(OUTF, "$(P)ACQ:LOlim:$(N):RBV.AOFF NPP NMS")
     field(OUTG, "$(P)ACQ:HIlim:$(N):RBV.AOFF NPP NMS")
     field(OUTH, "$(P)ACQ:HIHIlim:$(N):RBV.AOFF NPP NMS")
+    field(FLNK, "$(P)ACQ:limMAX:$(N)_")
 }
 # reflect MAX to HIHI and IVOV (low limits only)
 record(dfanout, "$(P)ACQ:limMAX:$(N)_") {
-    field(DOL, "$(P)SA:Ch$(N):MAX CP MS")
+    field(DOL, "$(P)SA:Ch$(N):MAX MS")
     field(OMSL, "closed_loop")
     field(OUTA, "$(P)ACQ:LOLOlim:$(N).HOPR NPP NMS")
     field(OUTB, "$(P)ACQ:LOlim:$(N).HOPR NPP NMS")
     field(OUTC, "$(P)ACQ:HIlim:$(N).HOPR NPP NMS")
     field(OUTD, "$(P)ACQ:HIHIlim:$(N).HOPR NPP NMS")
+    field(FLNK, "$(P)ACQ:limMIN:$(N)_")
 }
 # reflect MIN to LOLO and IVOV (high limits only)
 record(dfanout, "$(P)ACQ:limMIN:$(N)_") {
-    field(DOL, "$(P)SA:Ch$(N):MIN CP MS")
+    field(DOL, "$(P)SA:Ch$(N):MIN MS")
     field(OMSL, "closed_loop")
     field(OUTA, "$(P)ACQ:LOLOlim:$(N).LOPR NPP NMS")
     field(OUTB, "$(P)ACQ:LOlim:$(N).LOPR NPP NMS")
@@ -191,7 +202,7 @@ record(ai, "$(P)ACQ:HIHIlim:$(N):RBV") {
 record(bi, "$(P)ACQ:LOLOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:LOLOstatus")
-    field(SCAN, "I/O Intr")
+    field(SCAN, ".1 second")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -209,7 +220,7 @@ record(calc, "$(P)ACQ:LOLOstatus:$(N)_") {
 record(bi, "$(P)ACQ:LOstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:LOstatus")
-    field(SCAN, "I/O Intr")
+    field(SCAN, ".1 second")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -227,7 +238,7 @@ record(calc, "$(P)ACQ:LOstatus:$(N)_") {
 record(bi, "$(P)ACQ:HIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:HIstatus")
-    field(SCAN, "I/O Intr")
+    field(SCAN, ".1 second")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
@@ -245,7 +256,7 @@ record(calc, "$(P)ACQ:HIstatus:$(N)_") {
 record(bi, "$(P)ACQ:HIHIstatus:$(N)") {
     field(DTYP, "FEED Register Read")
     field(INP , "@name=$(PORT) reg=ACQ:HIHIstatus")
-    field(SCAN, "I/O Intr")
+    field(SCAN, ".1 second")
     field(MASK, "$(MASK)")
     field(ZNAM, "Ok")
     field(ONAM, "Out of range")
