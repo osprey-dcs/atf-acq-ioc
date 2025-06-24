@@ -24,8 +24,8 @@
 #endif
 
 // Runtime requires at least 7.0.8 for bi "Raw Soft Channel" support for MASK
-#if EPICS_VERSION_INT < VERSION_INT(7, 0, 8, 1)
-#  error Driver requires epics-base >= 7.0.8.1
+#if EPICS_VERSION_INT < VERSION_INT(7, 0, 8, 0)
+#  error Driver requires epics-base >= 7.0.8
 #endif
 
 static
