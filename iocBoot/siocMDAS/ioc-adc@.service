@@ -1,0 +1,27 @@
+[Unit]
+Description=IOC for ADC %i
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/epics/usr/bin/procServ \
+  --foreground --logfile - --name ioc-adc%i \
+  --chdir /opt/atf-acq-ioc/iocBoot/siocMDAS \
+  --info-file %t/ioc-adc%i/info \
+  --port 0 \
+  --port unix:%t/ioc-adc%i/control \
+  ./node%i.cmd
+
+RuntimeDirectory=ioc-adc%i
+StandardOutput=syslog
+StandardError=inherit
+SyslogIdentifier=ioc-adc%i
+User=softioc
+Group=softioc
+
+AmbientCapabilities=cap_sys_nice,cap_ipc_lock
+LimitRTPRIO=50
+
+[Install]
+WantedBy=multi-user.target
