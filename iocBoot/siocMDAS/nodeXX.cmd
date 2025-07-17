@@ -3,8 +3,8 @@
 
 ###############################################################################
 # Set up environment
-epicsEnvSet(P, "FDAS:$(NODE):")
-epicsEnvSet(EVG, "FDAS:")
+epicsEnvSet(P, "MDAS:$(NODE):")
+epicsEnvSet(EVG, "MDAS:")
 
 ###############################################################################
 # Register support components
