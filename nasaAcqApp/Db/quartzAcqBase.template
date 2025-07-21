@@ -152,7 +152,7 @@ record(calc, "$(P)DRDY:pps") {
 # compare this node with EVG node
 record(calc, "$(P)DRDY:err") {
     field(INPA, "$(P)DRDY:pps MS")
-    field(INPB, "$(EVG)DRDY:pps CP MS")
+    field(INPB, "$(EVG)DRDY:pps CP MS AUTO")
     field(CALC, "A-B")
     field(EGU , "ns")
     # difference should be abs()<65ns
@@ -537,7 +537,7 @@ record(bi, "$(P)RDY") {
 # setup and control
 
 record(ao, "$(P)SA:BufT") {
-    field(DOL , "$(EVG)SA:BufT CPP MS")
+    field(DOL , "$(EVG)SA:BufT CPP MS AUTO")
     field(OMSL, "closed_loop")
     field(DESC, "acq. period")
     field(EGU , "ms")
@@ -553,7 +553,7 @@ record(ao, "$(P)SA:BufT") {
 
 record(calcout, "$(P)SA:BufT_") {
     field(INPA, "$(P)SA:BufT NPP") # time in millisecond
-    field(INPB, "$(EVG)ACQ:rate.RVAL CP") # samples per second
+    field(INPB, "$(EVG)ACQ:rate.RVAL CP AUTO") # samples per second
     field(INPC, "14") # number of samples per channel per packet
     field(CALC, "MAX(1, CEIL(B*A/1000/14))")
     field(OUT , "$(P)SA:BufLim PP")
@@ -604,7 +604,7 @@ record(bo, "$(P)SA:AutClr") {
 record(calc, "$(P)SA:Pr") {
     field(DESC, "Sample period")
     field(INPA, "$(P)SA:Pr")
-    field(INPA, "$(EVG)ACQ:rate.RVAL CP") # decimation factor
+    field(INPA, "$(EVG)ACQ:rate.RVAL CP AUTO") # decimation factor
     field(CALC, "1/A")
     field(EGU , "s")
     field(PREC, "6")

@@ -112,7 +112,7 @@ record(longout, "$(P)$(R)ACQ:rate_") {
     field(DTYP, "FEED Register Write")
     field(OUT,  "@name=$(PORT) reg=ACQ:rate")
     field(OMSL, "closed_loop")
-    field(DOL , "$(EVG)ACQ:rateLO_ CPP")
+    field(DOL , "$(EVG)ACQ:rateLO_ CPP AUTO")
     field(LOPR, "1000")
     field(HOPR, "250000")
     field(DRVL, "1000")

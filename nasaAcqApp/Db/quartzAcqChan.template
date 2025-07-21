@@ -310,7 +310,7 @@ record(longin, "$(P)SA:Ch$(N):Cnt-I") {
 # override psc-psd.db
 
 record("*", "$(P)SA:Ch$(N):FFT:F:Samp-SP") {
-  field(DOL, "$(EVG)ACQ:rate.RVAL CP")
+  field(DOL, "$(EVG)ACQ:rate.RVAL CP AUTO")
   field(OMSL, "closed_loop")
 }
 
