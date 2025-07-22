@@ -1,0 +1,52 @@
+# copy per-chassis status from a Quartz node into the EVG node
+# mask error or disconnect if not USE
+
+record(bo, "$(P)STS:$(N):RDY") {
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(N):RDY CP MS AUTO")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "0")
+    field(OUT , "$(P)RDY:1_.$(BXX) PP") # quartzEVGBase.template
+    field(ZNAM, "Not Ready")
+    field(ONAM, "Ready")
+}
+
+record(bo, "$(P)STS:$(N):LOLOstatus") {
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(N):LOLOstatus CP MS AUTO")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "1")
+    field(OUT , "$(P)LOLOstatus:1_.$(BXX) PP")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+}
+
+record(bo, "$(P)STS:$(N):LOstatus") {
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(N):LOstatus CP MS AUTO")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "1")
+    field(OUT , "$(P)LOstatus:1_.$(BXX) PP")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+}
+
+record(bo, "$(P)STS:$(N):HIstatus") {
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(N):HIstatus CP MS AUTO")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "1")
+    field(OUT , "$(P)HIstatus:1_.$(BXX) PP")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+}
+
+record(bo, "$(P)STS:$(N):HIHIstatus") {
+    field(OMSL, "closed_loop")
+    field(DOL , "$(P)$(N):HIHIstatus CP MS AUTO")
+    field(IVOA, "Set output to IVOV")
+    field(IVOV, "1")
+    field(OUT , "$(P)HIHIstatus:1_.$(BXX) PP")
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+}

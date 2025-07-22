@@ -1,0 +1,268 @@
+#
+# Global acquisition control.
+# Fanned out by the event generator.
+# Hardwire the first node to be the event generator.
+#
+record(bo, "$(P)ACQ:enable") {
+    field(DESC, "Enable/disable data acquisition")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=ACQ:enable")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+record(mbbo, "$(P)ACQ:rate") {
+    field(DESC, "Set acquisition rate")
+    field(PINI, "YES")
+    field(ZRVL, "250000")
+    field(ZRST, "250 kHz")
+    field(ONVL, "50000")
+    field(ONST, "50 kHz")
+    field(TWVL, "25000")
+    field(TWST, "25 kHz")
+    field(THVL, "5000")
+    field(THST, "5 kHz")
+    field(FRVL, "1000")
+    field(FRST, "1 kHz")
+    field(VAL,  "0")
+    field(FLNK, "$(P)ACQ:rateLO_")
+    info(autosaveFields_pass0, "VAL")
+}
+# We want the per-FPGA records to process each time the mbbo above processes.
+# The MBBO record, unfortunately, does not have an MDEL field, so we have to
+# fake it here with this longout.  The per-FPGA records monitor this longout.
+record(longout, "$(P)ACQ:rateLO_") {
+    field(DESC, "Send monitors to per-FPGA records")
+    field(DOL,  "$(P)ACQ:rate.RVAL")
+    field(OMSL, "closed_loop")
+    field(MDEL, "-1")
+}
+
+# system wide display buffer period
+record(ao, "$(P)SA:BufT") {
+    field(DESC, "acq. period")
+    field(EGU , "ms")
+    field(VAL , "1000.0")
+    field(LOPR, "100")
+    field(DRVL, "100")
+    field(DRVH, "10000")
+    field(HOPR, "10000")
+    field(PINI, "YES")
+    info(autosaveFields_pass0, "VAL")
+}
+
+#
+# MPS central node records
+#
+record(bo, "$(P)MPS:clear") {
+    field(DESC, "Clear MPS trips when processed")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:clear")
+    field(ZNAM, "Clear")
+    field(ONAM, "Clear")
+}
+
+record(bo, "$(P)MPS:forceTrip:01") {
+    field(OUT , "$(P)MPS:forceTrip.B0 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:02") {
+    field(OUT , "$(P)MPS:forceTrip.B1 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:03") {
+    field(OUT , "$(P)MPS:forceTrip.B2 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+record(bo, "$(P)MPS:forceTrip:04") {
+    field(OUT , "$(P)MPS:forceTrip.B3 PP")
+    field(ZNAM, "Normal")
+    field(ONAM, "Tripped")
+    field(VAL , "0")
+}
+
+record(mbboDirect, "$(P)MPS:forceTrip") {
+    field(DESC, "Force MPS ouputs to tripped state")
+    field(NOBT, "4")
+    field(OUT , "$(P)MPS:forceTrip_ PP MS")
+    field(VAL , "0")
+}
+record(longout, "$(P)MPS:forceTrip_") {
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=MPS:forceTrip")
+    field(LOPR, "0")
+    field(DRVL, "0")
+    field(HOPR, "15")
+    field(DRVH, "15")
+}
+
+#
+# Event generator fake pulse-per-second source
+#
+record(bo, "$(P)EVG:fakePPS") {
+    field(DESC, "Enable/disable fake PPS - Use with care!")
+    field(DTYP, "FEED Register Write")
+    field(OUT,  "@name=$(PORT) reg=FPGA:fakePPS")
+    field(ZNAM, "Disable")
+    field(ONAM, "Enable")
+}
+
+# system wide reference DRDY:pps for comparison and alarming
+alias("$(P)01:DRDY:pps", "$(P)DRDY:pps")
+
+# Latency between hardware PPS marker and EVR PPS event
+record(ai, "$(P)PPS:latency") {
+    field(DESC, "$(DESC=)")
+    field(DTYP, "FEED Register Read")
+    field(INP,  "@name=$(PORT) reg=PPS:latency")
+    field(SCAN, "2 second")
+    field(TSE,  "-2")
+    field(EGU,  "ns")
+    field(LINR, "LINEAR")
+    field(ESLO, "10")
+}
+
+# system wide, used by acquisition sequencer
+record(lso, "$(P)SA:DESC") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:CUST") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FACLITY") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:PROJ") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:OPER") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FILE") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+record(lso, "$(P)SA:FILEHASH") {
+    field(SIZV, "128")
+    field(PINI, "YES")
+    info(autosaveFields_pass1, "VAL")
+}
+
+record(longout, "$(P)SYS:USE") {
+    field(DESC, "Bit mask of chassis in service")
+    field(VAL , "0xffffffff") # boot strap with all possible
+    field(FLNK, "$(P)SYS:USE_")
+    info(autosaveFields_pass1, "VAL")
+}
+record(fanout , "$(P)SYS:USE_") {
+    field(LNKA, "$(P)RDY:2_")
+    field(LNKB, "$(P)LOLOstatus:2_")
+    field(LNKC, "$(P)LOstatus:2_")
+    field(LNKD, "$(P)HIstatus:2_")
+    field(LNKE, "$(P)HIHIstatus:2_")
+}
+
+# global channel readiness summary
+record(mbboDirect, "$(P)RDY:1_") {
+    # B0 -> B1F written from quartzEVGAgg.template
+    field(VAL , "0")
+    field(FLNK, "$(P)RDY:2_")
+}
+record(calcout, "$(P)RDY:2_") {
+    field(INPA, "$(P)SYS:USE")
+    field(INPB, "$(P)RDY:1_") # 1 - ready
+    field(CALC, "ABS((A&B)-A)<0.5") # would use A&B==A but for floating point precision...
+    field(OUT , "$(P)SA:READY PP")
+}
+record(bi, "$(P)SA:READY") {
+    field(DESC, "System ready to record")
+    field(ZNAM, "Not Ready")
+    field(ONAM, "Ready")
+    field(ZSV , "MAJOR")
+}
+
+# global channel limit summaries
+record(mbboDirect, "$(P)LOLOstatus:1_") {
+    # B0 -> B1F written from quartzEVGAgg.template
+    field(VAL , "0xffffffff")
+    field(FLNK, "$(P)LOLOstatus:2_")
+}
+record(calcout, "$(P)LOLOstatus:2_") {
+    field(INPA, "$(P)SYS:USE")
+    field(INPB, "$(P)LOLOstatus:1_") # 0 - OK
+    field(CALC, "(A&B)>0.5")
+    field(OUT , "$(P)LOLOstatus PP")
+}
+record(bi, "$(P)LOLOstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(mbboDirect, "$(P)LOstatus:1_") {
+    # B0 -> B1F written from quartzEVGAgg.template
+    field(VAL , "0xffffffff")
+    field(FLNK, "$(P)LOstatus:2_")
+}
+record(calcout, "$(P)LOstatus:2_") {
+    field(INPA, "$(P)SYS:USE")
+    field(INPB, "$(P)LOstatus:1_") # 0 - OK
+    field(CALC, "(A&B)>0.5")
+    field(OUT , "$(P)LOstatus PP")
+}
+record(bi, "$(P)LOstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(mbboDirect, "$(P)HIstatus:1_") {
+    # B0 -> B1F written from quartzEVGAgg.template
+    field(VAL , "0xffffffff")
+    field(FLNK, "$(P)HIstatus:2_")
+}
+record(calcout, "$(P)HIstatus:2_") {
+    field(INPA, "$(P)SYS:USE")
+    field(INPB, "$(P)HIstatus:1_") # 0 - OK
+    field(CALC, "(A&B)>0.5")
+    field(OUT , "$(P)HIstatus PP")
+}
+record(bi, "$(P)HIstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}
+
+record(mbboDirect, "$(P)HIHIstatus:1_") {
+    # B0 -> B1F written from quartzEVGAgg.template
+    field(VAL , "0xffffffff")
+    field(FLNK, "$(P)HIHIstatus:2_")
+}
+record(calcout, "$(P)HIHIstatus:2_") {
+    field(INPA, "$(P)SYS:USE")
+    field(INPB, "$(P)HIHIstatus:1_") # 0 - OK
+    field(CALC, "(A&B)>0.5")
+    field(OUT , "$(P)HIHIstatus PP")
+}
+record(bi, "$(P)HIHIstatus") {
+    field(ZNAM, "Ok")
+    field(ONAM, "Out of range")
+    field(OSV , "MAJOR")
+}

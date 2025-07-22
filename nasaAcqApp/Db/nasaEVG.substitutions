@@ -1,0 +1,39 @@
+
+file "quartzEVGBase.template" {
+{}
+}
+
+file "quartzEVGAgg.template" {
+{N="01", BXX="B0"}
+{N="02", BXX="B1"}
+{N="03", BXX="B2"}
+{N="04", BXX="B3"}
+{N="05", BXX="B4"}
+{N="06", BXX="B5"}
+{N="07", BXX="B6"}
+{N="08", BXX="B7"}
+{N="09", BXX="B8"}
+{N="10", BXX="B9"}
+{N="11", BXX="BA"}
+{N="12", BXX="BB"}
+{N="13", BXX="BC"}
+{N="14", BXX="BD"}
+{N="15", BXX="BE"}
+{N="16", BXX="BF"}
+{N="17", BXX="B10"}
+{N="18", BXX="B11"}
+{N="19", BXX="B12"}
+{N="20", BXX="B13"}
+{N="21", BXX="B14"}
+{N="22", BXX="B15"}
+{N="23", BXX="B16"}
+{N="24", BXX="B17"}
+{N="25", BXX="B18"}
+{N="26", BXX="B19"}
+{N="27", BXX="B1A"}
+{N="28", BXX="B1B"}
+{N="29", BXX="B1C"}
+{N="30", BXX="B1D"}
+{N="31", BXX="B1E"}
+{N="32", BXX="B1F"}
+}
