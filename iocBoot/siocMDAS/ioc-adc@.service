@@ -22,6 +22,7 @@ Group=softioc
 
 AmbientCapabilities=cap_sys_nice,cap_ipc_lock
 LimitRTPRIO=50
+LimitMEMLOCK=256M
 
 [Install]
 WantedBy=multi-user.target
