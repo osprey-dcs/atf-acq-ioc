@@ -3,7 +3,7 @@
 <display version="2.0.0">
   <name>ACQ $(P)Ch$(N)</name>
   <macros>
-    <EVG>FDAS:01:</EVG>
+    <EVG>$(SYS)01:</EVG>
   </macros>
   <width>1010</width>
   <height>1520</height>
@@ -943,7 +943,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:01:</P>
+          <P>$(SYS)01:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -962,7 +962,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:02:</P>
+          <P>$(SYS)02:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -981,7 +981,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:03:</P>
+          <P>$(SYS)03:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1000,7 +1000,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:04:</P>
+          <P>$(SYS)04:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1019,7 +1019,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:05:</P>
+          <P>$(SYS)05:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1038,7 +1038,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:06:</P>
+          <P>$(SYS)06:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1057,7 +1057,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:07:</P>
+          <P>$(SYS)07:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1076,7 +1076,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:08:</P>
+          <P>$(SYS)08:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1095,7 +1095,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:09:</P>
+          <P>$(SYS)09:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1114,7 +1114,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:10:</P>
+          <P>$(SYS)10:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1133,7 +1133,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:11:</P>
+          <P>$(SYS)11:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1152,7 +1152,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:12:</P>
+          <P>$(SYS)12:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1171,7 +1171,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:13:</P>
+          <P>$(SYS)13:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1190,7 +1190,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:14:</P>
+          <P>$(SYS)14:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1209,7 +1209,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:15:</P>
+          <P>$(SYS)15:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1228,7 +1228,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:16:</P>
+          <P>$(SYS)16:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1247,7 +1247,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:17:</P>
+          <P>$(SYS)17:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1266,7 +1266,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:18:</P>
+          <P>$(SYS)18:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1285,7 +1285,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:19:</P>
+          <P>$(SYS)19:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1304,7 +1304,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:20:</P>
+          <P>$(SYS)20:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1323,7 +1323,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:21:</P>
+          <P>$(SYS)21:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1342,7 +1342,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:22:</P>
+          <P>$(SYS)22:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1361,7 +1361,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:23:</P>
+          <P>$(SYS)23:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1380,7 +1380,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:24:</P>
+          <P>$(SYS)24:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1399,7 +1399,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:25:</P>
+          <P>$(SYS)25:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1418,7 +1418,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:26:</P>
+          <P>$(SYS)26:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1437,7 +1437,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:27:</P>
+          <P>$(SYS)27:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1456,7 +1456,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:28:</P>
+          <P>$(SYS)28:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1475,7 +1475,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:29:</P>
+          <P>$(SYS)29:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1494,7 +1494,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:30:</P>
+          <P>$(SYS)30:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1513,7 +1513,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:31:</P>
+          <P>$(SYS)31:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>
@@ -1532,7 +1532,7 @@
       <action type="open_display">
         <file>scope.bob</file>
         <macros>
-          <P>FDAS:32:</P>
+          <P>$(SYS)32:</P>
         </macros>
         <target>replace</target>
         <description>Open Display</description>

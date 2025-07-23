@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-05-31 19:15:52 by atf-->
 <display version="2.0.0">
   <name>Acq Ctrl</name>
   <width>1830</width>
-  <height>590</height>
+  <height>640</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -524,9 +523,9 @@
     <name>Action Button_16</name>
     <actions>
       <action type="write_pv">
+        <description>WritePV</description>
         <pv_name>$(EVG)ACQ:enable</pv_name>
         <value>0</value>
-        <description>WritePV</description>
       </action>
     </actions>
     <text>Disable</text>
@@ -544,9 +543,9 @@
     <name>Action Button_17</name>
     <actions>
       <action type="write_pv">
+        <description>WritePV</description>
         <pv_name>$(EVG)ACQ:enable</pv_name>
         <value>1</value>
-        <description>WritePV</description>
       </action>
     </actions>
     <text>Enable</text>
@@ -650,9 +649,9 @@
     <name>Action Button_18</name>
     <actions>
       <action type="write_pv">
+        <description>Stop</description>
         <pv_name>$(pv_name)</pv_name>
         <value>0</value>
-        <description>Stop</description>
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
@@ -665,9 +664,9 @@
     <name>Action Button_19</name>
     <actions>
       <action type="write_pv">
+        <description>Start</description>
         <pv_name>$(pv_name)</pv_name>
         <value>1</value>
-        <description>Start</description>
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
@@ -680,9 +679,9 @@
     <name>Action Button_20</name>
     <actions>
       <action type="write_pv">
+        <description>Reset</description>
         <pv_name>$(pv_name)</pv_name>
         <value>2</value>
-        <description>Reset</description>
       </action>
     </actions>
     <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
@@ -1128,5 +1127,41 @@
       <color name="Header_Background" red="77" green="77" blue="77">
       </color>
     </line_color>
+  </widget>
+  <widget type="byte_monitor" version="2.0.0">
+    <name>Byte Monitor</name>
+    <pv_name>$(P)SYS:USE</pv_name>
+    <x>1360</x>
+    <y>29</y>
+    <width>460</width>
+    <numBits>32</numBits>
+    <square>true</square>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>System chassis required to be ready</text>
+    <x>1440</x>
+    <y>10</y>
+    <width>310</width>
+    <height>15</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>32</text>
+    <x>1360</x>
+    <y>10</y>
+    <width>30</width>
+    <height>15</height>
+    <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_30</name>
+    <text>1</text>
+    <x>1800</x>
+    <y>10</y>
+    <width>20</width>
+    <height>15</height>
+    <horizontal_alignment>1</horizontal_alignment>
   </widget>
 </display>

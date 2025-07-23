@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Boot</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>MDAS Chassis FPGA boot control</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Golden/bootloader image</text>
+    <x>410</x>
+    <y>40</y>
+    <width>200</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Application image</text>
+    <x>870</x>
+    <y>40</y>
+    <width>200</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Auto boot to App</text>
+    <x>130</x>
+    <y>50</y>
+    <width>70</width>
+    <height>40</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>Active Img</text>
+    <x>50</x>
+    <y>70</y>
+    <width>70</width>
+  </widget>
+  <widget type="polyline" version="2.0.0">
+    <name>Polyline_1</name>
+    <x>870</x>
+    <y>310</y>
+    <width>1</width>
+    <height>1</height>
+    <points>
+      <point x="0.0" y="0.0">
+      </point>
+    </points>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>01_1</name>
+    <macros>
+      <N>01</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>100</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>02_1</name>
+    <macros>
+      <N>02</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>130</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>03_1</name>
+    <macros>
+      <N>03</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>160</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>04_1</name>
+    <macros>
+      <N>04</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>190</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>05</name>
+    <macros>
+      <N>05</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>220</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>06</name>
+    <macros>
+      <N>06</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>250</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>07</name>
+    <macros>
+      <N>07</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>280</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>08</name>
+    <macros>
+      <N>08</N>
+    </macros>
+    <file>_chassis_boot.bob</file>
+    <x>10</x>
+    <y>310</y>
+    <width>1790</width>
+    <height>30</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Address</text>
+    <x>320</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_6</name>
+    <text>Address</text>
+    <x>980</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Name</text>
+    <x>440</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>FW VCS Hash</text>
+    <x>570</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>FW VCS Hash</text>
+    <x>1180</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>FW Build Date</text>
+    <x>1450</x>
+    <y>70</y>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>MCU SW Build Date</text>
+    <x>1590</x>
+    <y>70</y>
+    <width>140</width>
+  </widget>
+</display>
