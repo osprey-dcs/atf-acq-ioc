@@ -1,8 +1,10 @@
 #!../../bin/linux-x86_64/nasaAcq
 
+on error halt
+
 ###############################################################################
 # Set up environment
-epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.8")
+epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.1")
 epicsEnvSet(NODE, "01")
 epicsEnvSet(P, "FDAS:$(NODE):")
 epicsEnvSet(EVG, "FDAS:") # this is the EVG node
@@ -11,6 +13,8 @@ epicsEnvSet(EVG, "FDAS:") # this is the EVG node
 # Register support components
 dbLoadDatabase "../../dbd/nasaAcq.dbd"
 nasaAcq_registerRecordDeviceDriver pdbbase
+
+var dbRecordsOnceOnly 1
 
 ###############################################################################
 # Set up connections

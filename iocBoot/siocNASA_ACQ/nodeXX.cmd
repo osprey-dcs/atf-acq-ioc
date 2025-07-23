@@ -1,6 +1,8 @@
 # source me from node??.cmd
 # after setting NASA_ACQ_BASE_IP and NODE
 
+on error halt
+
 ###############################################################################
 # Set up environment
 epicsEnvSet(P, "FDAS:$(NODE):")
@@ -10,6 +12,8 @@ epicsEnvSet(EVG, "FDAS:")
 # Register support components
 dbLoadDatabase "../../dbd/nasaAcq.dbd"
 nasaAcq_registerRecordDeviceDriver pdbbase
+
+var dbRecordsOnceOnly 1
 
 ###############################################################################
 # Set up connections

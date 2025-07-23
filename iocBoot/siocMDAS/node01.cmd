@@ -1,5 +1,7 @@
 #!../../bin/linux-x86_64/nasaAcq
 
+on error break
+
 ###############################################################################
 # Set up environment
 epicsEnvSet(NASA_ACQ_BASE_IP, "192.168.79.2")
@@ -11,6 +13,8 @@ epicsEnvSet(EVG, "MDAS:") # this is the EVG node
 # Register support components
 dbLoadDatabase "../../dbd/nasaAcq.dbd"
 nasaAcq_registerRecordDeviceDriver pdbbase
+
+var dbLinkDefaultINT 1
 
 ###############################################################################
 # Set up connections
