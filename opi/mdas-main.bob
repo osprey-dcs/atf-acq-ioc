@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-28 13:41:37 by mdavidsaver-->
 <display version="2.0.0">
   <name>Main</name>
   <macros>
@@ -142,12 +143,12 @@
     <actions>
       <action type="open_display">
         <description>Control</description>
-        <file>chassis_acq_sts.bob</file>
+        <file>mdas_chassis_acq_sts.bob</file>
         <target>tab</target>
       </action>
       <action type="open_display">
         <description>Expert</description>
-        <file>chassis_acq.bob</file>
+        <file>mdas_chassis_acq.bob</file>
         <target>tab</target>
       </action>
     </actions>
@@ -290,10 +291,66 @@
     <name>Action Button_23</name>
     <actions>
       <action type="open_display">
-        <description>Open Display</description>
+        <description>Chassis 01</description>
         <file>chassis_mps.bob</file>
         <macros>
           <P>$(SYS)01:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 02</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)02:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 03</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)03:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 04</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)04:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 05</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)05:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 06</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)06:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 07</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)07:</P>
+        </macros>
+        <target>tab</target>
+      </action>
+      <action type="open_display">
+        <description>Chassis 08</description>
+        <file>chassis_mps.bob</file>
+        <macros>
+          <P>$(SYS)08:</P>
         </macros>
         <target>tab</target>
       </action>

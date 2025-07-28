@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-28 10:01:11 by mdavidsaver-->
 <display version="2.0.0">
   <name>Sys</name>
-  <width>1160</width>
-  <height>515</height>
+  <width>1210</width>
+  <height>895</height>
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <class>TITLE</class>
@@ -40,8 +41,8 @@
       <NIC>eno12399np0</NIC>
     </macros>
     <file>linStatNIC.bob</file>
-    <x>610</x>
-    <y>60</y>
+    <x>50</x>
+    <y>515</y>
     <width>550</width>
     <height>160</height>
     <resize>2</resize>
@@ -52,8 +53,8 @@
       <P>MDAS:SYS:DAQM:ROOT</P>
     </macros>
     <file>linStatFS.bob</file>
-    <x>610</x>
-    <y>230</y>
+    <x>50</x>
+    <y>685</y>
     <width>550</width>
     <height>105</height>
     <resize>2</resize>
@@ -64,8 +65,57 @@
       <P>MDAS:SYS:DAQM:DATA</P>
     </macros>
     <file>linStatFS.bob</file>
-    <x>610</x>
-    <y>335</y>
+    <x>50</x>
+    <y>790</y>
+    <width>550</width>
+    <height>105</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_4</name>
+    <macros>
+      <IOC>MDAS:SYS:DISWS3</IOC>
+    </macros>
+    <file>linStatHost.bob</file>
+    <x>660</x>
+    <y>60</y>
+    <width>550</width>
+    <height>455</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_5</name>
+    <macros>
+      <IOC>MDAS:SYS:DISWS3</IOC>
+      <NIC>eno8303</NIC>
+    </macros>
+    <file>linStatNIC.bob</file>
+    <x>660</x>
+    <y>515</y>
+    <width>550</width>
+    <height>160</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_6</name>
+    <macros>
+      <P>MDAS:SYS:DISWS3:ROOT</P>
+    </macros>
+    <file>linStatFS.bob</file>
+    <x>660</x>
+    <y>685</y>
+    <width>550</width>
+    <height>105</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>Embedded Display_7</name>
+    <macros>
+      <P>MDAS:SYS:DISWS3:SEC</P>
+    </macros>
+    <file>linStatFS.bob</file>
+    <x>660</x>
+    <y>790</y>
     <width>550</width>
     <height>105</height>
     <resize>2</resize>
