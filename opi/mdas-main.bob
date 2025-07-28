@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-28 13:41:37 by mdavidsaver-->
+<!--Saved on 2025-07-28 14:49:33 by mdavidsaver-->
 <display version="2.0.0">
   <name>Main</name>
   <macros>
@@ -164,7 +164,7 @@
     <actions>
       <action type="open_display">
         <description>Open Display</description>
-        <file>scope.bob</file>
+        <file>mdas-scope.bob</file>
         <macros>
           <P>$(SYS)01:</P>
           <N>01</N>
@@ -259,7 +259,7 @@
     <actions>
       <action type="open_display">
         <description>Open Display</description>
-        <file>chassis_sfp.bob</file>
+        <file>mdas_sfp.bob</file>
         <target>tab</target>
       </action>
     </actions>

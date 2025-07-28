@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-28 15:14:21 by mdavidsaver-->
 <display version="2.0.0">
   <name>Acq Ctrl</name>
   <width>1830</width>
@@ -1163,5 +1164,13 @@
     <width>20</width>
     <height>15</height>
     <horizontal_alignment>1</horizontal_alignment>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>$(P)SYS:USE</pv_name>
+    <x>1830</x>
+    <y>29</y>
+    <width>60</width>
+    <format>4</format>
   </widget>
 </display>

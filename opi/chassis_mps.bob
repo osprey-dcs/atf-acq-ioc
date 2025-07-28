@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-05-16 12:45:04 by dev-->
+<!--Saved on 2025-07-28 15:09:40 by mdavidsaver-->
 <display version="2.0.0">
   <name>MPS $(P)</name>
   <width>1450</width>
@@ -336,9 +336,9 @@
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button_8</name>
     <pv_name>$(SYS)MPS:forceTrip:04</pv_name>
-    <x>720</x>
+    <x>700</x>
     <y>5</y>
-    <width>30</width>
+    <width>50</width>
     <off_label>4</off_label>
     <on_label>4</on_label>
     <on_color>
@@ -352,7 +352,7 @@
     <pv_name>$(SYS)MPS:forceTrip.B2</pv_name>
     <x>760</x>
     <y>5</y>
-    <width>30</width>
+    <width>50</width>
     <off_label>3</off_label>
     <on_label>3</on_label>
     <on_color>
@@ -364,9 +364,9 @@
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button_10</name>
     <pv_name>$(SYS)MPS:forceTrip.B1</pv_name>
-    <x>800</x>
+    <x>820</x>
     <y>5</y>
-    <width>30</width>
+    <width>50</width>
     <off_label>2</off_label>
     <on_label>2</on_label>
     <on_color>
@@ -378,9 +378,9 @@
   <widget type="bool_button" version="2.0.0">
     <name>Boolean Button_11</name>
     <pv_name>$(SYS)MPS:forceTrip.B0</pv_name>
-    <x>840</x>
+    <x>880</x>
     <y>5</y>
-    <width>30</width>
+    <width>50</width>
     <off_label>1</off_label>
     <on_label>1</on_label>
     <on_color>
@@ -392,9 +392,9 @@
   <widget type="label" version="2.0.0">
     <name>Label_10</name>
     <text>Force Trip</text>
-    <x>620</x>
+    <x>610</x>
     <y>5</y>
-    <width>90</width>
+    <width>80</width>
     <height>30</height>
     <horizontal_alignment>2</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>

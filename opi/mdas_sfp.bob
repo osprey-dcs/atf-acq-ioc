@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2025-07-28 14:48:44 by mdavidsaver-->
+<display version="2.0.0">
+  <name>QSFP</name>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <class>TITLE</class>
+    <text>Fiber RX Power Levels</text>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>550</width>
+    <height>31</height>
+    <font use_class="true">
+      <font name="Header 1" family="Liberation Sans" style="BOLD" size="22.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="Text" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH1</name>
+    <macros>
+      <N>01</N>
+      <L>1</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>60</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH2</name>
+    <macros>
+      <N>02</N>
+      <L>2</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>100</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH3</name>
+    <macros>
+      <N>03</N>
+      <L>2</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>140</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH4</name>
+    <macros>
+      <N>04</N>
+      <L>3</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>180</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH5</name>
+    <macros>
+      <N>05</N>
+      <L>2</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>220</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH6</name>
+    <macros>
+      <N>06</N>
+      <L>3</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>260</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH7</name>
+    <macros>
+      <N>07</N>
+      <L>3</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>300</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="embedded" version="2.0.0">
+    <name>QSFP CH8</name>
+    <macros>
+      <N>08</N>
+      <L>3</L>
+    </macros>
+    <file>_chassis_sfp.bob</file>
+    <x>10</x>
+    <y>340</y>
+    <width>775</width>
+    <height>40</height>
+    <resize>2</resize>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>1</text>
+    <x>180</x>
+    <y>37</y>
+    <width>20</width>
+    <height>10</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>8</text>
+    <x>770</x>
+    <y>37</y>
+    <width>20</width>
+    <height>10</height>
+  </widget>
+</display>
