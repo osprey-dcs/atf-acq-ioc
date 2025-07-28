@@ -177,13 +177,14 @@ record(bi, "$(P)DRDY:ok") {
     field(OSV , "MAJOR")
 }
 
-# breakout PPS:status  (Only meaningful on EVG node)
+# breakout PPS:status
 record(bi, "$(P)PPS:fmc") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)PPS:status CP MS")
     field(MASK, "0x10000000")
     field(ZNAM, "No FMC")
     field(ONAM, "FMC")
+    field(FLNK, "$(P)PPS:gps")
 }
 record(bi, "$(P)PPS:gps") {
     field(DTYP, "Raw Soft Channel")
@@ -191,21 +192,22 @@ record(bi, "$(P)PPS:gps") {
     field(MASK, "0x20000000")
     field(ZNAM, "No GPS")
     field(ONAM, "GPS")
+    field(FLNK, "$(P)PPS:src")
 }
 record(mbbi, "$(P)PPS:src") {
     field(DTYP, "Raw Soft Channel")
-    field(INP , "$(P)PPS:status CP MS")
-    field(NOBT, "4")
+    field(INP, "$(P)PPS:status CP MS")
+    field(NOBT, "3")
     field(SHFT, "28")
-    field(MASK, "0xb") # 0b1011
     field(ZRVL, "0x0")
-    field(ONVL, "0x9") # 0b1001
-    field(TWVL, "0xa") # 0b1010
-    field(THVL, "0xc") # 0b1100
+    field(ONVL, "0x1") # 0b001
+    field(TWVL, "0x2") # 0b010
+    field(THVL, "0x4") # 0b100
     field(ZRST, "No PPS")
     field(ONST, "FMC")
     field(TWST, "PMOD")
     field(THST, "EVR")
+    field(ZRSV, "MAJOR")
     field(UNSV, "MAJOR")
 }
 record(calc, "$(P)PPS:jtr") {
