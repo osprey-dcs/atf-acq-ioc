@@ -238,7 +238,6 @@ record(longout, "$(P)$(R)MPS:invert_") {
 record(bi, "$(P)$(R)MPS:input:01") {
     field(DTYP, "Raw Soft Channel")
     field(INP , "$(P)$(R)MPS:status:01 CP MS")
-    field(SCAN, "I/O Intr")
     field(MASK, "0x10000")
     field(ZNAM, "Trip/Open")
     field(ONAM, "Normal/Close")
