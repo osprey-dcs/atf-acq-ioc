@@ -601,6 +601,13 @@ record(bo, "$(P)SA:AutClr") {
     info(autosaveFields_pass0, "VAL")
 }
 
+record("*", "$(P)FileLim-SP") {
+    field(DOL , "$(EVG)SA:FileLim-I CP")
+    field(OMSL, "closed_loop")
+    field(IVOA, "Don't drive outputs")
+    field(EGU , "MB")
+}
+
 # timebase, assume identical for all.
 
 record(calc, "$(P)SA:Pr") {

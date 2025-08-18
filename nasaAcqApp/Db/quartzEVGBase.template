@@ -36,6 +36,27 @@ record(longout, "$(P)ACQ:rateLO_") {
     field(DOL,  "$(P)ACQ:rate.RVAL")
     field(OMSL, "closed_loop")
     field(MDEL, "-1")
+    field(FLNK, "$(P)SA:FileLim-I")
+}
+
+record(ao, "$(P)SA:FileTime-SP") {
+    field(EGU , "m")
+    field(PREC, "1")
+    field(DRVH, "10000") # arbitrary
+    field(DRVL, "0")
+    field(OUT , "$(P)SA:FileLim-I.B PP")
+    field(PINI, "YES")
+    info(autosaveFields_pass0, "VAL")
+}
+
+# File size limit 
+record(calc, "$(P)SA:FileLim-I") {
+    field(INPA, "$(P)ACQ:rate.RVAL") # Hz
+    # B time in minutes
+    # 250KHz -> 25MB/s
+    field(CALC, "A/10000*60*B")
+    field(EGU , "MB")
+    field(PREC, "1")
 }
 
 # system wide display buffer period
