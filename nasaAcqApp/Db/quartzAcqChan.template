@@ -134,11 +134,6 @@ record(mbbo, "$(P)SA:Ch$(N):SDTYP") {
     field(UNSV, "INVALID")
 }
 
-record(lso, "$(P)SA:Ch$(N):DESC5") {
-    field(DESC, "Extra signal label")
-    field(SIZV, "128")
-    info(autosaveFields_pass0, "VAL")
-}
 record(stringout, "$(P)SA:Ch$(N):EGU") {
     field(DESC, "Current signal units")
     info(autosaveFields_pass0, "VAL")
