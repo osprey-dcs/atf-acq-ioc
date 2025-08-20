@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-05-16 13:08:46 by dev-->
 <display version="2.0.0">
   <name>Mon $(N)</name>
   <x>9</x>
   <y>88</y>
-  <width>615</width>
-  <height>820</height>
+  <width>1080</width>
+  <height>798</height>
   <background_color>
     <color name="GLOBAL canvas" red="200" green="200" blue="200">
     </color>
@@ -31,251 +30,6 @@
     </background_color>
     <horizontal_alignment>1</horizontal_alignment>
     <vertical_alignment>1</vertical_alignment>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>FPGAmon</name>
-    <x>25</x>
-    <y>280</y>
-    <width>255</width>
-    <height>95</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>Group</name>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_7</name>
-        <text>FPGA Temperature</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_8</name>
-        <pv_name>$(P)$(R)FPGA:Temperature</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Group</name>
-      <y>25</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_11</name>
-        <text>FPGA VccINT</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_12</name>
-        <pv_name>$(P)$(R)FPGA:VccINT</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Group</name>
-      <y>50</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_8</name>
-        <text>FPGA VccAUX</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_9</name>
-        <pv_name>$(P)$(R)FPGA:VccAUX</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>Group</name>
-      <y>75</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="label" version="2.0.0">
-        <name>Label_9</name>
-        <text>FPGA VccVBRAM</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_10</name>
-        <pv_name>$(P)$(R)FPGA:VBRAM</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-  </widget>
-  <widget type="group" version="3.0.0">
-    <name>MarbleP12mon</name>
-    <x>328</x>
-    <y>417</y>
-    <width>255</width>
-    <height>145</height>
-    <style>3</style>
-    <transparent>true</transparent>
-    <widget type="group" version="3.0.0">
-      <name>INA219val</name>
-      <y>50</y>
-      <width>255</width>
-      <height>15</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_30</name>
-        <pv_name>$(P)$(R)MARBLE:FMC1:P12V</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val</name>
-        <text>Marble FMC1 P12 V</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>INA219val_1</name>
-      <y>75</y>
-      <width>255</width>
-      <height>15</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_31</name>
-        <pv_name>$(P)$(R)MARBLE:FMC1:P12I</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_2</name>
-        <text>Marble FMC1 P12 I</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>INA219val_5</name>
-      <y>100</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_33</name>
-        <pv_name>$(P)$(R)MARBLE:FMC2:P12V</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_6</name>
-        <text>Marble FMC2 P12 V</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>INA219val_7</name>
-      <y>125</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_34</name>
-        <pv_name>$(P)$(R)MARBLE:FMC2:P12I</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_8</name>
-        <text>Marble FMC2 P12 I</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>INA219val_9</name>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_35</name>
-        <pv_name>$(P)$(R)MARBLE:P12V</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_10</name>
-        <text>Marble P12 V</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
-    <widget type="group" version="3.0.0">
-      <name>INA219val_11</name>
-      <y>25</y>
-      <width>255</width>
-      <height>20</height>
-      <style>3</style>
-      <transparent>true</transparent>
-      <widget type="textupdate" version="2.0.0">
-        <name>Text Update_36</name>
-        <pv_name>$(P)$(R)MARBLE:P12I</pv_name>
-        <x>155</x>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-        <wrap_words>false</wrap_words>
-      </widget>
-      <widget type="label" version="2.0.0">
-        <name>INA219val_12</name>
-        <text>Marble P12 I</text>
-        <width>150</width>
-        <horizontal_alignment>2</horizontal_alignment>
-        <vertical_alignment>1</vertical_alignment>
-      </widget>
-    </widget>
   </widget>
   <widget type="group" version="3.0.0">
     <name>Group</name>
@@ -647,7 +401,7 @@
   <widget type="group" version="3.0.0">
     <name>Group</name>
     <x>25</x>
-    <y>395</y>
+    <y>629</y>
     <width>290</width>
     <height>167</height>
     <style>3</style>
@@ -881,8 +635,8 @@
   </widget>
   <widget type="group" version="3.0.0">
     <name>Group</name>
-    <x>25</x>
-    <y>582</y>
+    <x>624</x>
+    <y>438</y>
     <width>255</width>
     <height>220</height>
     <style>3</style>
@@ -1459,16 +1213,16 @@
   <widget type="label" version="2.0.0">
     <name>Label_2</name>
     <text>Device summary</text>
-    <x>363</x>
-    <y>582</y>
+    <x>360</x>
+    <y>632</y>
     <width>197</width>
     <height>22</height>
   </widget>
   <widget type="led" version="2.0.0">
     <name>LED_18</name>
     <pv_name>$(P)$(R)STS</pv_name>
-    <x>483</x>
-    <y>634</y>
+    <x>480</x>
+    <y>684</y>
     <width>80</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
@@ -1476,8 +1230,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_19</name>
     <pv_name>$(P)$(R)USE</pv_name>
-    <x>483</x>
-    <y>609</y>
+    <x>480</x>
+    <y>659</y>
     <width>80</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
@@ -1485,8 +1239,8 @@
   <widget type="led" version="2.0.0">
     <name>LED_20</name>
     <pv_name>$(P)$(R)RDY</pv_name>
-    <x>483</x>
-    <y>659</y>
+    <x>480</x>
+    <y>709</y>
     <width>80</width>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
@@ -1494,22 +1248,22 @@
   <widget type="label" version="2.0.0">
     <name>Label_4</name>
     <text>Chans in use?</text>
-    <x>363</x>
-    <y>609</y>
+    <x>360</x>
+    <y>659</y>
     <width>115</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_5</name>
     <text>Status ok?</text>
-    <x>363</x>
-    <y>634</y>
+    <x>360</x>
+    <y>684</y>
     <width>115</width>
   </widget>
   <widget type="label" version="2.0.0">
     <name>Label_6</name>
     <text>Ready to record?</text>
-    <x>363</x>
-    <y>659</y>
+    <x>360</x>
+    <y>709</y>
     <width>115</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
@@ -1752,5 +1506,343 @@
     </on_color>
     <square>true</square>
     <labels_from_pv>true</labels_from_pv>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_21</name>
+    <pv_name>$(P)$(R)Marble:U27:Temp1</pv_name>
+    <x>323</x>
+    <y>428</y>
+    <height>25</height>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_22</name>
+    <pv_name>$(P)$(R)Marble:U29:Temp</pv_name>
+    <x>323</x>
+    <y>458</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_24</name>
+    <pv_name>$(P)$(R)Marble:U27:Fan1</pv_name>
+    <x>323</x>
+    <y>528</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_26</name>
+    <pv_name>$(P)$(R)Marble:U27:Fan2</pv_name>
+    <x>323</x>
+    <y>553</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_27</name>
+    <pv_name>$(P)$(R)Marble:U27:Tach2</pv_name>
+    <x>437</x>
+    <y>553</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_28</name>
+    <pv_name>$(P)$(R)Marble:U27:Tach1</pv_name>
+    <x>437</x>
+    <y>528</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_55</name>
+    <text>PPS Lck</text>
+    <x>740</x>
+    <y>237</y>
+    <width>60</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_58</name>
+    <text>PPS Jit.</text>
+    <x>815</x>
+    <y>237</y>
+    <width>60</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_59</name>
+    <text>PPS ok</text>
+    <x>890</x>
+    <y>237</y>
+    <width>60</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_60</name>
+    <text>PPS diff</text>
+    <x>960</x>
+    <y>237</y>
+    <width>60</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_21</name>
+    <text>FPGA</text>
+    <x>41</x>
+    <y>262</y>
+    <width>180</width>
+    <height>18</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Die Temp.</text>
+    <x>41</x>
+    <y>285</y>
+    <width>85</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_8</name>
+    <pv_name>$(P)$(R)FPGA:Temperature</pv_name>
+    <x>131</x>
+    <y>285</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>VccINT</text>
+    <x>41</x>
+    <y>310</y>
+    <width>85</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_12</name>
+    <pv_name>$(P)$(R)FPGA:VccINT</pv_name>
+    <x>131</x>
+    <y>310</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>VccAUX</text>
+    <x>41</x>
+    <y>335</y>
+    <width>85</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_9</name>
+    <pv_name>$(P)$(R)FPGA:VccAUX</pv_name>
+    <x>131</x>
+    <y>335</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>VccVBRAM</text>
+    <x>41</x>
+    <y>360</y>
+    <width>85</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_10</name>
+    <pv_name>$(P)$(R)FPGA:VBRAM</pv_name>
+    <x>131</x>
+    <y>360</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_22</name>
+    <text>Marble PCB</text>
+    <x>105</x>
+    <y>405</y>
+    <width>180</width>
+    <height>18</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_30</name>
+    <pv_name>$(P)$(R)MARBLE:FMC1:P12V</pv_name>
+    <x>130</x>
+    <y>478</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val</name>
+    <text>FMC1 P12 V</text>
+    <x>25</x>
+    <y>478</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_31</name>
+    <pv_name>$(P)$(R)MARBLE:FMC1:P12I</pv_name>
+    <x>130</x>
+    <y>503</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_2</name>
+    <text>FMC1 P12 I</text>
+    <x>25</x>
+    <y>503</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_33</name>
+    <pv_name>$(P)$(R)MARBLE:FMC2:P12V</pv_name>
+    <x>130</x>
+    <y>528</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_6</name>
+    <text>FMC2 P12 V</text>
+    <x>25</x>
+    <y>528</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_34</name>
+    <pv_name>$(P)$(R)MARBLE:FMC2:P12I</pv_name>
+    <x>130</x>
+    <y>553</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_8</name>
+    <text>FMC2 P12 I</text>
+    <x>25</x>
+    <y>553</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_35</name>
+    <pv_name>$(P)$(R)MARBLE:P12V</pv_name>
+    <x>130</x>
+    <y>428</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_10</name>
+    <text>Input P12 V</text>
+    <x>25</x>
+    <y>428</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_36</name>
+    <pv_name>$(P)$(R)MARBLE:P12I</pv_name>
+    <x>130</x>
+    <y>453</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_12</name>
+    <text>Input P12 I</text>
+    <x>25</x>
+    <y>453</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_61</name>
+    <text>U27 Temp</text>
+    <x>240</x>
+    <y>428</y>
+    <width>73</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_62</name>
+    <text>U29 Temp</text>
+    <x>240</x>
+    <y>458</y>
+    <width>73</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_29</name>
+    <pv_name>$(P)$(R)Marble:U29:Temp</pv_name>
+    <x>323</x>
+    <y>483</y>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_63</name>
+    <text>U29 Temp</text>
+    <x>240</x>
+    <y>483</y>
+    <width>73</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_64</name>
+    <text>Fan 1</text>
+    <x>240</x>
+    <y>528</y>
+    <width>73</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>INA219val_65</name>
+    <text>Fan 2</text>
+    <x>240</x>
+    <y>553</y>
+    <width>73</width>
+    <horizontal_alignment>2</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
   </widget>
 </display>

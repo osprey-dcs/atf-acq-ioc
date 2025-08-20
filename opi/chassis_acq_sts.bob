@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2025-07-28 15:14:21 by mdavidsaver-->
 <display version="2.0.0">
   <name>Acq Ctrl</name>
   <width>1830</width>
@@ -1172,5 +1171,35 @@
     <y>29</y>
     <width>60</width>
     <format>4</format>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_2</name>
+    <pv_name>$(P)SA:FileTime-SP</pv_name>
+    <x>985</x>
+    <y>639</y>
+    <width>134</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <pv_name>$(P)SA:FileLim-I</pv_name>
+    <x>1140</x>
+    <y>639</y>
+    <width>269</width>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_3</name>
+    <pv_name>pva://$(P)CTRL:FileCnt-SP</pv_name>
+    <x>985</x>
+    <y>667</y>
+    <width>134</width>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_2</name>
+    <pv_name>pva://$(P)CTRL:CnvtRslt-I</pv_name>
+    <x>985</x>
+    <y>700</y>
+    <width>1010</width>
+    <height>280</height>
+    <interactive>true</interactive>
   </widget>
 </display>
