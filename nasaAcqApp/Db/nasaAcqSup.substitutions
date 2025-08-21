@@ -15,7 +15,7 @@ file "perBuildDate.template"
 }
 
 file "perSysmonAI.template" {
-  pattern { P,   R,      PORT,        NAME,     EGU,           ESLO,    EOFF, PREC,  ADEL, LOLO,   LOW,  HIGH,  HIHI, DESC }
+  pattern { P,R, PORT,                NAME,     EGU,           ESLO,    EOFF, PREC,  ADEL,  LOLO,   LOW,  HIGH,  HIHI, DESC }
   { \$(P),"",\$(PORT),  "FPGA:Temperature", "deg C",   0.0076885223, -273.15,    1,     0,     0,     0,    70,    75, "FPGA temperature" }
   { \$(P),"",\$(PORT),       "FPGA:VccINT",     "V",   4.577637e-05,       0,    3,  0.05,  0.95,  0.98,  1.02   1.05, "FPGA VccINT" }
   { \$(P),"",\$(PORT),       "FPGA:VccAUX",     "V",   4.577637e-05,       0,    3,  0.05, 1.710, 1.746, 1.854, 1.890, "FPGA VccAUX" }
@@ -46,21 +46,26 @@ file "perSysmonAI.template" {
   { \$(P),"",\$(PORT),       "Quartz:2P5V1",    "V", 9.303042763e-4,       0,    3,  0.05, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P1)" }
   { \$(P),"",\$(PORT),       "Quartz:2P5V2",    "V", 9.303042763e-4,       0,    3,  0.05, 2.375, 2.450, 2.550, 2.625, "Quartz 2.5V supply voltage (P2)" }
   { \$(P),"",\$(PORT),       "Quartz:P12I",     "A", 3.565738076e-3,       0,    3,  0.05,  0.01,  0.015  2.00,  2.10, "Quartz 12.0V supply current" }
-  { \$(P),"",\$(PORT),   "Quartz:Temp",            "deg C",            1.6,  -273.0,    1,     1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
+  { \$(P),"",\$(PORT),       "Quartz:Temp", "deg C",            1.6,  -273.0,    1,     1,     5,     3,    55,    65, "Quartz monitor ADC temperature" }
+  { \$(P),"",\$(PORT),   "Marble:U29:Temp", "deg C",            0.5,       0,    1,     1,     0,     0,    70,    75, "Marble U29 temperature" }
+  { \$(P),"",\$(PORT),   "Marble:U28:Temp", "deg C",            0.5,       0,    1,     1,     0,     0,    70,    75, "Marble U28 temperature" }
+  { \$(P),"",\$(PORT),  "Marble:U27:Temp1", "deg C",            1.0,       0,    0,     2,     0,     0,    70,    75, "Marble U27 external temp 1" }
+  { \$(P),"",\$(PORT),  "Marble:U27:Tach1", "Ticks",            1.0,       0,    0,     2,     0,     0,    255   255, "Marble MAX6639 Tach 1 reg" }
+  { \$(P),"",\$(PORT),   "Marble:U27:Fan1",     "%", 0.833333333333,       0,    0,     2,     0,     0,    100   100, "Marble MAX6639 Fan 1 duty cycle" }
 }
 
 file "perSysmonLI.template" {
   pattern { P, R, PORT,          NAME,   EGU, LOLO, LOW, HIGH, HIHI,     LLSV,      LSV,      HSV,     HHSV, DESC }
-  { \$(P),"",\$(PORT),"FPGA:powerUp_",    "",    0,0,   2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
-  { \$(P),"",\$(PORT),  "FPGA:uptime",   "s",    0,   0,0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
-  { \$(P),"",\$(PORT),   "ACQ:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
-  { \$(P),"",\$(PORT),   "ACQ:active",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
-  { \$(P),"",\$(PORT),"ACQ:DCcoupled",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
-  { \$(P),"",\$(PORT),   "ACQ:clkPLL",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
-  { \$(P),"",\$(PORT),   "PPS:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
-  { \$(P),"",\$(PORT),  "DRDY:status",    "",   -1,   0,    0,0,    MAJOR, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:'Misaligned', 20 LSB:PPS->DRDY ticks" }
-  { \$(P),"",\$(PORT) ,  "ADC:aligns",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Count of ADC alignment requests" }
-  { \$(P),"",\$(PORT),   "MGT:status",    "",    0,   0,    0,0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:EVR time good', 8 LSB:Rx link up" }
+  { \$(P),"",\$(PORT),"FPGA:powerUp_",    "",    0,   0,    2,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "FPGA has powered up" }
+  { \$(P),"",\$(PORT),  "FPGA:uptime",   "s",    0,   0,    0,    2, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Seconds since boot" }
+  { \$(P),"",\$(PORT),   "ACQ:status",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition status register" }
+  { \$(P),"",\$(PORT),   "ACQ:active",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Active ADC channels" }
+  { \$(P),"",\$(PORT),"ACQ:DCcoupled",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "DC-coupled ADC channels" }
+  { \$(P),"",\$(PORT),   "ACQ:clkPLL",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Acquisition clock PLL status register" }
+  { \$(P),"",\$(PORT),   "PPS:status",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "PPS source status" }
+  { \$(P),"",\$(PORT),  "DRDY:status",    "",   -1,   0,    0,    0,    MAJOR, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:'Misaligned', 20 LSB:PPS->DRDY ticks" }
+  { \$(P),"",\$(PORT) ,  "ADC:aligns",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "Count of ADC alignment requests" }
+  { \$(P),"",\$(PORT),   "MGT:status",    "",    0,   0,    0,    0, NO_ALARM, NO_ALARM, NO_ALARM, NO_ALARM, "MSB:EVR time good', 8 LSB:Rx link up" }
 }
 
 file "perChannel.template" {
