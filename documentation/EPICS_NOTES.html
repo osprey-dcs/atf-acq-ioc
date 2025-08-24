@@ -32,6 +32,7 @@
 
 
 
+
           macros.&nbsp; Typically the P macro is set to 'FDAS:' and the
           NODE macro to the acquisition node number (01 through 32)
           followed by a colon.<br>
@@ -415,6 +416,55 @@
         </tr>
         <tr>
           <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble:U27:Temp1</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Marble MAX6639 (U27) temperature
+              monitor and fan controller external temperature 1.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble:U27:Tach1</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Marble MAX6639 (U27) temperature
+              monitor and fan controller tachometer 1 register.&nbsp;
+              Fan speed is inversely related to this value.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble:U27:Fan1</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Marble MAX6639 (U27) temperature
+              monitor and fan controller fan 1 duty cycle.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble:U28:Temp</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Marble LM75 (U28) temperature
+              monitor.<br>
+            </span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">Marble:U29:Temp</span></td>
+          <td style="text-align: center;"><span style="font-family:
+              Times New Roman, Times, serif;">ai</span></td>
+          <td style="text-align: left;"><span style="font-family: Times
+              New Roman, Times, serif;">Marble LM75 (U29) temperature
+              monitor.</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><span style="font-family:
               Times New Roman, Times, serif;">ACQ:status</span><span
               style="font-family: Times New Roman, Times, serif;"><br>
             </span></td>
@@ -592,6 +642,7 @@
               loop output pulse-per-second marker and the </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"></span>incoming
+
 
 
 
@@ -907,6 +958,7 @@
 
 
 
+
         Status<br>
       </span></h2>
     <h2><span style="font-family: Times New Roman, Times, serif;"></span></h2>
@@ -914,6 +966,7 @@
         time at which the firmware and software were built is contained
         in the per-node stringin records </span><span
         style="font-family: Times New Roman, Times, serif;">firmwareBuildDate
+
 
 
 
@@ -954,6 +1007,7 @@
 
 
 
+
         respectively.<br>
       </span></p>
     <p><span style="font-family: Times New Roman, Times, serif;"><span
@@ -970,10 +1024,12 @@
 
 
 
+
               of 0 indicates that the IPMI EEPROM on the Quartz card is
               invalid in some way.&nbsp; A </span></span></span></span><span
         style="font-family: Times New Roman, Times, serif;"><span
           style="font-family: Times New Roman, Times, serif;">Quartz:partno
+
 
 
 
@@ -1010,6 +1066,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">The
+
 
 
 
@@ -1119,6 +1176,7 @@
 
 
 
+
                 edges</span> are misaligned by more than about 8 ns, but
               all are aligned within about 24 ns.</span></td>
         </tr>
@@ -1133,6 +1191,7 @@
               New Roman, Times, serif;">One or more DRDY </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;">rising
+
 
 
 
@@ -1173,6 +1232,7 @@
 
 
 
+
                 edges</span> are misaligned. </span></td>
         </tr>
       </tbody>
@@ -1180,6 +1240,7 @@
     <h2><span style="font-family: Times New Roman, Times, serif;">Calibration<br>
       </span></h2>
     <p><span style="font-family: Times New Roman, Times, serif;">Calibration
+
 
 
 
@@ -1202,12 +1263,14 @@
 
 
 
+
           – per-channel </span><span style="font-family: Times New
           Roman, Times, serif;"><span style="font-family: Times New
             Roman, Times, serif;">calibration offsets in units of ADC
             counts.&nbsp; Range is ±1000000.<br>
           </span></span></li>
       <li><span style="font-family: Times New Roman, Times, serif;">CAL:gain/CAL:gainRbk
+
 
 
 
@@ -1236,10 +1299,12 @@
 
 
 
+
             –&nbsp; the time associated with the calibration values, in
             POSIX seconds, treated as an unsigned 32-bit value.</span></span></li>
       <li><span style=" font-family: Times New Roman, Times, serif;"><span
             style=" font-family: Times New Roman, Times, serif;">CAL:status
+
 
 
 
@@ -1258,6 +1323,7 @@
 
 
 
+
             – BO record that writes the calibration values (offset,
             gain, date) to non-volatile memory when processed.</span></span></li>
     </ul>
@@ -1269,6 +1335,7 @@
     <ul>
     </ul>
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-Node
+
 
 
 
@@ -1500,6 +1567,7 @@
 
 
 
+
         the machine protection mitigation output number, ranging from 01
         to 04.<br>
       </span></p>
@@ -1651,6 +1719,7 @@
 
 
 
+
               specifying the channels for which an excursion </span><span
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: &quot;Times New Roman&quot;, Times,
@@ -1684,6 +1753,7 @@
               specifying the local MPS hardware inputs for which a 'bad'</span><span
               style="font-family: &quot;Times New Roman&quot;, Times,
               serif;"><span style="font-style: italic;"></span>&nbsp;value
+
 
 
 
@@ -1790,6 +1860,7 @@
                 style="font-family: &quot;Times New Roman&quot;, Times,
                 serif;"></span><span style="font-family: &quot;Times New
                 Roman&quot;, Times, serif;">'tripped' status </span>became
+
 
 
 
@@ -2046,6 +2117,7 @@
 
 
 
+
               significant bits are map indicating the combined MPS
               'tripped' status from all downstream nodes.</span><span
               style="font-family: Times New Roman, Times, serif;"></span><span
@@ -2055,6 +2127,7 @@
                 style="font-family: Times New Roman, Times, serif;"></span><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">MPS:forceTrip
+
                   is also combined and the value of MPS:tripped</span></span>
               is the value written to the MPS mitigation hardware
               outputs.</span><span style="font-family: Times New Roman,
@@ -2089,6 +2162,7 @@
     <br class="Apple-interchange-newline">
     <meta charset="UTF-8">
     <h2><span style="font-family: Times New Roman, Times, serif;">Per-System
+
 
 
 
@@ -2159,6 +2233,7 @@
               style="font-family: Times New Roman, Times, serif;"><span
                 style="font-family: Times New Roman, Times, serif;"><span
                   style="font-family: Times New Roman, Times, serif;">Note
+
 
 
 
