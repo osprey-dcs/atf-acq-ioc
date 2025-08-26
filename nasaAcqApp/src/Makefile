@@ -78,6 +78,9 @@ endif
 # Finally link to the EPICS Base libraries
 nasaAcq_LIBS += $(EPICS_BASE_IOC_LIBS)
 
+PROD_SYS_LIBS += event_core event_extra z fftw3
+PROD_SYS_LIBS_Linux += event_pthreads
+
 #===========================
 
 include $(TOP)/configure/RULES
