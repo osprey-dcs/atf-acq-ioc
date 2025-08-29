@@ -537,6 +537,17 @@
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
+    <rules>
+      <rule name="Disable while running" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pvInt0==1">
+          <value>false</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>true</value>
+        </exp>
+        <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+      </rule>
+    </rules>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="action_button" version="3.0.0">
@@ -557,6 +568,17 @@
       <color name="Write_Background" red="128" green="255" blue="255">
       </color>
     </background_color>
+    <rules>
+      <rule name="Disable while running" prop_id="enabled" out_exp="false">
+        <exp bool_exp="pvInt0==1">
+          <value>false</value>
+        </exp>
+        <exp bool_exp="true">
+          <value>true</value>
+        </exp>
+        <pv_name>pva://$(P)CTRL:Run-SP</pv_name>
+      </rule>
+    </rules>
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
@@ -1176,30 +1198,70 @@
     <name>Text Entry_2</name>
     <pv_name>$(P)SA:FileTime-SP</pv_name>
     <x>985</x>
-    <y>639</y>
+    <y>678</y>
     <width>134</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_1</name>
     <pv_name>$(P)SA:FileLim-I</pv_name>
-    <x>1140</x>
-    <y>639</y>
+    <x>1200</x>
+    <y>678</y>
     <width>269</width>
   </widget>
   <widget type="textentry" version="3.0.0">
     <name>Text Entry_3</name>
     <pv_name>pva://$(P)CTRL:FileCnt-SP</pv_name>
     <x>985</x>
-    <y>667</y>
+    <y>706</y>
     <width>134</width>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_2</name>
     <pv_name>pva://$(P)CTRL:CnvtRslt-I</pv_name>
     <x>985</x>
-    <y>700</y>
+    <y>739</y>
     <width>1010</width>
     <height>280</height>
     <interactive>true</interactive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_29</name>
+    <text>Time bounded buffering</text>
+    <x>985</x>
+    <y>644</y>
+    <width>310</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_35</name>
+    <text>Bin length</text>
+    <x>909</x>
+    <y>678</y>
+    <width>70</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_36</name>
+    <text>Bin count</text>
+    <x>909</x>
+    <y>706</y>
+    <width>70</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_37</name>
+    <text>Bin size</text>
+    <x>1130</x>
+    <y>678</y>
+    <width>70</width>
+    <height>22</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_38</name>
+    <text>Last post-procMessage</text>
+    <x>909</x>
+    <y>739</y>
+    <width>70</width>
+    <height>51</height>
   </widget>
 </display>

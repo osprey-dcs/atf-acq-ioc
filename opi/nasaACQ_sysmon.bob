@@ -1519,7 +1519,7 @@
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_22</name>
-    <pv_name>$(P)$(R)Marble:U29:Temp</pv_name>
+    <pv_name>$(P)$(R)Marble:U28:Temp</pv_name>
     <x>323</x>
     <y>458</y>
     <horizontal_alignment>2</horizontal_alignment>
@@ -1802,7 +1802,7 @@
   </widget>
   <widget type="label" version="2.0.0">
     <name>INA219val_62</name>
-    <text>U29 Temp</text>
+    <text>U28 Temp</text>
     <x>240</x>
     <y>458</y>
     <width>73</width>
