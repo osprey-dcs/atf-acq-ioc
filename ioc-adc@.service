@@ -20,7 +20,7 @@ SyslogIdentifier=ioc-adc%i
 User=atf
 Group=atf
 
-AmbientCapabilities=cap_sys_nice,cap_ipc_lock
+AmbientCapabilities=cap_ipc_lock
 LimitRTPRIO=50
 LimitMEMLOCK=256M
 
