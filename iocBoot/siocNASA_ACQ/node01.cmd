@@ -42,6 +42,9 @@ dbLoadRecords("../../db/quartzAcq.db", "P=$(P),EVG=$(EVG),PORT=$(P)APP,NAME=NASA
 # Load record instances unique to event generator
 dbLoadRecords("../../db/nasaEVG.db", "P=$(EVG),PORT=$(P)APP")
 
+dbLoadRecords("../../db/save_restoreStatus.db", "P=$(P)AS:")
+save_restoreSet_status_prefix("$(P)AS:")
+
 system "install -d as"
 system "install -d as/$(NODE)"
 
