@@ -40,6 +40,8 @@ nasaAcq_LIBS += pscCore
 nasaAcq_LIBS += feed
 nasaAcq_LIBS += nasaSup
 
+nasaAcq_SYS_LIBS += event_extra fftw3 z
+
 # nasaAcq_registerRecordDeviceDriver.cpp derives from nasaAcq.dbd
 nasaAcq_SRCS += nasaAcq_registerRecordDeviceDriver.cpp
 
