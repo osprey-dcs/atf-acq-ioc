@@ -134,3 +134,23 @@ The first fiber pair (QSFP-1, fiber pair 1) on all nodes is the node event recei
 For nodes acting as event fanouts, the second fiber pair (QSFP-1, fiber pair 2) is the event fanout input and machine protection status output.  The third fiber pair (QSFP-1, fiber pair 3) is, by convention, the loopback connection to the node event receiver.  The remaining five fiber pairs (QSFP-1, fiber pair 4, and QSFP-2, all fiber pairs) are outgoing event links and incoming machine protection status links.
 
 For the node acting as the event generator, all but the first fiber pair (i.e. QSFP-1, fiber pairs 2 through 4, and QSFP-2, all fiber pairs) are outgoing event links and incoming machine protection status links.  Thus a fully-expanded system would consist of one event generator node, seven event fanout nodes and 34 leaf nodes for a total of 42 nodes and 1344 analog inputs.
+
+# Global timing
+
+Firmware responds to three application specific timing event codes.
+
+| Code | Function |
+|:---:|:----:|
+|  96 | Start streaming data |
+|  97 | Stop streaming data |
+|  99 | MPS clear latched |
+
+On receiption of code `96`, a Quartz will begin sending ADC data packets.
+On receiption of code `96`, a Quartz will stop ADC data packets.
+
+On receiption of code `99`, any latched MPS trips will be cleared.
+If the trip condition is still active, then a new trip will be immediately latched.
+
+Additionally, a several Quartz functions will wait for the arrival of a PPS second event `125`.
+Most importantly, writing the sample rate has the side effect of triggering an ADC chip sync.
+This process waits for the next `125` event so that synchronization is globally aligned.
